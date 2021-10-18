@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Guia de Testes LENOVO</title>
+    <meta charset="utf-8">
+
+    <link rel = "stylesheet" type = "text/css" href = "main/css/main.css">
+
+  </head>
+  
+  <body>
+    <div class = "header"><!-- cabeçalho da pagina -->
+        <h1 id = "home">Guia de testes</h1>
+        
+        <nav id = "menu">
+            <ul >
+                <li><a href = "#especificos">Específicos</a></li>
+                <li><a href = "#extras">Extras</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <section id = "content">
+        <section id = "especificos"> <!-- testes da checklist -->
+        <div class = "checklistItemTitle">
+            <h2 >Testes especificos do Produto.</h2>
+            <a href ="#home" class = "homeAnchor">Inicio</a>
+        </div>    
+            <ul>
+                <div> <!-- testes atrelados ao LDIAG -->
+                    <h3 class = "checklistItemH3">LDIAG</h3>
+                    
+                    <li class = "checklistItem" ><h4>Teste de HD</h4></li>
+                    <li class = "checklistItem" ><h4>Teste de Memória</h4></li>
+                    <li class = "checklistItem" ><h4>Teste de Processador</h4></li>
+                </div>
+                
+                <div> <!-- Verificação de informções do produto -->
+                    <h3 class = "checklistItemH3">Verificações</h3>
+                    
+                    <li class = "checklistItem">
+                         <div class = "itemHeader"> 
+                          <h4>Verificação de Especificações do Produto</h4>
+                         </div>
+                    	<div class = "itemContent">
+                          <p>Estas informações estão localizadas majoritariamente nas configurações do dispositivo tanto no Windows quanto no Linux, com a diferença de que no sistema Windows é possivel verificar a capacidade do HD ou SSD através do Explorador de arquivos.</p>
+                        
+                        	<p>Na checklist estas informações estão localizadas na área intitualda de "Especificações Técnicas do Produto"</p>
+                        </div>
+                    </li>
+                    <li class = "checklistItem"><h4>Verificação de SN e MTM</h4></li>
+                    <li class = "checklistItem"><h4>Ativação do sistema</h4></li>
+                </div>
+                
+                <div> <!-- Atualizações -->
+                    <h3 class = "checklistItemH3">Atualizações</h3>
+                
+                    <li class = "checklistItem"><h4>Atualização de Driver</h4></li>
+                    <li class = "checklistItem"><h4>Atualização de Bios</h4></li>
+                </div>
+                
+                <div> <!-- Áudio, Vídeo e Sistema -->
+                    <h3 class = "checklistItemH3">Áudio, Vídeo e Sistema</h3>
+                    
+                    <li class = "checklistItem"><h4>Microfone / Fone de Ouvido</h4></li>
+                    <li class = "checklistItem"><h4>Tela</h4></li>
+                    <li class = "checklistItem"><h4>Teste de Áudio / Vídeo</h4></li>
+                    <li class = "checklistItem"><h4>HDMI / VGA</h4></li>
+                    <li class = "checklistItem"><h4>Camera</h4></li>
+                    <li class = "checklistItem"><h4>Teste de conexão WI-FI</h4></li>
+                    <li class = "checklistItem"><h4>Ativação do PortCode</h4></li>
+                </div>
+                
+                <div><!-- hardware -->
+                    <h3 class = "checklistItemH3">Hardware</h3>
+                    
+                    <li class = "checklistItem"><h4>Teste de USB</h4></li>
+                    <li class = "checklistItem"><h4>Teste de Teclado</h4></li>
+                    <li class = "checklistItem"><h4>Teste de Touchpad</h4></li>
+                </div>
+            </ul>
+        </section>
+        
+        <section id = "extras"><!-- testes fora da checklist -->
+            <div class = "extraItemTitle">   
+                <h2 >Procedimentos Extras</h2>
+                <a href ="#home" class = "homeAnchor">Inicio</a>
+            </div> 
+            <ul> 
+                <li class = "extraItem"><h4>Gravação das informações da Placa-Mãe</h4></li>
+                <li class = "extraItem"><h4>Inserção de DPK</h4></li>
+                <li class = "extraItem"><h4>Desinstalação de Anti-Virus</h4></li>
+                <li class = "extraItem"><h4>Instalação do Lenovo UTILITY</h4></li>
+                <li class = "extraItem"><h4>Quebra de Senha</h4></li>
+                <li class = "extraItem"><h4>Desativar Administrador</h4></li>
+                <li class = "extraItem"><h4>Entrar em Outro Dominio</h4></li>
+                <li class = "extraItem"><h4>Criar Usuário</h4></li>
+                <li class = "extraItem"><h4>Excluir Usuário</h4></li>
+            </ul>
+        </section>
+    </section>
+    
+    <script>
+    	document.querySelector(".itemContent").style.display = "";
+    </script>
+  </body>
+</html>
