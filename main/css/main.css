@@ -13,75 +13,6 @@ section{
     margin-bottom: 40px;
 }
 
-
-/* estilo do itens */
-    section li{
-        background-color: #fff;
-        padding: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 6px;
-        border-width: 0px 0px 0px 6px;
-        border-style: solid;
-        
-    }
-    section li:hover{
-        box-shadow: 1px 1px 7px gray;
-    }
-    
-    h4{
-        padding: 5;
-        margin: 0;
-        font-weight:bold;
-    }
-    h3{
-        font-size: 17pt;
-    }
-    
-    .itemHeader{
-        display: inline-block;
-    }
-    
-    /* checklist */
-    .checklistItem{
-        border-color: #6495ED;
-        
-    }
-    .checklistItemH3{
-        color: #6495ED;
-    }
-    .checklistItemTitle{
-        color: #fff;
-        background-color: #6495ED;
-        padding: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 6px;
-        display: flex;
-    }
-    
-    /*extras*/
-    .extraItem{
-        border-color: #FFD700;
-    }
-    .extraItemH3{
-        color: #FFD700;
-    }
-    .extraItemTitle{
-        color: #fff;
-        background-color: #FFD700;
-        padding: 15px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 6px;
-        display: flex;
-    }
-    
-ul{
-    list-style: none;
-    margin:0px; 
-    padding: 0px;
-}
 /* cabeçalho */
     .header{
         background-color: #FF6347;
@@ -97,7 +28,7 @@ ul{
         padding-right: 10px;
         padding-bottom: 5px;
     }
-    a{
+    .whiteAnchor{
         color: #fff;
         font-weight: bold;
     }

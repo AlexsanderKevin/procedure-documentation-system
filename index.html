@@ -5,6 +5,7 @@
     <meta charset="utf-8">
 
     <link rel = "stylesheet" type = "text/css" href = "main/css/main.css">
+    <link rel = "stylesheet" type = "text/css" href = "main/css/item.css">
 
   </head>
   
@@ -14,8 +15,8 @@
         
         <nav id = "menu">
             <ul >
-                <li><a href = "#especificos">Específicos</a></li>
-                <li><a href = "#extras">Extras</a></li>
+                <li><a class = "whiteAnchor" href = "#especificos">Específicos</a></li>
+                <li><a class = "whiteAnchor" href = "#extras">Extras</a></li>
             </ul>
         </nav>
     </div>
@@ -24,11 +25,13 @@
         <section id = "especificos"> <!-- testes da checklist -->
         <div class = "checklistItemTitle">
             <h2 >Testes especificos do Produto.</h2>
-            <a href ="#home" class = "homeAnchor">Inicio</a>
+            <a href ="#home" class = "whiteAnchor">Inicio</a>
         </div>    
             <ul>
                 <div> <!-- testes atrelados ao LDIAG -->
                     <h3 class = "checklistItemH3">LDIAG</h3>
+                    <p>Todos os tópicos desta seção são testes realizados pelo <strong>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
+                    <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
                     
                     <li class = "checklistItem" ><h4>Teste de HD</h4></li>
                     <li class = "checklistItem" ><h4>Teste de Memória</h4></li>
@@ -84,9 +87,10 @@
         <section id = "extras"><!-- testes fora da checklist -->
             <div class = "extraItemTitle">   
                 <h2 >Procedimentos Extras</h2>
-                <a href ="#home" class = "homeAnchor">Inicio</a>
+                <a href ="#home" class = "whiteAnchor">Inicio</a>
             </div> 
             <ul> 
+                <li class = "extraItem"><h4>Teste LDIAG</h4></li>
                 <li class = "extraItem"><h4>Gravação das informações da Placa-Mãe</h4></li>
                 <li class = "extraItem"><h4>Inserção de DPK</h4></li>
                 <li class = "extraItem"><h4>Desinstalação de Anti-Virus</h4></li>
