@@ -4,6 +4,10 @@
     <title>Guia de Testes LENOVO</title>
     <meta charset="utf-8">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- external CSS -->
     <link rel = "stylesheet" type = "text/css" href = "main/css/main.css">
     <link rel = "stylesheet" type = "text/css" href = "main/css/item.css">
 
@@ -15,6 +19,7 @@
         
         <nav id = "menu">
             <ul >
+                <hr style="color: #fff; height: 2px;">
                 <li><a class = "whiteAnchor" href = "#especificos">Específicos</a></li>
                 <li><a class = "whiteAnchor" href = "#extras">Extras</a></li>
             </ul>
@@ -28,58 +33,121 @@
             <a href ="#home" class = "whiteAnchor">Inicio</a>
         </div>    
             <ul>
-                <div> <!-- testes atrelados ao LDIAG -->
+                <div class="itemSection"> <!-- testes atrelados ao LDIAG -->
                     <h3 class = "checklistItemH3">LDIAG</h3>
-                    <p>Todos os tópicos desta seção são testes realizados pelo <strong>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
-                    <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
                     
-                    <li class = "checklistItem" ><h4>Teste de HD</h4></li>
-                    <li class = "checklistItem" ><h4>Teste de Memória</h4></li>
-                    <li class = "checklistItem" ><h4>Teste de Processador</h4></li>
+                    <div class="itemContent checklist">
+                        <p>Todos os tópicos desta seção são testes realizados pelo <strong>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
+                        <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
+                    </div>
+                    
+<!--#region 001 -->
+                    <li class = "checklist itemList" id="001"><h4>Teste de HD</h4></li>
+<!-- #endregion-->
+<!--#region 002 -->
+                    <li class = "checklist itemList" id="002"><h4>Teste de Memória</h4></li>
+<!--#endregion-->
+<!--#region 003 -->
+                    <li class = "checklist itemList" id="003"><h4>Teste de Processador</h4></li>
+<!--#endregion-->
                 </div>
                 
-                <div> <!-- Verificação de informções do produto -->
+                <!-- Verificação de informções do produto -->
+                <div class="itemSection"> 
                     <h3 class = "checklistItemH3">Verificações</h3>
-                    
-                    <li class = "checklistItem">
-                         <div class = "itemHeader"> 
+<!--#region 004 verificação de especificações do produto-->
+                    <li class = "checklist itemList" id="004">
+                        <div class = "itemHeader"> 
                           <h4>Verificação de Especificações do Produto</h4>
-                         </div>
-                    	<div class = "itemContent">
-                          <p>Estas informações estão localizadas majoritariamente nas configurações do dispositivo tanto no Windows quanto no Linux, com a diferença de que no sistema Windows é possivel verificar a capacidade do HD ou SSD através do Explorador de arquivos.</p>
-                        
-                        	<p>Na checklist estas informações estão localizadas na área intitualda de "Especificações Técnicas do Produto"</p>
+                        </div>
+                    	<div class = "itemContent checklist">
+                            <p>Estas informações estão localizadas majoritariamente nas <strong>configurações</strong>  do dispositivo tanto no <strong>Windows</strong>  quanto no <strong>Linux</strong> , com a diferença de que no sistema <strong>Windows</strong>  é possivel verificar a capacidade do <strong>HD</strong>  ou <strong>SSD</strong>  através do <strong>Explorador de arquivos</strong> , na aba <strong>Este Computador</strong>.</p>
+                            
+                            <ul class="subUl">
+                                <li>
+                                    <h5>Windows</h5>
+                                    <div class="itemContent checklist">
+                                        <p>No sistema Windows o caminho é: <strong>Configurações -> Sistema -> Sobre</strong>.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h5>Linux</h5>
+                                    <div class="itemContent checklist">
+                                        <p>No sistema Linux o caminho é:</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        	<p>Na checklist estas informações estão localizadas na área intitualda de <strong>Especificações Técnicas do Produto</strong>.</p>
                         </div>
                     </li>
-                    <li class = "checklistItem"><h4>Verificação de SN e MTM</h4></li>
-                    <li class = "checklistItem"><h4>Ativação do sistema</h4></li>
+<!--#endregion-->
+<!--#region 005 verificação de SN e MTM-->
+                    <li class = "checklist itemList" id="005">
+                        <div class="itemHeader">
+                            <h4>Verificação de SN e MTM</h4>
+                        </div>
+
+                        <div class="itemContent checklist">
+                            <p>Existem três locais onde o <strong>SN, MTM e Modelo</strong>  devem estar de acordo:</p>
+                            <ul class="subUl">
+                                <li>
+                                    <h5>Caixa</h5>
+                                    <div class="itemContent checklist">
+                                        <p>A caixa da maquina deve, obrigatoriamente, conter um adesivo chamado de <strong>SO</strong>  (Service Order - Ordem de Serviço), onde é possivel consultar estes itens tanto de maneira escrita quanto em código de barras (caso seja necessário escaneá-los).</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h5>BIOS</h5>
+                                    <div class="itemContent checklist">
+                                        <p>É possível acessar a <strong>BIOS</strong>  da máquina tanto pelo botão <strong>RECOVERY</strong> quanto apertando a tecla <strong>F2</strong> durante a inicialização.</p>
+                                        <p>As informações necessárias estarão na aba <strong>information</strong> da <strong>BIOS</strong>.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <h5>Adesivo</h5>
+                                    <div class="itemContent">
+                                        <p>Todas as máquinas saem da fábrica com um adesivo que contém várias informações, inclusive as que precisamos aqui. O posicionamento desse adesivo, entretanto, depende da máquina que está sendo testada: se for um <strong>notebook</strong> , o adesivo se encontra no <Strong>Gabinete D</Strong>; para os <strong>IO</strong> (All In One) estará na traseira do equipamento; já no <strong>Desktop</strong>...</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </li>
+<!--#endregion-->
+<!--#region 006 -->
+                    <li class = "checklist itemList" id="006"><h4>Ativação do sistema</h4></li>
+<!--#endregion-->
                 </div>
                 
-                <div> <!-- Atualizações -->
+                <div class="itemSection"> <!-- Atualizações -->
                     <h3 class = "checklistItemH3">Atualizações</h3>
-                
-                    <li class = "checklistItem"><h4>Atualização de Driver</h4></li>
-                    <li class = "checklistItem"><h4>Atualização de Bios</h4></li>
+<!--#region 007 -->
+                    <li class = "checklist itemList" id="007"><h4>Atualização de Driver</h4></li>
+<!--#endregion-->
+<!--#region 008 -->
+                    <li class = "checklist itemList" id="008"><h4>Atualização de Bios</h4></li>
+<!--#endregion-->
                 </div>
                 
-                <div> <!-- Áudio, Vídeo e Sistema -->
+                <div class="itemSection"> <!-- Áudio, Vídeo e Sistema -->
                     <h3 class = "checklistItemH3">Áudio, Vídeo e Sistema</h3>
                     
-                    <li class = "checklistItem"><h4>Microfone / Fone de Ouvido</h4></li>
-                    <li class = "checklistItem"><h4>Tela</h4></li>
-                    <li class = "checklistItem"><h4>Teste de Áudio / Vídeo</h4></li>
-                    <li class = "checklistItem"><h4>HDMI / VGA</h4></li>
-                    <li class = "checklistItem"><h4>Camera</h4></li>
-                    <li class = "checklistItem"><h4>Teste de conexão WI-FI</h4></li>
-                    <li class = "checklistItem"><h4>Ativação do PortCode</h4></li>
+                    <li class = "checklist itemList" id="009"><h4>Microfone / Fone de Ouvido</h4></li>
+                    <li class = "checklist itemList" id="010"><h4>Tela</h4></li>
+                    <li class = "checklist itemList"><h4>Teste de Áudio / Vídeo</h4></li>
+                    <li class = "checklist itemList"><h4>HDMI / VGA</h4></li>
+                    <li class = "checklist itemList"><h4>Camera</h4></li>
+                    <li class = "checklist itemList"><h4>Teste de conexão WI-FI</h4></li>
+                    <li class = "checklist itemList"><h4>Ativação do PortCode</h4></li>
                 </div>
                 
-                <div><!-- hardware -->
+                <div class="itemSection"><!-- hardware -->
                     <h3 class = "checklistItemH3">Hardware</h3>
                     
-                    <li class = "checklistItem"><h4>Teste de USB</h4></li>
-                    <li class = "checklistItem"><h4>Teste de Teclado</h4></li>
-                    <li class = "checklistItem"><h4>Teste de Touchpad</h4></li>
+                    <li class = "checklist itemList"><h4>Teste de USB</h4></li>
+                    <li class = "checklist itemList"><h4>Teste de Teclado</h4></li>
+                    <li class = "checklist itemList"><h4>Teste de Touchpad</h4></li>
                 </div>
             </ul>
         </section>
@@ -90,20 +158,21 @@
                 <a href ="#home" class = "whiteAnchor">Inicio</a>
             </div> 
             <ul> 
-                <li class = "extraItem"><h4>Teste LDIAG</h4></li>
-                <li class = "extraItem"><h4>Gravação das informações da Placa-Mãe</h4></li>
-                <li class = "extraItem"><h4>Inserção de DPK</h4></li>
-                <li class = "extraItem"><h4>Desinstalação de Anti-Virus</h4></li>
-                <li class = "extraItem"><h4>Instalação do Lenovo UTILITY</h4></li>
-                <li class = "extraItem"><h4>Quebra de Senha</h4></li>
-                <li class = "extraItem"><h4>Desativar Administrador</h4></li>
-                <li class = "extraItem"><h4>Entrar em Outro Dominio</h4></li>
-                <li class = "extraItem"><h4>Criar Usuário</h4></li>
-                <li class = "extraItem"><h4>Excluir Usuário</h4></li>
+                <li class = "extra itemList"><h4>Teste LDIAG</h4></li>
+                <li class = "extra itemList"><h4>Gravação das informações da Placa-Mãe</h4></li>
+                <li class = "extra itemList"><h4>Inserção de DPK</h4></li>
+                <li class = "extra itemList"><h4>Desinstalação de Anti-Virus</h4></li>
+                <li class = "extra itemList"><h4>Instalação do Lenovo UTILITY</h4></li>
+                <li class = "extra itemList"><h4>Quebra de Senha</h4></li>
+                <li class = "extra itemList"><h4>Desativar Administrador</h4></li>
+                <li class = "extra itemList"><h4>Entrar em Outro Dominio</h4></li>
+                <li class = "extra itemList"><h4>Criar Usuário</h4></li>
+                <li class = "extra itemList"><h4>Excluir Usuário</h4></li>
             </ul>
         </section>
     </section>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script>
     	document.querySelector(".itemContent").style.display = "";
     </script>
