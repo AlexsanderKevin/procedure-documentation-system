@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+
+
+    <link rel="icon" type="image/jpg" href="main/img/favicon.ico"/>
     <title>Guia de Testes LENOVO</title>
     <meta charset="utf-8">
 
@@ -15,7 +18,7 @@
   
   <body>
     <div class = "header"><!-- cabeçalho da pagina -->
-        <h1 id = "home">Guia de testes</h1>
+        <h1 id = "home" class="headerTitle">Guia de testes</h1>
         
         <nav id = "menu">
             <ul >
@@ -32,106 +35,64 @@
             <h2 >Testes especificos do Produto.</h2>
             <a href ="#home" class = "whiteAnchor">Inicio</a>
         </div>    
-            <ul>
-                <div class="itemSection"> <!-- testes atrelados ao LDIAG -->
-                    <h3 class = "checklistItemH3">LDIAG</h3>
+            <ul class="mainUl">
+            <!--#region LDIAG -->                
+                <div class="itemSection">
+                    <h3 class = "checklist sectionTitle">LDIAG</h3>
                     
                     <div class="itemContent checklist">
                         <p>Todos os tópicos desta seção são testes realizados pelo <strong>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
                         <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
                     </div>
                     
-<!--#region 001 -->
                     <li class = "checklist itemList" id="001"><h4>Teste de HD</h4></li>
-<!-- #endregion-->
-<!--#region 002 -->
                     <li class = "checklist itemList" id="002"><h4>Teste de Memória</h4></li>
-<!--#endregion-->
-<!--#region 003 -->
                     <li class = "checklist itemList" id="003"><h4>Teste de Processador</h4></li>
-<!--#endregion-->
                 </div>
+            <!--#endregion-->
                 
-                <!-- Verificação de informções do produto -->
+            <!--#region Verificações -->
                 <div class="itemSection"> 
-                    <h3 class = "checklistItemH3">Verificações</h3>
-<!--#region 004 verificação de especificações do produto-->
+                    <h3 class = "checklist sectionTitle">Verificações</h3>
+                     
+                    <!--#004 verificação de especiicações do produto-->
                     <li class = "checklist itemList" id="004">
-                        <div class = "itemHeader"> 
-                          <h4>Verificação de Especificações do Produto</h4>
-                        </div>
-                    	<div class = "itemContent checklist">
-                            <p>Estas informações estão localizadas majoritariamente nas <strong>configurações</strong>  do dispositivo tanto no <strong>Windows</strong>  quanto no <strong>Linux</strong> , com a diferença de que no sistema <strong>Windows</strong>  é possivel verificar a capacidade do <strong>HD</strong>  ou <strong>SSD</strong>  através do <strong>Explorador de arquivos</strong> , na aba <strong>Este Computador</strong>.</p>
-                            
-                            <ul class="subUl">
-                                <li>
-                                    <h5>Windows</h5>
-                                    <div class="itemContent checklist">
-                                        <p>No sistema Windows o caminho é: <strong>Configurações -> Sistema -> Sobre</strong>.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Linux</h5>
-                                    <div class="itemContent checklist">
-                                        <p>No sistema Linux o caminho é:</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            
-                        	<p>Na checklist estas informações estão localizadas na área intitualda de <strong>Especificações Técnicas do Produto</strong>.</p>
-                        </div>
+                        <h4><a class="itemAnchor" href="main/html/itens/checklist/id-004-verificação-de-especificações-do-produto.html" rel="next" target="self" >Verificação de Especificações do Produto</a> </h4>
+                       
                     </li>
-<!--#endregion-->
-<!--#region 005 verificação de SN e MTM-->
-                    <li class = "checklist itemList" id="005">
-                        <div class="itemHeader">
-                            <h4>Verificação de SN e MTM</h4>
-                        </div>
 
-                        <div class="itemContent checklist">
-                            <p>Existem três locais onde o <strong>SN, MTM e Modelo</strong>  devem estar de acordo:</p>
-                            <ul class="subUl">
-                                <li>
-                                    <h5>Caixa</h5>
-                                    <div class="itemContent checklist">
-                                        <p>A caixa da maquina deve, obrigatoriamente, conter um adesivo chamado de <strong>SO</strong>  (Service Order - Ordem de Serviço), onde é possivel consultar estes itens tanto de maneira escrita quanto em código de barras (caso seja necessário escaneá-los).</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>BIOS</h5>
-                                    <div class="itemContent checklist">
-                                        <p>É possível acessar a <strong>BIOS</strong>  da máquina tanto pelo botão <strong>RECOVERY</strong> quanto apertando a tecla <strong>F2</strong> durante a inicialização.</p>
-                                        <p>As informações necessárias estarão na aba <strong>information</strong> da <strong>BIOS</strong>.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <h5>Adesivo</h5>
-                                    <div class="itemContent">
-                                        <p>Todas as máquinas saem da fábrica com um adesivo que contém várias informações, inclusive as que precisamos aqui. O posicionamento desse adesivo, entretanto, depende da máquina que está sendo testada: se for um <strong>notebook</strong> , o adesivo se encontra no <Strong>Gabinete D</Strong>; para os <strong>IO</strong> (All In One) estará na traseira do equipamento; já no <strong>Desktop</strong>...</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        
+                    <!--#005 verificação de SN e MTM-->
+                    <li class = "checklist itemList" id="005">
+                        <h4><a href="main/html/itens/checklist/id-005-Verificação-de-SN-e-MTM.html" rel="next" target="self">Verificação de SN e MTM</a> </h4>
                     </li>
-<!--#endregion-->
-<!--#region 006 -->
-                    <li class = "checklist itemList" id="006"><h4>Ativação do sistema</h4></li>
-<!--#endregion-->
+
+                    <!--#006 ativação do sistema-->
+                    <li class = "checklist itemList" id="006">
+                        <h4><a href="main/html/itens/checklist/id-006-Ativação-do-sistema.html">Ativação do Sistema</a> </h4>
+                    </li>
+
                 </div>
+            <!--#endregion-->
                 
-                <div class="itemSection"> <!-- Atualizações -->
-                    <h3 class = "checklistItemH3">Atualizações</h3>
-<!--#region 007 -->
-                    <li class = "checklist itemList" id="007"><h4>Atualização de Driver</h4></li>
-<!--#endregion-->
-<!--#region 008 -->
-                    <li class = "checklist itemList" id="008"><h4>Atualização de Bios</h4></li>
-<!--#endregion-->
+            <!--#region Atualizações -->    
+                <div class="itemSection">
+                    <h3 class = "checklist sectionTitle">Atualizações</h3>
+
+                    <!--#007 atualização de Driver-->
+                    <li class = "checklist itemList" id="007">
+                        <h4><a href="main/html/itens/checklist/id-007-atualização-de-driver.html" rel="next" target="self">Atualização de Driver</a> </h4>
+                    </li>
+
+                    <!--#008 atualização de BIOS-->
+                    <li class = "checklist itemList" id="008">
+                        <h4> <a href="main/html/itens/checklist/id-008-atualização-de-bios.html" rel="next" target="self">Atualização de Bios</a> </h4>
+                    </li>
+
                 </div>
-                
+            <!--#endregion-->
+
                 <div class="itemSection"> <!-- Áudio, Vídeo e Sistema -->
-                    <h3 class = "checklistItemH3">Áudio, Vídeo e Sistema</h3>
+                    <h3 class = "checklist sectionTitle">Áudio, Vídeo e Sistema</h3>
                     
                     <li class = "checklist itemList" id="009"><h4>Microfone / Fone de Ouvido</h4></li>
                     <li class = "checklist itemList" id="010"><h4>Tela</h4></li>
@@ -143,7 +104,7 @@
                 </div>
                 
                 <div class="itemSection"><!-- hardware -->
-                    <h3 class = "checklistItemH3">Hardware</h3>
+                    <h3 class = "checklist sectionTitle">Hardware</h3>
                     
                     <li class = "checklist itemList"><h4>Teste de USB</h4></li>
                     <li class = "checklist itemList"><h4>Teste de Teclado</h4></li>
@@ -157,7 +118,7 @@
                 <h2 >Procedimentos Extras</h2>
                 <a href ="#home" class = "whiteAnchor">Inicio</a>
             </div> 
-            <ul> 
+            <ul class="mainUl"> 
                 <li class = "extra itemList"><h4>Teste LDIAG</h4></li>
                 <li class = "extra itemList"><h4>Gravação das informações da Placa-Mãe</h4></li>
                 <li class = "extra itemList"><h4>Inserção de DPK</h4></li>
