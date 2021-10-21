@@ -17,7 +17,8 @@
   </head>
   
   <body>
-    <div class = "header"><!-- cabeçalho da pagina -->
+  <!--#region cabeçalho da pagina -->  
+    <div class = "header">
         <h1 id = "home" class="headerTitle">Guia de testes</h1>
         
         <nav id = "menu">
@@ -28,6 +29,7 @@
             </ul>
         </nav>
     </div>
+    <!--#endregion-->
     
     <section id = "content">
         <section id = "especificos"> <!-- testes da checklist -->
@@ -92,7 +94,8 @@
                 </div>
             <!--#endregion-->
 
-                <div class="itemSection"> <!-- Áudio, Vídeo e Sistema -->
+            <!--#region Áudio, Vídeo e Sistema -->    
+                <div class="itemSection">
                     <h3 class = "checklist sectionTitle">Áudio, Vídeo e Sistema</h3>
                     
                     <li class = "checklist itemList" id="009"><h4>Microfone / Fone de Ouvido</h4></li>
@@ -103,18 +106,22 @@
                     <li class = "checklist itemList"><h4>Teste de conexão WI-FI</h4></li>
                     <li class = "checklist itemList"><h4>Ativação do PortCode</h4></li>
                 </div>
+            <!--#endregion-->
                 
-                <div class="itemSection"><!-- hardware -->
+            <!--#region hardware -->    
+                <div class="itemSection">
                     <h3 class = "checklist sectionTitle">Hardware</h3>
                     
                     <li class = "checklist itemList"><h4>Teste de USB</h4></li>
                     <li class = "checklist itemList"><h4>Teste de Teclado</h4></li>
                     <li class = "checklist itemList"><h4>Teste de Touchpad</h4></li>
                 </div>
+            <!--#endregion-->
             </ul>
         </section>
         
-        <section id = "extras"><!-- testes fora da checklist -->
+        <!--#region testes fora da checklist -->
+        <section id = "extras">
             <div class = "extraItemTitle">   
                 <h2 >Procedimentos Extras</h2>
                 <a href ="#home" class = "whiteAnchor">Inicio</a>
@@ -132,6 +139,7 @@
                 <li class = "extra itemList"><h4>Excluir Usuário</h4></li>
             </ul>
         </section>
+        <!--#endregion-->
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
