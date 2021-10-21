@@ -13,14 +13,13 @@ section{
     border-radius: 6px;
     border-width: 0px 0px 0px 6px;
     border-style: solid; 
-    box-shadow: 1px 1px 7px gray;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.322);
 }
 
 .itemList:hover{
-    padding-top: 25px;
-    padding-bottom: 20px;
-    transition: .3s;
-    transition-delay: .1s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
+    transition: .2s;
+    
 }
 
 h4{
@@ -61,7 +60,7 @@ h1, h2, h3, h4, h5{
 }
 
 .subItemContent{
-    padding: 0px;
+    padding: 20px;
     padding-right: 50px;
     padding-left: 50px;
     border-width: 1px 1px 1px 1px;

@@ -19,9 +19,10 @@ p{
     color: black;
 }
 
-a{
+h4, a{
     text-decoration: none;
     font-weight: bold;
+    color: black;
 }
 
 ul{
