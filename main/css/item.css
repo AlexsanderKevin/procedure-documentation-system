@@ -1,10 +1,53 @@
 /* estilo do itens */
 
+:root {
+    --checklistColor: #6495ED;
+    --extraColor: #FFD700;
+}
+
 section{
     padding-top: 20px;
 }
 
+.itemSection{
+    margin-top: 80px;
+    padding-top: 20px;
+
+    border-width: 3px 0px 0px 0px;
+    border-style: solid;
+    border-color: var(--checklistColor);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemSectionContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .itemList{
+    background-color: #fff;
+
+    padding: 15px;
+
+    margin: 10px;
+
+    border-radius: 6px;
+    border-width: 0px 0px 0px 8px;
+    border-style: solid; 
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.568);
+
+    width: 550px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.itemListPage{
     background-color: #fff;
     padding: 15px; 
     padding-bottom: 10px;
@@ -17,16 +60,24 @@ section{
 }
 
 .itemList:hover{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.801);
-    transition: .2s;  
+    border-width: 3px 50px 3px 50px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
+    transition: .5s;  
 }
 
 .emptyItemList{
+    padding: 15px;
+
+    margin: 10px;
+
+    width: 550px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
     background-color: #eee;
-    padding: 15px; 
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
     border-radius: 6px;
     border-width: 1px 1px 1px 6px;
     border-style: solid; 
@@ -46,6 +97,7 @@ h1, h2, h3, h4, h5{
 
 .itemTitle{
     font-size: 30pt;
+    margin: auto;
 }
 .itemHeader{
     padding-left: 30px;
@@ -53,13 +105,9 @@ h1, h2, h3, h4, h5{
     padding-top: 0px;
 }
 
-.itemSection{
-    padding-top: 20px;
-}
-
 .itemContent{
     
-    padding: 10px;
+    padding: 15px;
     padding-right: 50px;
     padding-left: 50px;
     border-width: 1px 1px 1px 1px;
@@ -80,36 +128,33 @@ h1, h2, h3, h4, h5{
     margin: 10px;
 }
 
-/* checklist */
-.checklist{
-    border-color: #6495ED;
-    color: #4c77c7;
-    
-}
-
-.checklistItemTitle{
+.sectorTitle{
     color: #fff;
-    background-color: #6495ED;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 6px;
+
     display: flex;
+    justify-content: space-between;
+}
+
+/* checklist */
+.checklist{
+    border-color: var(--checklistColor);
+    color: var(--checklistColor);
+    
+}
+
+.checklistSectorTitle{
+    background-color: var(--checklistColor);
 }
 
 /*extras*/
 .extra{
-    border-color: #FFD700;
+    border-color: var(--extraColor);
 }
 
-.extraItemTitle{
-    color: #fff;
-    background-color: #FFD700;
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    display: flex;
+.extraSectorTitle{
+    background-color: var(--extraColor);
 }
-
-

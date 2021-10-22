@@ -33,7 +33,7 @@
     
     <section id = "content">
         <section id = "especificos"> <!-- testes da checklist -->
-        <div class = "checklistItemTitle">
+        <div class = "checklistSectorTitle sectorTitle">
             <h2 >Testes especificos do Produto.</h2>
             <a href ="#home" class = "whiteAnchor">Inicio</a>
         </div>    
@@ -47,32 +47,40 @@
                         <p>Todos os tópicos desta seção são testes realizados pelo <strong>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
                         <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
                     </div>
+
+                    <div class="itemSectionContent">
+                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist emptyItemList" id="001"><h4>Teste de HD</h4></li>
+                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist emptyItemList" id="002"><h4>Teste de Memória</h4></li>
+                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist emptyItemList" id="003"><h4>Teste de Processador</h4></li>
+                    </div>
                     
-                    <li onclick="emptyItem()" class = "checklist emptyItemList" id="001"><h4>Teste de HD</h4></li>
-                    <li onclick="emptyItem()" class = "checklist emptyItemList" id="002"><h4>Teste de Memória</h4></li>
-                    <li onclick="emptyItem()" class = "checklist emptyItemList" id="003"><h4>Teste de Processador</h4></li>
+                    
                 </div>
             <!--#endregion-->
                 
             <!--#region Verificações -->
                 <div class="itemSection"> 
+
                     <h3 class = "checklist sectionTitle">Verificações</h3>
-                     
-                    <!--#004 verificação de especiicações do produto-->
-                    <li class = "checklist itemList" id="004">
-                        <h4><a class="itemAnchor" href="main/html/itens/checklist/id-004-verificação-de-especificações-do-produto.html" rel="next" target="self" >Verificação de Especificações do Produto</a> </h4>
-                       
-                    </li>
+                    <div class="itemSectionContent">
+                        <!--#004 verificação de especiicações do produto-->
+                        <a class="itemAnchor" href="main/html/itens/checklist/id-004-verificação-de-especificações-do-produto.html" rel="next" target="self" >
+                        <li class = "checklist itemList" id="004">
+                            <h4>Verificação de Especificações do Produto </h4>
+                        </li></a>
 
-                    <!--#005 verificação de SN e MTM-->
-                    <li class = "checklist itemList" id="005">
-                        <h4><a href="main/html/itens/checklist/id-005-Verificação-de-SN-e-MTM.html" rel="next" target="self">Verificação de SN e MTM</a> </h4>
-                    </li>
+                        <!--#005 verificação de SN e MTM-->
+                        <a href="main/html/itens/checklist/id-005-Verificação-de-SN-e-MTM.html" rel="next" target="self">
+                        <li class = "checklist itemList" id="005">
+                            <h4>Verificação de SN e MTM </h4>
+                        </li></a>
 
-                    <!--#006 ativação do sistema-->
-                    <li class = "checklist itemList" id="006">
-                        <h4><a href="main/html/itens/checklist/id-006-Ativação-do-sistema.html">Ativação do Sistema</a> </h4>
-                    </li>
+                        <!--#006 ativação do sistema-->
+                        <a href="main/html/itens/checklist/id-006-Ativação-do-sistema.html">
+                        <li class = "checklist itemList" id="006">
+                            <h4>Ativação do Sistema </h4>
+                        </li></a>
+                    </div>
 
                 </div>
             <!--#endregion-->
@@ -81,15 +89,21 @@
                 <div class="itemSection">
                     <h3 class = "checklist sectionTitle">Atualizações</h3>
 
-                    <!--#007 atualização de Driver-->
-                    <li class = "checklist itemList" id="007">
-                        <h4><a href="main/html/itens/checklist/id-007-atualização-de-driver.html" rel="next" target="self">Atualização de Driver</a> </h4>
-                    </li>
+                    <div class="itemSectionContent">
+                        <!--#007 atualização de Driver-->
+                        <a href="main/html/itens/checklist/id-007-atualização-de-driver.html" rel="next" target="self">
+                        <li class = "checklist itemList" id="007">
+                            <h4>Atualização de Driver</h4>
+                        </li></a>
 
-                    <!--#008 atualização de BIOS-->
-                    <li class = "checklist itemList" id="008">
-                        <h4> <a href="main/html/itens/checklist/id-008-atualização-de-bios.html" rel="next" target="self">Atualização de Bios</a> </h4>
-                    </li>
+                        <!--#008 atualização de BIOS-->
+                        <a href="main/html/itens/checklist/id-008-atualização-de-bios.html" rel="next" target="self">
+                        <li class = "checklist itemList" id="008">
+                            <h4> Atualização de Bios </h4>
+                        </li></a>
+                    </div>
+
+                    
 
                 </div>
             <!--#endregion-->
@@ -97,24 +111,35 @@
             <!--#region Áudio, Vídeo e Sistema -->    
                 <div class="itemSection">
                     <h3 class = "checklist sectionTitle">Áudio, Vídeo e Sistema</h3>
-                    
-                    <li class = "checklist itemList" id="009"><h4>Microfone / Fone de Ouvido</h4></li>
-                    <li class = "checklist itemList" id="010"><h4>Tela</h4></li>
-                    <li class = "checklist itemList"><h4>Teste de Áudio / Vídeo</h4></li>
-                    <li class = "checklist itemList"><h4>HDMI / VGA</h4></li>
-                    <li class = "checklist itemList"><h4>Camera</h4></li>
-                    <li class = "checklist itemList"><h4>Teste de conexão WI-FI</h4></li>
-                    <li class = "checklist itemList"><h4>Ativação do PortCode</h4></li>
+                    <div class="itemSectionContent">
+
+                        <!--#009 microfone/fone de ouvido-->
+                        <a href="main/html/itens/checklist/id-009-teste-de-microfone-e-fone-de-ouvido.html" rel="next" target="self">
+                        <li class = "checklist itemList" id="009">
+                            <h4>Microfone / Fone de Ouvido</h4>
+                        </li></a>
+                        
+                        <li class = "checklist itemList" id="010"><h4>Tela</h4></li>
+                        <li class = "checklist itemList"><h4>Teste de Áudio / Vídeo</h4></li>
+                        <li class = "checklist itemList"><h4>HDMI / VGA</h4></li>
+                        <li class = "checklist itemList"><h4>Camera</h4></li>
+                        <li class = "checklist itemList"><h4>Teste de conexão WI-FI</h4></li>
+                        <li class = "checklist itemList"><h4>Ativação do PortCode</h4></li>
+                    </div>
                 </div>
             <!--#endregion-->
                 
             <!--#region hardware -->    
                 <div class="itemSection">
                     <h3 class = "checklist sectionTitle">Hardware</h3>
+
+                    <div class="itemSectionContent">
+                        <li class = "checklist itemList"><h4>Teste de USB</h4></li>
+                        <li class = "checklist itemList"><h4>Teste de Teclado</h4></li>
+                        <li class = "checklist itemList"><h4>Teste de Touchpad</h4></li>
+                    </div>
                     
-                    <li class = "checklist itemList"><h4>Teste de USB</h4></li>
-                    <li class = "checklist itemList"><h4>Teste de Teclado</h4></li>
-                    <li class = "checklist itemList"><h4>Teste de Touchpad</h4></li>
+                    
                 </div>
             <!--#endregion-->
             </ul>
@@ -122,7 +147,7 @@
         
         <!--#region testes fora da checklist -->
         <section id = "extras">
-            <div class = "extraItemTitle">   
+            <div class = "extraSectorTitle sectorTitle">   
                 <h2 >Procedimentos Extras</h2>
                 <a href ="#home" class = "whiteAnchor">Inicio</a>
             </div> 
@@ -131,7 +156,7 @@
                 <li class = "extra itemList"><h4>Gravação das informações da Placa-Mãe</h4></li>
                 <li class = "extra itemList"><h4>Inserção de DPK</h4></li>
                 <li class = "extra itemList"><h4>Desinstalação de Anti-Virus</h4></li>
-                <li class = "extra itemList"><h4>Instalação do Lenovo UTILITY</h4></li>
+                <li class = "extra itemList"><h4>Instalação do HOTKEY</h4></li>
                 <li class = "extra itemList"><h4>Quebra de Senha</h4></li>
                 <li class = "extra itemList"><h4>Desativar Administrador</h4></li>
                 <li class = "extra itemList"><h4>Entrar em Outro Dominio</h4></li>
@@ -143,12 +168,10 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="main/js/itens-vazios.js"></script>
     <script>
     	document.querySelector(".itemContent").style.display = "";
-
-        function emptyItem(){
-            window.alert("Este item não precisa de procedimento!");
-        }
     </script>
   </body>
 </html>
