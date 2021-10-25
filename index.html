@@ -24,8 +24,8 @@
         <nav id = "menu">
             <ul >
                 <hr style="color: #fff; height: 2px;">
-                <li><a class = "whiteAnchor" href = "#especificos">Específicos</a></li>
-                <li><a class = "whiteAnchor" href = "#extras">Extras</a></li>
+                <li><a class = "buttonAnchor mainColor" href = "#especificos">Específicos</a></li>
+                <li><a class = "buttonAnchor mainColor" href = "#extras">Extras</a></li>
             </ul>
         </nav>
     </div>
@@ -35,12 +35,12 @@
         <section id = "especificos"> <!-- testes da checklist -->
         <div class = "checklistSectorTitle sectorTitle">
             <h2 >Testes especificos do Produto.</h2>
-            <a href ="#home" class = "whiteAnchor">Inicio</a>
+            <a href ="#home" class = "buttonAnchor checklist">Inicio</a>
         </div>    
             <ul class="mainUl">
 
             <!--#region LDIAG -->                
-                <div class="itemSection">
+                <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">LDIAG</h3>
                     
                     <div class="itemContent checklist">
@@ -49,9 +49,11 @@
                     </div>
 
                     <div class="itemSectionContent">
-                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist emptyItemList" id="001"><h4>Teste de HD</h4></li>
-                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist emptyItemList" id="002"><h4>Teste de Memória</h4></li>
-                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist emptyItemList" id="003"><h4>Teste de Processador</h4></li>
+                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist itemList emptyItemList" id="001"><h4>Teste de HD</h4></li>
+
+                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist itemList emptyItemList" id="002"><h4>Teste de Memória</h4></li>
+
+                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist itemList emptyItemList" id="003"><h4>Teste de Processador</h4></li>
                     </div>
                     
                     
@@ -59,7 +61,7 @@
             <!--#endregion-->
                 
             <!--#region Verificações -->
-                <div class="itemSection"> 
+                <div class="checklist itemSection"> 
 
                     <h3 class = "checklist sectionTitle">Verificações</h3>
                     <div class="itemSectionContent">
@@ -86,7 +88,7 @@
             <!--#endregion-->
                 
             <!--#region Atualizações -->    
-                <div class="itemSection">
+                <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">Atualizações</h3>
 
                     <div class="itemSectionContent">
@@ -109,7 +111,7 @@
             <!--#endregion-->
 
             <!--#region Áudio, Vídeo e Sistema -->    
-                <div class="itemSection">
+                <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">Áudio, Vídeo e Sistema</h3>
                     <div class="itemSectionContent">
 
@@ -130,7 +132,7 @@
             <!--#endregion-->
                 
             <!--#region hardware -->    
-                <div class="itemSection">
+                <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">Hardware</h3>
 
                     <div class="itemSectionContent">
@@ -147,22 +149,32 @@
         
         <!--#region testes fora da checklist -->
         <section id = "extras">
-            <div class = "extraSectorTitle sectorTitle">   
-                <h2 >Procedimentos Extras</h2>
-                <a href ="#home" class = "whiteAnchor">Inicio</a>
-            </div> 
-            <ul class="mainUl"> 
-                <li class = "extra itemList"><h4>Teste LDIAG</h4></li>
-                <li class = "extra itemList"><h4>Gravação das informações da Placa-Mãe</h4></li>
-                <li class = "extra itemList"><h4>Inserção de DPK</h4></li>
-                <li class = "extra itemList"><h4>Desinstalação de Anti-Virus</h4></li>
-                <li class = "extra itemList"><h4>Instalação do HOTKEY</h4></li>
-                <li class = "extra itemList"><h4>Quebra de Senha</h4></li>
-                <li class = "extra itemList"><h4>Desativar Administrador</h4></li>
-                <li class = "extra itemList"><h4>Entrar em Outro Dominio</h4></li>
-                <li class = "extra itemList"><h4>Criar Usuário</h4></li>
-                <li class = "extra itemList"><h4>Excluir Usuário</h4></li>
-            </ul>
+
+                <div class = "extraSectorTitle sectorTitle">   
+                    <h2 >Procedimentos Extras</h2>
+                    <a href ="#home" class = "extra buttonAnchor ">Inicio</a>
+
+                </div> 
+                
+                <ul class="mainUl">
+                    <div class="extra itemSection">
+                        <div class="itemSectionContent">
+                            <li class = "extra itemList"><h4>Teste LDIAG</h4></li>
+                            <li class = "extra itemList"><h4>Gravação das informações da Placa-Mãe</h4></li>
+                            <li class = "extra itemList"><h4>Inserção de DPK</h4></li>
+                            <li class = "extra itemList"><h4>Desinstalação de Anti-Virus</h4></li>
+                            <li class = "extra itemList"><h4>Instalação do HOTKEY</h4></li>
+                            <li class = "extra itemList"><h4>Quebra de Senha</h4></li>
+                            <li class = "extra itemList"><h4>Desativar Administrador</h4></li>
+                            <li class = "extra itemList"><h4>Entrar em Outro Dominio</h4></li>
+                            <li class = "extra itemList"><h4>Criar Usuário</h4></li>
+                            <li class = "extra itemList"><h4>Excluir Usuário</h4></li>
+                        </div>
+                    </div>
+                    
+                </ul>
+            
+            
         </section>
         <!--#endregion-->
     </section>

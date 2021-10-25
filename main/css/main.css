@@ -1,7 +1,15 @@
 
+:root{
+    --mainColor: #FF6347;
+}
+
+.mainColor{
+    color: var(--mainColor);
+}
+
 body{
     margin-left:0px;
-    background-color: #ddd;
+    background-color: #ccc;
     font-family: Arial, sans-serif;
     font-size: 14pt;
 }
@@ -54,10 +62,11 @@ ul{
 }
 /* cabeçalho */
     .header{
-        background-color: #FF6347;
+        background-color: var(--mainColor);
         margin-top:0;
         padding-top: 30px;
         padding-left: 10px;
+        padding-bottom: 1px;
     }
     .headerTitle{
         color: #fff;
@@ -70,5 +79,23 @@ ul{
     .whiteAnchor{
         color: #fff;
         font-weight: bold;
+    }
+
+    .buttonAnchor{
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: 30px;
+    }
+
+    .buttonAnchor:hover{
+        background-color: #000;
+        color: #fff;
+        transition: .2s;
     }
 
