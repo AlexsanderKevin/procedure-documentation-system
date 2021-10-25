@@ -1,10 +1,4 @@
 /* estilo do itens */
-
-:root {
-    --checklistColor: #6495ED;
-    --extraColor: #ffbc04;
-}
-
 section{
     padding-top: 20px;
 }

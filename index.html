@@ -13,6 +13,7 @@
     <!-- external CSS -->
     <link rel = "stylesheet" type = "text/css" href = "main/css/main.css">
     <link rel = "stylesheet" type = "text/css" href = "main/css/item.css">
+    <link rel="stylesheet" type="text/css" href="main/css/modal.css">
 
   </head>
   
@@ -44,16 +45,16 @@
                     <h3 class = "checklist sectionTitle">LDIAG</h3>
                     
                     <div class="itemContent checklist">
-                        <p>Todos os tópicos desta seção são testes realizados pelo <strong>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
+                        <p>Todos os tópicos desta seção são testes realizados pelo <strong class="concept" onclick="showConceptModal(LDIAG)">LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
                         <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
                     </div>
 
                     <div class="itemSectionContent">
-                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist itemList emptyItemList" id="001"><h4>Teste de HD</h4></li>
+                        <li onclick="showAlertModal(ldiag)" class = "checklist itemList emptyItemList ldiag" id="001"><h4>Teste de HD</h4></li>
 
-                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist itemList emptyItemList" id="002"><h4>Teste de Memória</h4></li>
+                        <li onclick="showAlertModal(ldiag)" class = "checklist itemList emptyItemList ldiag" id="002"><h4>Teste de Memória</h4></li>
 
-                        <li onclick="emptyItem('Teste realizado pelo LDIAG, portanto não requer nenhum procedimento específico.')" class = "checklist itemList emptyItemList" id="003"><h4>Teste de Processador</h4></li>
+                        <li onclick="showAlertModal(ldiag)" class = "checklist itemList emptyItemList ldiag" id="003"><h4>Teste de Processador</h4></li>
                     </div>
                     
                     
@@ -206,9 +207,60 @@
         <!--#endregion-->
     </section>
 
+<!-- #region modal model -->
+    <div id="modal" class="modalContainer ">
+        <div class="modalFrame">
+            <div class="modalHeader">
+                <h3>modal</h3>
+                <button class="modalCloseButton">X</button>
+            </div>
+
+            <div class="modalContent itemContent">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nemo molestiae voluptas quam, harum provident. Corrupti quas, neque provident nemo voluptatibus, iure ipsum totam suscipit, facilis nesciunt nihil dolores. Enim?</p>
+            </div>
+
+        </div>
+    </div>
+<!--#endregion-->
+
+<!--#region alert modal-->
+    <div id="alertModal" class="modalContainer">
+        <div id="alertModalFrame" class="modalFrame">
+            <div id="alertModalHeader" class="modalHeader">
+                <h3 id="alertModalTitle" class="error">Alerta!</h3>
+                <button class="modalCloseButton">X</button>
+            </div>
+
+            <div id="alertModalContent" class="modalContent itemContent">
+                <p></p>
+            </div>
+
+        </div>
+    </div>
+<!--#endregion-->
+
+<!-- #region concept modal -->
+<div id="conceptModal" class="modalContainer ">
+    <div id="conceptModalFrame" class="modalFrame">
+        <div id="conceptModalHeader" class="modalHeader">
+            <h3 id="conceptModalTitle">modal</h3>
+            <button class="modalCloseButton">X</button>
+        </div>
+
+        <div id="conceptModalContent" class="modalContent itemContent">
+            <p></p>
+        </div>
+
+    </div>
+</div>
+<!--#endregion-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <!-- external javascript -->
     <script src="main/js/itens-vazios.js"></script>
+    <script src="main/js/modal.js"></script>
+
     <script>
     	document.querySelector(".itemContent").style.display = "";
     </script>
