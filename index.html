@@ -44,11 +44,13 @@
                 <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">LDIAG</h3>
                     
+                    <!--section description-->
                     <div class="itemContent checklist">
                         <p>Todos os tópicos desta seção são testes realizados pelo <strong class="concept" onclick="showConceptModal(LDIAG)">LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p>
-                        <p>O procedimento para execução do teste <strong>LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
+                        <p>O procedimento para execução do teste <strong class="concept" onclick="showConceptModal(LDIAG)">LDIAG</strong> está contido na seção de itens <strong><a href = "#extras">Extras</a></strong>.</p>
                     </div>
 
+                    <!--section content-->
                     <div class="itemSectionContent">
                         <li onclick="showAlertModal(ldiag)" class = "checklist itemList emptyItemList ldiag" id="001"><h4>Teste de HD</h4></li>
 
@@ -65,7 +67,14 @@
                 <div class="checklist itemSection"> 
 
                     <h3 class = "checklist sectionTitle">Verificações</h3>
-                    <div class="itemSectionContent">
+
+                    <!--section description-->
+                    <div class="itemContent checklist">
+                        <p>Esta seção consiste apenas em <strong>averiguar</strong> informações <strong>estáticas</strong> em relação ao equipamento.</p>
+                    </div>
+
+                    <div class="itemSectionContent">    
+
                         <!--#004 verificação de especiicações do produto-->
                         <a class="itemAnchor" href="main/html/itens/checklist/id-004-verificação-de-especificações-do-produto.html" rel="next" target="self" >
                         <li class = "checklist itemList" id="004">
@@ -92,6 +101,11 @@
                 <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">Atualizações</h3>
 
+                    <!--section description-->
+                    <div class="itemContent checklist">
+                        <p>As máquinas <strong>devem</strong> retornar ao cliente <strong>100% atualizadas</strong>. Os tópicos a seguir <strong>garantem</strong> que o equipamento apresente o <strong>melhor desempenho</strong>  e as <strong>mais atuais funcionalidades</strong> no dia a dia do usuário.</p>
+                    </div>
+
                     <div class="itemSectionContent">
                         <!--#007 atualização de Driver-->
                         <a href="main/html/itens/checklist/id-007-atualização-de-driver.html" rel="next" target="self">
@@ -114,6 +128,12 @@
             <!--#region Áudio, Vídeo e Sistema -->    
                 <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">Áudio, Vídeo e Sistema</h3>
+
+                    <!--setion description-->
+                    <div class="itemContent checklist">
+                        <p>O <strong>sistema operacional</strong> também é responsável pelo pleno funcionamento dos <strong>componentes</strong>. Esta seção contém os pontos <strong>mais afetados</strong> pelo funcionamento (ou a falta deste) do sistema.</p>
+                    </div>
+
                     <div class="itemSectionContent">
 
                         <!--#009 microfone/fone de ouvido-->
@@ -135,6 +155,11 @@
             <!--#region hardware -->    
                 <div class="checklist itemSection">
                     <h3 class = "checklist sectionTitle">Hardware</h3>
+
+                    <!--section description-->
+                    <div class="itemContent checklist">
+                        <p>Embora o <strong>sistema operacional</strong> represente uma parte extremamente relevante no funcionamento dos itens a seguir, é <strong>muito comum</strong> que <strong>defeitos</strong> encontrados durante esta seção de testes estejam atrelados <strong>diretamente</strong> ao <strong>hardware</strong>.</p>
+                    </div>
 
                     <div class="itemSectionContent">
                         <li class = "checklist itemList"><h4>Teste de USB</h4></li>
@@ -162,17 +187,35 @@
                 <!--#region reparo/troca de placa-->
                     <div class="extra itemSection">
                         <h3 class="extra sectionTitle">Reparo/Troca de Placa-Mãe</h3>
+
+                        <!--section description-->
+                        <div class="itemContent extra">
+                            <p>Em alguns casos é <strong>necessário</strong> que sejam realizados <strong>reparos</strong> ou até mesmo a <strong>troca</strong> da <strong>Placa-Mãe</strong> (também conhecida como Main-Board ou Mother-Board). Nestes casos é possível que algumas <strong>informações</strong> sejam <strong>apagadas da BIOS</strong> ou estejam <strong>incorretas</strong>.</p>
+
+                            <p>Esta seção compila as instruções para, principalmente, <strong>regravar</strong> tais informações.</p>
+                        </div>
+
                         <div class="itemSectionContent">
                             <li class = "extra itemList"><h4>Consulta de DPK</h4></li>
+
                             <li class = "extra itemList"><h4>Gravação das informações da Placa-Mãe</h4></li>
+
                             <li class = "extra itemList"><h4>Inserção de DPK</h4></li>
+
+                            <li class = "extra itemList"><h4>Inserção de Baseboard</h4></li>
                         </div>
                     </div>
                 <!--#endregion-->
                    
                 <!--#region usuario de teste-->
                     <div class="extra itemSection">
-                        <h3>Usuário de Teste</h3>
+                        <h3 class="extra sectionTitle">Usuário de Teste</h3>
+
+                        <!--section description-->
+                        <div class="itemContent extra">
+                            <p>Em maquinas com o sistema <strong>Windows</strong>, em casos de <strong>reinstalação do Sistema Operacional</strong> ou <strong>substituição do HD/SSD</strong> é preciso que os testes sejam realizados em um <strong>Usuário de Testes</strong> que deve ser <strong>Excluído</strong> ao final do processo.</p>
+                        </div>
+
                         <div class="itemSectionContent">
                             <li class = "extra itemList"><h4>Criar Usuário</h4></li>
                             <li class = "extra itemList"><h4>Excluir Usuário</h4></li>
@@ -182,7 +225,13 @@
 
                 <!--#region usuario bloqueado-->
                     <div class="extra itemSection">
-                        <h3 class="extra sectionTtitle">Usuário do Cliente Bloqueado</h3>
+                        <h3 class="extra sectionTitle">Usuário do Cliente Bloqueado</h3>
+
+                        <!--section description-->
+                        <div class="itemContent extra">
+                            <p>É comum que os usuários configurem uma <strong>senha</strong> em seus dispositivos. Alguns destes clientes optam por <strong>remover</strong> sua senha ou mandar um <strong>bilhete</strong> com a senha para auxiliar na assistencia técnica. Entretanto, quando isso <strong>não acontece</strong> é preciso seguir os procedimentos contidos nesta seção para que a realização dos testes seja <strong>possível</strong> .</p>
+                        </div>
+
                         <div class="itemSectionContent">
                             <li class = "extra itemList"><h4>Quebra de Senha</h4></li>
                             <li class = "extra itemList"><h4>Desativar Administrador</h4></li>
@@ -194,6 +243,12 @@
                 <!--#region outros-->    
                     <div class="extra itemSection">
                         <h3 class="extra sectionTitle">Outros</h3>
+
+                        <!--section description-->
+                        <div class="itemContent extra">
+                            <p>Os procedimentos a seguir são <strong>singulares</strong>. Talvez isso aconteça por serem muito <strong>específicos</strong> ou por resolverem um problema do inicio ao fim. Sendo assim, o fato de não estarem contidos em  outras seções <strong>não</strong>  os tornam menos relevantes.</p>
+                        </div>
+
                         <div class="itemSectionContent">
                             <li class = "extra itemList"><h4>Teste LDIAG</h4></li>
                             <li class = "extra itemList"><h4>Desinstalação de Anti-Virus</h4></li>
