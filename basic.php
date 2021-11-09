@@ -1,7 +1,7 @@
 <?php
 
     // definir PDO 
-    $pdo = new PDO('sqlite:dataBase.db');
+    $pdo = new PDO('sqlite:database.db');
 
     // escrever SQL
     $statement = $pdo->query("SELECT * FROM usuario");
@@ -10,4 +10,8 @@
     $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     // mostrar na tela
+    echo "<pre>";
     var_dump($rows);
+    echo "</pre>"
+
+?>
