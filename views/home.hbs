@@ -1,13 +1,32 @@
 <!--#region cabeçalho da pagina -->  
-    <header class = "header">
-        <h1 id = "home" class="headerTitle">Guia de testes</h1>
-        
-        <nav id = "menu">
-            <ul >
-                <hr style="color: #fff; height: 2px;">
-                <li><a class = "buttonAnchor mainColor" href = "#especificos">Específicos</a></li>
-                <li><a class = "buttonAnchor mainColor" href = "#extras">Extras</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--#endregion-->
+<header class = "header">
+    <h1 id = "home" class="headerTitle">Guia de testes</h1>
+    
+    <nav id = "menu">
+        <ul >
+            <hr style="color: #fff; height: 2px;">
+            <li><a class = "buttonAnchor mainColor" href = "#especificos">Específicos</a></li>
+            <li><a class = "buttonAnchor mainColor" href = "#extras">Extras</a></li>
+        </ul>
+    </nav>
+</header>
+<!--#endregion-->
+
+<!--#region content-->
+<section id="content">
+    <!--item sections-->
+    <section>
+        {{#each sections}}
+        <div class="section_title">
+            <h2>{{sections.nome}}</h2>
+        </div>
+        {{/each}}
+    </section>
+</section>
+<!--#endregion-->
+
+<!--#region content-->
+<section id="content">
+
+</section>
+<!--#endregion-->

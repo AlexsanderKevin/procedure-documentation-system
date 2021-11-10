@@ -5,6 +5,302 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Service Lenovo</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--styles-->
+    <link rel="stylesheet" href="">
+
+    <!--main css-->
+    <style>
+        :root{
+            --mainColor: #FF6347;
+            --secondColor: #fff;
+            --thirdColor: #eee;
+
+            --checklistColor: #6495ED;
+            --extraColor: #ffbc04;
+
+            --errorColor: rgb(255, 121, 121);
+        }
+
+        .mainColor{
+            color: var(--mainColor);
+        }
+
+        body{
+            margin-left:0px;
+            background-color: #ccc;
+            font-family: Arial, sans-serif;
+            font-size: 14pt;
+        }
+
+        #content{
+            max-width: 90vw;
+            margin: auto;
+            background-color: #eee;
+            padding: 40px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        section{
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        p{
+            text-align: justify;
+            color: black;
+        }
+
+        h4, a{
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+
+        h3, h2, h1 {
+            text-align: center;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .mainUl{
+            list-style: none;
+            margin:0px; 
+            padding: 0px;
+            }
+
+        .subUl{
+            list-style: disc;
+            padding: 15px;
+        }
+        /* cabeçalho */
+            .header{
+                background-color: var(--mainColor);
+                margin-top:0;
+                padding-top: 30px;
+                padding-left: 10px;
+                padding-bottom: 1px;
+            }
+            .headerTitle{
+                color: #fff;
+            }
+            nav li, nav a{
+                display: inline-block;
+                padding-right: 10px;
+                padding-bottom: 5px;
+            }
+            .whiteAnchor{
+                color: #fff;
+                font-weight: bold;
+            }
+
+            .buttonAnchor{
+                background-color: #fff;
+                padding: 5px;
+                border-radius: 5px;
+
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                height: 30px;
+            }
+
+            .buttonAnchor:hover{
+                
+                background-color: rgba(0, 0, 0, 0);
+                color: #fff;
+                transition: .2s;
+
+                border-style: solid;
+                border-width: 2px 2px 2px 2px;
+                border-color: #fff;
+            }
+
+            .concept{
+                cursor: pointer;
+            }
+
+            .concept:hover{
+                color: #666;
+                text-decoration: underline;
+            }
+    </style>
+
+    <!--item css-->
+    <style>
+        /* estilo do itens */
+        section{
+            padding-top: 20px;
+        }
+
+        .itemSection{
+            margin-top: 80px;
+            padding-top: 20px;
+
+            border-width: 3px 0px 0px 0px;
+            border-style: solid;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .itemSectionContent{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .itemList{
+            background-color: #fff;
+
+            padding: 10px;
+
+            margin: 10px;
+
+            border-radius: 6px;
+            border-width: 0px 0px 0px 8px;
+            border-style: solid; 
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.568);
+
+            width: 550px;
+
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .itemList:hover{
+            border-width: 3px 50px 3px 50px;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
+            transition: .2s;  
+        }
+
+        .emptyItemList{
+
+            background-color: #eee;
+
+            border-radius: 6px;
+            border-width: 1px 1px 1px 8px;
+            border-style: solid; 
+            box-shadow: 0 0 0;
+        }
+
+        .emptyItemList:hover{
+            border-radius: 6px;
+            border-width: 1px 1px 1px 8px;
+            border-style: solid; 
+            box-shadow: 0 0 0;
+        }
+
+        .itemListPage{
+            background-color: #fff;
+            padding: 15px; 
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border-width: 0px 0px 0px 6px;
+            border-style: solid; 
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.322);
+        }
+
+        h4{
+            padding: 5px;
+        }
+
+        .sectionTitle{
+            font-size:25pt;
+        }
+
+        h1, h2, h3, h4, h5{
+            font-weight:bold;
+        }
+
+        .itemTitle{
+            font-size: 30pt;
+            margin: auto;
+        }
+        .itemHeader{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 0px;
+        }
+
+        .itemContent{
+            
+            padding: 15px;
+            padding-right: 50px;
+            padding-left: 50px;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-radius: 5px;
+            background-color: #eee;
+            margin: 10px;
+        }
+
+        .subItemContent{
+            padding: 20px;
+            padding-right: 50px;
+            padding-left: 50px;
+            border-width: 1px 1px 1px 1px;
+            border-style: solid;
+            border-radius: 5px;
+            background-color: #fff;
+            margin: 10px;
+        }
+
+        .section_title{
+            color: #fff;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* checklist */
+        .checklist{
+            border-color: var(--checklistColor);
+            color: var(--checklistColor);
+            
+        }
+
+        .checklistBackground{
+            background-color: var(--checklistColor);
+        }
+
+        .checklistSectorTitle{
+            background-color: var(--checklistColor);
+        }
+
+        /*extras*/
+        .extra{
+            border-color: var(--extraColor);
+            color: var(--extraColor);
+        }
+
+        .extraBackground{
+            background-color: var(--extraColor);
+        }
+
+        .extraSectorTitle{
+            background-color: var(--extraColor);
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
