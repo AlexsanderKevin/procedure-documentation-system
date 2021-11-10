@@ -1,0 +1,161 @@
+/* estilo do itens */
+section{
+    padding-top: 20px;
+}
+
+.itemSection{
+    margin-top: 80px;
+    padding-top: 20px;
+
+    border-width: 3px 0px 0px 0px;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemSectionContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.itemList{
+    background-color: #fff;
+
+    padding: 10px;
+
+    margin: 10px;
+
+    border-radius: 6px;
+    border-width: 0px 0px 0px 8px;
+    border-style: solid; 
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.568);
+
+    width: 550px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.itemList:hover{
+    border-width: 3px 50px 3px 50px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
+    transition: .2s;  
+}
+
+.emptyItemList{
+
+    background-color: #eee;
+
+    border-radius: 6px;
+    border-width: 1px 1px 1px 8px;
+    border-style: solid; 
+    box-shadow: 0 0 0;
+}
+
+.emptyItemList:hover{
+    border-radius: 6px;
+    border-width: 1px 1px 1px 8px;
+    border-style: solid; 
+    box-shadow: 0 0 0;
+}
+
+.itemListPage{
+    background-color: #fff;
+    padding: 15px; 
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border-width: 0px 0px 0px 6px;
+    border-style: solid; 
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.322);
+}
+
+h4{
+    padding: 5px;
+}
+
+.sectionTitle{
+    font-size:25pt;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight:bold;
+}
+
+.itemTitle{
+    font-size: 30pt;
+    margin: auto;
+}
+.itemHeader{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+}
+
+.itemContent{
+    
+    padding: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #eee;
+    margin: 10px;
+}
+
+.subItemContent{
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 10px;
+}
+
+.sectorTitle{
+    color: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* checklist */
+.checklist{
+    border-color: var(--checklistColor);
+    color: var(--checklistColor);
+    
+}
+
+.checklistBackground{
+    background-color: var(--checklistColor);
+}
+
+.checklistSectorTitle{
+    background-color: var(--checklistColor);
+}
+
+/*extras*/
+.extra{
+    border-color: var(--extraColor);
+    color: var(--extraColor);
+}
+
+.extraBackground{
+    background-color: var(--extraColor);
+}
+
+.extraSectorTitle{
+    background-color: var(--extraColor);
+}

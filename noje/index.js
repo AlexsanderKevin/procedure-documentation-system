@@ -46,19 +46,19 @@ db.close((err) => {
 
 // app.set('view engine', 'hbs');
 
-// app.get('/', (req, res) => {
-//     res.render('home', {
-//         post: {
-//             author: 'Janith Kasun',
-//             image: 'https://picsum.photos/500/500',
-//             comments: [
-//                 'This is the first comment',
-//                 'This is the second comment',
-//                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec fermentum ligula. Sed vitae erat lectus.'
-//             ]
-//         }
-//     });
-// });
+ app.get('/', (req, res) => {
+     res.render('home', {
+         post: {
+             author: 'Janith Kasun',
+             image: 'https://picsum.photos/500/500',
+             comments: [
+                 'This is the first comment',
+                 'This is the second comment',
+                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec fermentum ligula. Sed vitae erat lectus.'
+             ]
+         }
+     });
+ });
 
 // app.get("/procedimentos", (req, res) => {
 //     res.render("procedimentos")
