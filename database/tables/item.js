@@ -26,7 +26,7 @@ const Item = database.define('items', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    item_subsection_id: {
+    itemSubsectionId: {
         type: Sequelize.INTEGER,
         references: 'item_subsections',
         referencesKey: 'id'

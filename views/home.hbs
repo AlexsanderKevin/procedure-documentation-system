@@ -5,8 +5,10 @@
     <nav id = "menu">
         <ul >
             <hr style="color: #fff; height: 2px;">
-            <li><a class = "buttonAnchor mainColor" href = "#especificos">Específicos</a></li>
-            <li><a class = "buttonAnchor mainColor" href = "#extras">Extras</a></li>
+            {{#item_sections}}
+                <li><a class = "buttonAnchor mainColor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
+            {{/item_sections}}
+            
         </ul>
     </nav>
 </header>
@@ -15,12 +17,33 @@
 <!--#region content-->
 <section id="content">
     <!--item sections-->
-    <section>
-        {{#each sections}}
-        <div class="section_title">
-            <h2>{{sections.nome}}</h2>
-        </div>
-        {{/each}}
+    {{#item_sections}}
+        <section id='{{this.dataValues.name}}'>
+            <div class='section_title'>
+                <h2>{{this.dataValues.name}}</h2>
+                <a href ="#home" class = "buttonAnchor checklist">Inicio</a>
+            </div>
+            <ul class="mainUl">
+               
+            
+    {{/item_sections}}
+        <!--#region item subsections-->
+            {{#item_subsections}}
+                <div class="item_subsection">
+                    <h3>{{this.dataValues.name}}</h3>
+                    <div class="itemContent">
+                        {{this.dataValues.description}}
+                    </div>
+                </div>
+            {{/item_subsections}}
+        <!--#endregion-->
+            <!--#region items-->
+                {{#items}}
+                    <a href=""><li class="itemList">{{this.dataValues.title}}</li></a>
+                    
+                {{/items}}
+            <!--#endregion-->
+        </ul>
     </section>
 </section>
 <!--#endregion-->

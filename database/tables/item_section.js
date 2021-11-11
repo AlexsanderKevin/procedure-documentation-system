@@ -14,7 +14,7 @@ const ItemSection = database.define('item_sections', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    department_id: {
+    departmentId: {
         type: Sequelize.INTEGER,
         references: 'department',
         referencesKey: 'id'

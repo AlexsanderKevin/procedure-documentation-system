@@ -2,12 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
+
     await queryInterface.createTable('items', {
       id: {
           type: Sequelize.INTEGER,
@@ -21,17 +16,17 @@ module.exports = {
       },
       description: {
           type: Sequelize.STRING,
-          allowNull: false
+          allowNull: true
       },
       solutions: {
           type: Sequelize.STRING,
-          allowNull: false
+          allowNull: true
       },
       obs: {
           type: Sequelize.STRING,
-          allowNull: false
+          allowNull: true
       },
-      item_subsection_id: {
+      itemSubsectionId: {
           type: Sequelize.INTEGER,
           references: {
             model: 'item_subsections',
