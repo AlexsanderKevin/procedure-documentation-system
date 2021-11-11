@@ -1,5 +1,6 @@
 const express = require("express")
 const express_handlebars = require('express-handlebars')
+const Department = require("./database/tables/department")
 
 const app = express()
 
@@ -14,23 +15,14 @@ app.get("/", (req, res) => {
     res.render("home")
 })
 
+app.get("/departments", async (req, res) => {
+    const departments = await Department.findAll() 
+
+    res.render("departments", { departments: departments.map((department) => {
+        return department.dataValues
+    }) })
+})
+
 app.listen(3000, () => {
     console.log("server running...")
 });
-
-(async ()=>{
-
-    const database = require('./database/db')
-    //tabelas
-    const Section = require('./database/tables/section')
-    const Linha = require('./database/tables/linha')
-
-    //sincronizar
-    await database.sync()
-
-    //criar row
-
-
-    const sections = await Section.findAll();
-    const linhas = await Linha.findAll();
-})()

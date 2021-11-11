@@ -1,17 +1,17 @@
 const Sequelize = require ('sequelize')
 const database = require('../db')
 
-const Linha = database.define('linha', {
+const Department = database.define('departments', {
     id:{
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    nome:{
+    name:{
         type: Sequelize.STRING,
         allowNull: false
     }
 })
 
-module.exports = Linha;
+module.exports = Department;

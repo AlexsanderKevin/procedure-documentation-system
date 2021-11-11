@@ -1,38 +1,34 @@
 const Sequelize = require('sequelize');
 
 const database = require('../db');
-const ItemSubsection = require("./item_subsection")
+const Department = require("./department")
  
-const Item = database.define('items', {
+const User = database.define('users', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    title: {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    description: {
+    username: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    solutions: {
+    password: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    obs: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    item_subsection_id: {
+    department_id: {
         type: Sequelize.INTEGER,
-        references: 'item_subsections',
+        references: 'departments',
         referencesKey: 'id'
     }
 })
 
-ItemSubsection.hasMany(Item)
+Department.hasMany(User)
  
-module.exports = Item;
+module.exports = User;
