@@ -4,9 +4,8 @@
     
     <nav id = "menu">
         <ul >
-            <hr style="color: #fff; height: 2px;">
             {{#item_sections}}
-                <li><a class = "buttonAnchor mainColor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
+                <li><a class = "buttonAnchor header_color" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
             {{/item_sections}}
             
         </ul>
@@ -19,22 +18,22 @@
     <!--item sections-->
     {{#item_sections}}
         <section id='{{this.dataValues.name}}'>
-            <div class='section_title'>
-                <h2>{{this.dataValues.name}}</h2>
-                <a href ="#home" class = "buttonAnchor checklist">Inicio</a>
+            <div class='section_title section_color_{{this.dataValues.id}}'>
+                <h2 >{{this.dataValues.name}}</h2>
+                <a href ="#home" class = "buttonAnchor section_color_{{this.dataValues.id}}">Inicio</a>
             </div>
             <ul class="mainUl">
         <!--#region item subsections-->
         {{#each this.item_subsections}}
-            <div class="item_subsection">
+            <div class="item_subsection section_color_{{../dataValues.id}}">
                 <h3>{{this.dataValues.name}}</h3>
                 <div class="itemContent">
-                    {{this.dataValues.description}}
+                    {{{this.dataValues.description}}}
                 </div>
             <!--#region items-->
             <div class="item_subsection_content">
                 {{#each this.items}}
-                    <a href=""><li class="itemList"><h4>{{this.dataValues.title}}</h4></li></a>
+                    <li class="itemList"><h4>{{this.dataValues.title}}</h4></li>
                 {{/each}}
             </div>
             <!--#endregion-->

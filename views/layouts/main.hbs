@@ -15,32 +15,46 @@
     <!--main css-->
     <style>
         :root{
-            --mainColor: #FF6347;
-            --secondColor: #fff;
-            --thirdColor: #eee;
 
-            --checklistColor: #6495ED;
-            --extraColor: #ffbc04;
+            /*
+            --mainColor: #FF6347;
+            --gradient_color_1: #fff;
+            --gradient_color_2: #eee;
+            --gradient_color_3: #ddd;
+            --gradient_color_4: #fff;
+            --contrast_color: #000;
+            */
+
+            --mainColor: #FF6347;
+            --gradient_color_1: #111;
+            --gradient_color_2: #222;
+            --gradient_color_3: #333;
+            --gradient_color_4: #444;
+            --contrast_color: #fff;
+            
+            --sectionColor_1: #6495ED;
+            --sectionColor_2: #ffbc04;
 
             --errorColor: rgb(255, 121, 121);
         }
 
-        .mainColor{
-            color: var(--mainColor);
+        .header_color{
+            color: var(--gradient_color_1);
         }
 
         body{
             margin-left:0px;
-            background-color: #ccc;
+            background-color: var(--gradient_color_1);
             font-family: Arial, sans-serif;
             font-size: 14pt;
         }
 
         #content{
-            max-width: 90vw;
+            max-width: 100vw;
             margin: auto;
-            background-color: #eee;
-            padding: 40px;
+            background-color: var(--gradient_color_2);
+            padding: 25px;
+            border-radius: 20px;
 
             display: flex;
             flex-direction: column;
@@ -55,13 +69,13 @@
 
         p{
             text-align: justify;
-            color: black;
+            color: var(--contrast_color);
         }
 
         h4, a{
             text-decoration: none;
             font-weight: bold;
-            color: black;
+            color: var(--contrast_color);
         }
 
         h3, h2, h1 {
@@ -84,27 +98,27 @@
         }
         /* cabeçalho */
             .header{
-                background-color: var(--mainColor);
+                background-color: var(--gradient_color_1);
                 margin-top:0;
                 padding-top: 30px;
                 padding-left: 10px;
                 padding-bottom: 1px;
             }
             .headerTitle{
-                color: #fff;
+                color: var(--mainColor);
+                border: solid;
+                border-width:  0px 0px 3px 0px;
             }
             nav li, nav a{
                 display: inline-block;
                 padding-right: 10px;
                 padding-bottom: 5px;
             }
-            .whiteAnchor{
-                color: #fff;
-                font-weight: bold;
-            }
+           
 
             .buttonAnchor{
-                background-color: #fff;
+                background-color: rgba(161, 150, 150, 0);
+                color: var(--mainColor);
                 padding: 5px;
                 border-radius: 5px;
 
@@ -117,13 +131,9 @@
 
             .buttonAnchor:hover{
                 
-                background-color: rgba(0, 0, 0, 0);
-                color: #fff;
+                background-color: rgba(161, 150, 150, 0);
+                color: #ccc;
                 transition: .2s;
-
-                border-style: solid;
-                border-width: 2px 2px 2px 2px;
-                border-color: #fff;
             }
 
             .concept{
@@ -161,18 +171,17 @@
         }
 
         .itemList{
-            background-color: #fff;
+            background-color: var(--gradient_color_4);
 
-            padding: 10px;
+            padding: 5px;
 
             margin: 10px;
 
             border-radius: 6px;
-            border-width: 0px 0px 0px 8px;
-            border-style: solid; 
-            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.568);
+            border-width: 2px 2px 2px 9px;
+            border-style: solid;
 
-            width: 550px;
+            width: 510px;
 
             display: flex;
             align-content: center;
@@ -187,7 +196,7 @@
 
         .emptyItemList{
 
-            background-color: #eee;
+            background-color: var(--gradient_color_2);
 
             border-radius: 6px;
             border-width: 1px 1px 1px 8px;
@@ -203,7 +212,7 @@
         }
 
         .itemListPage{
-            background-color: #fff;
+            background-color: var(--gradient_color_1);
             padding: 15px; 
             padding-bottom: 10px;
             margin-top: 20px;
@@ -244,7 +253,7 @@
             border-width: 1px 1px 1px 1px;
             border-style: solid;
             border-radius: 5px;
-            background-color: #eee;
+            background-color: var(--gradient_color_2);
             margin: 10px;
         }
 
@@ -255,7 +264,7 @@
             border-width: 1px 1px 1px 1px;
             border-style: solid;
             border-radius: 5px;
-            background-color: #fff;
+            background-color: var(--gradient_color_1);
             margin: 10px;
         }
 
@@ -264,40 +273,32 @@
             padding: 15px;
             margin-top: 10px;
             margin-bottom: 10px;
-            border-radius: 6px;
+            border-radius: 15px;
+            border: solid 4px;
 
             display: flex;
             justify-content: space-between;
-            background-color: #444;
+            background-color: var(--gradient_color_1);
         }
 
-        /* checklist */
-        .checklist{
-            border-color: var(--checklistColor);
-            color: var(--checklistColor);
+        /* sections colors */
+        .section_color_1{
+            border-color: var(--sectionColor_1);
+            color: var(--sectionColor_1);
             
         }
 
-        .checklistBackground{
-            background-color: var(--checklistColor);
+        .background_section_color_1{
+            background-color: var(--sectionColor_1);
         }
 
-        .checklistSectorTitle{
-            background-color: var(--checklistColor);
+        .section_color_2{
+            border-color: var(--sectionColor_2);
+            color: var(--sectionColor_2);
         }
 
-        /*extras*/
-        .extra{
-            border-color: var(--extraColor);
-            color: var(--extraColor);
-        }
-
-        .extraBackground{
-            background-color: var(--extraColor);
-        }
-
-        .extraSectorTitle{
-            background-color: var(--extraColor);
+        .background_section_color_2{
+            background-color: var(--sectionColor_2);
         }
 
     </style>
