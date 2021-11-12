@@ -24,32 +24,24 @@
                 <a href ="#home" class = "buttonAnchor checklist">Inicio</a>
             </div>
             <ul class="mainUl">
-               
-            
-    {{/item_sections}}
         <!--#region item subsections-->
-            {{#item_subsections}}
+            {{#each this.item_subsections}}
                 <div class="item_subsection">
                     <h3>{{this.dataValues.name}}</h3>
                     <div class="itemContent">
                         {{this.dataValues.description}}
                     </div>
-                </div>
-            {{/item_subsections}}
-        <!--#endregion-->
             <!--#region items-->
-                {{#items}}
-                    <a href=""><li class="itemList">{{this.dataValues.title}}</li></a>
-                    
-                {{/items}}
+                {{#each items}}
+                    <a href=""><li class="itemList"><h4>a{{this.dataValues.title}}</h4></li></a>
+                {{/each}}
             <!--#endregion-->
+
+                </div>
+            {{/each}}
+        <!--#endregion-->
+    {{/item_sections}}
         </ul>
     </section>
-</section>
-<!--#endregion-->
-
-<!--#region content-->
-<section id="content">
-
 </section>
 <!--#endregion-->

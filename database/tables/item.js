@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-
 const database = require('../db');
 const ItemSubsection = require("./item_subsection")
  
@@ -26,13 +25,6 @@ const Item = database.define('items', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    itemSubsectionId: {
-        type: Sequelize.INTEGER,
-        references: 'item_subsections',
-        referencesKey: 'id'
-    }
 })
-
-ItemSubsection.hasMany(Item)
  
 module.exports = Item;

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-
 const database = require('../db');
 const ItemSection = require("./item_section")
+const Item = require("./item")
  
 const ItemSubsection = database.define('item_subsections', {
     id: {
@@ -17,14 +17,15 @@ const ItemSubsection = database.define('item_subsections', {
     description: {
         type: Sequelize.STRING,
         allowNull: false
-    },
-    itemSectionId: {
-        type: Sequelize.INTEGER,
-        references: 'item_sections',
-        referencesKey: 'id'
     }
 })
 
-ItemSection.hasMany(ItemSubsection)
+ItemSection.hasMany(ItemSubsection, {constraint: true, foreingnKey: 'itemSectionId'})
+
+ItemSubsection.belongsTo(ItemSection, {constraint: true, foreingnKey: 'itemSectionId'})
+
+ItemSubsection.hasMany(Item, {constraint: true, foreingnKey: 'itemSubsectionId'})
+
+Item.belongsTo(ItemSubsection, {constraint: true, foreingnKey: 'itemSubsectionId'})
  
 module.exports = ItemSubsection;
