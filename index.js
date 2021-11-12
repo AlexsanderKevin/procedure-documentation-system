@@ -24,7 +24,9 @@ app.set('view engine', 'hbs')
 
 app.get("/", async (req, res) => {
     const departments = await Department.findAll() 
-    const item_sections = await ItemSection.findAll({include: ItemSubsection})
+    //const item_sections = await ItemSection.findAll({include: ItemSubsection})
+    const item_sections = await ItemSection.findAll({include: [{model:  ItemSubsection, required: true}, {model: Item, required: true}] })
+    
     const item_subsections = await ItemSubsection.findAll({include: Item})
     const items = await Item.findAll({include: ItemSubsection})
 
