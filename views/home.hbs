@@ -25,20 +25,22 @@
             </div>
             <ul class="mainUl">
         <!--#region item subsections-->
-            {{#each this.item_subsections}}
-                <div class="item_subsection">
-                    <h3>{{this.dataValues.name}}</h3>
-                    <div class="itemContent">
-                        {{this.dataValues.description}}
-                    </div>
+        {{#each this.item_subsections}}
+            <div class="item_subsection">
+                <h3>{{this.dataValues.name}}</h3>
+                <div class="itemContent">
+                    {{this.dataValues.description}}
+                </div>
             <!--#region items-->
+            <div class="item_subsection_content">
                 {{#each this.items}}
-                    <a href=""><li class="itemList"><h4>a{{this.dataValues.title}}</h4></li></a>
+                    <a href=""><li class="itemList"><h4>{{this.dataValues.title}}</h4></li></a>
                 {{/each}}
+            </div>
             <!--#endregion-->
 
-                </div>
-            {{/each}}
+            </div>
+        {{/each}}
         <!--#endregion-->
     {{/item_sections}}
         </ul>

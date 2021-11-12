@@ -33,6 +33,12 @@ module.exports = {
         description:'<p>Embora o <strong>sistema operacional</strong> represente uma parte extremamente relevante no funcionamento dos itens a seguir, é <strong>muito comum</strong> que <strong>defeitos</strong> encontrados durante esta seção de testes estejam atrelados <strong>diretamente</strong> ao <strong>hardware</strong>.</p>',
         itemSectionId: 1,
       },
+      {
+        id: 6,
+        name: 'Reparo/Troca de Placa-Mãe',
+        description:'<p>Em alguns casos é <strong>necessário</strong> que sejam realizados <strong>reparos</strong> ou até mesmo a <strong>troca</strong> da <strong>Placa-Mãe</strong> (também conhecida como Main-Board ou Mother-Board). Nestes casos é possível que algumas <strong>informações</strong> sejam <strong>apagadas da BIOS</strong> ou estejam <strong>incorretas</strong>.</p><p>Esta seção compila as instruções para, principalmente, <strong>regravar</strong> tais informações.</p>',
+        itemSectionId: 2,
+      },
     ], 
     {});
   },

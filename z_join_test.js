@@ -7,8 +7,15 @@
     //const item_subsections = await ItemSubsection.findAll({include: Item})
     //console.log(item_subsections[1].items[1].title)
 
-    const item_subsections = await ItemSubsection.findAll({include:ItemSection, include:Item})
+    const item_section = await ItemSection.findAll({
+        include: [{
+            model: ItemSubsection,
+            include: [{
+                model: Item,
+            }]
+        }]
+    })
 
-    console.log(item_secitons[0].item_subsections[0].name)
+    console.log(item_section[0].item_subsections[0].items[1])
 
 })();
