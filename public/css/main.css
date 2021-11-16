@@ -1,0 +1,94 @@
+
+:root{
+
+    /*
+    --mainColor: #FF6347;
+    --gradient_color_1: #fff;
+    --gradient_color_2: #eee;
+    --gradient_color_3: #ddd;
+    --gradient_color_4: #fff;
+    --contrast_color: #000;
+    */
+
+    --mainColor: #FF6347;
+    --gradient_color_1: #111;
+    --gradient_color_2: #222;
+    --gradient_color_3: #333;
+    --gradient_color_4: #444;
+    --gradient_color_5: #555;
+    --contrast_color: #ddd;
+    --min_contrast_color: #ccc;
+
+    --sectionColor_1: #6495ED;
+    --sectionColor_2: #ffbc04;
+
+    --errorColor: rgb(255, 121, 121);
+}
+
+
+body{
+    margin-left:0px;
+    background-color: var(--gradient_color_1);
+    font-family: Arial, sans-serif;
+    font-size: 14pt;
+}
+
+#content{
+    max-width: 100vw;
+    margin: auto;
+    background-color: var(--gradient_color_2);
+    padding: 25px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+section{
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+p{
+    text-align: justify;
+    color: var(--min_contrast_color);
+}
+strong{
+    color: var(--contrast_color)
+}
+
+h4, a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--contrast_color);
+}
+
+h3, h2, h1 {
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.mainUl{
+    list-style: none;
+    margin:0px; 
+    padding: 0px;
+    }
+
+.subUl{
+    list-style: disc;
+    padding: 15px;
+}
+
+.concept{
+    cursor: pointer;
+}
+
+.concept:hover{
+    color: #666;
+    text-decoration: underline;
+}

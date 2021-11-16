@@ -1,0 +1,58 @@
+<!--#region cabeçalho da pagina -->  
+<header class = "header">
+    <h1 id = "home" class="headerTitle">Guia de testes</h1>
+    
+    <nav id = "menu">
+        <ul >
+            {{#item_sections}}
+                <li><a class = "nav_anchor header_color" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
+            {{/item_sections}}
+            
+        </ul>
+    </nav>
+</header>
+<!--#endregion-->
+
+<!--#region content-->
+<section id="content">
+    <!--item sections-->
+    {{#item_sections}}
+        <section id='{{this.dataValues.name}}'>
+            <div class='section_title section_color_{{this.dataValues.id}}'>
+                <h2 >{{this.dataValues.name}}</h2>
+                <a href ="#home" class = "buttonAnchor section_color_{{this.dataValues.id}}">Inicio</a>
+            </div>
+            <ul class="mainUl">
+        <!--#region item subsections-->
+        {{#each this.item_subsections}}
+            <div class="item_subsection section_color_{{../dataValues.id}}">
+                <h3>{{this.dataValues.name}}</h3>
+                <div class="itemContent">
+                    {{{this.dataValues.description}}}
+                </div>
+            <!--#region items-->
+            <div class="item_subsection_content">
+                {{#each this.items}}
+                    {{#if dataValues.description}}
+                        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
+                            <li><h4>{{this.dataValues.title}}</h4></li>
+                        </a>
+                    {{else if dataValues.solutions}}
+                        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
+                            <li><h4>{{this.dataValues.title}}</h4></li>
+                        </a>
+                    {{else}}
+                        <li class=" emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
+                    {{/if}}
+                {{/each}}
+            </div>
+            <!--#endregion-->
+
+            </div>
+        {{/each}}
+        <!--#endregion-->
+    {{/item_sections}}
+        </ul>
+    </section>
+</section>
+<!--#endregion-->
