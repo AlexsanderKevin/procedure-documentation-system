@@ -55,6 +55,7 @@
     border-radius: 6px;
     border-width: 2px 2px 2px 9px;
     border-style: solid;
+    border-color: var(--gradient_color_5);
 
     width: 510px;
 
@@ -67,17 +68,7 @@
     color: var(--min_contrast_color);
 }
 
-.itemListPage{
-    background-color: var(--gradient_color_1);
-    padding: 15px; 
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border-width: 0px 0px 0px 6px;
-    border-style: solid; 
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.322);
-}
+
 
 h4{
     padding: 5px;
@@ -89,6 +80,10 @@ h4{
 
 h1, h2, h3, h4, h5{
     font-weight:bold;
+    color: var(--contrast_color);
+}
+
+hr{
     color: var(--contrast_color);
 }
 

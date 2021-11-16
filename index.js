@@ -14,17 +14,8 @@ app.engine('hbs', express_handlebars ({
 
 app.set('view engine', 'hbs')
 
-//app.get("/", async (req, res) => {
-//    const departments = await Department.findAll()
-
-//    res.render("home", { departments: departments.map((department) => {
-//        return department.dataValues
-//    }) })
-//})
-
 app.get("/", async (req, res) => {
     const departments = await Department.findAll() 
-    //const item_sections = await ItemSection.findAll({include: ItemSubsection})
     const item_sections = await ItemSection.findAll({
         include: [{
             model: ItemSubsection,
@@ -45,29 +36,16 @@ app.get("/", async (req, res) => {
     })
 })
 
-/*
-app.get("/procedure/:id", async (req, res) => {
-    const procedure_id = req.params.id
-    try{
-        const procedure = await Item.findById(procedure_id)
-
-        res.render('procedure', {procedure: procedure})
-    }catch(err){
-        console.error(err)
-        res.render("home")
-    }
-})
-*/
 
 app.get("/procedure/:id", async (req, res) => {
 const procedureId = req.params.id
 try{
-    const procedure = await Item.findById(procedureId)
+    const procedure = await Item.findByPk(procedureId)
 
     res.render("procedure", {procedure: procedure})
 }catch(err){
     console.error(err)
-    res.render("home")
+    res.render("error")
 }
 })
 

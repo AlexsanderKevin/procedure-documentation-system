@@ -9,14 +9,51 @@
     <div class = "itemListPage">
 
         <!--title-->
-        <div class = "itemHeader section_color_{{}}"> 
+        <div class = "itemHeader"> 
             <h1 class="itemTitle itemHeader ">{{procedure.dataValues.title}}</h1>
         </div>
+
         <!--item content-->
-        
-        <!--#endregion-->    
+        {{#if procedure.dataValues.description}}
+        <div class="item_content_page">
+            <h2>Descrição</h2>
+            <div class="item_content_text">
+                <hr>
+                {{{procedure.dataValues.description}}}
+            </div>
             
         </div>
+        {{/if}}
+
+        <!--item solution-->
+        {{#if procedure.dataValues.solutions}}
+        <div class="item_content_page">
+            <h2>Soluções</h2>
+            <div class="item_content_text">
+                <hr>
+                {{{procedure.dataValues.solutions}}}
+            </div>
+        </div>
+        {{/if}}
+
+        <!--item obs-->
+        {{#if procedure.dataValues.obs}}
+        <div class="item_content_page">
+            <h2>Obs</h2>
+            <hr>
+            {{{procedures.dataValues.obs}}}
+        </div>
+        {{/if}}
+
+        <!--item problems-->
+        {{#if procedure.dataValues.problems}}
+        <div class="item_content_page">
+            <h2>Possíveis Problemas</h2>
+            <hr>
+        </div>
+        {{/if}}
+
+
         <!--footer-->
         <footer>
             <a href="/" rel="prev" target="self">Voltar</a>

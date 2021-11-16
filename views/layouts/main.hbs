@@ -13,12 +13,46 @@
     <link  href="/css/main.css" rel="stylesheet">
     <link  href="/css/item.css" rel="stylesheet">
     <link  href="/css/header.css" rel="stylesheet">
+    <link  href="/css/item_page.css" rel="stylesheet">
+    <link  href="/css/modal.css" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
         {{{body}}}
     </div>
+
+    <!--#region alert modal-->
+    <div id="alertModal" class="modalContainer">
+        <div id="alertModalFrame" class="modalFrame">
+            <div id="alertModalHeader" class="modalHeader">
+                <h3 id="alertModalTitle" class="error">Alerta!</h3>
+                <button class="modalCloseButton">X</button>
+            </div>
+
+            <div id="alertModalContent" class="modalContent itemContent">
+                <p></p>
+            </div>
+
+        </div>
+    </div>
+<!--#endregion-->
+
+<!-- #region concept modal -->
+<div id="conceptModal" class="modalContainer ">
+    <div id="conceptModalFrame" class="modalFrame">
+        <div id="conceptModalHeader" class="modalHeader">
+            <h3 id="conceptModalTitle">modal</h3>
+            <button class="modalCloseButton">X</button>
+        </div>
+
+        <div id="conceptModalContent" class="modalContent itemContent">
+            <p></p>
+        </div>
+
+    </div>
+</div>
+<!--#endregion-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

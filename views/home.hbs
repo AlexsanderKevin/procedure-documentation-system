@@ -37,6 +37,10 @@
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
                             <li><h4>{{this.dataValues.title}}</h4></li>
                         </a>
+                    {{else if dataValues.solutions}}
+                        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
+                            <li><h4>{{this.dataValues.title}}</h4></li>
+                        </a>
                     {{else}}
                         <li class=" emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
                     {{/if}}
