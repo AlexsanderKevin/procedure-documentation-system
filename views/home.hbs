@@ -5,7 +5,7 @@
     <nav id = "menu">
         <ul >
             {{#item_sections}}
-                <li><a class = "buttonAnchor header_color" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
+                <li><a class = "nav_anchor header_color" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
             {{/item_sections}}
             
         </ul>
@@ -33,7 +33,13 @@
             <!--#region items-->
             <div class="item_subsection_content">
                 {{#each this.items}}
-                    <li class="itemList"><h4>{{this.dataValues.title}}</h4></li>
+                    {{#if dataValues.description}}
+                        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
+                            <li><h4>{{this.dataValues.title}}</h4></li>
+                        </a>
+                    {{else}}
+                        <li class=" emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
+                    {{/if}}
                 {{/each}}
             </div>
             <!--#endregion-->

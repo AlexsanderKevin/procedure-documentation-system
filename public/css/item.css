@@ -1,39 +1,37 @@
-/* estilo do itens */
-section{
+ /* estilo do itens */
+ section{
     padding-top: 20px;
 }
 
-.itemSection{
+.item_subsection{
     margin-top: 80px;
     padding-top: 20px;
 
     border-width: 3px 0px 0px 0px;
     border-style: solid;
 
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
-.itemSectionContent{
+.item_subsection_content{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .itemList{
-    background-color: #fff;
+    background-color: var(--gradient_color_4);
 
-    padding: 10px;
+    padding: 5px;
 
     margin: 10px;
 
     border-radius: 6px;
-    border-width: 0px 0px 0px 8px;
-    border-style: solid; 
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.568);
+    border-width: 2px 2px 2px 9px;
+    border-style: solid;
 
-    width: 550px;
+    width: 510px;
 
     display: flex;
     align-content: center;
@@ -43,28 +41,34 @@ section{
 .itemList:hover{
     border-width: 3px 50px 3px 50px;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
-    transition: .2s;  
+    transition: .3s;  
 }
 
 .emptyItemList{
 
-    background-color: #eee;
+    background-color: var(--gradient_color_2);
+
+    padding: 5px;
+
+    margin: 10px;
 
     border-radius: 6px;
-    border-width: 1px 1px 1px 8px;
-    border-style: solid; 
-    box-shadow: 0 0 0;
+    border-width: 2px 2px 2px 9px;
+    border-style: solid;
+
+    width: 510px;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
-.emptyItemList:hover{
-    border-radius: 6px;
-    border-width: 1px 1px 1px 8px;
-    border-style: solid; 
-    box-shadow: 0 0 0;
+.emptyItemList h4{
+    color: var(--min_contrast_color);
 }
 
 .itemListPage{
-    background-color: #fff;
+    background-color: var(--gradient_color_1);
     padding: 15px; 
     padding-bottom: 10px;
     margin-top: 20px;
@@ -85,6 +89,7 @@ h4{
 
 h1, h2, h3, h4, h5{
     font-weight:bold;
+    color: var(--contrast_color);
 }
 
 .itemTitle{
@@ -105,7 +110,7 @@ h1, h2, h3, h4, h5{
     border-width: 1px 1px 1px 1px;
     border-style: solid;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: var(--gradient_color_2);
     margin: 10px;
 }
 
@@ -116,46 +121,39 @@ h1, h2, h3, h4, h5{
     border-width: 1px 1px 1px 1px;
     border-style: solid;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: var(--gradient_color_1);
     margin: 10px;
 }
 
-.sectorTitle{
+.section_title{
     color: #fff;
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 6px;
+    border-radius: 15px;
+    border: solid 4px;
 
     display: flex;
     justify-content: space-between;
+    background-color: var(--gradient_color_1);
 }
 
-/* checklist */
-.checklist{
-    border-color: var(--checklistColor);
-    color: var(--checklistColor);
+/* sections colors */
+.section_color_1{
+    border-color: var(--sectionColor_1);
+    color: var(--sectionColor_1);
     
 }
 
-.checklistBackground{
-    background-color: var(--checklistColor);
+.background_section_color_1{
+    background-color: var(--sectionColor_1);
 }
 
-.checklistSectorTitle{
-    background-color: var(--checklistColor);
+.section_color_2{
+    border-color: var(--sectionColor_2);
+    color: var(--sectionColor_2);
 }
 
-/*extras*/
-.extra{
-    border-color: var(--extraColor);
-    color: var(--extraColor);
-}
-
-.extraBackground{
-    background-color: var(--extraColor);
-}
-
-.extraSectorTitle{
-    background-color: var(--extraColor);
+.background_section_color_2{
+    background-color: var(--sectionColor_2);
 }

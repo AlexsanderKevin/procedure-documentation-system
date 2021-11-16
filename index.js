@@ -45,13 +45,34 @@ app.get("/", async (req, res) => {
     })
 })
 
-app.get("/departments", async (req, res) => {
-    const departments = await Department.findAll() 
+/*
+app.get("/procedure/:id", async (req, res) => {
+    const procedure_id = req.params.id
+    try{
+        const procedure = await Item.findById(procedure_id)
 
-    res.render("departments", { departments: departments.map((department) => {
-        return department.dataValues
-    }) })
+        res.render('procedure', {procedure: procedure})
+    }catch(err){
+        console.error(err)
+        res.render("home")
+    }
 })
+*/
+
+app.get("/procedure/:id", async (req, res) => {
+const procedureId = req.params.id
+try{
+    const procedure = await Item.findById(procedureId)
+
+    res.render("procedure", {procedure: procedure})
+}catch(err){
+    console.error(err)
+    res.render("home")
+}
+})
+
+// pegando links externos da pasta public
+app.use(express.static(__dirname + "/public"))
 
 app.listen(3000, () => {
     console.log("server running...")

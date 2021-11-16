@@ -15,15 +15,15 @@ const Item = database.define('items', {
     },
     description: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     solutions: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     obs: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
 })
  
