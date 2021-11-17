@@ -1,25 +1,5 @@
- /* estilo do itens */
- section{
-    padding-top: 20px;
-}
 
-.item_subsection{
-    margin-top: 80px;
-    padding-top: 20px;
-
-    border-width: 3px 0px 0px 0px;
-    border-style: solid;
-
-    justify-content: center;
-}
-
-.item_subsection_content{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
+/*item list*/
 .itemList{
     background-color: var(--gradient_color_4);
 
@@ -27,11 +7,10 @@
 
     margin: 10px;
 
-    border-radius: 6px;
-    border-width: 2px 2px 2px 9px;
+    border-width: 0 0 0 9px;
     border-style: solid;
 
-    width: 510px;
+    width: 450px;
 
     display: flex;
     align-content: center;
@@ -52,12 +31,11 @@
 
     margin: 10px;
 
-    border-radius: 6px;
-    border-width: 2px 2px 2px 9px;
+    border-width: 1px 1px 1px 9px;
     border-style: solid;
     border-color: var(--gradient_color_5);
 
-    width: 510px;
+    width: 450px;
 
     display: flex;
     align-content: center;
@@ -68,25 +46,10 @@
     color: var(--min_contrast_color);
 }
 
-
-
 h4{
     padding: 5px;
 }
 
-.subsection_title{
-    font-size:25pt;
-    letter-spacing: 3px;
-    position: relative;
-}
-
-.subsection_title a{
-    font-size: 15pt;
-    position: absolute;
-    top: 0;
-    right: 0;
-    letter-spacing: 1px;
-}
 
 h1, h2, h3, h4, h5{
     font-weight:bold;
@@ -130,36 +93,4 @@ hr{
     margin: 10px;
 }
 
-.section_title{
-    color: var(--contrast_color);
-    padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    border: solid 4px;
-    letter-spacing: 3px;
 
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--gradient_color_1);
-}
-
-/* sections colors */
-.section_color_1{
-    border-color: var(--sectionColor_1);
-    color: var(--sectionColor_1);
-    
-}
-
-.background_section_color_1{
-    background-color: var(--sectionColor_1);
-}
-
-.section_color_2{
-    border-color: var(--sectionColor_2);
-    color: var(--sectionColor_2);
-}
-
-.background_section_color_2{
-    background-color: var(--sectionColor_2);
-}

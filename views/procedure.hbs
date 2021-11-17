@@ -10,15 +10,23 @@
 
         <!--title-->
         <div class = "itemHeader"> 
-            <h1 class="itemTitle itemHeader ">{{procedure.dataValues.title}}</h1>
+            <h1 class="itemTitle  ">{{procedure.dataValues.title}}</h1>
         </div>
 
         <!--item content-->
         {{#if procedure.dataValues.description}}
         <div class="item_content_page">
-            <h2>Descrição</h2>
+            <div class="item_content_header">
+                <h2>Descrição</h2>
+
+                <div class="page_content_burger" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+              </div>
+            </div>
+
             <div class="item_content_text">
-                <hr>
                 {{{procedure.dataValues.description}}}
             </div>
             
@@ -28,9 +36,16 @@
         <!--item solution-->
         {{#if procedure.dataValues.solutions}}
         <div class="item_content_page">
-            <h2>Soluções</h2>
+            <div class="item_content_header">                
+                <h2>Soluções</h2>
+
+                <div class="page_content_burger" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+              </div>
+            </div>
             <div class="item_content_text">
-                <hr>
                 {{{procedure.dataValues.solutions}}}
             </div>
         </div>
@@ -39,8 +54,15 @@
         <!--item obs-->
         {{#if procedure.dataValues.obs}}
         <div class="item_content_page">
-            <h2>Obs</h2>
-            <hr>
+            <div class="item_content_header">                
+                <h2>Obs</h2>
+
+                <div class="page_content_burger" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+              </div>
+            </div>
             {{{procedures.dataValues.obs}}}
         </div>
         {{/if}}
@@ -48,8 +70,15 @@
         <!--item problems-->
         {{#if procedure.dataValues.problems}}
         <div class="item_content_page">
-            <h2>Possíveis Problemas</h2>
-            <hr>
+            <div class="item_content_header">
+                <h2>Possíveis Problemas</h2>
+
+                <div class="page_content_burger" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+              </div>
+            </div>
         </div>
         {{/if}}
 

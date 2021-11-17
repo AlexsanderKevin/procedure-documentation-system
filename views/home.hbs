@@ -15,7 +15,7 @@
             {{/item_sections}}
         </ul>
 
-        <div class="burger" >
+        <div id="nav_burger" class="burger" >
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -27,35 +27,52 @@
 
 </header>
 <!--#endregion-->
+
 <!--#region content-->
 <section id="content">
-    <!--item sections-->
+    <!--#region item sections-->
     {{#item_sections}}
-        <section id='{{this.dataValues.name}}'>
-            <div class='section_title section_color_{{this.dataValues.id}}'>
-                <h2 >{{this.dataValues.name}}</h2>
-                
-            </div>
-            <ul class="mainUl">
+    <section class="item_section" id='{{this.dataValues.name}}'>
+        <div class='section_title section_color_{{this.dataValues.id}}'>
+            <h2 class="section_color_{{this.dataValues.id}}">{{this.dataValues.name}}</h2>
+        </div>
+        <div class="section_content">
+
+        
         <!--#region item subsections-->
         {{#each this.item_subsections}}
+        <div>
+
             <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.id}}">
                 <div class="subsection_title">
-                    <h3>{{this.dataValues.name}}</h3>
+                    <button class="subsection_about_button section_color_{{../dataValues.id}}">
+                        ?
+                    </button>
+                    <h3 class="section_color_{{../dataValues.id}}">{{this.dataValues.name}}</h3>
 
+                    <div class="subsection_burger" >
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    
+                    <!--
                     <a href ="#home" class = "buttonAnchor section_color_{{../dataValues.id}}">Inicio</a>
+                    -->
                 </div>
                 
 
-                <div class="itemContent">
+                <div class="subsection_description">
                     {{{this.dataValues.description}}}
                 </div>
+
             <!--#region items-->
-            <div class="item_subsection_content">
+            <ul class="mainUl">
+                <div class="item_subsection_content">
                 {{#each this.items}}
                     {{#if dataValues.description}}
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
-                            <li><h4>{{this.dataValues.title}}</h4></li>
+                            <li><h4 >{{this.dataValues.title}}</h4></li>
                         </a>
                     {{else if dataValues.solutions}}
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
@@ -65,14 +82,17 @@
                         <li class=" emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
                     {{/if}}
                 {{/each}}
-            </div>
+                </div>
+            </ul>
             <!--#endregion-->
 
             </div>
+        </div>
         {{/each}}
         <!--#endregion-->
-    {{/item_sections}}
-        </ul>
+        </div>
     </section>
+    {{/item_sections}}
+    <!--#endregion-->
 </section>
 <!--#endregion-->

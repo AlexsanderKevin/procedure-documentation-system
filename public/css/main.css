@@ -40,15 +40,11 @@ body{
 }
 
 #content{
-    max-width: 100vw;
-    margin: auto;
-    background-color: var(--gradient_color_2);
-    padding: 25px;
-    border-radius: 20px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 

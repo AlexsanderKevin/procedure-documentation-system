@@ -1,0 +1,85 @@
+/*item subsection*/
+.item_subsection{
+    background-color: var(--gradient_color_2);
+    margin: 10px;
+    padding: 20px;
+    width: 590px;
+
+    justify-content: center;
+
+    border: solid;
+    border-width: 0 0 3px 0;
+}
+
+.item_subsection_content{
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    border: solid;
+    border-width: 3px 0 0 0;
+
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.subsection_title{
+    font-size:25pt;
+    letter-spacing: 2px;
+
+    display: flex; 
+    justify-content: space-between;
+}
+
+.subsection_title a{
+    font-size: 15pt;
+    position: absolute;
+    top: 0;
+    right: 0;
+    letter-spacing: 1px;
+}
+
+.subsection_description{
+    padding: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    background-color: var(--gradient_color_2);
+    margin: 10px;
+
+    display: none;
+}
+
+.show_items{
+    display: flex;
+}
+
+.subsection_burger{
+    cursor: pointer;
+}
+
+.subsection_burger div{
+    width: 25px;
+    height: 3px;
+    background-color: var(--min_contrast_color);
+    margin: 5px;
+}
+
+.subsection_about_button{
+    background-color: rgba(0, 0, 0, 0);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--contrast_color);
+    border: solid 2px var(--contrast_color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
