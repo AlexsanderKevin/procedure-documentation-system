@@ -15,11 +15,12 @@
     display: flex;
     align-content: center;
     justify-content: center;
+
+    box-shadow: 2px 2px 7px black;
 }
 
 .itemList:hover{
     border-width: 3px 50px 3px 50px;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.801);
     transition: .3s;  
 }
 

@@ -9,6 +9,8 @@
 
     border: solid;
     border-width: 0 0 3px 0;
+
+    box-shadow: 2px 2px 7px black;
 }
 
 .item_subsection_content{

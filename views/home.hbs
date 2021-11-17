@@ -4,18 +4,18 @@
         <ul class="nav_links">
             {{#item_sections}}
                 <li>
-                    <h1 class="section_links">{{this.dataValues.name}}</h1>
+                    <h1 class="section_links all_button">{{this.dataValues.name}}</h1>
 
                     <div class="subsection_links while_hidden">
                         {{#each this.dataValues.item_subsections}}
-                        <a class = "" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                        <a class = "all_button" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
                         {{/each}}
                     </div>
                 </li>
             {{/item_sections}}
         </ul>
 
-        <div id="nav_burger" class="burger" >
+        <div id="nav_burger" class="burger all_button" >
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -48,9 +48,9 @@
                     <button class="subsection_about_button section_color_{{../dataValues.id}}">
                         ?
                     </button>
-                    <h3 class="section_color_{{../dataValues.id}}">{{this.dataValues.name}}</h3>
+                    <h3 class="subsection_name section_color_{{../dataValues.id}}">{{this.dataValues.name}}</h3>
 
-                    <div class="subsection_burger" >
+                    <div class="subsection_burger all_button" >
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="line3"></div>
@@ -95,4 +95,18 @@
     {{/item_sections}}
     <!--#endregion-->
 </section>
+<!--#endregion-->
+
+<!-- #region concept modal -->
+<div id="modal" class="modalContainer ">
+    <div id="conceptModalFrame" class="modalFrame">
+        <div class="modalHeader">
+            <h3 class="modal_title">modal</h3>
+            <button class="modalCloseButton all_button">X</button>
+        </div>
+
+        <div class="modalContent itemContent"></div>
+
+    </div>
+</div>
 <!--#endregion-->

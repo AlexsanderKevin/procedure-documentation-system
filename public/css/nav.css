@@ -6,7 +6,7 @@ nav {
 .nav_links{
     position: absolute;
     left: 0vh;
-    top: 40px;
+    top: 65px;
     padding: 30px;
     padding-bottom: 20px;
     background-color: var(--mainColor);
@@ -16,8 +16,10 @@ nav {
     justify-content: space-around;
     align-items: center;
 
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     transition: transform 0.1s ease-in;
+
+    box-shadow: 4px 4px 4px black;
 }
 
 

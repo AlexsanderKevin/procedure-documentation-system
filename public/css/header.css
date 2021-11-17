@@ -11,6 +11,8 @@
     width: 100vw;
     top: 0;
     left: 0;
+
+    box-shadow: 2px 2px 7px black;
 }
 
 .headerTitle{

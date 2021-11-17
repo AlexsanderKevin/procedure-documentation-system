@@ -94,3 +94,9 @@ ul{
     color: #666;
     text-decoration: underline;
 }
+
+.all_button:hover{
+    opacity: 0.5;
+    transition: 0.1s;
+    color: var(--contrast_color);
+}
