@@ -1,3 +1,8 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
 :root{
 
@@ -10,7 +15,7 @@
     --contrast_color: #000;
     */
 
-    --mainColor: #FF6347;
+    --mainColor: #b3283a;
     --gradient_color_1: #111;
     --gradient_color_2: #222;
     --gradient_color_3: #333;
@@ -27,6 +32,7 @@
 
 
 body{
+    padding-top: 50px;
     margin-left:0px;
     background-color: var(--gradient_color_1);
     font-family: Arial, sans-serif;

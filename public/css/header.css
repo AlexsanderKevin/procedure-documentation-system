@@ -1,18 +1,22 @@
 /* cabeçalho */
 .header{
-    background-color: var(--gradient_color_1);
     color: var(--gradient_color_1);
     margin-top:0;
-    padding-top: 30px;
+    margin-bottom: 40px;
+    padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 1px;
+    background-color: var(--mainColor);
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
 }
 
 .headerTitle{
-    color: var(--mainColor);
-    border: solid;
-    border-width:  0px 0px 3px 0px;
+    color: var(--contrast_color);
 }
+/**
 nav li, nav a{
     display: inline-block;
     padding-right: 10px;

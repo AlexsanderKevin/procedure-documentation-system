@@ -17,7 +17,7 @@
 .modalFrame{
     width: 60vw;
     min-width: 400px;
-    background-color: #fff;
+    background-color: var(--gradient_color_2);
     padding: 20px;
     border-radius: 10px;
 }
@@ -38,14 +38,14 @@
     padding: 5px;
     width: 40px;
     height: 40px;
-    background-color: white;
+    background-color: var(--gradient_color_2);
 
     border-width: 0;
 
     font-weight: bold;
     font-size: 20pt;
     font-family: monospace;
-    color: #000;
+    color: var(--contrast_color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +53,7 @@
 }
 .modalCloseButton:hover{
     background-color: var(--errorColor);
-    color: white;
+    color: var(--gradient_color_2);
     transition: .2s;
   
 }
@@ -64,4 +64,9 @@
 
 .error{
     color: var(--errorColor); 
+}
+
+.modalContent{
+    border: solid 1px;
+    border-color: var(--contrast_color);
 }

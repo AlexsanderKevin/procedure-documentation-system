@@ -1,18 +1,32 @@
 <!--#region cabeçalho da pagina -->  
 <header class = "header">
+    <nav id = "menu">
+        <ul class="nav_links">
+            {{#item_sections}}
+                <li>
+                    <h1 class="section_links">{{this.dataValues.name}}</h1>
+
+                    <div class="subsection_links while_hidden">
+                        {{#each this.dataValues.item_subsections}}
+                        <a class = "" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                        {{/each}}
+                    </div>
+                </li>
+            {{/item_sections}}
+        </ul>
+
+        <div class="burger" >
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
     <h1 id = "home" class="headerTitle">Guia de testes</h1>
     
-    <nav id = "menu">
-        <ul >
-            {{#item_sections}}
-                <li><a class = "nav_anchor header_color" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a></li>
-            {{/item_sections}}
-            
-        </ul>
-    </nav>
+
 </header>
 <!--#endregion-->
-
 <!--#region content-->
 <section id="content">
     <!--item sections-->
@@ -20,13 +34,19 @@
         <section id='{{this.dataValues.name}}'>
             <div class='section_title section_color_{{this.dataValues.id}}'>
                 <h2 >{{this.dataValues.name}}</h2>
-                <a href ="#home" class = "buttonAnchor section_color_{{this.dataValues.id}}">Inicio</a>
+                
             </div>
             <ul class="mainUl">
         <!--#region item subsections-->
         {{#each this.item_subsections}}
-            <div class="item_subsection section_color_{{../dataValues.id}}">
-                <h3>{{this.dataValues.name}}</h3>
+            <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.id}}">
+                <div class="subsection_title">
+                    <h3>{{this.dataValues.name}}</h3>
+
+                    <a href ="#home" class = "buttonAnchor section_color_{{../dataValues.id}}">Inicio</a>
+                </div>
+                
+
                 <div class="itemContent">
                     {{{this.dataValues.description}}}
                 </div>

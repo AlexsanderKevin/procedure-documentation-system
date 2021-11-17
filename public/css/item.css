@@ -74,8 +74,18 @@ h4{
     padding: 5px;
 }
 
-.sectionTitle{
+.subsection_title{
     font-size:25pt;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.subsection_title a{
+    font-size: 15pt;
+    position: absolute;
+    top: 0;
+    right: 0;
+    letter-spacing: 1px;
 }
 
 h1, h2, h3, h4, h5{
@@ -121,12 +131,13 @@ hr{
 }
 
 .section_title{
-    color: #fff;
+    color: var(--contrast_color);
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
     border: solid 4px;
+    letter-spacing: 3px;
 
     display: flex;
     justify-content: space-between;
