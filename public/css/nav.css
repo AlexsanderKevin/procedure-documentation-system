@@ -1,14 +1,23 @@
 nav {
     display: flex;
-    justify-content: left;
+    justify-content: center;
+
+    background-color: var(--mainColor);
+
+    position: fixed;
+    left: 0vw;
+    top: -15px;
+
 }
 
 .nav_links{
     position: absolute;
     left: 0vh;
-    top: 65px;
+    top: 15px;
+
     padding: 30px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     background-color: var(--mainColor);
 
     display: flex;
@@ -17,9 +26,7 @@ nav {
     align-items: center;
 
     transform: translateX(-110%);
-    transition: transform 0.1s ease-in;
-
-    box-shadow: 4px 4px 4px black;
+    transition: transform 0.2s ease-in;
 }
 
 
@@ -27,11 +34,27 @@ nav {
     letter-spacing: 3px;
 }
 
+.burger{
+    background-color: var(--mainColor);
+
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    z-index: 2;
+}
+
 .burger div{
     width: 25px;
     height: 3px;
     background-color: var(--contrast_color);
-    margin: 5px;
+    margin: 2px;
 }
 .burger{
     position: absolute;
@@ -51,21 +74,23 @@ nav {
 .subsection_links{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding-top: 15px;
     padding-bottom: 33px;
-    width: 100%;
+    width: 360px;
     
     border: solid 2px var(--contrast_color);
     border-width: 1px 0 0 0;
     
     transform: translateX(-150%);
-    transition: transform 0.2s ease-in;
+    transition: transform 0.3s ease-in;
     /*
     */
 }
 
 .while_hidden{
+    transition: 0s;
     position: absolute;
 }
 

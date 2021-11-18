@@ -8,7 +8,7 @@
 
                     <div class="subsection_links while_hidden">
                         {{#each this.dataValues.item_subsections}}
-                        <a class = "all_button" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                        <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
                         {{/each}}
                     </div>
                 </li>
@@ -23,9 +23,11 @@
     </nav>
     
     <h1 id = "home" class="headerTitle">Guia de testes</h1>
-    
-
 </header>
+
+<a href="#home" class="home_button all_button">
+    Inicio 
+</a>
 <!--#endregion-->
 
 <!--#region content-->

@@ -4,7 +4,7 @@
     border-width: 0 0 3px 0;
     padding: 15px;
     margin-bottom: 25px;
-    width: 100%;
+    width: 90vw;
     position: relative;
 }
 
@@ -31,6 +31,8 @@
     border-style: solid;
     background-color: var(--gradient_color_2);
     margin: 25px;
+
+    animation: open_section 0.5s;
 }
 
 .item_content_text{
@@ -63,4 +65,14 @@
 
 .show_text{
     display: flex;
+    animation: open_section 0.5s;
+}
+
+@keyframes open_section {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }

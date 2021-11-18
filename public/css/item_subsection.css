@@ -16,10 +16,10 @@
 .item_subsection_content{
     display: none;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    height: 100%;
+
+    max-height: 300px;
+    overflow-y: scroll;
 
     border: solid;
     border-width: 3px 0 0 0;
@@ -58,6 +58,7 @@
 
 .show_items{
     display: flex;
+    animation: open_content 0.3s ease-in-out;
 }
 
 .subsection_burger{
@@ -84,4 +85,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes open_content {
+    from{
+        /*
+        height: 0px;
+        */
+        transform: translateX(-50%);
+        
+    }
+    to{
+        /*
+        height: 300px;
+        */
+        transform: translateX(0%);
+    }
 }

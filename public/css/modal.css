@@ -21,6 +21,8 @@
     padding: 20px;
 
     box-shadow: 3px 3px 8px black;
+
+    animation: open_modal 0.5s;
 }
 
 .modalHeader{
@@ -65,4 +67,13 @@
 .modalContent{
     color: var(--contrast_color);
     border-width: 0 0 0 0 ;
+}
+
+@keyframes open_modal {
+    from{
+        transform: translateX(-50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
 }
