@@ -20,7 +20,7 @@
 }
 
 .itemList:hover{
-    border-width: 3px 50px 3px 50px;
+    border-width: 0 50px 0 50px;
     transition: .3s;  
 }
 

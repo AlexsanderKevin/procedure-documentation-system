@@ -1,0 +1,12 @@
+<section class="content">
+    <header class="department_header">
+        <h1>Selecione um departamento</h1>
+    </header>
+    <div class="department_list">
+        {{#each departments}}
+            <a href="/home/{{this.dataValues.id}}" class="department_item">
+                {{this.dataValues.name}}
+            </a>
+        {{/each}}
+    </div>
+</section>

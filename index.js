@@ -36,6 +36,14 @@ app.get("/", async (req, res) => {
     })
 })
 
+app.get("/departments", async (req, res) => {
+    const departments = await Department.findAll()
+
+    res.render("departments",{
+        departments: departments,
+    })
+})
+
 
 app.get("/procedure/:id", async (req, res) => {
 const procedureId = req.params.id
