@@ -7,6 +7,9 @@ const ItemSubsection = require("./database/tables/item_subsection")
 const Item = require("./database/tables/item")
 //item content
 const ItemSolution = require("./database/tables/item_solution")
+const ItemObs = require("./database/tables/item_obs")
+const ItemIssue = require("./database/tables/item_issues")
+const Comment = require("./database/tables/comment")
 
 
 const app = express()
@@ -83,10 +86,22 @@ app.get("/procedure/:id", async (req, res) => {
         const item_solutions = await ItemSolution.findAll({
             where: {itemId: procedureId}
         })
+        const item_obs = await ItemObs.findAll({
+            where: {itemId: procedureId}
+        })
+        const item_issues = await ItemIssue.findAll({
+            where: {itemId: procedureId}
+        })
+        const comments = await Comment.findAll({
+            where: {itemId: procedureId}
+        })
 
         res.render("procedure", {
             procedure: procedure,
             item_solutions: item_solutions,
+            item_obs: item_obs,
+            item_issues: item_issues,
+            comments: comments,
         })
     }catch(err){
         console.error(err)

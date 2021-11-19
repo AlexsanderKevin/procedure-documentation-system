@@ -7,18 +7,49 @@
 <!--#region content-->
 <section id="content">
     
-    <!--title-->
-    <header class = "itemHeader"> 
-        <h1 class="itemTitle  ">{{procedure.dataValues.title}}</h1>
+    <!--#region header-->
+    <header class = "header">
+    <nav id = "menu" class="section_nav procedure_nav">
+        <div class="nav_links">
+            <a class="all_button procedure_nav_anchor" href="#description">Descrição</a>
+            <a class="all_button procedure_nav_anchor" href="#solutions">Soluções</a>
+            <a class="all_button procedure_nav_anchor" href="#obs">Observações</a>
+            <a class="all_button procedure_nav_anchor" href="#issues">Possíveis Problemas</a>
+            <a class="all_button procedure_nav_anchor" href="#comments">Comentários</a>
+        </div>
+
+        <div id="nav_burger" class="burger all_button" >
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </nav>
+    
+
+    <nav class="settings_nav">
+        <img class="settings_button all_button " src="/img/icon/settings.png" alt="Opções">
+
+        <div class="settings_links_container">
+            <a class="all_button settings_anchor" href="/">Departamentos</a>
+        </div>
+    </nav>
+    
+    <h1 id = "home" class="headerTitle">
+        {{procedure.dataValues.title}}
+    </h1>
     </header>
-    <div class = "itemListPage">
 
+    <a href="#home" class="home_button all_button">
+        Inicio 
+    </a>
+    <!--#endregion-->
 
-        <!--item content-->
+        <!--#region item description-->
         {{#if procedure.dataValues.description}}
         <div class="item_content_container">
             <div class="item_content_header">
-                <h2>Descrição</h2>
+                <h2 id="description">Descrição</h2>
 
                 <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
@@ -33,12 +64,13 @@
             
         </div>
         {{/if}}
+        <!--#endregion-->
 
-        <!--item solution-->
+        <!--#region item solution-->
         {{#if item_solutions}}
         <div class="item_content_container">
             <div class="item_content_header">                
-                <h2>Soluções</h2>
+                <h2 id="solutions">Soluções</h2>
                 <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -60,7 +92,7 @@
                 </div>
                 
                 <div class="content_text">
-                    {{{this.dataValues.content}}}
+                    <p>{{{this.dataValues.content}}}</p>
                 </div>
             </div> 
             </div>
@@ -68,12 +100,13 @@
             </div>
         </div>
         {{/if}}
+        <!--#endregion-->
 
-        <!--item obs-->
+        <!--#region item obs-->
         {{#if item_obs}}
         <div class="item_content_container">
             <div class="item_content_header">                
-                <h2>Observações</h2>
+                <h2 id="obs">Observações</h2>
                 <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
                     <div class="line2"></div>
@@ -95,7 +128,7 @@
                 </div>
                 
                 <div class="content_text">
-                    {{{this.dataValues.content}}}
+                    <p>{{{this.dataValues.content}}}</p>
                 </div>
             </div> 
             </div>
@@ -103,22 +136,79 @@
             </div>
         </div>
         {{/if}}
+        <!--#endregion-->
 
-        <!--item problems-->
-        {{#if procedure.dataValues.problems}}
-        <div class="item_content_page">
-            <div class="item_content_header">
-                <h2>Possíveis Problemas</h2>
-
-                <div class="page_content_burger all_button">
+        <!--#region item issues-->
+        {{#if item_issues}}
+        <div class="item_content_container">
+            <div class="item_content_header">                
+                <h2 id="issues">Possíveis Problemas</h2>
+                <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
-              </div>
+                </div>
+            </div>
+            <div class="item_content_text">
+            {{#each item_issues}}
+            <div>
+            <div class="single_container">
+                <div class="content_header">
+                    <h3 class="content_title">{{this.dataValues.title}}</h3>
+
+                    <div class="single_content_burger content_burger all_button" >
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+                
+                <div class="content_text">
+                    <p>{{{this.dataValues.content}}}</p>
+                </div>
+            </div> 
+            </div>
+            {{/each}}
             </div>
         </div>
         {{/if}}
+        <!--#endregion-->
 
+        <!--#region comments-->
+        {{#if comments}}
+        <div class="item_content_container">
+            <div class="item_content_header">                
+                <h2 id="comments">Comentários</h2>
+                <div class="page_content_burger content_burger all_button" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <div class="item_content_text">
+            {{#each comments}}
+            <div>
+            <div class="single_container">
+                <div class="content_header">
+                    <h3 class="content_title">{{this.dataValues.title}}</h3>
+
+                    <div class="single_content_burger content_burger all_button" >
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+                
+                <div class="content_text">
+                    <p>{{{this.dataValues.content}}}</p>
+                </div>
+            </div> 
+            </div>
+            {{/each}}
+            </div>
+        </div>
+        {{/if}}
+        <!--#endregion-->
 
         <!--footer-->
         <footer style="display: none;">
