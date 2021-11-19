@@ -4,7 +4,7 @@
     </header>
     <div class="department_list">
         {{#each departments}}
-            <a href="/home/{{this.dataValues.id}}" class="department_item">
+            <a href="/home/{{this.dataValues.id}}" class="department_item section_color_{{this.dataValues.id}}">
                 {{this.dataValues.name}}
             </a>
         {{/each}}

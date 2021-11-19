@@ -11,6 +11,8 @@
     border-width: 0 0 3px 0;
 
     box-shadow: 2px 2px 7px black;
+
+    animation: open_content 0.3s;
 }
 
 .item_subsection_content{

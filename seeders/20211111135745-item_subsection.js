@@ -57,6 +57,30 @@ module.exports = {
         description:'<p>Os procedimentos a seguir são <strong>singulares</strong>. Talvez isso aconteça por serem muito <strong>específicos</strong> ou por resolverem um problema do inicio ao fim. Sendo assim, o fato de não estarem contidos em  outras seções <strong>não</strong>  os tornam menos relevantes.</p>',
         itemSectionId: 2,
       },
+      {
+        id: 10,
+        name: 'subseção de análise 1',
+        description:'descrição da subseção 1 de análise',
+        itemSectionId: 3,
+      },
+      {
+        id: 11,
+        name: 'subseção de análise 2',
+        description:'descrição da subseção 2 de análise',
+        itemSectionId: 3,
+      },
+      {
+        id: 12,
+        name: 'subseção de análise 3',
+        description:'descrição da subseção 3 de análise',
+        itemSectionId: 4,
+      },
+      {
+        id: 13,
+        name: 'subseção de embalagem 1',
+        description:'descrição da subseção 2 de análise',
+        itemSectionId: 5,
+      },
     ], 
     {});
   },

@@ -14,7 +14,7 @@ app.engine('hbs', express_handlebars ({
 
 app.set('view engine', 'hbs')
 
-app.get("/", async (req, res) => {
+app.get("/home", async (req, res) => {
     const departments = await Department.findAll() 
     const item_sections = await ItemSection.findAll({
         include: [{
@@ -36,7 +36,8 @@ app.get("/", async (req, res) => {
     })
 })
 
-app.get("/departments", async (req, res) => {
+// rota padrão
+app.get("/", async (req, res) => {
     const departments = await Department.findAll()
 
     res.render("departments",{
@@ -44,17 +45,42 @@ app.get("/departments", async (req, res) => {
     })
 })
 
+// home dinamica (rota)
+app.get("/home/:id", async (req, res) => {
+    const departmentId = req.params.id
 
+    try{
+        const item_sections = await ItemSection.findAll({
+            where: {departmentId: departmentId},
+            include: [{
+                model: ItemSubsection,
+                include: [{
+                    model: Item,
+                }]
+            }] 
+        })
+
+        res.render('home', {
+            item_sections: item_sections
+        })
+    }catch(err){
+        console.log(err)
+        res.render('error')
+    }
+})
+
+
+// página do procedimento (rota)
 app.get("/procedure/:id", async (req, res) => {
-const procedureId = req.params.id
-try{
-    const procedure = await Item.findByPk(procedureId)
+    const procedureId = req.params.id
+    try{
+        const procedure = await Item.findByPk(procedureId)
 
-    res.render("procedure", {procedure: procedure})
-}catch(err){
-    console.error(err)
-    res.render("error")
-}
+        res.render("procedure", {procedure: procedure})
+    }catch(err){
+        console.error(err)
+        res.render("error")
+    }
 })
 
 // pegando links externos da pasta public

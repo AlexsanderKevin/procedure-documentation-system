@@ -44,3 +44,12 @@
 .background_section_color_2{
     background-color: var(--sectionColor_2);
 }
+
+.section_color_3{
+    border-color: var(--sectionColor_3);
+    color: var(--sectionColor_3);
+}
+
+.background_section_color_3{
+    background-color: var(--sectionColor_3);
+}

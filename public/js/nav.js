@@ -8,7 +8,6 @@ const subsection_links = document.querySelectorAll('.subsection_links')
 const subsection_anchor = document.querySelectorAll('.subsection_anchor')
 const subsection_content = document.querySelectorAll('.item_subsection_content')
 
-
 // show nav menu when click the burger
 nav_burger.addEventListener('click', (e) => {
     nav_links.classList.toggle('show')
@@ -50,3 +49,18 @@ home_button.addEventListener('click', ()=>{
         subsection_content[i].classList.remove('show_items')
     }
 })
+
+// show settings container
+const settings_button = document.querySelector('.settings_button')
+const settings_containter = document.querySelector('.settings_links_container')
+const settings_anchor = document.querySelectorAll('.settings_anchor')
+
+settings_button.addEventListener('click', ()=>{
+    settings_containter.classList.toggle('show')
+})
+
+for(let i = 0; i < settings_anchor.length; i++){
+    settings_anchor[i].addEventListener('click', ()=>{
+        settings_containter.classList.toggle('show')
+    })
+}

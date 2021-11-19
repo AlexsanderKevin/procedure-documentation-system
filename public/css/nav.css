@@ -1,11 +1,11 @@
-nav {
+.section_nav {
     display: flex;
     justify-content: center;
 
     background-color: var(--mainColor);
 
     position: fixed;
-    left: 0vw;
+    left: -15px;
     top: -15px;
 
 }
@@ -15,15 +15,17 @@ nav {
     left: 0vh;
     top: 15px;
 
+    min-width: 200px;
+    max-height: 100vh;
+    overflow-y: scroll;
+
     padding: 30px;
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     background-color: var(--mainColor);
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 
     transform: translateX(-110%);
     transition: transform 0.2s ease-in;
@@ -69,6 +71,10 @@ nav {
     cursor: pointer;
     padding: 10px;
     font-weight: bold;
+
+    
+    border: solid var(--contrast_color);
+    border-width: 0 0 1px 0;
 }
 
 .subsection_links{
@@ -80,21 +86,54 @@ nav {
     padding-bottom: 33px;
     width: 360px;
     
-    border: solid 2px var(--contrast_color);
-    border-width: 1px 0 0 0;
-    
     transform: translateX(-150%);
     transition: transform 0.3s ease-in;
-    /*
-    */
 }
 
-.while_hidden{
-    transition: 0s;
+
+
+.settings_button{
+    cursor: pointer;
+    width: 28px;
     position: absolute;
+    top: 18px;
+    right: 25px;
+    opacity: 0.9;
+}
+
+.settings_nav{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+.settings_links_container{
+    position: absolute;
+    top: 50px;
+    right: -10px;
+    
+    background-color: var(--mainColor);
+    
+    font-size: 16pt;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: bold;
+    
+    transform: translateX(110%);
+    transition: transform 0.2s ease-in;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .show{
     display: flex;
     transform: translateX(0%);
+}
+.while_hidden{
+    transition: 0s;
+    position: absolute;
 }

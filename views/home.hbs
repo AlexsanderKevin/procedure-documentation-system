@@ -1,6 +1,6 @@
 <!--#region cabeçalho da pagina -->  
 <header class = "header">
-    <nav id = "menu">
+    <nav id = "menu" class="section_nav">
         <ul class="nav_links">
             {{#item_sections}}
                 <li>
@@ -20,9 +20,22 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
+
     </nav>
     
-    <h1 id = "home" class="headerTitle">Guia de testes</h1>
+
+    <nav class="settings_nav">
+        <img class="settings_button all_button " src="/img/icon/settings.png" alt="Opções">
+
+        <div class="settings_links_container">
+            <a class="all_button settings_anchor" href="/">Departamentos</a>
+        </div>
+    </nav>
+    
+    <h1 id = "home" class="headerTitle">
+        Guia de Procedimentos
+        
+    </h1>
 </header>
 
 <a href="#home" class="home_button all_button">
@@ -35,8 +48,8 @@
     <!--#region item sections-->
     {{#item_sections}}
     <section class="item_section" id='{{this.dataValues.name}}'>
-        <div class='section_title section_color_{{this.dataValues.id}}'>
-            <h2 class="section_color_{{this.dataValues.id}}">{{this.dataValues.name}}</h2>
+        <div class='section_title section_color_{{this.dataValues.departmentId}}'>
+            <h2 class="section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
         </div>
         <div class="section_content">
 
@@ -45,12 +58,12 @@
         {{#each this.item_subsections}}
         <div>
 
-            <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.id}}">
+            <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.departmentId}}">
                 <div class="subsection_title">
-                    <button class="subsection_about_button section_color_{{../dataValues.id}}">
+                    <button class="subsection_about_button section_color_{{../dataValues.departmentId}}">
                         ?
                     </button>
-                    <h3 class="subsection_name section_color_{{../dataValues.id}}">{{this.dataValues.name}}</h3>
+                    <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
 
                     <div class="subsection_burger all_button" >
                         <div class="line1"></div>
