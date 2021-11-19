@@ -23,3 +23,5 @@ const ItemObs = database.define('item_obs', {
 Item.hasMany(ItemObs, {constraint: true, foreingnKey: 'itemId'})
 
 ItemObs.belongsTo(Item, {constraint: true, foreingnKey: 'itemId'})
+
+module.exports = ItemObs

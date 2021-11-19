@@ -28,3 +28,5 @@ Comment.belongsTo(Item, {constraint: true, foreingnKey: 'itemId'})
 User.hasMany(Comment, {constraint: true, foreingnKey: 'userId'})
 
 Comment.belongsTo(User, {constraint: true, foreingnKey: 'userId'})
+
+module.exports = Comment

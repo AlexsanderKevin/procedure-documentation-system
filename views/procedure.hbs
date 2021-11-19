@@ -6,20 +6,21 @@
 
 <!--#region content-->
 <section id="content">
+    
+    <!--title-->
+    <header class = "itemHeader"> 
+        <h1 class="itemTitle  ">{{procedure.dataValues.title}}</h1>
+    </header>
     <div class = "itemListPage">
 
-        <!--title-->
-        <div class = "itemHeader"> 
-            <h1 class="itemTitle  ">{{procedure.dataValues.title}}</h1>
-        </div>
 
         <!--item content-->
         {{#if procedure.dataValues.description}}
-        <div class="item_content_page">
+        <div class="item_content_container">
             <div class="item_content_header">
                 <h2>Descrição</h2>
 
-                <div class="page_content_burger all_button" >
+                <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
@@ -34,36 +35,72 @@
         {{/if}}
 
         <!--item solution-->
-        {{#if procedure.dataValues.solutions}}
-        <div class="item_content_page">
+        {{#if item_solutions}}
+        <div class="item_content_container">
             <div class="item_content_header">                
                 <h2>Soluções</h2>
-
-                <div class="page_content_burger all_button" >
+                <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
-              </div>
+                </div>
             </div>
             <div class="item_content_text">
-                {{{procedure.dataValues.solutions}}}
+            {{#each item_solutions}}
+            <div>
+            <div class="single_container">
+                <div class="content_header">
+                    <h3 class="content_title">{{this.dataValues.title}}</h3>
+
+                    <div class="single_content_burger content_burger all_button" >
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+                
+                <div class="content_text">
+                    {{{this.dataValues.content}}}
+                </div>
+            </div> 
+            </div>
+            {{/each}}
             </div>
         </div>
         {{/if}}
 
         <!--item obs-->
-        {{#if procedure.dataValues.obs}}
-        <div class="item_content_page">
+        {{#if item_obs}}
+        <div class="item_content_container">
             <div class="item_content_header">                
-                <h2>Obs</h2>
-
-                <div class="page_content_burger all_button" >
+                <h2>Observações</h2>
+                <div class="page_content_burger content_burger all_button" >
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
-              </div>
+                </div>
             </div>
-            {{{procedures.dataValues.obs}}}
+            <div class="item_content_text">
+            {{#each item_obs}}
+            <div>
+            <div class="single_container">
+                <div class="content_header">
+                    <h3 class="content_title">{{this.dataValues.title}}</h3>
+
+                    <div class="single_content_burger content_burger all_button" >
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+                
+                <div class="content_text">
+                    {{{this.dataValues.content}}}
+                </div>
+            </div> 
+            </div>
+            {{/each}}
+            </div>
         </div>
         {{/if}}
 
@@ -73,7 +110,7 @@
             <div class="item_content_header">
                 <h2>Possíveis Problemas</h2>
 
-                <div class="page_content_burger all_button" >
+                <div class="page_content_burger all_button">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>

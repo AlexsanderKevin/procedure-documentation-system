@@ -1,9 +1,13 @@
 const express = require("express")
 const express_handlebars = require('express-handlebars')
 const Department = require("./database/tables/department")
+//item organization
 const ItemSection = require("./database/tables/item_section")
 const ItemSubsection = require("./database/tables/item_subsection")
 const Item = require("./database/tables/item")
+//item content
+const ItemSolution = require("./database/tables/item_solution")
+
 
 const app = express()
 
@@ -73,10 +77,17 @@ app.get("/home/:id", async (req, res) => {
 // página do procedimento (rota)
 app.get("/procedure/:id", async (req, res) => {
     const procedureId = req.params.id
+
     try{
         const procedure = await Item.findByPk(procedureId)
+        const item_solutions = await ItemSolution.findAll({
+            where: {itemId: procedureId}
+        })
 
-        res.render("procedure", {procedure: procedure})
+        res.render("procedure", {
+            procedure: procedure,
+            item_solutions: item_solutions,
+        })
     }catch(err){
         console.error(err)
         res.render("error")
