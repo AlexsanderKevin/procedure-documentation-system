@@ -17,14 +17,6 @@ const Item = database.define('items', {
         type: Sequelize.STRING,
         allowNull: true
     },
-    solutions: {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
-    obs: {
-        type: Sequelize.STRING,
-        allowNull: true
-    },
 })
  
 module.exports = Item;

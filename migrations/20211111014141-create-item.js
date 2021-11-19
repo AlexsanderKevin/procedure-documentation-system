@@ -18,14 +18,6 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: true
       },
-      solutions: {
-          type: Sequelize.STRING,
-          allowNull: true
-      },
-      obs: {
-          type: Sequelize.STRING,
-          allowNull: true
-      },
       itemSubsectionId: {
           type: Sequelize.INTEGER,
           references: {
