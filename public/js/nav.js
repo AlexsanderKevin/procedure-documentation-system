@@ -1,24 +1,6 @@
-//menu
-const nav_links = document.querySelector('.nav_links')
-const nav_burger = document.querySelector('#nav_burger')
-
 //arrays
 const section_links = document.querySelectorAll('.section_links')
 const subsection_links = document.querySelectorAll('.subsection_links')
-const subsection_anchor = document.querySelectorAll('.subsection_anchor')
-const subsection_content = document.querySelectorAll('.item_subsection_content')
-
-// show nav menu when click the burger
-nav_burger.addEventListener('click', (e) => {
-    nav_links.classList.toggle('show')
-    
-    for(let i = 0; i <subsection_links.length;i++){
-        
-        subsection_links[i].classList.remove('show')
-        subsection_links[i].classList.add('while_hidden')
-    }
-    
-})
 
 // show subsection links when click on section links
 for(let i = 0; i < section_links.length; i ++){
@@ -28,39 +10,22 @@ for(let i = 0; i < section_links.length; i ++){
     })
 }
 
-// hide nav when click in the subsection links
-for(let i = 0; i < subsection_content.length; i++){
-    subsection_anchor[i].addEventListener('click', ()=>{
-        
-        // hide nav menu
-        nav_links.classList.toggle('show')
-        
-        // open subsection when click on a subsection anchor
-        subsection_content[i].classList.add('show_items')
-    })
-}
+function nav_to_content(nav_component, content_component, anchor_component, show_nav_class, show_content_class){
+    const nav = document.querySelector(nav_component)
+    const content = document.querySelectorAll(content_component)
+    const anchor = document.querySelectorAll(anchor_component)
 
-
-//home button (close all subsections)
-const home_button = document.querySelector('.home_button')
-
-home_button.addEventListener('click', ()=>{
-    for(let i = 0; i < subsection_content.length; i++){
-        subsection_content[i].classList.remove('show_items')
+    for(let i = 0; i < content.length; i++){
+        anchor[i].addEventListener('click', ()=>{
+            //hide nav
+            nav.classList.toggle(show_nav_class)
+            //open content
+            content[i].classList.add(show_content_class)
+        })
     }
-})
-
-// show settings container
-const settings_button = document.querySelector('.settings_button')
-const settings_containter = document.querySelector('.settings_links_container')
-const settings_anchor = document.querySelectorAll('.settings_anchor')
-
-settings_button.addEventListener('click', ()=>{
-    settings_containter.classList.toggle('show')
-})
-
-for(let i = 0; i < settings_anchor.length; i++){
-    settings_anchor[i].addEventListener('click', ()=>{
-        settings_containter.classList.toggle('show')
-    })
 }
+
+// home nav
+nav_to_content('.nav_links', '.item_subsection_content', '.subsection_anchor', 'show', 'show_items')
+//procedure nav
+nav_to_content('.nav_links', '.item_content_text', '.procedure_nav_anchor', 'show', 'show_text')

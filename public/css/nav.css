@@ -1,4 +1,4 @@
-.section_nav {
+nav {
     display: flex;
     justify-content: center;
 
@@ -8,6 +8,7 @@
     left: -15px;
     top: -15px;
 
+    padding: 0px;
 }
 
 .nav_links{
@@ -16,13 +17,14 @@
     top: 15px;
 
     min-width: 200px;
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: scroll;
 
-    padding: 30px;
+    padding: 0;
     padding-top: 50px;
     padding-bottom: 10px;
-    background-color: var(--mainColor);
+    background-color: var(--gradient_color_2);
+    box-shadow: 2px 2px 7px black;
 
     display: flex;
     flex-direction: column;
@@ -30,15 +32,37 @@
 
     transform: translateX(-110%);
     transition: transform 0.2s ease-in;
+
+    z-index: 1;
 }
 
 .nav_links a{
     letter-spacing: 3px;
 }
 
-.burger{
-    background-color: var(--mainColor);
+.nav_div{
+    border: solid var(--contrast_color);
+    border-width: 2px 0 0 0;
 
+    margin: 0;
+    margin-top: 10px;
+    
+    padding: 15px;
+    padding-left: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.procedure_nav{
+    min-width: 200px;
+}
+
+.burger{
     height: 50px;
     width: 50px;
 
@@ -66,15 +90,11 @@
 }
 
 .section_links{
-    font-size: 16pt;
-    letter-spacing: 3px;
+    font-size: 18pt;
+    letter-spacing: 2px;
     cursor: pointer;
     padding: 10px;
     font-weight: bold;
-
-    
-    border: solid var(--contrast_color);
-    border-width: 0 0 1px 0;
 }
 
 .subsection_links{
@@ -88,6 +108,9 @@
     
     transform: translateX(-150%);
     transition: transform 0.3s ease-in;
+
+    border: solid var(--min_contrast_color);
+    border-width: 1px 0 0 0;
 }
 
 .settings_button{
@@ -97,6 +120,8 @@
     top: 18px;
     right: 25px;
     opacity: 0.9;
+
+    display: none;
 }
 
 .settings_nav{
@@ -109,8 +134,10 @@
     position: absolute;
     top: 50px;
     right: -10px;
+    height: 100vh;
     
-    background-color: var(--mainColor);
+    background-color: var(--gradient_color_2);
+    box-shadow: 2px 2px 7px black;
     
     font-size: 16pt;
     letter-spacing: 1px;

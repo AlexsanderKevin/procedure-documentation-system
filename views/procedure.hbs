@@ -11,12 +11,35 @@
     <header class = "header">
     <nav id = "menu" class="section_nav procedure_nav">
         <div class="nav_links">
-            <a class="all_button procedure_nav_anchor" href="#description">Descrição</a>
-            <a class="all_button procedure_nav_anchor" href="#solutions">Soluções</a>
-            <a class="all_button procedure_nav_anchor" href="#obs">Observações</a>
-            <a class="all_button procedure_nav_anchor" href="#issues">Possíveis Problemas</a>
-            <a class="all_button procedure_nav_anchor" href="#comments">Comentários</a>
+            <div class="nav_div">
+                
+                <a class="all_button procedure_nav_anchor" href="#description">Descrição</a>
+                
+                {{#if item_solutions}}
+                    <a class="all_button procedure_nav_anchor" href="#solutions">Soluções</a>
+                {{/if}}
+                {{#if item_obs}}
+                    <a class="all_button procedure_nav_anchor" href="#obs">Observações</a>
+                {{/if}}
+                {{#if item_issues}}
+                    <a class="all_button procedure_nav_anchor" href="#issues">Problemas</a>
+                {{/if}}
+                {{#if comments}}
+                    <a class="all_button procedure_nav_anchor" href="#comments">Comentários</a>
+                {{/if}}
+            </div>
+            
+            <div class="nav_div">
+                <h1 class="section_links all_button">Departamentos</h1>
+
+                <div class="subsection_links while_hidden">
+                    {{#each departments}}
+                        <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
+                    {{/each}}
+                </div>
+            </div>
         </div>
+
 
         <div id="nav_burger" class="burger all_button" >
             <div class="line1"></div>
@@ -78,25 +101,25 @@
                 </div>
             </div>
             <div class="item_content_text">
-            {{#each item_solutions}}
-            <div>
-            <div class="single_container">
-                <div class="content_header">
-                    <h3 class="content_title">{{this.dataValues.title}}</h3>
+                {{#each item_solutions}}
+                <div>
+                <div class="single_container">
+                    <div class="content_header">
+                        <h3 class="content_title">{{this.dataValues.title}}</h3>
 
-                    <div class="single_content_burger content_burger all_button" >
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
+                        <div class="single_content_burger content_burger all_button" >
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
                     </div>
+                    
+                    <div class="content_text">
+                        <p>{{{this.dataValues.content}}}</p>
+                    </div>
+                </div> 
                 </div>
-                
-                <div class="content_text">
-                    <p>{{{this.dataValues.content}}}</p>
-                </div>
-            </div> 
-            </div>
-            {{/each}}
+                {{/each}}
             </div>
         </div>
         {{/if}}

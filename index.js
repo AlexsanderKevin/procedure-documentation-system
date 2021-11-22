@@ -21,28 +21,6 @@ app.engine('hbs', express_handlebars ({
 
 app.set('view engine', 'hbs')
 
-app.get("/home", async (req, res) => {
-    const departments = await Department.findAll() 
-    const item_sections = await ItemSection.findAll({
-        include: [{
-            model: ItemSubsection,
-            include: [{
-                model: Item,
-            }]
-        }]
-    })
-
-    const item_subsections = await ItemSubsection.findAll({include: Item})
-    const items = await Item.findAll({include: ItemSubsection})
-
-    res.render("home", { 
-        departments: departments,
-        item_sections: item_sections,
-        item_subsections: item_subsections,
-        items: items,
-    })
-})
-
 // rota padrão
 app.get("/", async (req, res) => {
     const departments = await Department.findAll()
@@ -55,6 +33,7 @@ app.get("/", async (req, res) => {
 // home dinamica (rota)
 app.get("/home/:id", async (req, res) => {
     const departmentId = req.params.id
+    const departments = await Department.findAll()
 
     try{
         const item_sections = await ItemSection.findAll({
@@ -68,7 +47,8 @@ app.get("/home/:id", async (req, res) => {
         })
 
         res.render('home', {
-            item_sections: item_sections
+            item_sections: item_sections,
+            departments: departments 
         })
     }catch(err){
         console.log(err)
@@ -80,6 +60,7 @@ app.get("/home/:id", async (req, res) => {
 // página do procedimento (rota)
 app.get("/procedure/:id", async (req, res) => {
     const procedureId = req.params.id
+    const departments = await Department.findAll()
 
     try{
         const procedure = await Item.findByPk(procedureId)
@@ -102,6 +83,7 @@ app.get("/procedure/:id", async (req, res) => {
             item_obs: item_obs,
             item_issues: item_issues,
             comments: comments,
+            departments: departments,
         })
     }catch(err){
         console.error(err)

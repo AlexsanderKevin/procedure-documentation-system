@@ -2,6 +2,7 @@
 <header class = "header">
     <nav id = "menu" class="section_nav">
         <ul class="nav_links">
+            <div class="nav_div">
             {{#item_sections}}
                 <li>
                     <h1 class="section_links all_button">{{this.dataValues.name}}</h1>
@@ -13,7 +14,20 @@
                     </div>
                 </li>
             {{/item_sections}}
+            </div>
+
+            <div class="nav_div">
+                <h1 class="section_links all_button">Departamentos</h1>
+
+                <div class="subsection_links while_hidden">
+                    {{#each departments}}
+                        <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
+                    {{/each}}
+                </div>
+            </div>
         </ul>
+
+        
 
         <div id="nav_burger" class="burger all_button" >
             <div class="line1"></div>
@@ -88,10 +102,6 @@
                     {{#if dataValues.description}}
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
                             <li><h4 >{{this.dataValues.title}}</h4></li>
-                        </a>
-                    {{else if dataValues.solutions}}
-                        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
-                            <li><h4>{{this.dataValues.title}}</h4></li>
                         </a>
                     {{else}}
                         <li class="emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
