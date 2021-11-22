@@ -52,11 +52,11 @@
 
     <div class="edit_button_container">
         <!--cancel changes button-->
-        <img class="discard_button icon_button all_button" src="/img/icon/close.png" alt="Descartar Mudanças">
+        <img class="edition_button discard_button icon_button all_button" src="/img/icon/close.png" alt="Descartar Mudanças">
         <!--save changes button-->
-        <img class="save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
+        <img class="edition_button save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
         <!--edit button-->
-        <img class="edit_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+        <img class="start_edition icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
     </div>
 </header>
 
@@ -116,7 +116,7 @@
                         <li class="emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
                     {{/if}}
                 {{/each}}
-                <button class="add_button all_button">+</button>
+                <button class="edition_button add_button all_button">+</button>
                 </div>
             </ul>
             <!--#endregion-->
@@ -124,12 +124,12 @@
             </div>
         </div>
         {{/each}}
-        <button class="add_button all_button">+</button>
+        <button class="edition_button add_button all_button">+</button>
         <!--#endregion-->
         </div>
     </section>
     {{/item_sections}}
-    <button class="add_button all_button">+</button>
+    <button class="edition_button add_button all_button">+</button>
     <!--#endregion-->
 </section>
 <!--#endregion-->
