@@ -10,8 +10,7 @@ const ItemSolution = require("./database/tables/item_solution")
 const ItemObs = require("./database/tables/item_obs")
 const ItemIssue = require("./database/tables/item_issues")
 const Comment = require("./database/tables/comment")
-
-
+//app
 const app = express()
 
 app.engine('hbs', express_handlebars ({
@@ -27,6 +26,13 @@ app.get("/", async (req, res) => {
 
     res.render("departments",{
         departments: departments,
+    })
+})
+
+app.get("/login", async (req, res) => {
+
+    res.render("login",{
+        
     })
 })
 
@@ -55,7 +61,6 @@ app.get("/home/:id", async (req, res) => {
         res.render('error')
     }
 })
-
 
 // página do procedimento (rota)
 app.get("/procedure/:id", async (req, res) => {

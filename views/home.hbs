@@ -48,12 +48,20 @@
     
     <h1 id = "home" class="headerTitle">
         Guia de Procedimentos
-        
     </h1>
+
+    <div class="edit_button_container">
+        <!--cancel changes button-->
+        <img class="discard_button icon_button all_button" src="/img/icon/close.png" alt="Descartar Mudanças">
+        <!--save changes button-->
+        <img class="save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
+        <!--edit button-->
+        <img class="edit_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+    </div>
 </header>
 
-<a href="#home" class="home_button all_button">
-    Inicio 
+<a href="#home" class="">
+    <img class="home_button all_button" src="/img/icon/home.png" alt="Inicio"> 
 </a>
 <!--#endregion-->
 
@@ -64,6 +72,7 @@
     <section class="item_section" id='{{this.dataValues.name}}'>
         <div class='section_title section_color_{{this.dataValues.departmentId}}'>
             <h2 class="section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
+            
         </div>
         <div class="section_content">
 
@@ -107,6 +116,7 @@
                         <li class="emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
                     {{/if}}
                 {{/each}}
+                <button class="add_button all_button">+</button>
                 </div>
             </ul>
             <!--#endregion-->
@@ -114,10 +124,12 @@
             </div>
         </div>
         {{/each}}
+        <button class="add_button all_button">+</button>
         <!--#endregion-->
         </div>
     </section>
     {{/item_sections}}
+    <button class="add_button all_button">+</button>
     <!--#endregion-->
 </section>
 <!--#endregion-->

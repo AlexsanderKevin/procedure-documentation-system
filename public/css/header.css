@@ -21,7 +21,6 @@
 }
 
 .home_button{
-    background-color: var(--mainColor);
     color: var(--contrast_color);
     cursor: pointer;
 
@@ -29,19 +28,12 @@
     font-size: 15pt;
     letter-spacing: 1px;
 
-    width: 100px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
     position: fixed;
     right: 1vw;
     top: 2vh;
     z-index: 0;
 
-    border: solid 0;
-    border-radius: 25px;
-    box-shadow: 2px 2px 7px black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
