@@ -22,28 +22,46 @@
     align-items: center;
 }
 
+.input_box{
+    position: relative;
+}
+
 .login_text_input{
-    background-color: var(--gradient_color_2);
+    background: none;
     color: var(--contrast_color);
-    height: 60px;
-    width: 50%;
-    padding-left: 10px;
+    width: 100%;
 
     font-size: 20pt;
 
     border: solid var(--min_contrast_color);
     border-width: 0 0 3px 0;
-    box-shadow: 3px 3px 5px black;
+
+    outline: none;
 }
 
-.login_text_input:focus{
-    border: solid var(--contrast_color);
-    border-width: 0 0 3px 0;
+.login_label{
+    color: var(--contrast_color);
+    letter-spacing: 1px;
+
+    font-size: 20pt;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: .2s;
+}
+
+.login_text_input:focus ~ .login_label,
+.login_text_input:valid ~ .login_label{
+    top: -20px;
+    font-size: 15pt;
+    color: var(--gradient_color_5);
 }
 
 .login_button{
     background-color: var(--mainColor);
-    color: var(--contrast_color);
+    color: var(--min_contrast_color);
 
     padding: 5px;
     padding-left: 20px;

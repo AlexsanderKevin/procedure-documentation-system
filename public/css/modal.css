@@ -9,7 +9,6 @@
     z-index: 2000;
 
     display: none;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -58,6 +57,10 @@
 
 .modalContainer.show{
     display: flex;
+}
+
+.modal_title{
+    letter-spacing: 1px;
 }
 
 .error{

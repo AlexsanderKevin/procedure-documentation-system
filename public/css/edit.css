@@ -3,7 +3,7 @@
     
     height: 30px;
     width: 30px;
-    
+    margin: 10px   
 }
 
 .edit_button_container{
@@ -14,8 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    width: 160px;
 }
 
 .add_button{
@@ -36,5 +34,9 @@
 }
 
 .edition_button{
+    display: none;
+}
+
+.show_button{
     display: flex;
 }

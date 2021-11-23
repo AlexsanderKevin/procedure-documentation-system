@@ -1,0 +1,100 @@
+.form_container{
+    background-color: rgba(0, 0, 0, 0.904);
+}
+
+.modal_form_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form_field_container{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edition_input_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 20pt;
+    transition: .2s;
+}
+
+.edition_input_box{
+    position: relative;
+    width: 100%;
+}
+
+.edition_field{
+    background: none;
+    color: var(--contrast_color);
+    width: 100%;
+
+    font-size: 20pt;
+
+    border: solid var(--contrast_color);
+    border-width: 0 0 3px 0;
+
+    outline: none;
+}
+
+.edition_field:focus ~ .edition_input_label,
+.edition_field:valid ~ .edition_input_label{
+    top: -25px;
+    font-size: 15pt;
+    color: var(--gradient_color_5);
+}
+
+.modal_form_button{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--contrast_color);
+    border: none;
+
+    font-weight: bold;
+    font-size: 20pt;
+    letter-spacing: 2px;
+
+    margin: 10px;
+}
+
+.modal_form_footer{
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.textbox_box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.edition_textbox{
+    background: none;
+    outline: none;
+    color: var(--contrast_color);
+
+    border: solid var(--contrast_color);
+    border-width: 1px;
+
+    padding: 5px;
+}
+
+.edition_textbox_label{
+    font-size: 20pt;
+}
+
+.form_frame{
+    width: 50%;
+}

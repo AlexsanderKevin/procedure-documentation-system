@@ -4,8 +4,17 @@
     </div>
     
     <form class="login_form">
-        <input class="login_text_input" type="text" placeholder="Usuário">
-        <input class="login_text_input" type="password" placeholder="Senha">
-        <button class="login_button all_button">Entrar</button>
+        
+        <div class="input_box">
+             <input class="login_text_input" type="text" name="user" required>
+            <label for="password" class="login_label">Nome de Usuário</label>
+        </div>
+        <div class="input_box">
+             <input class="login_text_input" type="password" name="password" required>
+            <label for="password" class="login_label">Senha</label>
+        </div>
+        
+       
+        <button class="login_button all_button" type="submit">Entrar</button>
     </form>
 </section>

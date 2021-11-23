@@ -8,26 +8,36 @@ modal_close_button.addEventListener('click', () => {
     modal.classList.remove('show')
 })
 
+function dynamic_modal(target_component, title_component, content_component){
+    // arrays
+    const target = document.querySelectorAll(target_component)
+    const title = document.querySelectorAll(title_component)
+    const content = document.querySelectorAll(content_component)
+    
+    for(let i = 0; i < target.length; i++){
+        target[i].addEventListener('click', ()=>{
+            modal.classList.toggle('show')
+            modal_title.innerText = title[i].innerText
+            modal_content.innerText = content[i].innerText
+        })
+    }
+    
+}
+
 // subsection description modal
-const subsection_name = document.querySelectorAll('.subsection_name')
-const about_button = document.querySelectorAll('.subsection_about_button')
-const about_text = document.querySelectorAll('.subsection_description')
+dynamic_modal('.subsection_about_button', '.subsection_name', '.subsection_description')
 
-for(let i = 0; i < about_button.length; i++){
-    about_button[i].addEventListener('click', () => {
-        modal.classList.toggle('show')
-        modal_title.innerHTML = subsection_name[i].innerText
-        modal_content.innerHTML = about_text[i].innerHTML
-    })
+function static_modal(target_component, title, content){
+    const target = document.querySelectorAll(target_component)
+
+    for(i = 0; i < target.length; i++){
+        target[i].addEventListener('click', ()=>{
+            modal.classList.toggle('show')
+            modal_title.innerText = title
+            modal_content.innerText = content
+        })
+    }
 }
 
-// empty item modal
-const empty_item = document.querySelectorAll('.emptyItemList')
-
-for(let i = 0; i < empty_item.length; i++){
-    empty_item[i].addEventListener('click', () => {
-        modal.classList.toggle('show')
-        modal_title.innerText = 'Item vazio!'
-        modal_content.innerText = 'Este item não possui conteúdo algum para ser visualizado no momento.'
-    })
-}
+// item vazio
+static_modal('.emptyItemList', 'Item vazio!', 'Este item não possui conteúdo algum para ser visualizado no momento.')

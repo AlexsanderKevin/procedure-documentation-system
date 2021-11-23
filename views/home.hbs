@@ -27,8 +27,6 @@
             </div>
         </ul>
 
-        
-
         <div id="nav_burger" class="burger all_button" >
             <div class="line1"></div>
             <div class="line2"></div>
@@ -50,14 +48,16 @@
         Guia de Procedimentos
     </h1>
 
+    <!--#region edition buttons-->
     <div class="edit_button_container">
-        <!--cancel changes button-->
-        <img class="edition_button discard_button icon_button all_button" src="/img/icon/close.png" alt="Descartar Mudanças">
         <!--save changes button-->
         <img class="edition_button save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
+        <!--cancel changes button-->
+        <img class="edition_button discard_button icon_button all_button " src="/img/icon/close.png" alt="Descartar Mudanças">
         <!--edit button-->
-        <img class="start_edition icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+        <img class="edition_button start_edition icon_button all_button show_button" src="/img/icon/pencil.png" alt="Editar">
     </div>
+    <!--#endregion-->
 </header>
 
 <a href="#home" class="">
@@ -72,6 +72,8 @@
     <section class="item_section" id='{{this.dataValues.name}}'>
         <div class='section_title section_color_{{this.dataValues.departmentId}}'>
             <h2 class="section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
+            <!--pencil button-->
+            <img class="edit_section pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
             
         </div>
         <div class="section_content">
@@ -88,18 +90,16 @@
                     </button>
                     <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
 
+                    <!--pencil button-->
+                    <img class="edit_subsection pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+
                     <div class="subsection_burger all_button" >
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="line3"></div>
                     </div>
-                    
-                    <!--
-                    <a href ="#home" class = "buttonAnchor section_color_{{../dataValues.id}}">Inicio</a>
-                    -->
                 </div>
                 
-
                 <div class="subsection_description">
                     {{{this.dataValues.description}}}
                 </div>
@@ -109,14 +109,30 @@
                 <div class="item_subsection_content">
                 {{#each this.items}}
                     {{#if dataValues.description}}
+                    <div class="single_item_container">
+
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
-                            <li><h4 >{{this.dataValues.title}}</h4></li>
+                            <h4 >
+                                {{this.dataValues.title}}
+                            </h4>
                         </a>
+                        <!--pencil button-->
+                        <img class="edit_item pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+                    </div>
+
                     {{else}}
-                        <li class="emptyItemList"><h4>{{this.dataValues.title}}</h4></li>
+                    <div class="single_item_container">
+                        
+                        <h4 class="emptyItemList">
+                            {{this.dataValues.title}}
+                        </h4>
+                        <!--pencil button-->
+                        <img class="edit_item pencil_button edition_button icon_button    all_button" src="/img/icon/pencil.png" alt="Editar">
+                    </div>
+
                     {{/if}}
                 {{/each}}
-                <button class="edition_button add_button all_button">+</button>
+                <button class="new_item edition_button add_button all_button">+</button>
                 </div>
             </ul>
             <!--#endregion-->
@@ -124,26 +140,15 @@
             </div>
         </div>
         {{/each}}
-        <button class="edition_button add_button all_button">+</button>
+        <button class="new_subsection edition_button add_button all_button">+</button>
         <!--#endregion-->
         </div>
     </section>
     {{/item_sections}}
-    <button class="edition_button add_button all_button">+</button>
+    <button class="new_section edition_button add_button all_button">+</button>
     <!--#endregion-->
 </section>
 <!--#endregion-->
 
-<!-- #region concept modal -->
-<div id="modal" class="modalContainer ">
-    <div id="conceptModalFrame" class="modalFrame">
-        <div class="modalHeader">
-            <h3 class="modal_title">modal</h3>
-            <button class="modalCloseButton all_button">X</button>
-        </div>
 
-        <div class="modalContent itemContent"></div>
 
-    </div>
-</div>
-<!--#endregion-->
