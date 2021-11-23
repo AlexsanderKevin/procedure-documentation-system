@@ -48,16 +48,6 @@
         Guia de Procedimentos
     </h1>
 
-    <!--#region edition buttons-->
-    <div class="edit_button_container">
-        <!--save changes button-->
-        <img class="edition_button save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
-        <!--cancel changes button-->
-        <img class="edition_button discard_button icon_button all_button " src="/img/icon/close.png" alt="Descartar Mudanças">
-        <!--edit button-->
-        <img class="edition_button start_edition icon_button all_button show_button" src="/img/icon/pencil.png" alt="Editar">
-    </div>
-    <!--#endregion-->
 </header>
 
 <a href="#home" class="">
@@ -71,7 +61,7 @@
     {{#item_sections}}
     <section class="item_section" id='{{this.dataValues.name}}'>
         <div class='section_title section_color_{{this.dataValues.departmentId}}'>
-            <h2 class="section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
+            <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
             <!--pencil button-->
             <img class="edit_section pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
             
@@ -112,7 +102,7 @@
                     <div class="single_item_container">
 
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
-                            <h4 >
+                            <h4 class="item_name">
                                 {{this.dataValues.title}}
                             </h4>
                         </a>
@@ -123,7 +113,7 @@
                     {{else}}
                     <div class="single_item_container">
                         
-                        <h4 class="emptyItemList">
+                        <h4 class="emptyItemList item_name">
                             {{this.dataValues.title}}
                         </h4>
                         <!--pencil button-->

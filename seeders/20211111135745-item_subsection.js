@@ -6,13 +6,13 @@ module.exports = {
       {
         id: 1,
         name: 'LDIAG',
-        description: "<p>Todos os tópicos desta seção são testes realizados pelo <strong class='concept' onclick='showConceptModal(LDIAG)'>LDIAG</strong>, portanto não requerem nenhum procedimento específico.</p><p>O procedimento para execução do teste <strong class='concept' onclick='showConceptModal(LDIAG)'>LDIAG</strong> está contido na seção de itens <strong><a href = '#Extra'>Extras</a></strong>.</p>",
+        description: "Todos os tópicos desta seção são testes realizados pelo LDIAG, portanto não requerem nenhum procedimento específico. O procedimento para execução do teste LDIAG está contido na seção de itens Extras.",
         itemSectionId: 1,
       },
       {
         id: 2,
         name: 'Verificações',
-        description:'<p>Esta seção consiste apenas em <strong>averiguar</strong> informações <strong>estáticas</strong> em relação ao equipamento.</p>',
+        description:'Esta seção consiste apenas em averiguar informações estáticasem relação ao equipamento.',
         itemSectionId: 1,
       },
       {

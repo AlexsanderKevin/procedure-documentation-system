@@ -25,6 +25,17 @@
 
 </head>
 <body>
+     <!--#region edition buttons-->
+    <div class="edit_button_container">
+        <!--save changes button-->
+        <img class="edition_button save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
+        <!--cancel changes button-->
+        <img class="edition_button discard_button icon_button all_button " src="/img/icon/close.png" alt="Descartar Mudanças">
+        <!--edit button-->
+        <img class="edition_button start_edition icon_button all_button show_button" src="/img/icon/pencil.png" alt="Editar">
+    </div>
+    <!--#endregion-->
+
     <div class="container">
         {{{body}}}
     </div>
@@ -51,7 +62,7 @@
 
             <div class="modalContent form_field_container">
                 <div class="edition_input_box">
-                    <input type="text" class="edition_field" name="title" required>
+                    <input id="single_form_name_field" type="text" class="edition_field" name="title" required>
                     <label for="title" class="edition_input_label">Título</label>
                 </div>
 
@@ -72,13 +83,13 @@
 
             <div class="modalContent form_field_container">
                 <div class="edition_input_box">
-                    <input type="text" class="edition_field" name="title" required>
+                    <input id="two_form_name_field" type="text" class="edition_field" name="title" required>
                     <label for="title" class="edition_input_label">Título</label>
                 </div>
                 <br>
                 <div class="textbox_box">
-                    <label for="description" class="edition_textbox_label">Descrição</label>
-                    <textarea type="textarea" class="edition_textbox" name="description"></textarea>
+                    <label  for="description" class="edition_textbox_label">Descrição</label>
+                    <textarea id="two_form_description_field" type="textarea" class="edition_textbox" name="description"></textarea>
                 </div>
             </div>
 
