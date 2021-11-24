@@ -1,17 +1,19 @@
 const express = require("express")
 const express_handlebars = require('express-handlebars')
-const Department = require("./database/tables/department")
+const Department = require("./app/models/department")
 //item organization
-const ItemSection = require("./database/tables/item_section")
-const ItemSubsection = require("./database/tables/item_subsection")
-const Item = require("./database/tables/item")
+const ItemSection = require("./app/models/item_section")
+const ItemSubsection = require("./app/models/item_subsection")
+const Item = require("./app/models/item")
 //item content
-const ItemSolution = require("./database/tables/item_solution")
-const ItemObs = require("./database/tables/item_obs")
-const ItemIssue = require("./database/tables/item_issues")
-const Comment = require("./database/tables/comment")
+const ItemSolution = require("./app/models/item_solution")
+const ItemObs = require("./app/models/item_obs")
+const ItemIssue = require("./app/models/item_issues")
+const Comment = require("./app/models/comment")
 //app
 const app = express()
+// controller
+const AuthController = require('./app/controllers/AuthController')
 
 const hbs = express_handlebars.create({
     defaultLayout: 'main',
@@ -31,12 +33,17 @@ app.get("/", async (req, res) => {
     })
 })
 
+//login
 app.get("/login", async (req, res) => {
 
     res.render("login",{
         
     })
 })
+
+//login post
+app.post('/api/signIn', AuthController.signIn)
+app.post('/api/signUp', AuthController.signUp)
 
 // home dinamica (rota)
 app.get("/home/:id", async (req, res) => {
