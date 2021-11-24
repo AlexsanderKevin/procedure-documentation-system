@@ -1,58 +1,22 @@
-<!--#region cabeçalho da pagina -->  
-<header class = "header">
-    <nav id = "menu" class="section_nav">
-        <ul class="nav_links">
-            <div class="nav_div">
-            {{#item_sections}}
-                <li>
-                    <h1 class="section_links all_button">{{this.dataValues.name}}</h1>
-
-                    <div class="subsection_links while_hidden">
-                        {{#each this.dataValues.item_subsections}}
-                        <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
-                        {{/each}}
-                    </div>
-                </li>
-            {{/item_sections}}
-            </div>
-
-            <div class="nav_div">
-                <h1 class="section_links all_button">Departamentos</h1>
-
-                <div class="subsection_links while_hidden">
-                    {{#each departments}}
-                        <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
-                    {{/each}}
-                </div>
-            </div>
-        </ul>
-
-        <div id="nav_burger" class="burger all_button" >
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+<!--#region header -->  
+{{> header title = 'Guia de Procedimentos'}}
+<nav id = "menu" class="section_nav">
+    <div class="nav_links">
+        <div class="nav_div">
+            {{> nav_div_home}}
         </div>
 
-    </nav>
-    
+        <div class="nav_div">
+            <h1 class="section_links all_button">Departamentos</h1>
 
-    <nav class="settings_nav">
-        <img class="settings_button all_button " src="/img/icon/settings.png" alt="Opções">
-
-        <div class="settings_links_container">
-            <a class="all_button settings_anchor" href="/">Departamentos</a>
+            <div class="subsection_links while_hidden">
+                {{#each departments}}
+                    <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
+                {{/each}}
+            </div>
         </div>
-    </nav>
-    
-    <h1 id = "home" class="headerTitle">
-        Guia de Procedimentos
-    </h1>
-
-</header>
-
-<a href="#home" class="">
-    <img class="home_button all_button" src="/img/icon/home.png" alt="Inicio"> 
-</a>
+    </div>
+</nav>
 <!--#endregion-->
 
 <!--#region content-->

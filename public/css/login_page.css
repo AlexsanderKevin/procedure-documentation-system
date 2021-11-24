@@ -54,27 +54,9 @@
 
 .login_text_input:focus ~ .login_label,
 .login_text_input:valid ~ .login_label{
-    top: -20px;
+    top: -25px;
     font-size: 15pt;
     color: var(--gradient_color_5);
-}
-
-.login_button{
-    background-color: var(--mainColor);
-    color: var(--min_contrast_color);
-
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    border: none;
-    border-radius: 50px;
-
-    font-size: 20pt;
-    font-weight: bold;
-    letter-spacing: 2px;
-    
-    box-shadow: 0 3px 5px black;
 }
 
 .login_header{
@@ -86,15 +68,27 @@
     margin-bottom: 20px;
 }
 
-.uncomplete_form_button{
+.login_button{
     background-color: var(--gradient_color_2);
     box-shadow: none;
     opacity: 0.5;
-    cursor: auto;
+    color: var(--contrast_color);
+    
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    border: none;
+    border-radius: 50px;
+    
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: 2px;    
+    transition: .2s;
 }
 
-.uncomplete_form_button:hover{
-    background-color: var(--gradient_color_2);
-    box-shadow: none;
-    cursor: auto;
+.login_button{
+    opacity: 1;
+    background-color: var(--mainColor);  
+    box-shadow: 0 3px 5px black;
 }

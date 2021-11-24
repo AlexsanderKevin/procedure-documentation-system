@@ -1,71 +1,26 @@
-<!--#region cabeçalho da pagina -->  
-<header class = "header">
-    
-</header>
-<!--#endregion-->
-
 <!--#region content-->
 <section id="content">
     
-    <!--#region header-->
-    <header class = "header">
+    <!--#region nav-->
+    {{> header title = procedure.dataValues.title}}
     <nav id = "menu" class="section_nav procedure_nav">
-        <div class="nav_links">
-            <div class="nav_div">
-                
-                <a class="all_button procedure_nav_anchor" href="#description">Descrição</a>
-                
-                {{#if item_solutions}}
-                    <a class="all_button procedure_nav_anchor" href="#solutions">Soluções</a>
-                {{/if}}
-                {{#if item_obs}}
-                    <a class="all_button procedure_nav_anchor" href="#obs">Observações</a>
-                {{/if}}
-                {{#if item_issues}}
-                    <a class="all_button procedure_nav_anchor" href="#issues">Problemas</a>
-                {{/if}}
-                {{#if comments}}
-                    <a class="all_button procedure_nav_anchor" href="#comments">Comentários</a>
-                {{/if}}
-            </div>
-            
-            <div class="nav_div">
-                <h1 class="section_links all_button">Departamentos</h1>
+    <div class="nav_links">
+        <div class="nav_div">
+            {{>nav_div_procedure}}
+        </div>
+        
+        <div class="nav_div">
+            <h1 class="section_links all_button">Departamentos</h1>
 
-                <div class="subsection_links while_hidden">
-                    {{#each departments}}
-                        <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
-                    {{/each}}
-                </div>
+            <div class="subsection_links while_hidden">
+                {{#each departments}}
+                    <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
+                {{/each}}
             </div>
         </div>
-
-
-        <div id="nav_burger" class="burger all_button" >
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-
+    </div>
     </nav>
-    
 
-    <nav class="settings_nav">
-        <img class="settings_button all_button " src="/img/icon/settings.png" alt="Opções">
-
-        <div class="settings_links_container">
-            <a class="all_button settings_anchor" href="/">Departamentos</a>
-        </div>
-    </nav>
-    
-    <h1 id = "home" class="headerTitle">
-        {{procedure.dataValues.title}}
-    </h1>
-    </header>
-
-    <a href="#home" class="">
-        <img class="home_button all_button" src="/img/icon/home.png" alt="Inicio"> 
-    </a>
     <!--#endregion-->
 
         <!--#region item description-->

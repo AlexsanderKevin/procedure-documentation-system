@@ -40,7 +40,7 @@ function form_modal(modal_id){
 
     return modal
 }
-
+// opening the respective modal
 function open_form(target_component, target_modal, modal_title_component, edited_title_component, edited_description_component){
     const form = form_modal(target_modal)
     const target = document.querySelectorAll(target_component)
@@ -96,10 +96,10 @@ function open_form(target_component, target_modal, modal_title_component, edited
     
 }
 
-//seçao
+//section
 open_form('.new_section', '#single_field_form', '#single_field_form_title')
 open_form('.edit_section', '#single_field_form', '#single_field_form_title', '.section_name')
-//subseção
+//subsection
 open_form('.new_subsection', '#two_field_form', '#two_field_form_title')
 open_form('.edit_subsection', '#two_field_form', '#two_field_form_title', '.subsection_name', '.subsection_description')
 //item

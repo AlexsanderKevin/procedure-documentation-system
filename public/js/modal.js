@@ -39,5 +39,5 @@ function static_modal(target_component, title, content){
     }
 }
 
-// item vazio
+// empty item
 static_modal('.emptyItemList', 'Item vazio!', 'Este item não possui conteúdo algum para ser visualizado no momento.')

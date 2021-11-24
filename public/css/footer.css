@@ -1,0 +1,13 @@
+footer{
+    background-color: var(--gradient_color_2);
+    height: 15vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h1{
+    color: var(--gradient_color_5);
+}

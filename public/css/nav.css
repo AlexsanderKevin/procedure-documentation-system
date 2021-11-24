@@ -1,3 +1,9 @@
+#nav_burger{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -73,7 +79,7 @@ nav {
 
     border-radius: 25px;
 
-    z-index: 2;
+    z-index: 3;
 }
 
 .burger div{
