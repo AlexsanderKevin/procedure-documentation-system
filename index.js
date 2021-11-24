@@ -13,10 +13,12 @@ const Comment = require("./database/tables/comment")
 //app
 const app = express()
 
-app.engine('hbs', express_handlebars ({
+const hbs = express_handlebars.create({
     defaultLayout: 'main',
     extname: '.hbs'
-}))
+})
+
+app.engine('hbs', hbs.engine)
 
 app.set('view engine', 'hbs')
 
