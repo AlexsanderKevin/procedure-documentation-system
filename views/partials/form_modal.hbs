@@ -1,19 +1,42 @@
-<!--two field form-->
-<div id="{{type}}_field_form" class=" modalContainer form_container ">
+ <!--#region single field form-->
+<div id="single_field_form" class=" modalContainer form_container ">
     <form id="form_frame" class="form_frame">
         <div class="modal_form_header">
-            <h3 id="{{type}}_field_form_title" class="modal_title">modal</h3>
+            <h3 id="single_field_form_title" class="modal_title">modal</h3>
         </div>
 
         <div class="modalContent form_field_container">
             <div class="edition_input_box">
-                <input id="{{type}}_form_name_field" type="text" class="edition_field" name="title" required>
+                <input id="single_form_name_field" type="text" class="edition_field" name="title" required>
+                <label for="title" class="edition_input_label">Título</label>
+            </div>
+
+        </div>
+
+        <div class="modal_form_footer">
+            <button class="form_close_button modal_form_button all_button">Fechar</button>
+            <button type="submit" class="modal_form_button all_button submit_edition_button">OK</button>
+        </div>
+    </form>
+</div>
+<!--#endregion-->
+
+<!--#region two field form-->
+<div id="two_field_form" class=" modalContainer form_container ">
+    <form id="form_frame" class="form_frame">
+        <div class="modal_form_header">
+            <h3 id="two_field_form_title" class="modal_title">modal</h3>
+        </div>
+
+        <div class="modalContent form_field_container">
+            <div class="edition_input_box">
+                <input id="two_form_name_field" type="text" class="edition_field" name="title" required>
                 <label for="title" class="edition_input_label">Título</label>
             </div>
             <br>
             <div class="textbox_box">
                 <label  for="description" class="edition_textbox_label">Descrição</label>
-                <textarea id="{{type}}_form_description_field" type="textarea" class="edition_textbox" name="description"></textarea>
+                <textarea id="two_form_description_field" type="textarea" class="edition_textbox" name="description"></textarea>
             </div>
         </div>
 

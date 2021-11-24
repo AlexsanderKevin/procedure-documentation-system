@@ -26,24 +26,12 @@
 
 </head>
 <body>
-     <!--#region edition buttons-->
-    <div class="edit_button_container">
-        <!--save changes button-->
-        <img class="edition_button save_button icon_button all_button" src="/img/icon/diskette.png" alt="Salvar Mudanças">
-        <!--cancel changes button-->
-        <img class="edition_button discard_button icon_button all_button " src="/img/icon/close.png" alt="Descartar Mudanças">
-        <!--edit button-->
-        <img class="edition_button start_edition icon_button all_button show_button" src="/img/icon/pencil.png" alt="Editar">
-    </div>
-    <!--#endregion-->
-
     <div class="container">
         {{{body}}}
     </div>
 
     {{>modal}}
-    {{>form_modal type = 'two'}}
-    {{>form_modal type = 'single'}}
+    {{>form_modal}}
     {{>footer}}
 
     <!--js files-->
@@ -59,6 +47,7 @@
     <script src="/js/burger.js"></script>
     <script src="/js/home_button.js"></script>
     <script src="/js/login_form.js"></script>
-    <script src="/js/edit.js"></script>
+    <script src="/js/edition/edition_modal.js"></script>
+    <script src="/js/edition/edition_buttons.js"></script>
 </body>
 </html>

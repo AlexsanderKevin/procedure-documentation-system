@@ -1,0 +1,31 @@
+<div class="item_content_container">
+    <div class="item_content_header">                
+        <h2 id="solutions">{{category_title}}</h2>
+        <div class="page_content_burger content_burger all_button" >
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+    <div class="item_content_text">
+        {{#each category}}
+        <div>
+        <div class="single_container">
+            <div class="content_header">
+                <h3 class="content_title">{{this.dataValues.title}}</h3>
+
+                <div class="single_content_burger content_burger all_button" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            
+            <div class="content_text">
+                <p>{{{this.dataValues.content}}}</p>
+            </div>
+        </div> 
+        </div>
+        {{/each}}
+    </div>
+</div>

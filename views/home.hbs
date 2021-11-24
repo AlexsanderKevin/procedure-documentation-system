@@ -1,5 +1,6 @@
 <!--#region header -->  
 {{> header title = 'Guia de Procedimentos'}}
+{{> edition}}
 <nav id = "menu" class="section_nav">
     <div class="nav_links">
         <div class="nav_div">
@@ -24,11 +25,10 @@
     <!--#region item sections-->
     {{#item_sections}}
     <section class="item_section" id='{{this.dataValues.name}}'>
-        <div class='section_title section_color_{{this.dataValues.departmentId}}'>
+        <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
             <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
             <!--pencil button-->
-            <img class="edit_section pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
-            
+            <img class="pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
         </div>
         <div class="section_content">
 
@@ -38,14 +38,14 @@
         <div>
 
             <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.departmentId}}">
-                <div class="subsection_title">
+                <div class=" subsection_title">
                     <button class="subsection_about_button section_color_{{../dataValues.departmentId}}">
                         ?
                     </button>
                     <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
 
                     <!--pencil button-->
-                    <img class="edit_subsection pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+                    <img class="edit_section pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
 
                     <div class="subsection_burger all_button" >
                         <div class="line1"></div>
@@ -63,7 +63,7 @@
                 <div class="item_subsection_content">
                 {{#each this.items}}
                     {{#if dataValues.description}}
-                    <div class="single_item_container">
+                    <div class="editable single_item_container">
 
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
                             <h4 class="item_name">
@@ -71,7 +71,8 @@
                             </h4>
                         </a>
                         <!--pencil button-->
-                        <img class="edit_item pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+                        <img class="edit_subsection pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+
                     </div>
 
                     {{else}}
@@ -81,12 +82,13 @@
                             {{this.dataValues.title}}
                         </h4>
                         <!--pencil button-->
-                        <img class="edit_item pencil_button edition_button icon_button    all_button" src="/img/icon/pencil.png" alt="Editar">
+                        <img class="edit_item pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
+
                     </div>
 
                     {{/if}}
                 {{/each}}
-                <button class="new_item edition_button add_button all_button">+</button>
+                <button class="plus_button new_item edition_button add_button all_button">+</button>
                 </div>
             </ul>
             <!--#endregion-->
