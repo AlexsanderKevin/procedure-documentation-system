@@ -1,6 +1,4 @@
-<!--#region content-->
 <section id="content">
-    
     <!--#region nav-->
     {{> header title = procedure.dataValues.title}}
     <nav id = "menu" class="section_nav procedure_nav">
@@ -20,10 +18,11 @@
         </div>
     </div>
     </nav>
-
     <!--#endregion-->
 
-        <!--#region item description-->
+    <!--#region content-->
+    <div>
+        <!--# item description-->
         {{#if procedure.dataValues.description}}
         <div class="item_content_container">
             <div class="item_content_header">
@@ -42,156 +41,26 @@
             
         </div>
         {{/if}}
-        <!--#endregion-->
 
-        <!--#region item solution-->
+        <!--# item solution-->
         {{#if item_solutions}}
-        <div class="item_content_container">
-            <div class="item_content_header">                
-                <h2 id="solutions">Soluções</h2>
-                <div class="page_content_burger content_burger all_button" >
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-            <div class="item_content_text">
-                {{#each item_solutions}}
-                <div>
-                <div class="single_container">
-                    <div class="content_header">
-                        <h3 class="content_title">{{this.dataValues.title}}</h3>
-
-                        <div class="single_content_burger content_burger all_button" >
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                            <div class="line3"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="content_text">
-                        <p>{{{this.dataValues.content}}}</p>
-                    </div>
-                </div> 
-                </div>
-                {{/each}}
-            </div>
-        </div>
+            {{>procedure_content category = item_solutions title = 'Soluções' id = 'solutions'}}
         {{/if}}
-        <!--#endregion-->
 
-        <!--#region item obs-->
+        <!--# item obs-->
         {{#if item_obs}}
-        <div class="item_content_container">
-            <div class="item_content_header">                
-                <h2 id="obs">Observações</h2>
-                <div class="page_content_burger content_burger all_button" >
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-            <div class="item_content_text">
-            {{#each item_obs}}
-            <div>
-            <div class="single_container">
-                <div class="content_header">
-                    <h3 class="content_title">{{this.dataValues.title}}</h3>
-
-                    <div class="single_content_burger content_burger all_button" >
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                </div>
-                
-                <div class="content_text">
-                    <p>{{{this.dataValues.content}}}</p>
-                </div>
-            </div> 
-            </div>
-            {{/each}}
-            </div>
-        </div>
+            {{>procedure_content category = item_obs title = 'Observações' id = 'obs'}}
         {{/if}}
-        <!--#endregion-->
 
-        <!--#region item issues-->
+        <!--# item issues-->
         {{#if item_issues}}
-        <div class="item_content_container">
-            <div class="item_content_header">                
-                <h2 id="issues">Possíveis Problemas</h2>
-                <div class="page_content_burger content_burger all_button" >
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-            <div class="item_content_text">
-            {{#each item_issues}}
-            <div>
-            <div class="single_container">
-                <div class="content_header">
-                    <h3 class="content_title">{{this.dataValues.title}}</h3>
-
-                    <div class="single_content_burger content_burger all_button" >
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                </div>
-                
-                <div class="content_text">
-                    <p>{{{this.dataValues.content}}}</p>
-                </div>
-            </div> 
-            </div>
-            {{/each}}
-            </div>
-        </div>
+            {{>procedure_content category = item_issues title = 'Possíveis Problemas' id = 'issues'}}
         {{/if}}
-        <!--#endregion-->
 
-        <!--#region comments-->
+        <!--# comments-->
         {{#if comments}}
-        <div class="item_content_container">
-            <div class="item_content_header">                
-                <h2 id="comments">Comentários</h2>
-                <div class="page_content_burger content_burger all_button" >
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-            <div class="item_content_text">
-            {{#each comments}}
-            <div>
-            <div class="single_container">
-                <div class="content_header">
-                    <h3 class="content_title">{{this.dataValues.title}}</h3>
-
-                    <div class="single_content_burger content_burger all_button" >
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
-                </div>
-                
-                <div class="content_text">
-                    <p>{{{this.dataValues.content}}}</p>
-                </div>
-            </div> 
-            </div>
-            {{/each}}
-            </div>
-        </div>
-        {{/if}}
-        <!--#endregion-->
-
-        <!--footer-->
-        <footer style="display: none;">
-            <a href="/home/{{procedure.dataValues.departmentId}}" rel="prev" target="self" class="all_button">Voltar</a>
-        </footer>
+            {{>procedure_content category = comments title = 'Comentários' id = 'comments'}}
+        {{/if}}   
     </div>
-</section>
 <!--#endregion-->
+</section>
