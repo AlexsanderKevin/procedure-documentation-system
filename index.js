@@ -1,22 +1,21 @@
 const express = require("express")
 const express_handlebars = require('express-handlebars')
+//database
 const Department = require("./app/models/department")
-//item organization
+const User = require("./app/models/user")
 const ItemSection = require("./app/models/item_section")
 const ItemSubsection = require("./app/models/item_subsection")
 const Item = require("./app/models/item")
-//item content
 const ItemSolution = require("./app/models/item_solution")
 const ItemObs = require("./app/models/item_obs")
 const ItemIssue = require("./app/models/item_issues")
 const Comment = require("./app/models/comment")
-const User = require("./app/models/user")
-const bodyParser = require("body-parser")
 //app
 const app = express()
 app.use(express.json());
 app.use(express.urlencoded());
 // controller
+const bodyParser = require("body-parser")
 const AuthController = require('./app/controllers/AuthController')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -32,7 +31,7 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 
 // rota padrão
-app.get("/", async (req, res) => {
+app.get("/departments", async (req, res) => {
     const departments = await Department.findAll()
 
     res.render("departments",{
@@ -70,7 +69,7 @@ app.post("/auth", async (req, res) => {
     }
 })
 
-app.get("/login", (req, res) => {
+app.get("/", (req, res) => {
     res.render("login")
 })
 
@@ -136,6 +135,10 @@ app.get("/procedure/:id", async (req, res) => {
         console.error(err)
         res.render("error")
     }
+})
+// register route
+app.get("/register", async (req, res) => {
+    res.render("register")
 })
 
 // pegando links externos da pasta public
