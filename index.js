@@ -10,10 +10,17 @@ const ItemSolution = require("./app/models/item_solution")
 const ItemObs = require("./app/models/item_obs")
 const ItemIssue = require("./app/models/item_issues")
 const Comment = require("./app/models/comment")
+const User = require("./app/models/user")
+const bodyParser = require("body-parser")
 //app
 const app = express()
+app.use(express.json());
+app.use(express.urlencoded());
 // controller
 const AuthController = require('./app/controllers/AuthController')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+require("dotenv").config();
 
 const hbs = express_handlebars.create({
     defaultLayout: 'main',
@@ -34,11 +41,37 @@ app.get("/", async (req, res) => {
 })
 
 //login
-app.get("/login", async (req, res) => {
+app.post("/auth", async (req, res) => {
+    const username = req.body.username 
+    const password = req.body.password
 
-    res.render("login",{
-        
-    })
+    const user = await User.findOne({ where: { username: username }  })
+
+    if(user){
+        const isPasswordCorrect = await bcrypt.compare(password, user.password)
+
+        if(isPasswordCorrect){
+            const token = jwt.sign(
+                { id: user.id, departmentId: user.departmentId },
+                process.env.SECRET,
+                {
+                  expiresIn: "10h",
+                }
+            );
+
+            console.log(token)
+
+            res.render("login", { token: token, departmentId: user.departmentId })
+        }else{
+            res.render("login", { error: "Senha incorreta"})
+        }
+    }else{
+        res.render("login", { error: "Usuario nao encontrado"})
+    }
+})
+
+app.get("/login", (req, res) => {
+    res.render("login")
 })
 
 //login post

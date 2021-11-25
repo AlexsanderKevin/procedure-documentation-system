@@ -3,11 +3,11 @@
         <h1 class="login_page_title ">Login</h1>
     </div>
     
-    <form class="login_form">
+    <form class="login_form" action="/auth" method="POST">
         
         <div class="input_box">
-             <input id="user" class="login_text_input" type="text" name="user" required>
-            <label for="password" class="login_label">Nome de Usuário</label>
+             <input id="username" class="login_text_input" type="text" name="username" required>
+            <label for="username" class="login_label">Nome de Usuário</label>
         </div>
         <div class="input_box">
              <input id="password" class="login_text_input" type="password" name="password" required>
@@ -17,3 +17,13 @@
         <button class="login_button all_button" type="submit">Entrar</button>
     </form>
 </section>
+
+{{#if token}}
+  <script type="text/javascript">
+    const token = '{{token}}';
+
+    localStorage.setItem("token", token)
+
+    window.location.href = "/home/" + '{{departmentId}}'
+  </script>
+{{/if}}

@@ -22,7 +22,7 @@ const User = database.define('users', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    department_id: {
+    departmentId: {
         type: Sequelize.INTEGER,
         references: 'departments',
         referencesKey: 'id'
