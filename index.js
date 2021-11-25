@@ -143,6 +143,22 @@ app.get("/register", async (req, res) => {
         departments: departments,
     })
 })
+// edit route
+app.get("/edit", async (req, res) => {
+    const departments = await Department.findAll()
+    const item_sections = await ItemSection.findAll()
+    const item_subsections = await ItemSubsection.findAll()
+    const items = await Item.findAll()
+    const users = await User.findAll()
+
+    res.render("edition", {
+        departments: departments,
+        item_sections: item_sections,
+        item_subsections: item_subsections,
+        items: items,
+        users: users,
+    })
+})
 
 // pegando links externos da pasta public
 app.use(express.static(__dirname + "/public"))

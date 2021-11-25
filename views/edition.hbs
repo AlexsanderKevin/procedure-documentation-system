@@ -1,0 +1,41 @@
+{{>header title = 'Edição'}}
+<br><br>
+<section class="edition">
+    {{>edition_header}}
+
+    <div id="body"></div>
+</section>
+<script>
+    const operation = document.querySelectorAll('.operation')
+    const body = document.querySelector('#body')
+
+    for(let i = 0; i < operation.length; i ++){
+       operation[i].addEventListener('click', ()=>{
+           body.innerText = `{{>add}}`
+       })
+    }
+
+    
+    const table = document.querySelectorAll('.table')
+    
+
+    for(let i = 0; i < operation.length; i ++){
+        operation[i].addEventListener('click', ()=>{
+            switch(operation[i].value){
+                case 'add':
+                    for(let i = 0; i < table.length; i++){
+                        table[i].addEventListener('click', ()=>{
+                            switch(table[i].value){
+                                case 'user':
+                                    body.innerHTML = '{{>add_department}}'
+                                    break
+                            }
+                        })
+                    }
+                    break
+                case 'edit':
+                    break
+            }
+        })
+    }
+</script>

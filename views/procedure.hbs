@@ -1,25 +1,6 @@
 <section id="content">
-    <!--#region nav-->
     {{> header title = procedure.dataValues.title}}
-    <nav id = "menu" class="section_nav procedure_nav">
-    <div class="nav_links">
-        <div class="nav_div">
-            {{>nav_div_procedure}}
-        </div>
-        
-        <div class="nav_div">
-            <h1 class="section_links all_button">Departamentos</h1>
-
-            <div class="subsection_links while_hidden">
-                {{#each departments}}
-                    <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-    </nav>
-    <!--#endregion-->
-
+    {{> nav_procedure}}
     <!--#region content-->
     <div>
         <!--# item description-->

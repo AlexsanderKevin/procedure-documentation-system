@@ -1,0 +1,20 @@
+<nav id = "menu" class="section_nav">
+    <div class="nav_links">
+        <div class="nav_div">
+            {{#item_sections}}
+                <li>
+                    <h1 class="section_links all_button">{{this.dataValues.name}}</h1>
+
+                    <div class="subsection_links while_hidden">
+                        {{#each this.dataValues.item_subsections}}
+                        <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                        {{/each}}
+                    </div>
+                </li>
+            {{/item_sections}}
+        </div>
+        {{>nav_to_departments}}
+    </div>
+</nav>
+
+{{>burger id = 'nav_burger' class = 'burger'}}

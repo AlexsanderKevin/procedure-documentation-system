@@ -1,23 +1,7 @@
 <!--#region header -->  
-{{> header title = 'Guia de Procedimentos'}}
-{{> edition}}
-<nav id = "menu" class="section_nav">
-    <div class="nav_links">
-        <div class="nav_div">
-            {{> nav_div_home}}
-        </div>
-
-        <div class="nav_div">
-            <h1 class="section_links all_button">Departamentos</h1>
-
-            <div class="subsection_links while_hidden">
-                {{#each departments}}
-                    <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
-                {{/each}}
-            </div>
-        </div>
-    </div>
-</nav>
+{{>header title = 'Guia de Procedimentos'}}
+{{>edition_link}}
+{{>nav_home}}
 <!--#endregion-->
 
 <!--#region content-->
@@ -27,8 +11,6 @@
     <section class="item_section" id='{{this.dataValues.name}}'>
         <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
             <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
-            <!--pencil button-->
-            <img class="pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
         </div>
         <div class="section_content">
 
@@ -43,10 +25,6 @@
                         ?
                     </button>
                     <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
-
-                    <!--pencil button-->
-                    <img class="edit_section pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
-
                     {{>burger class = 'subsection_burger'}}
                 </div>
                 
@@ -60,43 +38,31 @@
                 {{#each this.items}}
                     {{#if dataValues.description}}
                     <div class="editable single_item_container">
-
                         <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
                             <h4 class="item_name">
                                 {{this.dataValues.title}}
                             </h4>
                         </a>
-                        <!--pencil button-->
-                        <img class="edit_subsection pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
-
                     </div>
 
                     {{else}}
-                    <div class="single_item_container">
-                        
+                    <div class="single_item_container">                        
                         <h4 class="emptyItemList item_name">
                             {{this.dataValues.title}}
                         </h4>
-                        <!--pencil button-->
-                        <img class="edit_item pencil_button edition_button icon_button all_button" src="/img/icon/pencil.png" alt="Editar">
-
                     </div>
-
                     {{/if}}
                 {{/each}}
-                <button class="plus_button new_item edition_button add_button all_button">+</button>
                 </div>
             </ul>
             <!--#endregion-->
             </div>
         </div>
         {{/each}}
-        <button class="new_subsection edition_button add_button all_button">+</button>
         <!--#endregion-->
         </div>
     </section>
     {{/item_sections}}
-    <button class="new_section edition_button add_button all_button">+</button>
     <!--#endregion-->
 </section>
 <!--#endregion-->
