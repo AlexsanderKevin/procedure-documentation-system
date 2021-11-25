@@ -138,7 +138,10 @@ app.get("/procedure/:id", async (req, res) => {
 })
 // register route
 app.get("/register", async (req, res) => {
-    res.render("register")
+    const departments = await Department.findAll()
+    res.render("register", {
+        departments: departments,
+    })
 })
 
 // pegando links externos da pasta public

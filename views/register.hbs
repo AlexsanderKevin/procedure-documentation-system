@@ -1,0 +1,45 @@
+{{> header title = 'Cadastro'}}
+<br>
+<section class="register form_section">
+    <header class="form_header">
+        <h1>Novo Usuário</h1>
+    </header>
+    <form action="/auth" method="POST">
+        
+        <div class="input_box">
+             <input id="name" class="text_input name" type="text" name="name" required>
+            <label for="name" class="register_label">Nome Completo</label>
+        </div>
+        <div class="input_box">
+             <input id="username" class="text_input username" type="text" name="username" required>
+            <label for="username" class="register_label">Nome de Usuário</label>
+        </div>
+
+        <div class="password_container">
+            <div class="input_box">
+                <input id="password" class="text_input" type="password" name="password" required>
+                <label for="password" class="register_label">Senha</label>
+            </div>
+            
+            <div class="input_box">
+                <input id="confirm_password" class="text_input" type="password" name="confirm_password" required>
+                <label for="confirm_password" class="register_label">Confirmar Senha</label>
+            </div>
+        </div>
+        
+        <div class="select_container">
+            <select name="department" id="department">
+                <option value="null">Departamento</option>
+                {{#departments}}
+                <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
+                {{/departments}}
+            </select>
+        </div>
+
+        <div class="button_container">
+            <button class="all_button" type="reset">Resetar</button>
+
+            <button class="all_button" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</section>

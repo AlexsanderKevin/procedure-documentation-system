@@ -34,6 +34,9 @@ a:hover{
     --sectionColor_3: #ecc14b;
 
     --errorColor: rgb(255, 121, 121);
+
+    --standard_shadow: 0 0 5px black;
+    --standard_shadow_strong: 0 0 10px black;
 }
 
 ::-webkit-scrollbar{

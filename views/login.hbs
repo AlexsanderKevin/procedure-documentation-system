@@ -1,12 +1,12 @@
-<section class="login_page_content">
-    <div class="login_header">
-        <h1 class="login_page_title ">Login</h1>
-    </div>
+<section class="login form_section">
+    <header class="form_header">
+        <h1>Login</h1>
+    </header>
     
     <form class="login_form" action="/auth" method="POST">
         
         <div class="input_box">
-             <input id="username" class="login_text_input" type="text" name="username" required>
+             <input id="username" class="login_text_input username" type="text" name="username" required>
             <label for="username" class="login_label">Nome de Usuário</label>
         </div>
         <div class="input_box">
@@ -14,7 +14,9 @@
             <label for="password" class="login_label">Senha</label>
         </div>
         
-        <button class="login_button all_button" type="submit">Entrar</button>
+        <div class="button_container">
+          <button class="login_button all_button" type="submit">Entrar</button>
+        </div>
     </form>
 </section>
 

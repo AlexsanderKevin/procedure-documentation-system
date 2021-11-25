@@ -10,7 +10,7 @@
     border: solid;
     border-width: 0 0 3px 0;
 
-    box-shadow: 2px 2px 7px black;
+    box-shadow: var(--standard_shadow);
 
     animation: open_content 0.3s;
 }

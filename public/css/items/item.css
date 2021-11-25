@@ -24,7 +24,7 @@
     align-content: center;
     justify-content: center;
 
-    box-shadow: 2px 2px 7px black;
+    box-shadow: var(--standard_shadow);
 }
 
 .itemList:hover{
