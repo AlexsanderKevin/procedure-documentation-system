@@ -1,41 +1,40 @@
-<header>
-        <div id="operation_container" class="radio_container">
-            <div class="radio_box">
-                <input class=" operation" id="add" type="radio" value="add" name="operation">
-                <label class="radio_label" for="add">Adicionar</label>
-            </div>
 
-            <div class="radio_box">
-                <input class=" operation" id="edit" type="radio" value="edit" name="operation">
-                <label class="radio_label" for="edit">Editar</label>
-            </div>
-        </div>
 
-        <div id="table_container" class="redio_container">
-            <!-- department -->
-            <div class="radio_box">            
-                <input class="table" type="radio" id="department" name="table" value="department">
-                <label for="department">Departamento</label>
-            </div>
-            <!-- section -->
-            <div class="radio_box">
-                <input class="table" type="radio" id="item_section" name="table" value="item_section">
-                <label for="item_section">Seção</label>
-            </div>
-            <!-- subsection -->
-            <div class="radio_box">
-                <input class="table" type="radio" id="item_subsection" name="table" value="item_subsection">
-                <label for="item_subsection" >Subseção</label>
-            </div>
-            <!-- item -->
-            <div class="radio_box">
-                <input class="table" type="radio" id="item" name="table" value="procedure">
-                <label for="item">Procedimento</label>
-            </div>
-            <!-- user -->
-            <div class="radio_box">
-                <input class="table" type="radio" id="user" name="table" value="user">
-                <label for="user">Usuário</label>
-            </div>
-        </div>
-    </header>
+    <div id="operation_container" class="radio_container">
+        <select name="operation" id="operation">
+            <option class="invalid_option" value="">*Selecione a Operação</option>
+            <option value="add">Adicionar</option>
+            <option value="edit">Editar</option>
+        </select>
+    </div>
+
+    <div id="table_container" class="redio_container">
+
+        <select class="show" name="table" id="table">
+            <option class="invalid_option" value="">*Selecione a Tabela</option>
+            <option value="department">Departamento</option>
+            <option value="section">Seção</option>
+            <option value="subsection">Subseção</option>
+            <option value="procedure">Procedimento</option>
+            <option value="user">Usuário</option>
+        </select>
+        <!--
+        <select class="show" name="table" id="table_add">
+            <option class="invalid_option" value="">*Selecione a Tablea</option>
+            <option value="add_department">Departamento</option>
+            <option value="add_section">Seção</option>
+            <option value="add_subsection">Subseção</option>
+            <option value="add_procedure">Procedimento</option>
+            <option value="add_user">Usuário</option>
+        </select>
+
+        <select class="" name="table" id="table_edit">
+            <option class="invalid_option" value="">*Selecione a Tablea</option>
+            <option value="edit_department">Departamento</option>
+            <option value="edit_section">Seção</option>
+            <option value="edit_subsection">Subseção</option>
+            <option value="edit_procedure">Procedimento</option>
+            <option value="edit_user">Usuário</option>
+        </select>
+        -->
+    </div>

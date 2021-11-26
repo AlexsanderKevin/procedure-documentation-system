@@ -76,3 +76,7 @@ option{
 .select_container{
     width: 100%;
 }
+
+.show{
+    display: flex;
+}

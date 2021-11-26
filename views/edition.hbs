@@ -1,41 +1,47 @@
-{{>header title = 'Edição'}}
-<br><br>
 <section class="edition">
-    {{>edition_header}}
+    {{>header title = 'Edição'}}
+    <br><br>
+    <header class="edition">
+        {{>edition_header}}
+    </header>
+    <br>
+    {{>add_user}}  
+    {{>add_department}} 
+    {{>add_section}} 
+    {{>add_subsection}} 
+</section class="edition_body">
 
-    <div id="body"></div>
-</section>
 <script>
-    const operation = document.querySelectorAll('.operation')
-    const body = document.querySelector('#body')
+    const operation = document.querySelector('#operation')
+    const table = document.querySelector('#table')
+    const add_user = document.querySelector('#add_user_form')
+    const add_department = document.querySelector('#add_department_form')
+    const add_section = document.querySelector('#add_section_form')
+    const add_subsection = document.querySelector('#add_subsection_form')
 
-    for(let i = 0; i < operation.length; i ++){
-       operation[i].addEventListener('click', ()=>{
-           body.innerText = `{{>add}}`
-       })
+     function show_form(target_value, targert_form){
+        if(table.value == target_value){
+            targert_form.classList.add('show')
+        }else{
+            targert_form.classList.remove('show')
+        }
+    }
+    
+    function define_operation(){
+        if(operation.value == 'add'){
+            show_form('user', add_user)
+            show_form('department', add_department)
+            show_form('section', add_section)
+            show_form('subsection', add_subsection)
+        }
     }
 
-    
-    const table = document.querySelectorAll('.table')
-    
+    operation.addEventListener('change', ()=>{
+        define_operation()
+    })
+    table.addEventListener('change', ()=>{
+        define_operation()
+    })
 
-    for(let i = 0; i < operation.length; i ++){
-        operation[i].addEventListener('click', ()=>{
-            switch(operation[i].value){
-                case 'add':
-                    for(let i = 0; i < table.length; i++){
-                        table[i].addEventListener('click', ()=>{
-                            switch(table[i].value){
-                                case 'user':
-                                    body.innerHTML = '{{>add_department}}'
-                                    break
-                            }
-                        })
-                    }
-                    break
-                case 'edit':
-                    break
-            }
-        })
-    }
+    console.log('serto')
 </script>
