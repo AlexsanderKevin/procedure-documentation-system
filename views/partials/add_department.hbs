@@ -3,16 +3,7 @@
         <h1>Novo Departamento</h1>
     </header>
     <form>
-        
-        <div class="input_box">
-             <input id="department_title_input" class="text_input title" type="text" name="department_title" required>
-            <label for="department_title" class="register_label">*Título</label>
-        </div>
-
-        <div class="button_container">
-            <button class="all_button" type="reset">Resetar</button>
-
-            <button class="all_button" type="submit">Cadastrar</button>
-        </div>
+        {{>template_form_input_box name="department_title" type="text" text="*Título"}}
+        {{>template_form_button_container}}
     </form>
 </section>

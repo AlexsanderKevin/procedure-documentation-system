@@ -1,27 +1,15 @@
-<section id="add_section_form" class="register form_section edition_form">
+<section id="add_section_form" class="register form_section edition_form ">
     <header class="form_header">
         <h1>Nova Seção</h1>
     </header>
     <form>
-        
-        <div class="input_box">
-             <input id="section_title_input" class="text_input title" type="text" name="section_title" required>
-            <label for="section_title" class="register_label">*Título</label>
-        </div>
-        <div class="datalist_container input_box">
-            <input class="text_input" list="section_department" name="department_list" required>
-            <label class="register_label" for="department_list">*Departamento</label>
-            <datalist name="section_department" id="section_department">
-                {{#departments}}
-                <option value="{{this.dataValues.name}}">
-                {{/departments}}
-            </datalist>
-        </div>
-
-        <div class="button_container">
-            <button class="all_button" type="reset">Resetar</button>
-
-            <button class="all_button" type="submit">Cadastrar</button>
-        </div>
+        {{>template_form_input_box name="section_title" type="text" text="*Título"}}
+        {{>template_form_datalist_input name="section_department" text="*Departamento"}}
+        <datalist name="section_department" id="section_department">
+            {{#departments}}
+            <option value="{{this.dataValues.name}}">
+            {{/departments}}
+        </datalist>
+        {{>template_form_button_container}}
     </form>
 </section>
