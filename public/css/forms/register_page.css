@@ -3,10 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
 }
 
 .register form{
-    width: 600px;
+    max-width: 750px;
 }
 
 .register div.input_box{
@@ -37,13 +39,6 @@
     left: 0;
 
     transition: .2s;
-}
-
-.text_input:focus ~ .register_label,
-.text_input:valid ~ .register_label{
-    top: -25px;
-    font-size: 15pt;
-    color: var(--gradient_color_5);
 }
 
 .password_container{

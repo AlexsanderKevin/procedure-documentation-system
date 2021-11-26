@@ -2,11 +2,20 @@
     <header class="form_header">
         <h1>Nova Seção</h1>
     </header>
-    <form action="/auth" method="POST">
+    <form>
         
         <div class="input_box">
              <input id="section_title_input" class="text_input title" type="text" name="section_title" required>
-            <label for="section_title" class="register_label">Título da Seção</label>
+            <label for="section_title" class="register_label">*Título</label>
+        </div>
+        <div class="datalist_container input_box">
+            <input class="text_input" list="section_department" name="department_list" required>
+            <label class="register_label" for="department_list">*Departamento</label>
+            <datalist name="section_department" id="section_department">
+                {{#departments}}
+                <option value="{{this.dataValues.name}}">
+                {{/departments}}
+            </datalist>
         </div>
 
         <div class="button_container">

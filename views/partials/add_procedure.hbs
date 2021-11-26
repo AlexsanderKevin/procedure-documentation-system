@@ -1,0 +1,33 @@
+<section id="add_procedure_form" class="register form_section edition_form ">
+    <header class="form_header">
+        <h1>Novo Procedimento</h1>
+    </header>
+    <form>
+        <div class="input_box">
+             <input id="procedure_title_input" class="text_input title" type="text" name="procedure_title" required>
+            <label for="procedure_title" class="register_label">*Título</label>
+        </div>
+        
+        <div class="datalist_container input_box">
+            <input class="text_input" list="procedure_subsection" name="procedure_subsection" required>
+            <label class="register_label" for="procedure_subsection">*Subseção</label>
+            <datalist name="procedure_subsection" id="procedure_subsection">
+                {{#each item_subsections}}
+                    <option value="{{this.dataValues.name}}">
+                {{/each}}
+            </datalist>
+        </div>
+
+        <div class="input_box textarea">
+            <label  for="description" class="">*Descrição</label>
+            <textarea id="procedure_description_input" type="textarea" class="" name="description"></textarea>
+        </div>
+
+
+        <div class="button_container">
+            <button class="all_button" type="reset">Resetar</button>
+
+            <button class="all_button" type="submit">Cadastrar</button>
+        </div>
+    </form>
+</section>

@@ -3,7 +3,7 @@ form{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 35px;
+    gap: 40px;
 
     border: solid var(--gradient_color_3);
 
@@ -48,7 +48,7 @@ form div{
     justify-content: space-around;
 }
 
-select{
+.datalist_container input, select{
     background: none;
     color: var(--min_contrast_color);
     outline: none;
@@ -64,7 +64,11 @@ select{
     border-width: 1px;
 }
 
-select:focus{
+.datalist_container input:focus{
+    border-color: var(--contrast_color);
+    color: var(--contrast_color);
+}
+.select:focus{
     border-color: var(--contrast_color);
     color: var(--contrast_color);
 }
@@ -73,10 +77,36 @@ option{
     background: var(--gradient_color_2);
 }
 
-.select_container{
+datalist{
+    background: var(--gradient_color_2);
+}
+
+.datalist_container{
     width: 100%;
 }
 
-.show{
+.input-box.textarea{
     display: flex;
+    flex-direction: column;
+}
+
+form textarea{
+    background: none;
+    outline: none;
+    color: var(--contrast_color);
+    width: 500px;
+}
+
+.textarea label{
+    color: var(--min_contrast_color);
+    position: absolute;
+    top: -25px;
+    left: 0;
+}
+
+.text_input:focus ~ .register_label,
+.text_input:valid ~ .register_label{
+    top: -25px;
+    font-size: 15pt;
+    color: var(--gradient_color_5);
 }
