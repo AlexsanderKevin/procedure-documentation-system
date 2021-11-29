@@ -9,9 +9,8 @@
 }
 
 .edition_header{
-    min-width: 600px;
-    max-width: 750px;
-    max-width: 750px;
+    min-width: 750px;
+    max-width: 100%;
     border: solid var(--gradient_color_3);
 
     box-shadow: var(--standard_shadow_strong);

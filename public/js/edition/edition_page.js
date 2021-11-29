@@ -10,29 +10,34 @@ const add_subsection = document.querySelector('#add_subsection_form')
 const add_obs = document.querySelector('#add_obs_form')
 const add_issue = document.querySelector('#add_issue_form')
 // lists
-//const department_list = document
-// show respective form
-function show_form(target_value, targert_form){
-    if(table.value == target_value && operation.value == 'add'){
-        targert_form.classList.add('show')
+const department_list = document.querySelector('#department_list')
+// show respective content
+function show_content(target_value, targert_content, target_operation){
+    if(table.value == target_value && operation.value == target_operation){
+        targert_content.classList.add('show')
     }else{
-        targert_form.classList.remove('show')
+        targert_content.classList.remove('show')
     }
 }
 // show respective list
 function show_list(){
-    
+    if(table.value == 'department' && operation.value == 'edit'){
+        department_list.classList.add('show')
+    }
 }
 //defining th operations
 function define_operation(){
-    show_form('department', add_department)
-    show_form('subsection', add_subsection)
-    show_form('procedure', add_procedure)
-    show_form('solution', add_solution)
-    show_form('section', add_section)
-    show_form('user', add_user)
-    show_form('obs', add_obs)  
-    show_form('issue', add_issue)  
+// showing forms
+    show_content('department', add_department, 'add')
+    show_content('subsection', add_subsection, 'add')
+    show_content('procedure', add_procedure, 'add')
+    show_content('solution', add_solution, 'add')
+    show_content('section', add_section, 'add')
+    show_content('user', add_user, 'add')
+    show_content('obs', add_obs, 'add')  
+    show_content('issue', add_issue, 'add') 
+// showing lists
+    show_content('department', department_list, 'edit') 
 }
 operation.addEventListener('change', ()=>{define_operation()})
 table.addEventListener('change', ()=>{define_operation()})
