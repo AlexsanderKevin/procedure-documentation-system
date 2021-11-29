@@ -1,0 +1,18 @@
+{{#each this.items}}
+    {{#if dataValues.description}}
+    <div class="editable single_item_container">
+        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
+            <h4 class="item_name">
+                {{this.dataValues.title}}
+            </h4>
+        </a>
+    </div>
+
+    {{else}}
+    <div class="single_item_container">                        
+        <h4 class="emptyItemList item_name">
+            {{this.dataValues.title}}
+        </h4>
+    </div>
+    {{/if}}
+{{/each}}

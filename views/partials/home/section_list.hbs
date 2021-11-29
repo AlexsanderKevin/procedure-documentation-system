@@ -1,0 +1,12 @@
+{{#item_sections}}
+<section class="item_section" id='{{this.dataValues.name}}'>
+    <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
+        <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
+    </div>
+    <div class="section_content">
+
+    <!--subsections-->
+    {{>home/subsection_list}}
+    </div>
+</section>
+{{/item_sections}}

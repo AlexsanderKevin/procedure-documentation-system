@@ -1,0 +1,24 @@
+{{#each this.item_subsections}}
+<div>
+    <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.departmentId}}">
+        <div class=" subsection_title">
+            <button class="subsection_about_button section_color_{{../dataValues.departmentId}}">
+                ?
+            </button>
+            <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
+            {{>main/burger class = 'subsection_burger'}}
+        </div>
+        
+        <div class="subsection_description">
+            {{{this.dataValues.description}}}
+        </div>
+
+    <!--#region items-->
+    <ul class="mainUl">
+        <div class="item_subsection_content">
+            {{>home/item_list}}
+        </div>
+    </ul>
+    </div>
+</div>
+{{/each}}

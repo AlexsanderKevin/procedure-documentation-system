@@ -1,71 +1,7 @@
-<!--#region header -->  
 {{>main/header title = 'Guia de Procedimentos'}}
 {{>edition/link}}
 {{>nav/home}}
-<!--#endregion-->
 
-<!--#region content-->
 <section id="content">
-    <!--#region item sections-->
-    {{#item_sections}}
-    <section class="item_section" id='{{this.dataValues.name}}'>
-        <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
-            <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
-        </div>
-        <div class="section_content">
-
-        
-        <!--#region item subsections-->
-        {{#each this.item_subsections}}
-        <div>
-
-            <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.departmentId}}">
-                <div class=" subsection_title">
-                    <button class="subsection_about_button section_color_{{../dataValues.departmentId}}">
-                        ?
-                    </button>
-                    <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
-                    {{>main/burger class = 'subsection_burger'}}
-                </div>
-                
-                <div class="subsection_description">
-                    {{{this.dataValues.description}}}
-                </div>
-
-            <!--#region items-->
-            <ul class="mainUl">
-                <div class="item_subsection_content">
-                {{#each this.items}}
-                    {{#if dataValues.description}}
-                    <div class="editable single_item_container">
-                        <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{../../dataValues.id}}">
-                            <h4 class="item_name">
-                                {{this.dataValues.title}}
-                            </h4>
-                        </a>
-                    </div>
-
-                    {{else}}
-                    <div class="single_item_container">                        
-                        <h4 class="emptyItemList item_name">
-                            {{this.dataValues.title}}
-                        </h4>
-                    </div>
-                    {{/if}}
-                {{/each}}
-                </div>
-            </ul>
-            <!--#endregion-->
-            </div>
-        </div>
-        {{/each}}
-        <!--#endregion-->
-        </div>
-    </section>
-    {{/item_sections}}
-    <!--#endregion-->
+    {{>home/section_list}}
 </section>
-<!--#endregion-->
-
-
-

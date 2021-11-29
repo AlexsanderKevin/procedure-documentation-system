@@ -1,7 +1,5 @@
 <section class="content">
-    <header class="department_header">
-        <h1>Selecione um departamento</h1>
-    </header>
+    {{>main/header title="Selecione um Depatamento"}}
     <div class="department_list">
         {{#each departments}}
             <a href="/home/{{this.dataValues.id}}" class="department_item section_color_{{this.dataValues.id}}">
