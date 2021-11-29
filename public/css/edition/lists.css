@@ -1,0 +1,50 @@
+.edition ol{
+    display: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    width: 100%;
+    max-height: 70vh;
+    padding: 30px;
+    overflow-y: scroll;
+
+    border: solid var(--gradient_color_3);
+    box-shadow: var(--standard_shadow_strong);
+}
+
+.edition .li_box{
+    background-color: var(--gradient_color_1);
+    padding: 20px;
+
+    border: solid var(--gradient_color_3);
+
+    width: 500px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: var(--standard_shadow_strong);
+}
+
+.edition li{
+    color: var(--contrast_color);
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.edit_button_container img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.edit_button_container{
+    display: flex;
+    gap: 10px;
+}

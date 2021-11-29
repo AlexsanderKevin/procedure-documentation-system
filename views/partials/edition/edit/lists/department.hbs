@@ -1,0 +1,11 @@
+<ol id="department_list" class="">
+    {{#>forms/datalist name="departments_list" label="*Pesquisar Departamento"}}
+        {{#departments}}
+            <option value={{this.dataValues.name}}>
+        {{/departments}}
+    {{/forms/datalist}}
+    
+    {{#departments}}
+        {{>edition/edit/li_box title = this.dataValues.name}}
+    {{/departments}}
+</ol>

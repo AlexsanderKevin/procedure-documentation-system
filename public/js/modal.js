@@ -7,7 +7,6 @@ const modal_title = document.querySelector('.modal_title')
 modal_close_button.addEventListener('click', () => {
     modal.classList.remove('show')
 })
-
 function dynamic_modal(target_component, title_component, content_component){
     // arrays
     const target = document.querySelectorAll(target_component)
@@ -21,7 +20,6 @@ function dynamic_modal(target_component, title_component, content_component){
             modal_content.innerText = content[i].innerText
         })
     }
-    
 }
 
 // subsection description modal
@@ -38,6 +36,5 @@ function static_modal(target_component, title, content){
         })
     }
 }
-
 // empty item
 static_modal('.emptyItemList', 'Item vazio!', 'Este item não possui conteúdo algum para ser visualizado no momento.')

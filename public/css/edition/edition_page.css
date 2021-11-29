@@ -1,16 +1,16 @@
 .edition{
     width: 100%;
+    min-height: 70vh;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0;
-
-    padding: 0;
 }
 
-header.edition {
+.edition_header{
+    min-width: 600px;
+    max-width: 750px;
     max-width: 750px;
     border: solid var(--gradient_color_3);
 
@@ -22,11 +22,11 @@ header.edition {
     align-self: center;
 }
 
-header.edition div{
+.edition_header div{
     width: 100%;
 }
 
-header.edition select{
+.edition_header select{
     outline: none;
     border: none;
 }

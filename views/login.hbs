@@ -1,8 +1,8 @@
 <section class="login form_section">
     {{>forms/header text='Login'}}
     <form class="login_form" action="/auth" method="POST">        
-        {{>forms/input_box type="text" name="username" class=' username' text='Nome de Usuário'}}
-        {{>forms/input_box type="password" name="password" text='Senha'}}
+        {{>forms/input_box type="text" name="username" class=' username' label='*Nome de Usuário'}}
+        {{>forms/input_box type="password" name="password" label='*Senha'}}
         {{>forms/button_container submit="Entrar"}}
     </form>
 </section>
