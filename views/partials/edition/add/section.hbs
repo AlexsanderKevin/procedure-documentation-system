@@ -1,9 +1,10 @@
 {{#>forms/default_form id="add_section_form" title="Nova Seção" confirm="Adicionar"}}
-    {{>forms/input_box name="section_title" type="text" text="*Título"}}
-        {{>forms/datalist_input name="section_department" text="*Departamento"}}
-        <datalist name="section_department" id="section_department">
-            {{#departments}}
+    {{>forms/input_box name="section_title" type="text" label="*Título"}}
+
+    {{#>forms/datalist name="section_department" label="*Departamento"}}
+        {{#departments}}
             <option value="{{this.dataValues.name}}">
-            {{/departments}}
-        </datalist>
+        {{/departments}}
+    {{/forms/datalist}}
+
 {{/forms/default_form}}

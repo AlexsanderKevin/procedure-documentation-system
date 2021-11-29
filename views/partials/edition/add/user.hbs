@@ -1,16 +1,15 @@
 {{#>forms/default_form id="add_user_form" title="Novo Usuário" confirm="Adicionar"}}
-    {{>forms/input_box name="name" type="text" text="*Nome Completo"}}
-    {{>forms/input_box name="username" type="text" text="*Nome de Usuário"}}
+    {{>forms/input_box name="name" type="text" label="*Nome Completo"}}
+    {{>forms/input_box name="username" type="text" label="*Nome de Usuário"}}
 
     <div class="password_container">
-        {{>forms/input_box name="password" type="password" text="*Senha"}}
-        {{>forms/input_box name="confirm_password" type="password" text="*Confirmar Senha"}}
+        {{>forms/input_box name="password" type="password" label="*Senha"}}
+        {{>forms/input_box name="confirm_password" type="password" label="*Confirmar Senha"}}
     </div>
 
-    {{>forms/datalist_input name="user_department" text="*Departamentos"}}
-    <datalist name="user_department" id="user_department">
+    {{#>forms/datalist name="user_department" label="*Departamentos"}}
         {{#departments}}
-        <option value="{{this.dataValues.name}}">
+            <option value="{{this.dataValues.name}}">
         {{/departments}}
-    </datalist>
-{{/forms/default_form }}
+    {{/forms/datalist}}
+{{/forms/default_form}}

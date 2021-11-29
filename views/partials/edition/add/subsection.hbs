@@ -1,19 +1,12 @@
 {{#>forms/default_form id="add_subsection_form" title="Nova Subseção" confirm="Adicionar"}}
-    {{>forms/input_box name="subsection_title" type="text" text="*Título"}}
+    {{>forms/input_box name="subsection_title" type="text" label="*Título"}}
         
-    <div class="datalist_container input_box">
-        <input class="text_input" list="subsection_section" name="subsection_section" required>
-        <label class="register_label" for="subsection_section">*Seção</label>
-        <datalist name="subsection_section" id="subsection_section">
-            {{#each item_sections}}
-                <option value="{{this.dataValues.name}}">
-            {{/each}}
-        </datalist>
-    </div>
-
-    <div class="input_box textarea">
-        <label  for="description" class="">*Descrição</label>
-        <textarea id="subsection_description_input" type="textarea" class="" name="description"></textarea>
-    </div>
+    {{#>forms/datalist name="subsection_section" label="*Seção"}}
+        {{#each item_sections}}
+            <option value="{{this.dataValues.name}}">
+        {{/each}}
+    {{/forms/datalist}}
+        
+    {{>forms/textarea_box name="description" label="*Descrição"}}
 {{/forms/default_form}}
 
