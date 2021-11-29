@@ -3,14 +3,14 @@
         <h1>Novo Procedimento</h1>
     </header>
     <form>
-        {{>template_form_input_box name="procedure_title" type="text" text="*Título"}}
-        {{>template_form_datalist_input name="procedure_subsection" text="*Subseção"}}
+        {{>forms/input_box name="procedure_title" type="text" text="*Título"}}
+        {{>forms/datalist_input name="procedure_subsection" text="*Subseção"}}
         <datalist name="procedure_subsection" id="procedure_subsection">
             {{#each item_subsections}}
                 <option value="{{this.dataValues.name}}">
             {{/each}}
         </datalist>
-        {{>template_form_textarea_box name="procedure_description_input" text="*Descrição"}}
+        {{>forms/textarea_box name="procedure_description_input" text="*Descrição"}}
         {{>forms/button_container}}
     </form>
 </section>

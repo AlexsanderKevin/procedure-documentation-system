@@ -1,7 +1,7 @@
 <div class="item_content_container">
     <div class="item_content_header">                
         <h2 id="{{id}}">{{title}}</h2>
-        {{>burger class = 'page_content_burger content_burger all_button'}}
+        {{>main/burger class = 'page_content_burger content_burger all_button'}}
     </div>
     <div class="item_content_text">
         {{#each category}}
@@ -10,7 +10,7 @@
             <div class="content_header">
                 <h3 class="content_title">{{this.dataValues.title}}</h3>
 
-                {{>burger class = 'single_content_burger content_burger all_button'}}
+                {{>main/burger class = 'single_content_burger content_burger all_button'}}
             </div>
             
             <div class="content_text">

@@ -3,15 +3,15 @@
         <h1>Novo Usuário</h1>
     </header>
     <form>
-        {{>template_form_input_box name="name" type="text" text="*Nome Completo"}}
-        {{>template_form_input_box name="username" type="text" text="*Nome de Usuário"}}
+        {{>forms/input_box name="name" type="text" text="*Nome Completo"}}
+        {{>forms/input_box name="username" type="text" text="*Nome de Usuário"}}
 
         <div class="password_container">
-            {{>template_form_input_box name="password" type="password" text="*Senha"}}
-            {{>template_form_input_box name="confirm_password" type="password" text="*Confirmar Senha"}}
+            {{>forms/input_box name="password" type="password" text="*Senha"}}
+            {{>forms/input_box name="confirm_password" type="password" text="*Confirmar Senha"}}
         </div>
 
-        {{>template_form_datalist_input name="user_department" text="*Departamentos"}}
+        {{>forms/datalist_input name="user_department" text="*Departamentos"}}
         <datalist name="user_department" id="user_department">
             {{#departments}}
             <option value="{{this.dataValues.name}}">

@@ -3,8 +3,8 @@
         <h1>Nova Seção</h1>
     </header>
     <form>
-        {{>template_form_input_box name="section_title" type="text" text="*Título"}}
-        {{>template_form_datalist_input name="section_department" text="*Departamento"}}
+        {{>forms/input_box name="section_title" type="text" text="*Título"}}
+        {{>forms/datalist_input name="section_department" text="*Departamento"}}
         <datalist name="section_department" id="section_department">
             {{#departments}}
             <option value="{{this.dataValues.name}}">

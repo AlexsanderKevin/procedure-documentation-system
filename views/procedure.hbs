@@ -1,6 +1,6 @@
 <section id="content">
-    {{> header title = procedure.dataValues.title}}
-    {{> nav_procedure}}
+    {{>main/header title = procedure.dataValues.title}}
+    {{>nav/procedure}}
     <!--#region content-->
     <div>
         <!--# item description-->
@@ -9,11 +9,7 @@
             <div class="item_content_header">
                 <h2 id="description">Descrição</h2>
 
-                <div class="page_content_burger content_burger all_button" >
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-              </div>
+                {{>main/burger class='page_content_burger content_burger'}}
             </div>
 
             <div class="item_content_text">
@@ -25,22 +21,22 @@
 
         <!--# item solution-->
         {{#if item_solutions}}
-            {{>procedure_content category = item_solutions title = 'Soluções' id = 'solutions'}}
+            {{>procedure/content category = item_solutions title = 'Soluções' id = 'solutions'}}
         {{/if}}
 
         <!--# item obs-->
         {{#if item_obs}}
-            {{>procedure_content category = item_obs title = 'Observações' id = 'obs'}}
+            {{>procedure/content category = item_obs title = 'Observações' id = 'obs'}}
         {{/if}}
 
         <!--# item issues-->
         {{#if item_issues}}
-            {{>procedure_content category = item_issues title = 'Possíveis Problemas' id = 'issues'}}
+            {{>procedure/content category = item_issues title = 'Possíveis Problemas' id = 'issues'}}
         {{/if}}
 
         <!--# comments-->
         {{#if comments}}
-            {{>procedure_content category = comments title = 'Comentários' id = 'comments'}}
+            {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
         {{/if}}   
     </div>
 <!--#endregion-->
