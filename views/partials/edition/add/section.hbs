@@ -1,15 +1,9 @@
-<section id="add_section_form" class="register form_section edition_form ">
-    <header class="form_header">
-        <h1>Nova Seção</h1>
-    </header>
-    <form>
-        {{>forms/input_box name="section_title" type="text" text="*Título"}}
+{{#>forms/default_form id="add_section_form" title="Nova Seção" confirm="Adicionar"}}
+    {{>forms/input_box name="section_title" type="text" text="*Título"}}
         {{>forms/datalist_input name="section_department" text="*Departamento"}}
         <datalist name="section_department" id="section_department">
             {{#departments}}
             <option value="{{this.dataValues.name}}">
             {{/departments}}
         </datalist>
-        {{>forms/button_container submit='Adicionar'}}
-    </form>
-</section>
+{{/forms/default_form}}

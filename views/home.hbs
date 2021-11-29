@@ -3,5 +3,9 @@
 {{>nav/home}}
 
 <section id="content">
-    {{>home/section_list}}
+    {{#>home/section_list}}
+        {{#>home/subsection_list}}
+            {{>home/item_list}}
+        {{/home/subsection_list}}
+    {{/home/section_list}}
 </section>

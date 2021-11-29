@@ -1,9 +1,3 @@
-<section id="add_department_form" class="register form_section edition_form">
-    <header class="form_header">
-        <h1>Novo Departamento</h1>
-    </header>
-    <form>
-        {{>forms/input_box name="department_title" type="text" text="*Título"}}
-        {{>forms/button_container submit='Adicionar'}}
-    </form>
-</section>
+{{#>forms/default_form id="add_department_form" title="Novo Departamento" confirm="Adicionar"}}
+    {{>forms/input_box name="department_title" type="text" text="*Título"}}
+{{/forms/default_form}}
