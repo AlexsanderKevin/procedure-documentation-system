@@ -1,0 +1,18 @@
+.edition .icon_button{
+    position: static;
+}
+
+.filters .icon_button.close{
+    opacity: 0.7;
+}
+.filters .icon_button.close:hover{
+    opacity: 0.3;
+}
+
+.edition .open{
+    display: none;
+    position: fixed;
+
+    top: 10px;
+    left: 10px;
+}

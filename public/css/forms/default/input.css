@@ -13,8 +13,8 @@
 
     outline: none;
 }
-.text_input:focus ~ .register_label,
-.text_input:valid ~ .register_label{
+.text_input:focus ~ .edit_label,
+.text_input:valid ~ .edit_label{
     top: -25px;
     font-size: 15pt;
     color: var(--gradient_color_5);

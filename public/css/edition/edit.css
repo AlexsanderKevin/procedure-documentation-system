@@ -25,11 +25,11 @@
     max-width: 750px;
 }
 
-.edit div.input_box{
+div.input_box{
     width: 100%;
 }
 
-.edit form div.input_box input{
+form div.input_box input{
     background: none;
     color: var(--contrast_color);
     width: 100%;
