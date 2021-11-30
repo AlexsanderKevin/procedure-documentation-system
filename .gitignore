@@ -1,4 +1,5 @@
 noje/node_modules/
 .vs/
 node_modules/
-.env
+.env/
+database.sqlite/
