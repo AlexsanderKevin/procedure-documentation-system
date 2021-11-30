@@ -1,5 +1,5 @@
 .filters{
-    background: black;
+    background: none;
     width: 100%;
     padding: 20px;
 
@@ -7,9 +7,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-
-    border: solid var(--gradient_color_3);
-    box-shadow: var(--standard_shadow_strong);
 
     position: relative;
 }

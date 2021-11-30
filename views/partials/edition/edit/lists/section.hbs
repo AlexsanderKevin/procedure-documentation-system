@@ -1,10 +1,6 @@
 <ol id="department_list" class=" show">
     {{>edition/edit/icon_button src="img/icon/filter.png" class="open show"}}
-    <div class="filters show">
-        <header>
-            <h1>Filtrar</h1>
-        </header>
-
+    <div id="section_list_filter" class="filters show">
         <div>
             {{#>forms/datalist name="department" label="*Departamento*"}}
                 {{#departments}}
@@ -30,7 +26,6 @@
                 {{/item_sections}}
             {{/forms/datalist}}
         </div>
-
     </div>
     
     {{#item_sections}}
