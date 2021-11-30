@@ -1,0 +1,28 @@
+.datalist_container input, select{
+    background: none;
+    color: var(--min_contrast_color);
+    outline: none;
+
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+
+    font-size: 20pt;
+    letter-spacing: 1px;
+
+    border: solid var(--min_contrast_color);
+    border-width: 1px;
+}
+
+.datalist_container input:focus{
+    border-color: var(--contrast_color);
+    color: var(--contrast_color);
+}
+
+datalist{
+    background: none;
+}
+
+.datalist_container{
+    width: 100%;
+}

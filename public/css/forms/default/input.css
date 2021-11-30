@@ -1,0 +1,21 @@
+.input_box{
+    position: relative;
+}
+.text_input{
+    background: none;
+    color: var(--contrast_color);
+    width: 100%;
+
+    font-size: 20pt;
+
+    border: solid var(--min_contrast_color);
+    border-width: 0 0 3px 0;
+
+    outline: none;
+}
+.text_input:focus ~ .register_label,
+.text_input:valid ~ .register_label{
+    top: -25px;
+    font-size: 15pt;
+    color: var(--gradient_color_5);
+}

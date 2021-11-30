@@ -1,0 +1,21 @@
+<ol id="department_list" class="show">
+    {{#>forms/default_form class="filters show"}}
+
+        {{#>forms/datalist name="department" label="*Departamento"}}
+            {{#departments}}
+                <option value='{{this.dataValues.name}}'>
+            {{/departments}}
+        {{/forms/datalist}}
+
+        {{#>forms/datalist name="section_list" label="*Título"}}
+            {{#item_sections}}
+                <option value='{{this.dataValues.name}}'>
+            {{/item_sections}}
+        {{/forms/datalist}}
+
+    {{/forms/default_form}}
+    
+    {{#item_sections}}
+        {{>edition/li_box title = this.dataValues.name}}
+    {{/item_sections}}
+</ol>

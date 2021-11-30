@@ -1,7 +1,7 @@
-<ol id="department_list" class="">
+<ol id="department_list" class="register">
     {{#>forms/datalist name="departments_list" label="*Pesquisar Departamento"}}
         {{#departments}}
-            <option value={{this.dataValues.name}}>
+            <option value='{{this.dataValues.name}}'>
         {{/departments}}
     {{/forms/datalist}}
     

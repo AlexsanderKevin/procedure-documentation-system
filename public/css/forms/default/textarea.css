@@ -1,0 +1,18 @@
+.input-box.textarea{
+    display: flex;
+    flex-direction: column;
+}
+
+form textarea{
+    background: none;
+    outline: none;
+    color: var(--contrast_color);
+    width: 500px;
+}
+
+.textarea label{
+    color: var(--min_contrast_color);
+    position: absolute;
+    top: -25px;
+    left: 0;
+}

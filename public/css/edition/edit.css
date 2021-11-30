@@ -11,3 +11,46 @@
     top: 5px;
     right: 0px;
 }
+
+.edit{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.edit form{
+    max-width: 750px;
+}
+
+.edit div.input_box{
+    width: 100%;
+}
+
+.edit form div.input_box input{
+    background: none;
+    color: var(--contrast_color);
+    width: 100%;
+
+    font-size: 20pt;
+
+    border: solid var(--min_contrast_color);
+    border-width: 0 0 3px 0;
+
+    outline: none;
+}
+
+.edit_label{
+    color: var(--min_contrast_color);
+    letter-spacing: 1px;
+
+    font-size: 20pt;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: .2s;
+}

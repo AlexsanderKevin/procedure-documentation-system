@@ -1,0 +1,9 @@
+.select:focus{
+    border-color: var(--contrast_color);
+    color: var(--contrast_color);
+}
+
+option{
+    background: var(--gradient_color_2);
+}
+
