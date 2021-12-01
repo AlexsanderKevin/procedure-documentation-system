@@ -156,6 +156,7 @@ app.get("/edit", async (req, res) => {
     const item_solutions = await ItemSolution.findAll()
     const item_subsections = await ItemSubsection.findAll()
     const item_issues = await ItemIssue.findAll()
+    const item_obs = await ItemObs.findAll()
 
     res.render("edition", {
         users: users,
@@ -165,6 +166,7 @@ app.get("/edit", async (req, res) => {
         item_solutions: item_solutions,
         item_subsections: item_subsections,
         item_issues: item_issues,
+        item_obs: item_obs,
     })
 })
 

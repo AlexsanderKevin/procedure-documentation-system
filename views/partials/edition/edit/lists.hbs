@@ -1,0 +1,36 @@
+<!--departments-->
+<div id="department_list" class="item_container">
+    {{#departments}}
+        {{>edition/li_box title = this.dataValues.name}}
+    {{/departments}}
+</div>
+<!--sections-->
+<div id="section_list" class="item_container">
+    {{#item_sections}}
+        {{>edition/li_box title = this.dataValues.name}}
+    {{/item_sections}}
+</div>
+<!--subsections-->
+<div id="subsection_list" class="item_container">
+    {{#item_subsections}}
+        {{>edition/li_box title = this.dataValues.name}}
+    {{/item_subsections}}
+</div>
+<!--procedures-->
+<div id="procedure_list" class="item_container">
+    {{#items}}
+        {{>edition/li_box title = this.dataValues.title}}
+    {{/items}}
+</div>
+<!--solutions-->
+<div id="solution_list" class="item_container">
+    {{#item_solutions}}
+        {{>edition/li_box title = this.dataValues.title}}
+    {{/item_solutions}}
+</div>
+<!--obs-->
+<div id="obs_list" class="item_container">
+    {{#item_obs}}
+        {{>edition/li_box title = this.dataValues.title}}
+    {{/item_obs}}
+</div>
