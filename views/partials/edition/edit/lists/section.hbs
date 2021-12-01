@@ -1,19 +1,9 @@
 <ol id="department_list" class=" show">
-    {{#>edition/edit/filters id="section_list_filter"}}
-        {{#>forms/datalist name="department" label="*Departamento*"}}
-            {{#departments}}
-                <option value='{{this.dataValues.name}}'>
-            {{/departments}}
-        {{/forms/datalist}}
+    {{>edition/edit/filters id="section_list_filter" class="show"}}
 
-        {{#>forms/datalist name="section_list" label="*Título*"}}
-            {{#item_sections}}
-                <option value='{{this.dataValues.name}}'>
-            {{/item_sections}}
-        {{/forms/datalist}}
-    {{/edition/edit/filters}}
-    
-    {{#item_sections}}
-        {{>edition/li_box title = this.dataValues.name}}
-    {{/item_sections}}
+    <div class="item_container">
+        {{#item_sections}}
+            {{>edition/li_box title = this.dataValues.name}}
+        {{/item_sections}}
+    </div>    
 </ol>

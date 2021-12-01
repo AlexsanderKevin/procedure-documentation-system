@@ -1,14 +1,15 @@
 .filters{
-    background: none;
+    background: var(--gradient_color_1);
     width: 100%;
-    padding: 20px;
-
+    padding: 10px;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-
-    position: relative;
+    top: 0px;
+    border-bottom: solid var(--gradient_color_3);
+    box-shadow: var(--standard_shadow_strong);
+    position: absolute;
 }
 .filters input{
     border: solid var(--gradient_color_3);
@@ -22,7 +23,6 @@
     color: var(--gradient_color_4);
 }
 .filters div{
-    width: 100%;
     display: flex;
     grid-template-columns: auto auto auto ;
     justify-content: center;
@@ -33,7 +33,12 @@
     display: flex;
     flex-direction: row;
     gap: 5px;
-
     justify-content: center;
     align-items: center;
+}
+.filters select{
+    border: none;
+}
+.filters select .invelid_option{
+    opacity: 0;
 }
