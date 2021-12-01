@@ -42,3 +42,6 @@
 .filters select .invelid_option{
     opacity: 0;
 }
+.filters option{
+    display: none;
+}

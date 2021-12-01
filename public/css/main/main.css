@@ -123,3 +123,6 @@ ul{
     transition: 0.1s;
     color: var(--contrast_color);
 }
+.invalid_option{
+    display: none;
+}

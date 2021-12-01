@@ -1,9 +1,5 @@
-<ol id="department_list" class=" show">
-    {{>edition/edit/filters id="section_list_filter" class="show"}}
-
-    <div class="item_container">
-        {{#item_sections}}
-            {{>edition/li_box title = this.dataValues.name}}
-        {{/item_sections}}
-    </div>    
-</ol>
+<div id="section_list" class="item_container {{class}}">
+    {{#item_sections}}
+        {{>edition/li_box title = this.dataValues.name}}
+    {{/item_sections}}
+</div>
