@@ -21,9 +21,13 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require("dotenv").config();
 
+//const hbs_helpers = require('./public/helpers')
+const Helpers = require('./public/helpers/index.js')
+
 const hbs = express_handlebars.create({
     defaultLayout: 'main',
-    extname: '.hbs'
+    extname: '.hbs',
+    helpers: Helpers,
 })
 
 app.engine('hbs', hbs.engine)
