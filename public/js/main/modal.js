@@ -28,7 +28,7 @@ dynamic_modal('.subsection_about_button', '.subsection_name', '.subsection_descr
 function static_modal(target_component, title, content){
     const target = document.querySelectorAll(target_component)
 
-    for(i = 0; i < target.length; i++){
+    for(let i = 0; i < target.length; i++){
         target[i].addEventListener('click', ()=>{
             modal.classList.toggle('show')
             modal_title.innerText = title

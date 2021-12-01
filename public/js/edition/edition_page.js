@@ -1,16 +1,18 @@
-const table = document.querySelector('#table')
-const operation = document.querySelector('#operation')
+import {arr, get} from '../../lib/main.js'
+
+const table = get('#table')
+const operation = get('#operation')
 // forms
-const add_user = document.querySelector('#add_user_form')
-const add_section = document.querySelector('#add_section_form')
-const add_solution = document.querySelector('#add_solution_form')
-const add_procedure = document.querySelector('#add_procedure_form')
-const add_department = document.querySelector('#add_department_form')
-const add_subsection = document.querySelector('#add_subsection_form')
-const add_obs = document.querySelector('#add_obs_form')
-const add_issue = document.querySelector('#add_issue_form')
+const add_user = get('#add_user_form')
+const add_section = get('#add_section_form')
+const add_solution = get('#add_solution_form')
+const add_procedure = get('#add_procedure_form')
+const add_department = get('#add_department_form')
+const add_subsection = get('#add_subsection_form')
+const add_obs = get('#add_obs_form')
+const add_issue = get('#add_issue_form')
 // lists
-const department_list = document.querySelector('#department_list')
+const department_list = get('#department_list')
 // show respective content
 function show_content(target_value, targert_content, target_operation){
     if(table.value == target_value && operation.value == target_operation){

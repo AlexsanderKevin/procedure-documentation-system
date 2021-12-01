@@ -1,3 +1,5 @@
+import {get, arr} from '../../lib/main.js'
+
 // dynamic burger for dynamic content
 function burger(button_component, content_component, show_class, subcontent_component, hidden_class){
     const button = document.querySelectorAll(button_component)
