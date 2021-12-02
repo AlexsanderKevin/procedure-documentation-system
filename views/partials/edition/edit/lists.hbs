@@ -34,3 +34,15 @@
         {{>edition/li_box title = this.dataValues.title}}
     {{/item_obs}}
 </div>
+<!--issues-->
+<div id="issue_list" class="item_container">
+    {{#item_issues}}
+        {{>edition/li_box title = this.dataValues.title}}
+    {{/item_issues}}
+</div>
+<!--user-->
+<div id="user_list" class="item_container">
+    {{#users}}
+        {{>edition/li_box title = this.dataValues.name}}
+    {{/users}}
+</div>

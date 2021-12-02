@@ -19,9 +19,8 @@ function define_operation(array, operation){
     }
     show_list_frame()
 }
-
 const header = [operation, table]
-
+// it applies it's functions all edition operations
 for(let i = 0; i < header.length; i++){
     header[i].addEventListener('change', ()=>{
         define_operation(add_forms, 'add')

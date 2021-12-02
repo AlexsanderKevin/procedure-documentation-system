@@ -1,39 +1,30 @@
 import {table, operation} from './edition_page.js'
-import {arr, get} from '../../lib/main.js'
-
-const add_department = get('#add_department_form')
-const add_subsection = get('#add_subsection_form')
-const add_procedure = get('#add_procedure_form')
-const add_solution = get('#add_solution_form')
-const add_section = get('#add_section_form')
-const add_issue = get('#add_issue_form')
-const add_user = get('#add_user_form')
-const add_obs = get('#add_obs_form')
+import {arr, get} from '../../lib/main.js' 
 
 export const add_forms = [
     {
-        content: add_department,
+        content: get('#add_department_form'),
         value: 'department'
     },{
-        content: add_subsection,
+        content: get('#add_subsection_form'),
         value: 'subsection'
     },{
-        content: add_procedure,
+        content: get('#add_procedure_form'),
         value: 'procedure',
     },{
-        content: add_solution,
+        content: get('#add_solution_form'),
         value: 'solution',
     },{
-        content: add_section,
+        content: get('#add_section_form'),
         value: 'section',
     },{
-        content: add_issue,
+        content: get('#add_issue_form'),
         value: 'issue',
     },{
-        content: add_user,
+        content: get('#add_user_form'),
         value: 'user',
     },{
-        content: add_obs,
+        content: get('#add_obs_form'),
         value: 'obs',
     },  
 ]
