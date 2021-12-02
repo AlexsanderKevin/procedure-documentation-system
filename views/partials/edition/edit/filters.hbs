@@ -7,6 +7,39 @@
             <option value="section">Seção:</option>
             <option value="subsection">Subseção:</option>
             <option value="procedure">Procedimento:</option>
+            <option value="user">Nome:</option>
         </select>
+    </div>
+    <div>
+        <!--department-->
+        {{#>forms/datalist main_id="department_filter" name="department_filter_list" class="filter_type" }}
+            {{#departments}}
+                <option value="{{this.dataValues.name}}"></option>
+            {{/departments}}
+        {{/forms/datalist}}
+        <!--section-->
+        {{#>forms/datalist main_id="section_filter" name="section_filter_list" class="filter_type " }}
+            {{#item_sections}}
+                <option value="{{this.dataValues.name}}"></option>
+            {{/item_sections}}
+        {{/forms/datalist}}
+        <!--subsection-->
+        {{#>forms/datalist main_id="subsection_filter" name="subsection_filter_list" class="filter_type " }}
+            {{#item_subsections}}
+                <option value="{{this.dataValues.name}}"></option>
+            {{/item_subsections}}
+        {{/forms/datalist}}
+        <!--procedure-->
+        {{#>forms/datalist main_id="item_filter" name="item_filter_list" class="filter_type" }}
+            {{#items}}
+                <option value="{{this.dataValues.title}}"></option>
+            {{/items}}
+        {{/forms/datalist}}
+        <!--user-->
+        {{#>forms/datalist main_id="user_filter" name="user_filter_list" class="filter_type" }}
+            {{#users}}
+                <option value="{{this.dataValues.name}}"></option>
+            {{/users}}
+        {{/forms/datalist}}
     </div>
 </div>

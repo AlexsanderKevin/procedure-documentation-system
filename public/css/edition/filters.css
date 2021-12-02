@@ -1,3 +1,7 @@
+.filters .datalist_container{
+    display: none;
+}
+
 .filters{
     background: var(--gradient_color_1);
     width: 100%;
@@ -10,10 +14,16 @@
     border-bottom: solid var(--gradient_color_3);
     box-shadow: var(--standard_shadow_strong);
     position: absolute;
+    align-items: center;
 }
-.filters input{
-    border: solid var(--gradient_color_3);
+.filters input.datalist_input{
+    border: none;
     font-size: 15pt;
+    border: solid var(--gradient_color_4);
+    border-width: 0 0 1px 0;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .filters label{
     font-size: 18pt;
@@ -44,4 +54,8 @@
 }
 .filters option{
     display: none;
+}
+
+.show{
+    display: flex;
 }
