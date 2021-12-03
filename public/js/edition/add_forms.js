@@ -1,5 +1,5 @@
 import {table, operation} from './edition_page.js'
-import {get} from '../../lib/main.js' 
+import {get} from '../../lib/main.js'
 
 export const add_forms = [
     {

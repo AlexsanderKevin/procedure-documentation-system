@@ -20,7 +20,6 @@ const AuthController = require('./app/controllers/AuthController')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require("dotenv").config();
-
 //const hbs_helpers = require('./public/helpers')
 const Helpers = require('./public/helpers/index.js')
 

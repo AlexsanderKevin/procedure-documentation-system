@@ -1,6 +1,7 @@
 import {get} from '../../../lib/main.js'
 import {table} from '../edition_page.js'
 import { filter_types } from './filter_options.js'
+import { filter_button } from './filter_items.js'
 
 const filter_by = get('#filter_by')
 const filter_opt = get('.filter_by option')
@@ -51,6 +52,7 @@ function show(target_value, target_list){
     }
 }
 filter_by.addEventListener('change', ()=>{
+    filter_button.classList.add('show')
     for(let i = 0; i < filter_types.length; i++){
         //destructuring
         const {value, list, input} = filter_types[i]
@@ -58,3 +60,4 @@ filter_by.addEventListener('change', ()=>{
         show(value, list)
     }
 })
+
