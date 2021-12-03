@@ -22,10 +22,12 @@ function filtering(value){
 for(let i = 0; i < filter_types.length; i++){
     const { value, list, input} =filter_types[i]
     input.addEventListener('change', ()=>{
+        filter_button.classList.remove('animated')
     //filter_button.addEventListener('click',()=>{
         filtering(input.value)
     })
     filter_button.addEventListener('click',()=>{
+        filter_button.classList.add('animated')
         input.value = ''
         for(let i = 0; i < container.length; i++){
             container[i].classList.add('show')

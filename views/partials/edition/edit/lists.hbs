@@ -1,48 +1,32 @@
 <!--departments-->
-<div id="department_list" class="item_container">
     {{#departments}}
-        {{>edition/li_box title = this.dataValues.name}}
+        {{>edition/li_box title = this.dataValues.name class="department_list"}}
+        <!--user-->
+        {{#users}}
+            {{>edition/li_box title = this.dataValues.name class="user_list"}}
+        {{/users}}
+        <!--sections-->
+        {{#item_sections}}
+            {{>edition/li_box title = this.dataValues.name class="section_list"}}
+            <!--subsections-->
+            {{#item_subsections}}
+                {{>edition/li_box title = this.dataValues.name class="subsection_list"}}
+                <!--procedures-->
+                {{#items}}
+                    {{>edition/li_box title = this.dataValues.title class="procedure_list"}}
+                    <!--solutions-->
+                    {{#item_solutions}}
+                        {{>edition/li_box title = this.dataValues.title class="solution_list"}}
+                    {{/item_solutions}}
+                    <!--obs-->      
+                    {{#item_obs}}
+                        {{>edition/li_box title = this.dataValues.title class="obs_list"}}
+                    {{/item_obs}}
+                    <!--issues-->
+                    {{#item_issues}}
+                        {{>edition/li_box title = this.dataValues.title class="issue_list"}}
+                    {{/item_issues}}
+                {{/items}}
+            {{/item_subsections}}
+        {{/item_sections}}
     {{/departments}}
-</div>
-<!--sections-->
-<div id="section_list" class="item_container">
-    {{#item_sections}}
-        {{>edition/li_box title = this.dataValues.name}}
-    {{/item_sections}}
-</div>
-<!--subsections-->
-<div id="subsection_list" class="item_container">
-    {{#item_subsections}}
-        {{>edition/li_box title = this.dataValues.name}}
-    {{/item_subsections}}
-</div>
-<!--procedures-->
-<div id="procedure_list" class="item_container">
-    {{#items}}
-        {{>edition/li_box title = this.dataValues.title}}
-    {{/items}}
-</div>
-<!--solutions-->
-<div id="solution_list" class="item_container">
-    {{#item_solutions}}
-        {{>edition/li_box title = this.dataValues.title}}
-    {{/item_solutions}}
-</div>
-<!--obs-->
-<div id="obs_list" class="item_container">
-    {{#item_obs}}
-        {{>edition/li_box title = this.dataValues.title}}
-    {{/item_obs}}
-</div>
-<!--issues-->
-<div id="issue_list" class="item_container">
-    {{#item_issues}}
-        {{>edition/li_box title = this.dataValues.title}}
-    {{/item_issues}}
-</div>
-<!--user-->
-<div id="user_list" class="item_container">
-    {{#users}}
-        {{>edition/li_box title = this.dataValues.name}}
-    {{/users}}
-</div>

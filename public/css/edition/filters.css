@@ -62,4 +62,16 @@
 
 #filter_button{
     display: none;
+
+}
+#filter_button.animated{
+    animation:refresh 1s
+}
+
+@keyframes refresh{
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(-360deg);
+    }
 }

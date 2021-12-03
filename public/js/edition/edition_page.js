@@ -25,6 +25,6 @@ const header = [operation, table]
 for(let i = 0; i < header.length; i++){
     header[i].addEventListener('change', ()=>{
         define_operation(add_forms, 'add')
-        define_operation(edition_lists, 'edit')
+        //define_operation(edition_lists, 'edit')
     })
 }

@@ -150,22 +150,45 @@ app.get("/register", async (req, res) => {
 app.get("/edit", async (req, res) => {
     const items = await Item.findAll()
     const users = await User.findAll()
-    const departments = await Department.findAll()
     const item_sections = await ItemSection.findAll()
     const item_solutions = await ItemSolution.findAll()
     const item_subsections = await ItemSubsection.findAll()
     const item_issues = await ItemIssue.findAll()
     const item_obs = await ItemObs.findAll()
+    /*
+    */
+   const departments = await Department.findAll({
+        include:[
+            {
+                model: ItemSection,
+                include: [{
+                    model:ItemSubsection,
+                    include: [{
+                        model: Item,
+                        include: [
+                            {model: ItemSolution},
+                            {model: ItemObs},
+                            {model: ItemIssue}
+                        ]
+                    }]
+                }]
+            },{
+                model: User
+            }
+        ]
+   })
 
     res.render("edition", {
+        departments: departments,
         users: users,
         items: items,
-        departments: departments,
         item_sections: item_sections,
         item_solutions: item_solutions,
         item_subsections: item_subsections,
         item_issues: item_issues,
         item_obs: item_obs,
+        /*
+        */
     })
 })
 
