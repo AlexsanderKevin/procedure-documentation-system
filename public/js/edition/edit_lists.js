@@ -5,28 +5,28 @@ export const list_frame = get('#list_frame')
 
 export const edition_lists = [
     {
-        content: get('.section_list'),
+        content: get('.section'),
         value: 'section'
     },{
-        content: get('.department_list'),
+        content: get('.department'),
         value: 'department'
     },{
-        content: get('.subsection_list'),
+        content: get('.subsection'),
         value: 'subsection'
     },{
-        content: get('.procedure_list'),
+        content: get('.procedure'),
         value: 'procedure'
     },{
-        content: get('.solution_list'),
+        content: get('.solution'),
         value: 'solution'
     },{
-        content: get('.obs_list'),
+        content: get('.obs'),
         value: 'obs'
     },{
-        content: get('.issue_list'),
+        content: get('.issue'),
         value: 'issue'
     },{
-        content: get('.user_list'),
+        content: get('.user'),
         value: 'user'
     }
 ]

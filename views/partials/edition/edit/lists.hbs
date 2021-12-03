@@ -1,30 +1,30 @@
 <!--departments-->
     {{#departments}}
-        {{>edition/li_box title = this.dataValues.name class="department_list"}}
+        {{>edition/li_box title = this.dataValues.name class="item_list department"}}
         <!--user-->
         {{#users}}
-            {{>edition/li_box title = this.dataValues.name class="user_list"}}
+            {{>edition/li_box title = this.dataValues.name class="item_list user"}}
         {{/users}}
         <!--sections-->
         {{#item_sections}}
-            {{>edition/li_box title = this.dataValues.name class="section_list"}}
+            {{>edition/li_box title = this.dataValues.name class="item_list section"}}
             <!--subsections-->
             {{#item_subsections}}
-                {{>edition/li_box title = this.dataValues.name class="subsection_list"}}
+                {{>edition/li_box title = this.dataValues.name class="item_list subsection"}}
                 <!--procedures-->
                 {{#items}}
-                    {{>edition/li_box title = this.dataValues.title class="procedure_list"}}
+                    {{>edition/li_box title = this.dataValues.title class="item_list procedure"}}
                     <!--solutions-->
                     {{#item_solutions}}
-                        {{>edition/li_box title = this.dataValues.title class="solution_list"}}
+                        {{>edition/li_box title = this.dataValues.title class="item_list solution"}}
                     {{/item_solutions}}
                     <!--obs-->      
                     {{#item_obs}}
-                        {{>edition/li_box title = this.dataValues.title class="obs_list"}}
+                        {{>edition/li_box title = this.dataValues.title class="item_list obs"}}
                     {{/item_obs}}
                     <!--issues-->
                     {{#item_issues}}
-                        {{>edition/li_box title = this.dataValues.title class="issue_list"}}
+                        {{>edition/li_box title = this.dataValues.title class="item_list issue"}}
                     {{/item_issues}}
                 {{/items}}
             {{/item_subsections}}
