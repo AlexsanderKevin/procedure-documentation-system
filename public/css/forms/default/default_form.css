@@ -11,6 +11,7 @@ form{
     padding-bottom: 0px;
 
     box-shadow: var(--standard_shadow_strong);
+    background-color: var(--gradient_color_1);
 }
 
 .form_section{

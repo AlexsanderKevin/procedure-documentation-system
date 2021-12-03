@@ -1,6 +1,8 @@
+import { get } from "../../lib/main.js"
+
 function home_close(content_component, show_class){
-    const button = document.querySelector('.home_button')
-    const content = document.querySelectorAll(content_component)
+    const button = document.querySelector('#home_button')
+    const content = get(content_component)
 
     button.addEventListener('click', (e)=>{
         for(let i = 0; i < content.length; i++){

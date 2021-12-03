@@ -1,4 +1,4 @@
-import {arr, get} from '../../lib/main.js'
+import {get} from '../../lib/main.js'
 import {add_forms} from './add_forms.js'
 import {show_list_frame, edition_lists} from './edit_lists.js'
 
@@ -15,7 +15,8 @@ export function show(target_value, targert_content, target_operation){
 //defining the operations
 function define_operation(array, operation){
     for(let i = 0; i < array.length; i++){
-        show(array[i].value, array[i].content, operation)
+        const {content, value} = array[i]
+        show(value, content, operation)
     }
     show_list_frame()
 }

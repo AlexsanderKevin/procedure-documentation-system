@@ -1,5 +1,5 @@
 import {table, operation} from './edition_page.js'
-import {arr, get} from '../../lib/main.js'
+import {get} from '../../lib/main.js'
 
 export const list_frame = get('#list_frame')
 
@@ -38,5 +38,3 @@ export function show_list_frame(){
         list_frame.classList.remove('show')
     }
 }
-
-console.log('serto')

@@ -1,7 +1,7 @@
 <div id="{{main_id}}" class="datalist_container input_box {{class}}">
-    <input class="text_input " list={{name}} name={{name}} required>
+    <input id="{{name}}_input" class="text_input " list={{name}} name={{name}} required>
     <label class="edit_label" for={{name}}>{{label}}</label>
-    <datalist id={{name}} name={{name}}>
+    <datalist id="{{name}}" name={{name}}>
         {{>@partial-block}}
     </datalist>
 </div>

@@ -1,8 +1,8 @@
 <div id="{{id}}" class="filters {{class}}">    
     <img class="icon_button" style="opacity: 0.5; cursor:default;" src="/img/icon/filter.png" alt="filtrar">
     <div>
-        <select name="filter_by" class="filter_by">
-            <option class="invalid_option">*Filtrar Por*</option>
+        <select id="filter_by" name="filter_by" class="filter_by">
+            <option value = "invalid" class="invalid_option">*Filtrar Por*</option>
             <option value="department">Departamento:</option>
             <option value="section">Seção:</option>
             <option value="subsection">Subseção:</option>
@@ -30,7 +30,7 @@
             {{/item_subsections}}
         {{/forms/datalist}}
         <!--procedure-->
-        {{#>forms/datalist main_id="item_filter" name="item_filter_list" class="filter_type" }}
+        {{#>forms/datalist main_id="procedure_filter" name="procedure_filter_list" class="filter_type" }}
             {{#items}}
                 <option value="{{this.dataValues.title}}"></option>
             {{/items}}
