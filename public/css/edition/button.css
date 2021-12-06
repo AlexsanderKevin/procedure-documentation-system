@@ -2,9 +2,35 @@
     position: static;
 }
 
-.filters .icon_button.close{
-    opacity: 0.7;
+.add_button{
+    border: none;
+    background: none;
+    color: var(--contrast_color);
+    font-size: 30pt;
+    font-weight: bold;
 }
-.filters .icon_button.close:hover{
-    opacity: 0.3;
+
+.edition_mode{
+    display: none;
+}
+
+.icon_button{
+    cursor: pointer;
+    
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+.edition_mode_button{
+    cursor: pointer;
+    
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    
+    position: absolute;
+    z-index: 1;
+
+    top: 5px;
+    right: 0px;
 }

@@ -1,16 +1,4 @@
-.icon_button{
-    cursor: pointer;
-    
-    height: 30px;
-    width: 30px;
-    margin: 10px;
-    
-    position: absolute;
-    z-index: 1;
 
-    top: 5px;
-    right: 0px;
-}
 
 .edit{
     display: none;

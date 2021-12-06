@@ -6,6 +6,7 @@
                 {{this.dataValues.title}}
             </h4>
         </a>
+        {{>edition/button/edit class="procedure"}}
     </div>
 
     {{else}}
@@ -13,6 +14,8 @@
         <h4 class="emptyItemList item_name">
             {{this.dataValues.title}}
         </h4>
+        {{>edition/button/edit class="procedure"}}
     </div>
     {{/if}}
 {{/each}}
+{{>edition/button/add class="procedure"}}
