@@ -1,7 +1,7 @@
 .modalContainer{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.616);
+    background-color: rgba(0, 0, 0, 0.932);
 
     position: fixed;
     top: 0px;
@@ -20,6 +20,14 @@
     padding: 20px;
 
     box-shadow: 3px 3px 8px black;
+
+    animation: open_modal 0.5s;
+}
+.block_modal_frame{
+    width: 60vw;
+    min-width: 400px;
+    background: none;
+    padding: 20px;
 
     animation: open_modal 0.5s;
 }

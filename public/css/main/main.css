@@ -126,3 +126,7 @@ ul{
 .invalid_option{
     display: none;
 }
+
+.show{
+    display: flex !important;
+}
