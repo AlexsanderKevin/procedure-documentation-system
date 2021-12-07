@@ -1,0 +1,10 @@
+<section id="{{id}}" class="edit form_section {{class}}">
+    {{>forms/header text=title}}
+    <form>
+        {{>@partial-block}}
+        {{#>forms/buttons/container}}
+            {{>forms/buttons/reset class="cancel_button" label="Cancelar"}}
+            {{>forms/buttons/submit class="submit_button" label="Pronto"}}
+        {{/forms/buttons/container}}
+    </form>
+</section>
