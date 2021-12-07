@@ -8,15 +8,21 @@ const header = get('#edition_header')
 const main_add_button = get('#main_add_button')
 const add_options = get('#add_options_container')
 const add_forms = {
+    add_department: get('#add_department_form'),
     add_procedure: get('#add_procedure_form'),
     add_section: get('#add_section_form'),
     add_subsection: get('#add_subsection_form'),
+    add_solution: get('#add_solution_form'),
+    add_issue: get('#add_issue_form'),
+    add_obs: get('#add_obs_form'),
 }
-
 on_click(main_add_button, ()=>{add_options.classList.toggle('hide')})
 on_change(add_options, ()=>{
     open(modal)
     switch(add_options.value){
+        case 'department': 
+            open(add_forms.add_department)
+            break
         case 'procedure': 
             open(add_forms.add_procedure)
             break
@@ -26,8 +32,16 @@ on_change(add_options, ()=>{
         case 'subsection': 
             open(add_forms.add_subsection)
             break
+        case 'solution': 
+            open(add_forms.add_solution)
+            break
+        case 'issue': 
+            open(add_forms.add_issue)
+            break
+        case 'obs': 
+            open(add_forms.add_obs)
+            break
     }
-
     add_options.classList.add('hide')
     add_options.value = ''
 })
@@ -49,9 +63,12 @@ cancel_buttons.forEach(button => {
     on_click(button, ()=>{
         close(modal)
         // this close the form with the modal
-        add_buttons.forEach(item =>{
-            const {button, form} = item
-            close(form)
-        })
+        close(add_forms.add_department)
+        close(add_forms.add_procedure)
+        close(add_forms.add_section)
+        close(add_forms.add_subsection)
+        close(add_forms.add_solution)
+        close(add_forms.add_obs)
+        close(add_forms.add_issue)
     })
 });

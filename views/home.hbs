@@ -1,7 +1,7 @@
 {{>main/header title = 'Guia de Procedimentos'}}
-{{>edition/button/edition_mode}}
+
+{{>edition/tool_bar}}
 {{>nav/home}}
-{{>edition/nav/header}}
 
 <section id="content">
     {{#>home/section_list}}
@@ -11,8 +11,3 @@
     {{/home/section_list}}
 </section>
 
-{{#>main/block_modal id="edition_modal"}}
-    {{>edition/forms/section class=""}}
-    {{>edition/forms/subsection class=""}}
-    {{>edition/forms/procedure class=""}}
-{{/main/block_modal}}

@@ -33,4 +33,10 @@
             {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
         {{/if}}   
     </div>
+
+    {{#>main/block_modal id="edition_modal"}}
+        {{>edition/forms/solution class=""}}
+        {{>edition/forms/issue class=""}}
+        {{>edition/forms/obs class=""}}
+    {{/main/block_modal}}
 </section>
