@@ -1,0 +1,50 @@
+#edition_nav{
+    background-color: var(--gradient_color_2);
+    width: 100vw;
+    height: 80px;
+
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 30px 0 30px;
+
+    box-shadow: var(--standard_shadow_strong);
+    animation: slide_down 0.2s;
+}
+#empty{
+    height: 70px;
+}
+
+.hide{
+    display: none !important;
+    transform: translateY(-100%);
+}
+@keyframes slide_down{
+    from{
+        transform: translateY(-100%);
+    }to{
+        transform: translateY(0);
+    }
+}
+#edition_header h1{
+    font-size: 20pt;
+    color: var(--gradient_color_5);
+    padding-top: 5px;
+}
+#edition_header select{
+    font-size: 15pt;
+}
+#edition_header select option:hover{
+    background-color: var(--contrast_color);
+    color: var(--gradient_color_2);
+}
+#edition_header .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}

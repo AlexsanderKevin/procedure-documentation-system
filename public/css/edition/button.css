@@ -8,6 +8,10 @@
     color: var(--contrast_color);
     font-size: 30pt;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .edition_mode{

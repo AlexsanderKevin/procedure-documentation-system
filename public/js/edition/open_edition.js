@@ -1,34 +1,57 @@
-import {get} from '../../lib/main.js'
+import {get, on_click, close, open, on_change} from '../../lib/main.js'
 import { add_buttons } from './button_arrays.js'
 
 const start_edition_button = get('#edition_mode_button')
 const modal = get('#edition_modal')
-const edition_buttons = get('.edition_mode')
-
-function show_forms(){
-    for(let i = 0; i < add_buttons.length; i++){   
-        const{buttons, form} = add_buttons[i]
-
-        for(let i = 0; i < buttons.length; i++){
-            buttons[i].addEventListener('click', ()=>{
-                form.classList.add('show')
-            })
-        }
-    }
+const cancel_buttons = get('.cancel_button')
+const header = get('#edition_header')
+const main_add_button = get('#main_add_button')
+const add_options = get('#add_options_container')
+const add_forms = {
+    add_procedure: get('#add_procedure_form'),
+    add_section: get('#add_section_form'),
+    add_subsection: get('#add_subsection_form'),
 }
 
-start_edition_button.addEventListener('click', ()=>{
-    for(let i = 0; i < edition_buttons.length; i++){
-        edition_buttons[i].classList.toggle('show')
+on_click(main_add_button, ()=>{add_options.classList.toggle('hide')})
+on_change(add_options, ()=>{
+    open(modal)
+    switch(add_options.value){
+        case 'procedure': 
+            open(add_forms.add_procedure)
+            break
+        case 'section': 
+            open(add_forms.add_section)
+            break
+        case 'subsection': 
+            open(add_forms.add_subsection)
+            break
     }
-    button_task(edition_buttons)
-    show_forms()
+
+    add_options.classList.add('hide')
+    add_options.value = ''
 })
 
-function button_task(button_array){
-    for(let i = 0; i < button_array.length; i++){
-        button_array[i].addEventListener('click', ()=>{
-            modal.classList.add('show')
-        })
-    }
+function show_forms(){  
+    add_buttons.forEach(item => {
+        const {buttons, form} = item
+        buttons.forEach(button => {on_click(button, ()=>{open(form)})})
+    })
 }
+// this inits the edition mode
+on_click(start_edition_button, ()=>{
+    header.classList.toggle('hide')
+    add_options.classList.add('hide')
+    show_forms()
+})
+// this closes the modal when click in the cancel buttons
+cancel_buttons.forEach(button => {
+    on_click(button, ()=>{
+        close(modal)
+        // this close the form with the modal
+        add_buttons.forEach(item =>{
+            const {button, form} = item
+            close(form)
+        })
+    })
+});
