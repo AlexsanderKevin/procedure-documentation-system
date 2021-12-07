@@ -2,9 +2,9 @@
     {{>forms/input_box name="procedure_title" type="text" label="*Título"}}
 
     {{#>forms/datalist name="procedure_subsection" label="*Subseção"}}
-        {{#each item_subsections}}
+        {{#item_subsections}}
             <option value="{{this.dataValues.name}}">
-        {{/each}}
+        {{/item_subsections}}
     {{/forms/datalist}}
     
     {{>forms/textarea_box name="procedure_description_input" label="*Descrição"}}
