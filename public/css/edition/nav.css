@@ -13,6 +13,8 @@
 
     box-shadow: var(--standard_shadow_strong);
     animation: slide_down 0.2s;
+
+    z-index: 0;
 }
 #empty{
     height: 70px;

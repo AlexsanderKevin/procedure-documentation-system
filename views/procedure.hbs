@@ -1,9 +1,11 @@
+{{#procedure}}
 <section id="content">
-    {{>main/header title = procedure.dataValues.title}}
+    {{>main/header title = this.dataValues.title}}
     {{>nav/procedure}}
+    {{>edition/tool_bar/procedure_page}}
     <div>
         <!--# item description-->
-        {{#if procedure.dataValues.description}}
+        {{#if this.dataValues.description}}
         <div class="item_content_container">
             <div class="item_content_header">
                 <h2 id="description">Descrição</h2>
@@ -12,26 +14,26 @@
             </div>
 
             <div class="item_content_text">
-                {{{procedure.dataValues.description}}}
+                {{{this.dataValues.description}}}
             </div>           
         </div>
         {{/if}}
         <!--# item solution-->
-        {{#if item_solutions}}
-            {{>procedure/content category = item_solutions title = 'Soluções' id = 'solutions'}}
-        {{/if}}
-        <!--# item obs-->
-        {{#if item_obs}}
-            {{>procedure/content category = item_obs title = 'Observações' id = 'obs'}}
-        {{/if}}
-        <!--# item issues-->
-        {{#if item_issues}}
-            {{>procedure/content category = item_issues title = 'Possíveis Problemas' id = 'issues'}}
-        {{/if}}
-        <!--# comments-->
-        {{#if comments}}
-            {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
-        {{/if}}   
+            {{#if this.item_solutions}}
+                {{>procedure/content category = item_solutions title = 'Soluções' id = 'solutions'}}
+            {{/if}}
+            <!--# item obs-->
+            {{#if this.item_obs}}
+                {{>procedure/content category = item_obs title = 'Observações' id = 'obs'}}
+            {{/if}}
+            <!--# item issues-->
+            {{#if this.item_issues}}
+                {{>procedure/content category = item_issues title = 'Possíveis Problemas' id = 'issues'}}
+            {{/if}}
+            <!--# comments-->
+            {{#if this.comments}}
+                {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
+            {{/if}}   
     </div>
 
     {{#>main/block_modal id="edition_modal"}}
@@ -40,3 +42,4 @@
         {{>edition/forms/obs class=""}}
     {{/main/block_modal}}
 </section>
+{{/procedure}}

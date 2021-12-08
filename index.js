@@ -92,6 +92,11 @@ app.get("/home/:id", async (req, res) => {
                 model: ItemSubsection,
                 include: [{
                     model: Item,
+                    include:[
+                        {model: ItemSolution},
+                        {model: ItemIssue},
+                        {model: ItemObs}
+                    ]
                 }]
             }] 
         })
@@ -112,6 +117,16 @@ app.get("/procedure/:id", async (req, res) => {
     const departments = await Department.findAll()
 
     try{
+        const procedure = await Item.findAll({
+            where: {id: procedureId},
+            include: [
+                {model: ItemSolution},
+                {model: ItemIssue},
+                {model: ItemObs},
+                {model: Comment}
+            ]
+        })
+        /*
         const procedure = await Item.findByPk(procedureId)
         const item_solutions = await ItemSolution.findAll({
             where: {itemId: procedureId}
@@ -125,14 +140,17 @@ app.get("/procedure/:id", async (req, res) => {
         const comments = await Comment.findAll({
             where: {itemId: procedureId}
         })
+        */
 
-        res.render("procedure", {
+       res.render("procedure", {
+            departments: departments,
             procedure: procedure,
+            /*
             item_solutions: item_solutions,
             item_obs: item_obs,
             item_issues: item_issues,
             comments: comments,
-            departments: departments,
+            */
         })
     }catch(err){
         console.error(err)

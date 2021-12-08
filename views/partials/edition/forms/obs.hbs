@@ -2,9 +2,7 @@
     {{>forms/input_box name="obs_title" type="Text" label="*Título"}}
 
     {{#>forms/datalist name="obs_procedure" label="*Procedimento"}}
-        {{#items}}
-            <option value="{{this.dataValues.title}}">
-        {{/items}}
+        <option value="{{this.dataValues.title}}">
     {{/forms/datalist}}
 
     {{>forms/textarea_box name="obs_description" label="*Descrição"}}
