@@ -1,6 +1,10 @@
 {{>main/header title = 'Guia de Procedimentos'}}
 {{>nav/home}}
-{{>edition/tool_bar/home_page}}
+{{#>edition/tool_bar}}
+    <option value="section">Seção</option>
+    <option value="subsection">Subseção</option>
+    <option value="procedure">Procedimento</option>
+{{/edition/tool_bar}}
 
 <section id="content">
     {{#>home/section_list}}

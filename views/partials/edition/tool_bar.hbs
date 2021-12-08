@@ -1,5 +1,18 @@
 {{>edition/button/edition_mode}}
-{{>edition/nav/header}}
+<header id="edition_header" class="hide">
+    <div id="edition_nav">
+        <h1>Barra de Edição</h1>
+        <div class="buttons">
+            {{>edition/button/add id="main_add_button" class="show"}}
+          
+            <select name="open_add_form" id="add_options_container" class="hide">
+                <option class="invalid_option" value="">*Conteudo*</option>
+                {{>@partial-block}}         
+            </select>
+        </div>   
+    </div>
+    <div id="empty"></div>
+</header>
 
 {{#>main/block_modal id="edition_modal"}}
     {{>edition/forms/department class=""}}

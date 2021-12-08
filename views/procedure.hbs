@@ -2,7 +2,11 @@
 <section id="content">
     {{>main/header title = this.dataValues.title}}
     {{>nav/procedure}}
-    {{>edition/tool_bar/procedure_page}}
+    {{#>edition/tool_bar}}
+        <option value="solution">Solução</option>
+        <option value="obs">Observação</option>
+        <option value="issue">Possível Problema</option>
+    {{/edition/tool_bar}}
     <div>
         <!--# item description-->
         {{#if this.dataValues.description}}
@@ -35,11 +39,5 @@
                 {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
             {{/if}}   
     </div>
-
-    {{#>main/block_modal id="edition_modal"}}
-        {{>edition/forms/solution class=""}}
-        {{>edition/forms/issue class=""}}
-        {{>edition/forms/obs class=""}}
-    {{/main/block_modal}}
 </section>
 {{/procedure}}
