@@ -33,4 +33,6 @@ export function close(target){
 export function open(target){
     target.classList.add('show')
 }
-
+export function hide(target){
+    target.classList.add('hide')
+}

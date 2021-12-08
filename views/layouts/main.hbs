@@ -38,12 +38,13 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         {{{body}}}
+        <img src="/img/icon/edit.png" id="edit_bg_img" class="hide">
+        {{>main/modal}}
     </div>
-
-    {{>main/modal}}
     {{>main/footer}}
+
 
     <!--js files-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -60,7 +61,6 @@
     <script type="module" src="/js/main/home_button.js"></script>
     <!--edition-->
     <script type="module" src="/js/edition/open_edition.js"></script>
-    <script type="module" src="/js/edition/button_arrays.js"></script>
     <!--user-->
     <script type="module" src="/js/user/login_form.js"></script>
     <script type="module" src="/js/user/register_form.js"></script>

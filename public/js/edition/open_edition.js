@@ -1,6 +1,6 @@
 import {get, on_click, close, open, on_change} from '../../lib/main.js'
-import { add_buttons } from './button_arrays.js'
 
+const bg_img = get('#edit_bg_img')
 const start_edition_button = get('#edition_mode_button')
 const modal = get('#edition_modal')
 const cancel_buttons = get('.cancel_button')
@@ -54,6 +54,7 @@ function show_forms(){
 }
 // this inits the edition mode
 on_click(start_edition_button, ()=>{
+    bg_img.classList.toggle('hide')
     header.classList.toggle('hide')
     add_options.classList.add('hide')
     show_forms()
