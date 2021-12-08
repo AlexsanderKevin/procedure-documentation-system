@@ -19,7 +19,7 @@ a:hover{
     --gradient_color_4: #fff;
     --contrast_color: #000;
     */
-    --mainColor: #b3283a;
+    --mainColor: #000;
     --gradient_color_1: #111;
     --gradient_color_2: #222;
     --gradient_color_3: #333;
@@ -69,6 +69,10 @@ body{
 }
 #container{
     min-height: 77vh;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
 }
 
 section{

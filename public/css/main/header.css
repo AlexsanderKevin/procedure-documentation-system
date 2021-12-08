@@ -12,7 +12,6 @@
     top: 0;
     left: 0;
 
-    box-shadow: var(--standard_shadow);
     z-index: 1;
 }
 

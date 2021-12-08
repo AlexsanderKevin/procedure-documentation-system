@@ -41,6 +41,14 @@ app.get("/departments", async (req, res) => {
         departments: departments,
     })
 })
+// rota profile
+app.get("/profile", async (req, res) => {
+    const users = await User.findAll()
+
+    res.render("profile_adm",{
+        users: users,
+    })
+})
 
 //login
 app.post("/auth", async (req, res) => {
@@ -126,31 +134,10 @@ app.get("/procedure/:id", async (req, res) => {
                 {model: Comment}
             ]
         })
-        /*
-        const procedure = await Item.findByPk(procedureId)
-        const item_solutions = await ItemSolution.findAll({
-            where: {itemId: procedureId}
-        })
-        const item_obs = await ItemObs.findAll({
-            where: {itemId: procedureId}
-        })
-        const item_issues = await ItemIssue.findAll({
-            where: {itemId: procedureId}
-        })
-        const comments = await Comment.findAll({
-            where: {itemId: procedureId}
-        })
-        */
 
        res.render("procedure", {
             departments: departments,
             procedure: procedure,
-            /*
-            item_solutions: item_solutions,
-            item_obs: item_obs,
-            item_issues: item_issues,
-            comments: comments,
-            */
         })
     }catch(err){
         console.error(err)
