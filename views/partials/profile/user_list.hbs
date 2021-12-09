@@ -1,6 +1,9 @@
 <div id="user_list_container" class="{{class}}">
     <header id="list_header">
-        {{>edition/button/add id="add_user" class="show"}}
+        <div id="edition_container">
+            {{>edition/button/add id="add_user" class="show"}}
+            {{>edition/button/main_edit}}
+        </div>
         <div id="user_quantity_container">
             <p id="user_quantity">25</p>
             <img id="user_quantity_icon" src="/img/icon/group.png" alt="">

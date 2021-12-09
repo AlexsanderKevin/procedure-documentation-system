@@ -38,3 +38,18 @@
     top: 5px;
     right: 0px;
 }
+#main_pencil{
+    height: 25px;
+    width: 25px;
+}
+.main_pencil_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+
+    font-weight: bold;
+    color: var(--contrast_color);
+    gap: 5px;
+}
