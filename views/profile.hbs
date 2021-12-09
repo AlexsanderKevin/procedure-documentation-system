@@ -8,31 +8,29 @@
                 <h1>Kevin Alexsander de Jesus</h1>
                 <hr>
                 <p><strong>Usuário:</strong>  kjesus</p>
-                <p><strong>Departamento:</strong>  Teste</p>
                 <p><strong>Cargo:</strong>  Assistente Técnico</p>
+                <p><strong>Departamento:</strong>  Teste</p>
             </div>
         </div>
     </div>
     <div id="main_column">
         <div id="main_menu">
             <div class="radio_box">
-                <input type="radio" name="main_menu" id="user_list">
-                <label for="user_list">Usuários</label>
+                <input type="radio" name="main_menu" id="radio_user_list">
+                <label for="radio_user_list">Usuários</label>
             </div>
             <div class="radio_box">
-                <input type="radio" name="main_menu" id="approve_list">
-                <label for="approve_list">Aprovações</label>
+                <input type="radio" name="main_menu" id="radio_approve_list">
+                <label for="radio_approve_list">Aprovações</label>
             </div>
             <div class="radio_box">
-                <input type="radio" name="main_menu" id="comment_list">
-                <label for="comment_list">Comentários</label>
+                <input type="radio" name="main_menu" id="radio_comment_list">
+                <label for="radio_comment_list">Comentários</label>
             </div>
         </div>
 
         <div id="main_content">
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            {{>profile/user_list class=""}}
         </div>
     </div>
     <div id="right_column" class="side_column">
@@ -48,3 +46,6 @@
         </div>
     </div>
 </section>
+ <!--script-->
+<script type="module" src="/js/profile/main_menu.js"></script>
+<script type="module" src="/js/profile/user_list.js"></script>

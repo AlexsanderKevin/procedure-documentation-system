@@ -1,4 +1,6 @@
-{{>main/header title = 'Guia de Procedimentos'}}
+{{#departments}}
+    {{>home/header title = this.dataValues.name}}
+{{/departments}}
 {{>main/home_button}}
 {{>nav/home}}
 {{#>edition/tool_bar}}

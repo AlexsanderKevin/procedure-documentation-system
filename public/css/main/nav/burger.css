@@ -1,0 +1,30 @@
+#nav_burger{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+.burger{
+    height: 50px;
+    width: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    z-index: 3;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: var(--contrast_color);
+    margin: 2px;
+}
+.burger{
+    position: absolute;
+    top: 20px;
+    left: 5vh;
+    cursor: pointer;
+}

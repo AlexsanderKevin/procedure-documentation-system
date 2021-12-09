@@ -45,19 +45,11 @@ on_change(add_options, ()=>{
     add_options.classList.add('hide')
     add_options.value = ''
 })
-
-function show_forms(){  
-    add_buttons.forEach(item => {
-        const {buttons, form} = item
-        buttons.forEach(button => {on_click(button, ()=>{open(form)})})
-    })
-}
 // this inits the edition mode
 on_click(start_edition_button, ()=>{
     bg_img.classList.toggle('hide')
     header.classList.toggle('hide')
     add_options.classList.add('hide')
-    show_forms()
 })
 // this closes the modal when click in the cancel buttons
 cancel_buttons.forEach(button => {
