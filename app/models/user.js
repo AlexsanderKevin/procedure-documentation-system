@@ -26,6 +26,14 @@ const User = database.define('users', {
         type: Sequelize.INTEGER,
         references: 'departments',
         referencesKey: 'id'
+    },
+    cargo: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    permission: {
+        type: Sequelize.STRING,
+        allowNull: true
     }
 })
 

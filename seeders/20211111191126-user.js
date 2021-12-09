@@ -8,8 +8,10 @@ module.exports = {
         id: 1,
         name: 'Kevin Alexsander de Jesus',
         username: 'kjesus',
-        password: await bcrypt.hash('utln-3358', 10),
+        password: await bcrypt.hash('13348', 10),
         departmentId: 1,
+        cargo: 'Assistente Técnico',
+        permission: 'adm'
       },
     ], 
     {});
