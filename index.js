@@ -49,7 +49,7 @@ app.get("/profile", async (req, res) => {
         ]
     })
 
-    res.render("profile_adm",{
+    res.render("profile",{
         departments: departments,
     })
 })
@@ -75,7 +75,15 @@ app.post("/auth", async (req, res) => {
 
             console.log(token)
 
-            res.render("login", { token: token, departmentId: user.departmentId })
+            res.render("login", { 
+                token: token, 
+                departmentId: user.departmentId,
+                user_name: user.name,
+                user_department: user.departmentId,
+                user_username: user.username,
+                user_cargo: user.cargo,
+                user_permission: user.permission
+            })
         }else{
             res.render("login", { error: "Senha incorreta"})
         }
@@ -95,9 +103,11 @@ app.post('/api/signUp', AuthController.signUp)
 // home dinamica (rota)
 app.get("/home/:id", async (req, res) => {
     const departmentId = req.params.id
-    const departments = await Department.findAll()
-
+    
     try{
+        const departments = await Department.findAll({
+            where: {id: departmentId}
+        })
         const item_sections = await ItemSection.findAll({
             where: {departmentId: departmentId},
             include: [{
