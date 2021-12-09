@@ -1,49 +1,22 @@
 {{>main/header title="Perfil"}}
 <section id="profile">
     {{>main/home_button}}
+    <!--right column-->
     <div id="left_column" class="side_column">
-        <div id="this_user_info_container" class="side_column_container">
-            <img src="/img/icon/account.png" alt="" id="profile_pic">
-            <div id="this_user_info">
-                <h1>Kevin Alexsander de Jesus</h1>
-                <hr>
-                <p><strong>Usuário:</strong>  kjesus</p>
-                <p><strong>Cargo:</strong>  Assistente Técnico</p>
-                <p><strong>Departamento:</strong>  Teste</p>
-            </div>
-        </div>
+        {{>profile/this_user_info}}
     </div>
+    <!--main column-->
     <div id="main_column">
-        <div id="main_menu">
-            <div class="radio_box">
-                <input type="radio" name="main_menu" id="radio_user_list">
-                <label for="radio_user_list">Usuários</label>
-            </div>
-            <div class="radio_box">
-                <input type="radio" name="main_menu" id="radio_approve_list">
-                <label for="radio_approve_list">Aprovações</label>
-            </div>
-            <div class="radio_box">
-                <input type="radio" name="main_menu" id="radio_comment_list">
-                <label for="radio_comment_list">Comentários</label>
-            </div>
-        </div>
-
+        <!--menu-->
+        {{>profile/main_menu}}
+        <!--main content-->
         <div id="main_content">
             {{>profile/user_list class=""}}
         </div>
     </div>
+    <!--right column-->
     <div id="right_column" class="side_column">
-        <div id="departments_container" class="side_column_container">
-            <h1 id="departments_container_header">
-                Home
-                <img id="home_icon" src="/img/icon/home.png" alt="">
-            </h1>
-
-            {{#departments}}
-                <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
-            {{/departments}}
-        </div>
+        {{>profile/departments_container}}
     </div>
 </section>
  <!--script-->

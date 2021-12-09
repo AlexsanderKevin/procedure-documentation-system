@@ -1,11 +1,8 @@
 {{#>edition/forms/default id="add_user_form" title="Novo Usuário" confirm="Adicionar"}}
     {{>forms/input_box name="name" type="text" label="*Nome Completo"}}
     {{>forms/input_box name="username" type="text" label="*Nome de Usuário"}}
-
-    <div class="password_container">
-        {{>forms/input_box name="password" type="password" label="*Senha"}}
-        {{>forms/input_box name="confirm_password" type="password" label="*Confirmar Senha"}}
-    </div>
+    {{>forms/input_box name="password" type="text" label="*Senha"}}
+    {{>forms/input_box name="cargo" type="text" label="*Cargo"}}
 
     {{#>forms/datalist name="user_department" label="*Departamentos"}}
         {{#departments}}
