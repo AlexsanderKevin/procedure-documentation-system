@@ -42,7 +42,7 @@
     border-width: 0 0 2px 0;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
 }
 #profile #left_column{
@@ -51,9 +51,6 @@
 }
 #profile #home_icon{
     width: 35px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
 }
 #profile #profile_pic{
     height: 150px;

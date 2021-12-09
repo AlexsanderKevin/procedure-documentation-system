@@ -69,10 +69,6 @@ body{
 }
 #container{
     min-height: 77vh;
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    left: 0;
 }
 
 section{

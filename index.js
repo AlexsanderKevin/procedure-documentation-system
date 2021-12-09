@@ -43,10 +43,14 @@ app.get("/departments", async (req, res) => {
 })
 // rota profile
 app.get("/profile", async (req, res) => {
-    const users = await User.findAll()
+    const departments = await Department.findAll({
+        include:[
+            {model:User}
+        ]
+    })
 
     res.render("profile_adm",{
-        users: users,
+        departments: departments,
     })
 })
 

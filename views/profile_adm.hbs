@@ -1,5 +1,6 @@
 {{>main/header title="Perfil"}}
 <section id="profile">
+    {{>main/home_button}}
     <div id="left_column" class="side_column">
         <div id="this_user_info_container" class="side_column_container">
             <img src="/img/icon/account.png" alt="" id="profile_pic">
@@ -14,9 +15,18 @@
     </div>
     <div id="main_column">
         <div id="main_menu">
-            <button class="all_button">Usuários</button>
-            <button class="all_button">Aprovações</button>
-            <button class="all_button">Comentários</button>
+            <div class="radio_box">
+                <input type="radio" name="main_menu" id="user_list">
+                <label for="user_list">Usuários</label>
+            </div>
+            <div class="radio_box">
+                <input type="radio" name="main_menu" id="approve_list">
+                <label for="approve_list">Aprovações</label>
+            </div>
+            <div class="radio_box">
+                <input type="radio" name="main_menu" id="comment_list">
+                <label for="comment_list">Comentários</label>
+            </div>
         </div>
 
         <div id="main_content">
@@ -28,13 +38,13 @@
     <div id="right_column" class="side_column">
         <div id="departments_container" class="side_column_container">
             <h1 id="departments_container_header">
-                <img id="home_icon" src="/img/icon/home.png" alt="">
                 Home
+                <img id="home_icon" src="/img/icon/home.png" alt="">
             </h1>
 
-            <a href="" class="all_button">Análise</a>
-            <a href="" class="all_button">Embalagem</a>
-            <a href="" class="all_button">Teste</a>
+            {{#departments}}
+                <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
+            {{/departments}}
         </div>
     </div>
 </section>
