@@ -36,7 +36,7 @@
     padding: 10px;
 }
 #profile .req_container{
-    
+    position: relative;
 
     padding: 10px;
 
@@ -63,8 +63,12 @@
     border: solid var(--gradient_color_5);
     border-width: 0 0 1px 0;
 }
+#profile .req_info_container{
+    position: relative;
+}
 #profile .req_info_container p{
     margin: 0;
+    
 }
 #profile #req_menu{
     width: 100%;
@@ -88,4 +92,24 @@
 
     display: flex;
     justify-content: center;
+}
+#profile .req_author_container{
+    font-size: 12pt;
+}
+#profile .req_container .req_button_container{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+#profile .req_container button{
+    background: none;
+    border: none;
+    font-weight: bold;
+
+    color: var(--contrast_color);
 }

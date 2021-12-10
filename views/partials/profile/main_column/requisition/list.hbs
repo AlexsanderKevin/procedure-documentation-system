@@ -16,19 +16,10 @@
         {{>profile/main_column/requisition/radio_box name="req_issue" label="Problema"}}
     </div>
     <div class="list_content">
-        <div class="req_container">
-            <div class="req_info_container">
-                <p class="req_title_container"><span class="req_title">Novo Procedimento</span></p>
-                <hr>
-                <p><strong>Linha:</strong> teste</p>
-                <p><strong>Seção:</strong> Seção</p>
-                <p><strong>Sub:</strong> reparo/troca de placa mãe</p>
-                <hr>
-                <p><strong>Por: </strong> Kevin Alexsander de Jesus</p>
-            </div>
-            <div class="req_description_container">
-                <p class="req_description_label"><strong>Descrição:</strong></p>
-            </div>
-        </div>
+        {{#>profile/main_column/requisition/req_container}}
+            <p><strong>Linha:</strong> teste</p>
+            <p><strong>Seção:</strong> Seção</p>
+            <p><strong>Sub:</strong> reparo/troca de placa mãe</p>
+        {{/profile/main_column/requisition/req_container}}
     </div>
 </div>
