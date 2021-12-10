@@ -45,7 +45,9 @@ app.get("/departments", async (req, res) => {
 app.get("/profile", async (req, res) => {
     const departments = await Department.findAll({
         include:[
-            {model:User}
+            {
+                model:User,
+            }
         ]
     })
 
@@ -59,7 +61,13 @@ app.post("/auth", async (req, res) => {
     const username = req.body.username 
     const password = req.body.password
 
-    const user = await User.findOne({ where: { username: username }  })
+    const user = await User.findOne({ 
+        where: { username: username },
+        include: [{
+            model: Comment,
+            where: {userId: user.id}
+        }]  
+    })
 
     if(user){
         const isPasswordCorrect = await bcrypt.compare(password, user.password)
@@ -82,7 +90,7 @@ app.post("/auth", async (req, res) => {
                 user_department: user.departmentId,
                 user_username: user.username,
                 user_cargo: user.cargo,
-                user_permission: user.permission
+                user_permission: user.permission,
             })
         }else{
             res.render("login", { error: "Senha incorreta"})

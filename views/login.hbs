@@ -12,5 +12,11 @@
     const token = '{{token}}';
     localStorage.setItem("token", token)
     window.location.href = "/home/" + '{{departmentId}}'
+
+    localStorage.setItem("name", '{{user_name}}'),
+    localStorage.setItem("department", "{{user_department}}"),
+    localStorage.setItem("username", "{{user_username}}"),
+    localStorage.setItem("cargo", "{{user_cargo}}"),
+    localStorage.setItem("permission", "{{user_permission}}")
   </script>
 {{/if}}
