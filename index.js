@@ -55,7 +55,6 @@ app.get("/profile", async (req, res) => {
         departments: departments,
     })
 })
-
 //login
 app.post("/auth", async (req, res) => {
     const username = req.body.username 
@@ -65,7 +64,6 @@ app.post("/auth", async (req, res) => {
         where: { username: username },
         include: [{
             model: Comment,
-            where: {userId: user.id}
         }]  
     })
 
@@ -103,11 +101,9 @@ app.post("/auth", async (req, res) => {
 app.get("/", (req, res) => {
     res.render("login")
 })
-
 //login post
 app.post('/api/signIn', AuthController.signIn)
 app.post('/api/signUp', AuthController.signUp)
-
 // home dinamica (rota)
 app.get("/home/:id", async (req, res) => {
     const departmentId = req.params.id
@@ -140,7 +136,6 @@ app.get("/home/:id", async (req, res) => {
         res.render('error')
     }
 })
-
 // página do procedimento (rota)
 app.get("/procedure/:id", async (req, res) => {
     const procedureId = req.params.id
@@ -182,9 +177,8 @@ app.get("/edit", async (req, res) => {
     const item_subsections = await ItemSubsection.findAll()
     const item_issues = await ItemIssue.findAll()
     const item_obs = await ItemObs.findAll()
-    /*
-    */
-   const departments = await Department.findAll({
+
+    const departments = await Department.findAll({
         include:[
             {
                 model: ItemSection,
@@ -214,11 +208,8 @@ app.get("/edit", async (req, res) => {
         item_subsections: item_subsections,
         item_issues: item_issues,
         item_obs: item_obs,
-        /*
-        */
     })
 })
-
 // pegando links externos da pasta public
 app.use(express.static(__dirname + "/public"))
 

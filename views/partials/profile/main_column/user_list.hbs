@@ -1,5 +1,5 @@
 <div id="user_list_container" class="{{class}}">
-    <header id="list_header">
+    <header class="list_header">
         <div id="edition_container">
             {{>edition/button/add id="add_user" class="show"}}
             {{>edition/button/main_edit}}
@@ -9,7 +9,7 @@
             <img id="user_quantity_icon" src="/img/icon/group.png" alt="">
         </div>
     </header>
-    <div id="user_list_content">
+    <div id="user_list_content" class="list_content">
         {{>edition/forms/user  class=""}}
         {{#departments}}
             {{#each this.users}}

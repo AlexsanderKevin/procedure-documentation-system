@@ -8,10 +8,12 @@
     <!--main column-->
     <div id="main_column">
         <!--menu-->
-        {{>profile/main_menu}}
+        {{>profile/main_column/menu}}
         <!--main content-->
         <div id="main_content">
-            {{>profile/user_list class=""}}
+            <img id="bg_img" src="/img/icon/lenovo (1).png" alt="">
+            {{>profile/main_column/user_list class="hide"}}
+            {{>profile/main_column/requisition/list class=""}}
         </div>
     </div>
     <!--right column-->
@@ -19,9 +21,6 @@
         {{>profile/departments_container}}
     </div>
 
-    {{#user_comment}}
-        <p>coment</p>
-    {{/user_comment}}
 </section>
  <!--script-->
 <script type="module" src="/js/profile/main_menu.js"></script>

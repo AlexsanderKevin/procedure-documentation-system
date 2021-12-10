@@ -3,7 +3,7 @@
     border-width: 1px;
     color:var(--contrast_color);
 }
-#profile #user_list_container #list_header{
+#profile .list_header{
     width: 100%;
     background-color: var(--gradient_color_2);
 
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
 }
-#profile #user_list_content{
+#profile .list_content{
     padding: 30px;
 
     display: flex;

@@ -31,7 +31,8 @@
 
     gap: 10px;
 }
-#profile #main_content{;
+#profile #main_content{
+    position: relative;
 }
 #profile #main_menu button{
     border: none;
@@ -79,4 +80,13 @@
     position: sticky;
     top: 0;
 }
+#profile #bg_img{
+    padding: 0 100px;
+    width: 800px;
+    position: fixed;
+    top: 0;
 
+    opacity: 0.03;
+
+    z-index: -1;
+}
