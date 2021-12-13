@@ -1,6 +1,6 @@
 <div class="req_container">
     <div class="req_info_container">
-        <p class="req_title_container"><span class="req_title">Novo Procedimento</span></p>
+        <p class="req_title_container"><span class="req_title">{{title}}</span></p>
         <hr>
         {{>@partial-block}}
         
@@ -12,9 +12,17 @@
             <button class="all_button reprove_button">Reprovar</button>
         </div>
     </div>
+    {{#if this.dataValues.description}}
     <div class="req_description_container">
         <p class="req_description_label"><strong>Descrição:</strong></p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aliquid voluptates quidem. Nihil corporis molestias mollitia sunt! Consectetur aliquid labore inventore consequuntur maxime quidem nesciunt exercitationem repellat aperiam? Nam, ducimus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque illum labore id, quo repudiandae repellendus praesentium, excepturi ratione quia architecto quod reiciendis laudantium atque, odit delectus! Cumque vel natus facilis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, esse. Provident cupiditate autem in, blanditiis, odio dolorum architecto sunt, tempore sit corporis quasi amet itaque dolores quae molestias sapiente a?</p>
+        <p>{{{this.dataValues.description}}}</p>
     </div>
+    {{/if}}
+    {{#if this.dataValues.content}}
+    <div class="req_description_container">
+        <p class="req_description_label"><strong>Descrição:</strong></p>
+        <p>{{{this.dataValues.content}}}</p>
+    </div>
+    {{/if}}
 </div>
 <br><br>

@@ -1,0 +1,14 @@
+<div id="subseciton_rec_list" class="{{class}}">
+    {{#departments}}
+        {{#each this.item_sections}}
+            {{#each this.item_subsections}}
+                {{#unless this.approved}}
+                    {{#>profile/main_column/requisition/req_container title = this.dataValues.name}}
+                        <p><strong>linha:</strong> {{../../../dataValues.name}}</p>
+                        <p><strong>seção:</strong> {{../../dataValues.name}}</p>
+                    {{/profile/main_column/requisition/req_container}}
+                {{/unless}}
+            {{/each}}
+        {{/each}}
+    {{/departments}}
+</div>

@@ -1,0 +1,20 @@
+<div id="solution_req_list" class="{{class}}">
+    {{#departments}}
+        {{#each this.item_sections}}
+            {{#each this.item_subsections}}
+                {{#each this.items}}
+                {{#each this.item_solutions}}
+                    {{#unless this.approved}}
+                        {{#>profile/main_column/requisition/req_container title = this.dataValues.title}}
+                            <p><strong>linha:</strong> {{../../../../../dataValues.name}}</p>
+                            <p><strong>seção:</strong> {{../../../../dataValues.name}}</p>
+                            <p><strong>sub:</strong> {{../../../dataValues.name}}</p>
+                            <p><strong>Proced:</strong> {{../../dataValues.title}}</p>
+                        {{/profile/main_column/requisition/req_container}}
+                    {{/unless}}
+                {{/each}}
+                {{/each}}
+            {{/each}}
+        {{/each}}
+    {{/departments}}
+</div>

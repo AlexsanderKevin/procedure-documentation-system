@@ -1,0 +1,17 @@
+<div id="procedure_req_list" class="{{class}}">
+    {{#departments}}
+        {{#each this.item_sections}}
+            {{#each this.item_subsections}}
+                {{#each this.items}}
+                    {{#unless this.approved}}
+                        {{#>profile/main_column/requisition/req_container title = this.dataValues.title}}
+                            <p><strong>linha:</strong> {{../../../../dataValues.name}}</p>
+                            <p><strong>seção:</strong> {{../../../dataValues.name}}</p>
+                            <p><strong>sub:</strong> {{../../dataValues.name}}</p>
+                        {{/profile/main_column/requisition/req_container}}
+                    {{/unless}}
+                {{/each}}
+            {{/each}}
+        {{/each}}
+    {{/departments}}
+</div>

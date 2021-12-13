@@ -16,10 +16,11 @@
         {{>profile/main_column/requisition/radio_box name="req_issue" label="Problema"}}
     </div>
     <div class="list_content">
-        {{#>profile/main_column/requisition/req_container}}
-            <p><strong>Linha:</strong> teste</p>
-            <p><strong>Seção:</strong> Seção</p>
-            <p><strong>Sub:</strong> reparo/troca de placa mãe</p>
-        {{/profile/main_column/requisition/req_container}}
+        {{>profile/main_column/requisition/lists/procedure class="hide"}}
+        {{>profile/main_column/requisition/lists/subsection class="hide"}}
+        {{>profile/main_column/requisition/lists/section class="hide"}}
+        {{>profile/main_column/requisition/lists/solution class="hide"}}
+        {{>profile/main_column/requisition/lists/obs class="hide"}}
+        {{>profile/main_column/requisition/lists/issue class=""}}
     </div>
 </div>

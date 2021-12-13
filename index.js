@@ -46,11 +46,24 @@ app.get("/profile", async (req, res) => {
     const departments = await Department.findAll({
         include:[
             {
-                model:User,
+                model: ItemSection,
+                include: [{
+                    model:ItemSubsection,
+                    include: [{
+                        model: Item,
+                        include: [
+                            {model: ItemSolution},
+                            {model: ItemObs},
+                            {model: ItemIssue}
+                        ]
+                    }]
+                }]
+            },{
+                model: User
             }
         ]
-    })
-
+   })
+    
     res.render("profile",{
         departments: departments,
     })
