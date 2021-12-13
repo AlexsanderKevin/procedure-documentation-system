@@ -32,8 +32,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      permission: {
-          type: Sequelize.STRING,
+      adm: {
+          type: Sequelize.BOOLEAN,
           allowNull: true
       },
       // Timestamps

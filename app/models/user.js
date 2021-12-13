@@ -31,7 +31,7 @@ const User = database.define('users', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    permission: {
+    adm: {
         type: Sequelize.BOOLEAN,
         allowNull: true
     }
