@@ -32,7 +32,7 @@ const User = database.define('users', {
         allowNull: false
     },
     permission: {
-        type: Sequelize.STRING,
+        type: Sequelize.BOOLEAN,
         allowNull: true
     }
 })

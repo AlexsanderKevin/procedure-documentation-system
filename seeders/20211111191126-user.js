@@ -11,7 +11,7 @@ module.exports = {
         password: await bcrypt.hash('13348', 10),
         departmentId: 1,
         cargo: 'Assistente Técnico',
-        permission: 'adm'
+        permission: true
       },
     ], 
     {});
