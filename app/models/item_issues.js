@@ -17,7 +17,12 @@ const ItemIssue = database.define('item_issues', {
     content: {
         type: Sequelize.STRING,
         allowNull: false
-    }
+    },
+    approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+    },
 })
 
 Item.hasMany(ItemIssue, {constraint: true, foreingnKey: 'itemId'})

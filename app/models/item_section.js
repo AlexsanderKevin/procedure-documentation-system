@@ -18,6 +18,11 @@ const ItemSection = database.define('item_sections', {
         type: Sequelize.INTEGER,
         references: 'department',
         referencesKey: 'id'
+    },
+    approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
     }
 })
 

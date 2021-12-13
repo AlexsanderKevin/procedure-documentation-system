@@ -24,6 +24,11 @@ module.exports = {
           key: 'id'
         }
       },
+      approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+    },
       // Timestamps
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE,

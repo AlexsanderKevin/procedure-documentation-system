@@ -17,6 +17,11 @@ const Item = database.define('items', {
         type: Sequelize.STRING,
         allowNull: true
     },
+    approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+    }
 })
  
 module.exports = Item;

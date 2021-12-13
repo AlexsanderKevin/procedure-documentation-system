@@ -17,6 +17,11 @@ const ItemSubsection = database.define('item_subsections', {
     description: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
     }
 })
 

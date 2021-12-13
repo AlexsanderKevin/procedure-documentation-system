@@ -11,6 +11,11 @@ const Department = database.define('departments', {
     name:{
         type: Sequelize.STRING,
         allowNull: false
+    },
+    approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
     }
 })
 

@@ -17,6 +17,11 @@ const ItemSolution = database.define('item_solutions', {
     content: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
     }
 })
 

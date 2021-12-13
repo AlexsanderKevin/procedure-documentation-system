@@ -13,6 +13,11 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false
       },
+      approved:{
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+      },
       // Timestamps
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE,
