@@ -7,15 +7,19 @@
         </div>
         <div class="nav_div">
             {{#item_sections}}
+            {{#if this.dataValues.approved}}
                 <li>
                     <h1 class="section_links all_button">{{this.dataValues.name}}</h1>
 
                     <div class="subsection_links while_hidden">
                         {{#each this.dataValues.item_subsections}}
-                        <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                        {{#if this.dataValues.approved}}
+                            <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                        {{/if}}
                         {{/each}}
                     </div>
                 </li>
+            {{/if}}
             {{/item_sections}}
         </div>
     </div>

@@ -4,7 +4,7 @@
             {{#each this.item_subsections}}
                 {{#each this.items}}
                 {{#each this.item_obs}}
-                    {{#unless this.approved}}
+                    {{#unless this.dataValues.approved}}
                         {{#>profile/main_column/requisition/req_container title = this.dataValues.title}}
                             <p><strong>linha:</strong> {{../../../../../dataValues.name}}</p>
                             <p><strong>seção:</strong> {{../../../../dataValues.name}}</p>

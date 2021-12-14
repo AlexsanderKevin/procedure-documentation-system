@@ -1,4 +1,5 @@
 {{#item_sections}}
+{{#if this.dataValues.approved}}
 <section class="item_section" id='{{this.dataValues.name}}'>
     <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
         <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
@@ -9,5 +10,6 @@
     {{>@partial-block}}
     </div>
 </section>
+{{/if}}
 {{/item_sections}}
 {{>edition/button/add class="add_section_button"}}

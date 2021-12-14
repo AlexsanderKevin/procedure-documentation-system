@@ -1,7 +1,7 @@
 <div id="section_req_list" class="{{class}}">
     {{#departments}}
-        {{#each this.item_sections}}
-                {{#unless this.approved}}
+        {{#each this.dataValues.item_sections}}
+                {{#unless this.dataValues.approved}}
                     {{#>profile/main_column/requisition/req_container title = this.dataValues.name}}
                         <p><strong>linha:</strong> {{../../dataValues.name}}</p>
                     {{/profile/main_column/requisition/req_container}}
