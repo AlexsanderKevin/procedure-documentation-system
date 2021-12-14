@@ -1,4 +1,4 @@
-import {get} from '/lib/main.js'
+import {get, on_click} from '/lib/main.js'
 
 const REQ_MENU = [
     {
@@ -26,4 +26,19 @@ const REQ_MENU = [
         content:get('#issue_req_list')
     }
 ]
-console.log(REQ_MENU)
+
+REQ_MENU.forEach(item => {const {button, content} = item
+    on_click(button, ()=>{
+        REQ_MENU.forEach(item => {const {button, content} = item
+            if(button.checked){
+                content.classList.remove('hide')
+            }else{
+                content.classList.add('hide')
+            }
+        })
+    })
+})
+
+const REQ_CONTAINERS = get('.req_container')
+const REQ_QTD = get('#pendant_requisition_qtd')
+REQ_QTD.innerText = REQ_CONTAINERS.length

@@ -16,9 +16,7 @@ radios.forEach(radio => {
     on_click(radio.button, ()=>{
         const bg_img = get('#bg_img')
         bg_img.classList.add('hide')
-        radios.forEach(radio => {
-            const {button, content} = radio
-
+        radios.forEach(radio => {const {button, content} = radio
             if(button.checked){
                 content.classList.remove('hide')
             }else{
