@@ -1,9 +1,9 @@
 {{#>edition/forms/default id="add_solution_form" title="Nova Solução" confirm="Adicionar"}}
     {{>forms/input_box name="solution_title" type="Text" label="*Título"}}
 
-    {{#>forms/datalist name="solution_procedure" label="*Procedimento"}}
-        <option value="{{this.dataValues.title}}">
-    {{/forms/datalist}}
+    {{#>forms/select name="solution_procedure" label="Procedimento"}}
+        <option value="{{this.dataValues.id}}">{{this.dataValues.title}}</option>
+    {{/forms/select}}
 
     {{>forms/textarea_box name="solution_description" label="*Descrição"}}
 {{/edition/forms/default}}

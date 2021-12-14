@@ -1,9 +1,9 @@
 {{#>edition/forms/default id="add_issue_form" title="Novo Possível Problema" confirm="Adicionar"}}
     {{>forms/input_box name="issue_title" type="Text" label="*Título"}}
 
-    {{#>forms/datalist name="issue_procedure" label="*Procedimento"}}        
-        <option value="{{this.dataValues.title}}">        
-    {{/forms/datalist}}
+    {{#>forms/select name="issue_procedure" label="Procedimento"}}        
+        <option value="{{this.dataValues.id}}">{{this.dataValues.title}}</option>        
+    {{/forms/select}}
 
     {{>forms/textarea_box name="issue_description" label="*Descrição"}}
 {{/edition/forms/default}}

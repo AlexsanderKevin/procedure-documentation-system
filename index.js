@@ -254,3 +254,23 @@ app.post("/create_section", async (req, res)=>{
     const CREATED_SECTION = await ItemSection.create(NEW_SECTION)
     res.redirect(`home/${NEW_SECTION.departmentId}`)
 })
+// input a new subsection
+app.post('/create_subsection', async (req, res)=>{
+    const NEW_SUBSECTION = {
+        name: req.body.subsection_title,
+        itemSectionId: req.body.subsection_section,
+        description: req.body.subsection_description
+    }
+    const CREATED_SUBSECTION = await ItemSubsection.create(NEW_SUBSECTION)
+    res.redirect('/home/1')
+})
+// input a new procedure 
+app.post('/create_procedure', async(req, res)=>{
+    const NEW_PROCEDURE = {
+        title: req.body.procedure_title,
+        itemSubsectionId: req.body.procedure_subsection,
+        description: req.body.procedure_description_input
+    }
+    const CREATED_PROCEDURE = await Item.create(NEW_PROCEDURE)
+    res.redirect('/home/1')
+})

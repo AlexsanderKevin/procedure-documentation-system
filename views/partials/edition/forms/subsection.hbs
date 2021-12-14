@@ -1,11 +1,11 @@
-{{#>edition/forms/default id="add_subsection_form" title="Nova Subseção" confirm="Adicionar"}}
+{{#>edition/forms/default action="/create_subsection" id="add_subsection_form" title="Nova Subseção" confirm="Adicionar"}}
     {{>forms/input_box name="subsection_title" type="text" label="*Título"}}
         
-    {{#>forms/datalist name="subsection_section" label="*Seção"}}
+    {{#>forms/select name="subsection_section" label="Seção"}}
         {{#each item_sections}}
-            <option value="{{this.dataValues.name}}">
+            <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
         {{/each}}
-    {{/forms/datalist}}
+    {{/forms/select}}
         
-    {{>forms/textarea_box name="description" label="*Descrição"}}
+    {{>forms/textarea_box name="subsection_description" label="*Descrição"}}
 {{/edition/forms/default}}

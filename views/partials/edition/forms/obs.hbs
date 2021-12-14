@@ -1,9 +1,9 @@
 {{#>edition/forms/default id="add_obs_form" title="Nova Observação" confirm="Adicionar"}}
     {{>forms/input_box name="obs_title" type="Text" label="*Título"}}
 
-    {{#>forms/datalist name="obs_procedure" label="*Procedimento"}}
-        <option value="{{this.dataValues.title}}">
-    {{/forms/datalist}}
+    {{#>forms/select name="obs_procedure" label="Procedimento"}}
+        <option value="{{this.dataValues.id}}">{{this.dataValues.title}}</option>
+    {{/forms/select}}
 
     {{>forms/textarea_box name="obs_description" label="*Descrição"}}
 {{/edition/forms/default}}

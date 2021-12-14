@@ -21,7 +21,7 @@ const ItemObs = database.define('item_obs', {
     approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false
+        defaultValue: true
     }
 })
 

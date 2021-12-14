@@ -1,13 +1,13 @@
-{{#>edition/forms/default id="add_procedure_form" title="Novo Procedimento" confirm='Adicionar'}}
+{{#>edition/forms/default action="/create_procedure" id="add_procedure_form" title="Novo Procedimento" confirm='Adicionar'}}
     {{>forms/input_box name="procedure_title" type="text" label="*Título"}}
 
-    {{#>forms/datalist name="procedure_subsection" label="*Subseção"}}
+    {{#>forms/select name="procedure_subsection" label="Subseção"}}
         {{#item_sections}}
             {{#each this.item_subsections}}
-                <option value="{{this.dataValues.name}}">
+                <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
             {{/each}}
         {{/item_sections}}
-    {{/forms/datalist}}
+    {{/forms/select}}
     
     {{>forms/textarea_box name="procedure_description_input" label="*Descrição"}}
 {{/edition/forms/default}}

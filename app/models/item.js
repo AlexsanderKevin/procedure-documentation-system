@@ -20,7 +20,7 @@ const Item = database.define('items', {
     approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false
+        defaultValue: true
     }
 })
  
