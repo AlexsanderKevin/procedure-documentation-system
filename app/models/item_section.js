@@ -22,7 +22,7 @@ const ItemSection = database.define('item_sections', {
     approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false
+        defaultValue: true
     }
 })
 

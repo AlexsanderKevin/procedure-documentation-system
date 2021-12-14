@@ -1,6 +1,6 @@
 <section id="{{id}}" class="edit form_section {{class}}">
     {{>forms/header text=title}}
-    <form>
+    <form action="{{action}}" method="POST">
         {{>@partial-block}}
         {{#>forms/buttons/container}}
             {{>forms/buttons/reset class="cancel_button" label="Cancelar"}}

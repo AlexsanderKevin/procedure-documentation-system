@@ -12,11 +12,6 @@ const Department = database.define('departments', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    approved:{
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-        defaultValue: false
-    }
 })
 
 module.exports = Department;

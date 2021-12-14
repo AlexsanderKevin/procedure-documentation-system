@@ -152,9 +152,26 @@ app.get("/home/:id", async (req, res) => {
 // página do procedimento (rota)
 app.get("/procedure/:id", async (req, res) => {
     const procedureId = req.params.id
-    const departments = await Department.findAll()
 
     try{
+        const departments = await Department.findAll({
+            include: [{
+                model: ItemSection,
+                include: [{
+                    model: ItemSubsection,
+                    include: [{
+                        model: Item,
+                        where: {id: procedureId},
+                        include:[
+                            {model: ItemSolution},
+                            {model: ItemIssue},
+                            {model: ItemObs},
+                            {model: Comment}
+                        ]
+                    }]
+                }] 
+            }]
+        })
         const procedure = await Item.findAll({
             where: {id: procedureId},
             include: [
@@ -167,7 +184,6 @@ app.get("/procedure/:id", async (req, res) => {
 
        res.render("procedure", {
             departments: departments,
-            procedure: procedure,
         })
     }catch(err){
         console.error(err)
@@ -229,3 +245,12 @@ app.use(express.static(__dirname + "/public"))
 app.listen(3000, () => {
     console.log("server running...")
 });
+// input a new section
+app.post("/create_section", async (req, res)=>{
+    const NEW_SECTION = {
+        name: req.body.section_title,
+        departmentId: req.body.section_department
+    }
+    const CREATED_SECTION = await ItemSection.create(NEW_SECTION)
+    res.redirect(`home/${NEW_SECTION.departmentId}`)
+})

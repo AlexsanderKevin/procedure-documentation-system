@@ -1,9 +1,9 @@
-{{#>edition/forms/default id="add_section_form" title="Nova Seção" confirm="Adicionar"}}
+{{#>edition/forms/default action="/create_section" id="add_section_form" title="Nova Seção" confirm="Adicionar"}}
     {{>forms/input_box name="section_title" type="text" label="*Título"}}
 
     {{#>forms/datalist name="section_department" label="*Departamento"}}
         {{#departments}}
-            <option value="{{this.dataValues.name}}">
+            <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
         {{/departments}}
     {{/forms/datalist}}
 

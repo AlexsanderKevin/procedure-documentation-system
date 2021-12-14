@@ -1,4 +1,7 @@
-{{#procedure}}
+{{#departments}}
+{{#each this.item_sections}}
+{{#each this.item_subsections}}
+{{#each this.items}}
 <section id="content">
     {{>main/header title = this.dataValues.title}}
     {{>main/home_button}}
@@ -40,5 +43,9 @@
                 {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
             {{/if}}   
     </div>
+    <a href="/home/{{../../../dataValues.id}}">Home</a>
 </section>
-{{/procedure}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/departments}}

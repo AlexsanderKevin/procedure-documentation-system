@@ -27,7 +27,7 @@ module.exports = {
       approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: false
+        defaultValue: true
     },
       // Timestamps
       createdAt: Sequelize.DATE,
