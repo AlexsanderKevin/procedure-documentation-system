@@ -22,31 +22,31 @@ module.exports = {
         id: 4,
         title: 'Verificação de Especificações do Produto',
         itemSubsectionId: 2,
-        description: '<p>Estas informações estão localizadas majoritariamente nas <strong>configurações</strong>  do dispositivo tanto no <strong>Windows</strong>  quanto no <strong>Linux</strong> , com a diferença de que no sistema <strong>Windows</strong>  é possivel verificar a capacidade do <strong>HD</strong>  ou <strong>SSD</strong>  através do <strong>Explorador de arquivos</strong> , na aba <strong>Este Computador</strong>.</p>'
+        description: 'Estas informações estão localizadas majoritariamente nas configurações  do dispositivo tanto no Windows  quanto no Linux, com a diferença de que no sistema Windows  é possivel verificar a capacidade do HD ou SSD  através do Explorador de arquivos, na aba Este Computador.'
       },
       {
         id: 5,
         title: 'Verificação de SN e MTM',
         itemSubsectionId: 2,
-        description: '<p>Existem quatro locais onde o <strong>SN, MTM e Modelo</strong>  devem estar de acordo:</p>'
+        description: 'Existem quatro locais onde o SN, MTM e Modelo  devem estar de acordo:'
       },
       {
         id: 6,
         title: 'Ativação do Sistema',
         itemSubsectionId: 2,
-        description:'<p>Todas as máquinas que saem de fábrica com <strong>Windows</strong> devem ter seu <strong>sistema operacional ativado</strong>, desde que o cliente não tenha feito a instalação de um sistema <strong>diferente</strong>. Sendo assim, é necessário verificarmos, primeiro, se o sistema instalado é realmente o <strong>original</strong>  de fábrica, e em seguida se está <strong>ativado</strong>.</p>'
+        description:'Todas as máquinas que saem de fábrica com Windows devem ter seu sistema operacional ativado, desde que o cliente não tenha feito a instalação de um sistema diferente. Sendo assim, é necessário verificarmos, primeiro, se o sistema instalado é realmente o original  de fábrica, e em seguida se está ativado.'
       },
       {
         id: 7,
         title: 'Atualização de Drivers',
         itemSubsectionId: 3,
-        description:'<p>As máquinas devem ser mandadas para o cliente 100% atualizadas, portanto é imprescindível que atualizemos tanto a versão do <strong>Windows</strong> quanto os drivers disponiveis para <strong>Download</strong> nas <strong>Configurações</strong></p>',
+        description:'As máquinas devem ser mandadas para o cliente 100% atualizadas, portanto é imprescindível que atualizemos tanto a versão do Windows quanto os drivers disponiveis para Download nas Configurações',
       },
       {
         id: 8,
         title: 'Atualização de Bios',
         itemSubsectionId: 3,
-        description:'<p>Assim como o <strong>Windows</strong>, a <strong>BIOS</strong> também tem mais de uma <strong>versão</strong>, portanto é preciso garantir que a máquina será enviada para o cliente com a mais atualizada possível. O que diferencia o <strong>Windows</strong> da <strong>BIOS</strong>, entretanto, é que cada modelo de computador terá uma <strong>BIOS diferente</strong> e com <strong>versões diferentes</strong>.</p><p>Sendo assim, é necessário primeiro <strong>consultar</strong> a <strong>BIOS</strong> e a <strong>versão</strong> correta para a máquina em questão no site de <strong><a href=""https://support.lenovo.com/br/pt"" rel=""external"" target=""blank"">Suporte Lenovo</a> </strong>, para depois fazer a instalação.</p>',
+        description:'Assim como o Windows, a BIOS também tem mais de uma versão, portanto é preciso garantir que a máquina será enviada para o cliente com a mais atualizada possível. O que diferencia o Windows da BIOS, entretanto, é que cada modelo de computador terá uma BIOS diferente e com versões diferentes. Sendo assim, é necessário primeiro consultar a BIOS e a versão correta para a máquina em questão no site de Suporte Lenovo, para depois fazer a instalação.',
       },
       {
         id: 9,
@@ -58,7 +58,7 @@ module.exports = {
         id: 10,
         title: 'Teste de Tela',
         itemSubsectionId: 4,
-        description:'<p>Existem vários problemas que podem envolver a tela, portanto é <strong>necessário</strong> prestar atenção durante todo o teste em relação ao surgimento de alguma anormalidade.</p>                    <p>Os problemas <strong>mais comuns</strong> são:</p>                    <ul class=""subUl"">                        <li>        <p><strong>Ponto Luminoso:</strong> são manchas (normalmente pequenas) onde os <strong>pixels</strong> parecem emitir <strong>maior luminosidade</strong> do que no restante da tela.</p>                        </li>    <hr>                        <li>                            <p><strong>Pixel Morto:</strong> são <strong>pontos ou manchas</strong>  na tela (normalmente pequenas) que indicam que um ou mais <strong>pixels</strong> pararam de funiconar.</p>                        </li>                   <hr>    <li>                            <p><strong>Artefato:</strong> são quaisquer <strong>pontos ou manchas</strong> de <strong>origem não identificada</strong> que indiquem mau funcionamento da tela.</p>                        </li>                        <hr>                        <li>                            <p><strong>Listras:</strong> é possível que apareçam <strong>listras</strong>  (normalmente verticais) <strong>pretas </strong> ou de <strong>outras cores</strong> em qualquer parte da tela.</p>                        </li>                        <hr>                        <li>                            <p><strong>Distorções:</strong> a imagem da tela pode ficar <strong>dimencionada</strong> de maneira errada.</p>    </li>                    </ul>'
+        description:'Existem vários problemas que podem envolver a tela, portanto é necessário prestar atenção durante todo o teste em relação ao surgimento de alguma anormalidade.                    Os problemas mais comuns são: Ponto Luminoso: são manchas (normalmente pequenas) onde os pixels parecem emitir maior luminosidade do que no restante da tela. Pixel Morto: são pontos ou manchas  na tela (normalmente pequenas) que indicam que um ou mais pixels pararam de funiconar. Artefato: são quaisquer pontos ou manchas de origem não identificada que indiquem mau funcionamento da tela. Listras: é possível que apareçam listras  (normalmente verticais) pretas  ou de outras cores em qualquer parte da tela. Distorções: a imagem da tela pode ficar dimencionada de maneira errada.'
       },
       {
         id: 11,
@@ -88,7 +88,7 @@ module.exports = {
         id: 15,
         title: 'Ativação do PortCode',
         itemSubsectionId: 4,
-        description:'<p>A função do <strong>PortCode</strong> é fornecer funcionalidades específicas de <strong>teclado</strong> para um determinado <strong>país</strong>, baseando-se nas <strong>normas</strong> locais, tais como a <strong>ABNT</strong> no <strong>Brasil</strong>.</p>        <p>No caso do <strong>PortCode</strong> no <strong>Brasil</strong> a função é ativar as teclas: <strong>?</strong>, <strong>/</strong>, <strong>°</strong></p>        <p>É importante que seja instalado a versão <strong>IIL</strong> do <strong>PortCode</strong>, pois é a versão que tem apresentado melhor <strong>compatibilidade</strong> com os dispositivos.</p>'
+        description:'A função do PortCode é fornecer funcionalidades específicas de teclado para um determinado país, baseando-se nas normas locais, tais como a ABNT no Brasil. No caso do PortCode no Brasil a função é ativar as teclas: ?, />, ° É importante que seja instalado a versão IIL do PortCode, pois é a versão que tem apresentado melhor compatibilidade com os dispositivos.'
       },
       {
         id: 16,
@@ -100,13 +100,13 @@ module.exports = {
         id: 17,
         title: 'Teste de Teclado',
         itemSubsectionId: 5,
-        description:'<p>Existem, a princípio, <strong>duas</strong> maneiras de testar o funcionamento do <strong>teclado</strong>, uma <strong>online</strong> (usando a internet) e uma <strong>offline</strong> (sem conexão com a internet).</p>'
+        description:'Existem, a princípio, duas maneiras de testar o funcionamento do teclado, uma online (usando a internet) e uma offline (sem conexão com a internet).'
       },
       {
         id: 18,
         title: 'Teste de Touchpad',
         itemSubsectionId: 5,
-        description:'<p><strong>Ambas</strong> as ferramentas utilizadas na solução do <a href="id-017-teste-de-teclado.html" rel="next" target="self">Teste de Teclado</a> podem ser utilizados também durante o <strong>teste de touchpad</strong>.</p>'
+        description:'Ambas as ferramentas utilizadas na solução do Teste de Teclado podem ser utilizados também durante o teste de touchpad.'
       },
       {
         id: 19,
