@@ -1,3 +1,6 @@
-{{#>edition/forms/default id="add_department_form" title="Novo Departamento" confirm="Adicionar"}}
-    {{>forms/input_box name="department_title" type="text" label="*Título"}}
-{{/edition/forms/default}}
+<form id="add_department_form" class="form_2" action="/create_department">
+    <div class="department_form_input_box">
+        <label for="department_name">*Novo Departamento</label>
+        <input type="text" name="department_name" id="department_name">
+    </div>
+</form>
