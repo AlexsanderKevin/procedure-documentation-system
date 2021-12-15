@@ -251,8 +251,9 @@ app.post("/create_section", async (req, res)=>{
         name: req.body.section_title,
         departmentId: req.body.section_department
     }
+    const REDIRECT_DEPARTMENT = req.body.department_id
     const CREATED_SECTION = await ItemSection.create(NEW_SECTION)
-    res.redirect(`home/${NEW_SECTION.departmentId}`)
+    res.redirect(`home/${REDIRECT_DEPARTMENT}`)
 })
 // input a new subsection
 app.post('/create_subsection', async (req, res)=>{
@@ -261,8 +262,9 @@ app.post('/create_subsection', async (req, res)=>{
         itemSectionId: req.body.subsection_section,
         description: req.body.subsection_description
     }
+    const REDIRECT_DEPARTMENT = req.body.department_id
     const CREATED_SUBSECTION = await ItemSubsection.create(NEW_SUBSECTION)
-    res.redirect('/home/1')
+    res.redirect(`home/${REDIRECT_DEPARTMENT}`)
 })
 // input a new procedure 
 app.post('/create_procedure', async(req, res)=>{
@@ -271,6 +273,37 @@ app.post('/create_procedure', async(req, res)=>{
         itemSubsectionId: req.body.procedure_subsection,
         description: req.body.procedure_description_input
     }
+    const REDIRECT_DEPARTMENT = req.body.department_id
     const CREATED_PROCEDURE = await Item.create(NEW_PROCEDURE)
-    res.redirect('/home/1')
+    res.redirect(`home/${REDIRECT_DEPARTMENT}`)
+})
+// input a new procedure solution
+app.post('/create_solution', async(req, res)=>{
+    const   NEW_SOLUTION = {
+        title: req.body.solution_title,
+        itemId: req.body.solution_procedure,
+        content: req.body.solution_description
+    }
+    const CREATED_SOLUTION = await ItemSolution.create(NEW_SOLUTION)
+    res.redirect(`procedure/${NEW_SOLUTION.itemId}`)
+})
+// input a new procedure issue
+app.post('/create_issue', async(req, res)=>{
+    const NEW_ISSUE = {
+        title: req.body.issue_title,
+        itemId: req.body.issue_procedure,
+        content: req.body.issue_description
+    }
+    const CREATED_ISSUE = await ItemIssue.create(NEW_ISSUE)
+    res.redirect(`procedure/${NEW_ISSUE.itemId}`)
+})
+// input a new procedure obs
+app.post('/create_obs', async(req, res)=>{
+    const NEW_OBS = {
+        title: req.body.obs_title,
+        itemId: req.body.obs_procedure,
+        content:req.body.obs_description
+    }
+    const CREATED_OBS = await ItemObs.create(NEW_OBS)
+    res.redirect(`procedure/${NEW_OBS.itemId}`)
 })

@@ -2,6 +2,7 @@
     {{>forms/input_box name="procedure_title" type="text" label="*Título"}}
 
     {{#>forms/select name="procedure_subsection" label="Subseção"}}
+        {{>forms/invalid_opt label="Subseção"}}
         {{#item_sections}}
             {{#each this.item_subsections}}
                 <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
