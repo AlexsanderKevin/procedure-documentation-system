@@ -36,6 +36,11 @@ module.exports = {
           type: Sequelize.BOOLEAN,
           allowNull: true
       },
+      editor: {
+          type: Sequelize.BOOLEAN,
+          allowNull: true
+      },
+      
       // Timestamps
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE,

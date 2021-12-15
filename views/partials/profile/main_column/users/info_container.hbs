@@ -1,0 +1,25 @@
+{{#each departments}}
+{{#each this.users}}
+<div class="user_info_container">
+    <div class="user_info_header">
+        <img class="user_pic" src="/img/icon/account.png" alt="">
+        <h1>{{this.dataValues.name}}</h1>
+        <span>{{../dataValues.name}}</span>
+    </div>
+    <div class="user_info">
+        <div class="main_info">
+            <p><strong>Usuário:</strong>  {{this.dataValues.username}}</p>
+            <p><strong>Cargo:</strong>  {{this.dataValues.cargo}}</p>
+        </div>
+        <div class="permission_tags_container">
+            {{#if this.dataValues.adm}}
+                <span class="user_permission_tag">ADM</span>
+            {{/if}}
+            {{#if this.dataValues.editor}}
+                <span class="user_permission_tag">Editor</span>
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{/each}}
+{{/each}}

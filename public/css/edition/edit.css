@@ -23,7 +23,7 @@ form div.input_box input{
     font-size: 20pt;
 
     border: solid var(--min_contrast_color);
-    border-width: 0 0 3px 0;
+    border-width: 0 0 1px 0;
 
     outline: none;
 }
@@ -59,4 +59,8 @@ form div.input_box input{
     }to{
         opacity: 0.03;
     }
+}
+
+#add_user_form #permission_container input{
+    display: none;
 }

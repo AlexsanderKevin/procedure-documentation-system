@@ -307,3 +307,22 @@ app.post('/create_obs', async(req, res)=>{
     const CREATED_OBS = await ItemObs.create(NEW_OBS)
     res.redirect(`procedure/${NEW_OBS.itemId}`)
 })
+// register user
+app.post('/create_user', async(req, res)=>{
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.user_password, 10)
+        const NEW_USER = {
+            name: req.body.user_name,
+            username: req.body.user_username,
+            password: hashedPassword,
+            departmentId: req.body.user_department,
+            cargo: req.body.user_cargo,
+            adm: req.body.adm_permission,
+            editor: req.body.editor_permission
+        }
+        const CREATED_USER = await User.create(NEW_USER)
+        res.redirect('profile')
+    }catch(error){
+        res.redirect('profile')
+    }
+})

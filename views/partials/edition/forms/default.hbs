@@ -3,7 +3,7 @@
     <form action="{{action}}" method="POST">
         {{>@partial-block}}
         {{#if departments}}
-            <select class="metadata_select" name="department_id" id="">
+            <select class="metadata_select" style="display: none;" name="department_id" id="">
                 {{#each departments}}
                 <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
                 {{/each}}

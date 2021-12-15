@@ -34,6 +34,10 @@ const User = database.define('users', {
     adm: {
         type: Sequelize.BOOLEAN,
         allowNull: true
+    },
+    editor: {
+        type: Sequelize.BOOLEAN,
+        allowNull: true
     }
 })
 

@@ -1,12 +1,24 @@
-{{#>edition/forms/default id="add_user_form" title="Novo Usuário" confirm="Adicionar"}}
-    {{>forms/input_box name="name" type="text" label="*Nome Completo"}}
-    {{>forms/input_box name="username" type="text" label="*Nome de Usuário"}}
-    {{>forms/input_box name="password" type="text" label="*Senha"}}
-    {{>forms/input_box name="cargo" type="text" label="*Cargo"}}
-
-    {{#>forms/datalist name="user_department" label="*Departamentos"}}
-        {{#departments}}
-            <option value="{{this.dataValues.name}}">
-        {{/departments}}
-    {{/forms/datalist}}    
+{{#>edition/forms/default action="/create_user" id="add_user_form" title="Novo Usuário" confirm="Adicionar"}}
+    {{>forms/input_box name="user_name" type="text" label="*Nome Completo"}}
+    <div class="input_boxes_container">
+        {{>forms/input_box name="user_username" type="text" label="*Nome de Usuário"}}
+        {{>forms/input_box name="user_password" type="text" label="*Senha"}}
+    </div>
+    <div class="input_boxes_container">
+        {{#>forms/select name="user_cargo"}}
+            {{>forms/invalid_opt label="Cargo"}}
+            <option value="Assistente Técnico 1">Assitente Técnico 1</option>
+        {{/forms/select}}    
+        {{#>forms/select name="user_department" }}
+            {{>forms/invalid_opt label="Departamento"}}
+            {{#departments}}
+                <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
+            {{/departments}}
+        {{/forms/select}}    
+    </div>
+    <div id="permission_container" class="checkboxes_container">
+        <span style="font-size: 20pt;">Permissões: </span>
+        {{>forms/checkbox_box name="adm_permission" label="ADM"}}
+        {{>forms/checkbox_box name="editor_permission" label="Editor"}}
+    </div>
 {{/edition/forms/default}}

@@ -9,7 +9,7 @@
     font-size: 20pt;
 
     border: solid var(--min_contrast_color);
-    border-width: 0 0 3px 0;
+    border-width: 0 0 1px 0;
 
     outline: none;
 }
@@ -18,4 +18,29 @@
     top: -25px;
     font-size: 15pt;
     color: var(--gradient_color_5);
+}
+.input_boxes_container{
+    gap: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox_container input:checked ~ label{
+    background-color: var(--contrast_color);
+    color: var(--gradient_color_1);
+}
+.checkbox_container label{
+    padding: 5px 30px 5px 30px;
+    border: solid var(--contrast_color);
+    border-radius: 25px;
+    border-width: 1px;
+
+    cursor: pointer;
+}
+.checkboxes_container{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    width: 100%;
 }

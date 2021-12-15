@@ -2,35 +2,41 @@
     border: solid var(--gradient_color_5);
     border-width: 1px;
     color:var(--contrast_color);
+
 }
 #profile .list_header{
     width: 100%;
     background-color: var(--gradient_color_2);
-
+    
     border: solid var(--gradient_color_5);
     border-width: 0 0 1px 0;
-
+    
     padding: 0px 10px 0px 10px;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 #profile .list_content{
     padding: 30px;
-
+    
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #profile .user_info_container{
     border: solid var(--gradient_color_5);
     border-width: 0 0 0px 0;
 
-    width: 100%;
+    width: 90%;
     padding: 10px;
 
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 #profile .user_info{
@@ -52,7 +58,7 @@
     font-size: 13pt;
 }
 #profile .user_pic{
-    height: 150px;
+    height: 50px;
 }
 
 #profile #user_list_container #user_quantity_container{
@@ -75,4 +81,25 @@
 #profile #edition_container{
     display: flex;
     gap: 20px;
+}
+#profile .user_info_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+#profile .user_permission_tag{
+    border: solid var(--contrast_color);
+    border-width: 1px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 25px;
+
+    font-size: 12pt;
+}
+#profile .user_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
