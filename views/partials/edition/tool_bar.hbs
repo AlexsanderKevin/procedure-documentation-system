@@ -9,20 +9,29 @@
                 <option class="invalid_option" value="">*Conteudo*</option>
                 {{>@partial-block}}         
             </select>
-            {{>edition/button/main_edit}}
+            {{>edition/button/main_edit id="main_edit_button"}}
         </div>   
     </div>
     <div id="empty"></div>
 </header>
 
 {{#>main/block_modal id="edition_modal"}}
-    {{>edition/forms/section class=""}}
-    {{>edition/forms/subsection class=""}}
-    {{>edition/forms/procedure class=""}}
-    {{>edition/forms/solution class=""}}
-    {{>edition/forms/issue class=""}}
-    {{>edition/forms/obs class=""}}
+    <!-- add -->
+    {{>edition/forms/section id="add_section_form" title="Nova Seção" action="/create_section"}}
+    {{>edition/forms/subsection id="add_subsection_form" title="Nova Subseção" action="/create_subsection"}}
+    {{>edition/forms/procedure id="add_procedure_form" title="Novo Procedimento" action="/create_procedure"}}
+    {{>edition/forms/solution id="add_solution_form" title="Nova Solução" action="/create_solution"}}
+    {{>edition/forms/issue id="add_issue_form" title="Novo Problema" action="/create_issue"}}
+    {{>edition/forms/obs id="add_obs_form" title="Nova Observação" action="/create_obs"}}
+    <!-- edit -->
+    {{>edition/forms/section id="edit_section_form" title="Editar Seção" action=""}}
+    {{>edition/forms/subsection id="edit_subsection_form" title="Editar Subseção" action=""}}
+    {{>edition/forms/procedure id="edit_procedure_form" title="Editar Procedimento" action=""}}
+    {{>edition/forms/solution id="edit_solution_form" title="Editar Solução" action=""}}
+    {{>edition/forms/issue id="edit_issue_form" title="Editar Problema" action=""}}
+    {{>edition/forms/obs id="edit_obs_form" title="Editar Observação" action=""}}
 {{/main/block_modal}}
 
 <!--edition-->
 <script type="module" src="/js/edition/open_edition.js"></script>
+<script type="module" src="/js/edition/edit.js"></script>

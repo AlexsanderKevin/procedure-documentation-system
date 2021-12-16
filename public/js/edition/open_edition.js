@@ -2,6 +2,7 @@ import {get, on_click, close, open, on_change} from '../../lib/main.js'
 
 const bg_img = get('#edit_bg_img')
 const start_edition_button = get('#edition_mode_button')
+// const modal = get('#edition_modal')
 const modal = get('#edition_modal')
 const cancel_buttons = get('.cancel_button')
 const header = get('#edition_header')
@@ -56,7 +57,6 @@ cancel_buttons.forEach(button => {
     on_click(button, ()=>{
         close(modal)
         // this close the form with the modal
-        close(add_forms.add_department)
         close(add_forms.add_procedure)
         close(add_forms.add_section)
         close(add_forms.add_subsection)
