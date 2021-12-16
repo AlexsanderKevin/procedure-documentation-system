@@ -2,6 +2,16 @@ import {get, on_click, close, open, on_change} from '../../lib/main.js'
 
 const bg_img = get('#edit_bg_img')
 const start_edition_button = get('#edition_mode_button')
+const this_user = {
+    name: localStorage.getItem('name'),
+    username: localStorage.getItem('username'),
+    cargo: localStorage.getItem('cargo'),
+    department: localStorage.getItem('department'),
+    adm: localStorage.getItem('adm'),
+    editor: localStorage.getItem('editor')
+}
+//this shows the button to start edition only if the user is an editor
+if(!this_user.editor){start_edition_button.classList.add('hide')}
 // const modal = get('#edition_modal')
 const modal = get('#edition_modal')
 const cancel_buttons = get('.cancel_button')

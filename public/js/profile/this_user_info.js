@@ -1,15 +1,8 @@
 import { get } from "../../lib/main.js"
-
-const this_user = {
-    name: localStorage.getItem('name'),
-    username: localStorage.getItem('username'),
-    cargo: localStorage.getItem('cargo'),
-    permission: localStorage.getItem('permission'),
-    department: localStorage.getItem('department'),
-}
+import { this_user } from "./this_user.js"
 
 const {
-    name: user_name, username: user_username, cargo: user_cargo, permission: user_permission, department: user_department} = this_user
+    name: user_name, username: user_username, cargo: user_cargo, department: user_department, adm: adm_permission, editor: editor_permission} = this_user
 
 const this_user_html = {
     name: get("#this_name"),

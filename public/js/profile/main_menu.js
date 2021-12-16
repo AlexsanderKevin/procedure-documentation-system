@@ -1,4 +1,8 @@
 import { get, on_click } from "../../lib/main.js"
+import { this_user } from "./this_user.js"
+
+const MENU = get('#main_menu')
+if(!this_user.adm){MENU.classList.add('hide')}
 
 const radios = [
     {

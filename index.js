@@ -101,7 +101,8 @@ app.post("/auth", async (req, res) => {
                 user_department: user.departmentId,
                 user_username: user.username,
                 user_cargo: user.cargo,
-                user_permission: user.permission,
+                user_adm: user.adm,
+                user_editor: user.editor,
             })
         }else{
             res.render("login", { error: "Senha incorreta"})
