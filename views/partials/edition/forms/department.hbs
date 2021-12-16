@@ -1,6 +1,7 @@
-<form id="add_department_form" class="form_2" action="/create_department">
-    <div class="department_form_input_box">
-        <label for="department_name">*Novo Departamento</label>
-        <input type="text" name="department_name" id="department_name">
+<form id="add_department_form" class="form_2 {{class}}" action="/create_department" method="post">
+    <input placeholder="*Novo Departamento" type="text" name="department_name" id="department_name" required>
+    <div class="button_container">
+        <button id="close_add_department_form" class="all_button" type="reset">Cancelar</button>
+        <button class="all_button" type="submit">Pronto</button>
     </div>
 </form>

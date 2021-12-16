@@ -326,3 +326,9 @@ app.post('/create_user', async(req, res)=>{
         res.redirect('profile')
     }
 })
+// add new department
+app.post('/create_department', async(req, res)=>{
+    const NEW_DEPARTMENT = {name: req.body.department_name}
+    const CREATED_DEPARTMENT = await Department.create(NEW_DEPARTMENT)
+    res.redirect('profile')
+})
