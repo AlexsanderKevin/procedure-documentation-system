@@ -333,3 +333,5 @@ app.post('/create_department', async(req, res)=>{
     const CREATED_DEPARTMENT = await Department.create(NEW_DEPARTMENT)
     res.redirect('profile')
 })
+// delete an requisition
+app.delete('/reprove')
