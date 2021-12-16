@@ -21,7 +21,7 @@ const ItemIssue = database.define('item_issues', {
     approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: true
+        defaultValue: false
     },
 })
 

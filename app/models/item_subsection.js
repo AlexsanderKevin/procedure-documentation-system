@@ -21,7 +21,7 @@ const ItemSubsection = database.define('item_subsections', {
     approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
-        defaultValue: true
+        defaultValue: false
     }
 })
 

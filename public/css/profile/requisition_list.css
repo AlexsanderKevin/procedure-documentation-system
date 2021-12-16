@@ -44,6 +44,7 @@
 
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 
     border: solid var(--gradient_color_5);
     border-width: 0 0 2px 0;
@@ -56,7 +57,7 @@
     border: solid var(--gradient_color_5);
     border-width: 1px;
 
-    width: 70%;
+    width: 100%;
     height: 100%;
     padding: 10px;
 
@@ -68,6 +69,7 @@
 }
 #profile .req_info_container{
     position: relative;
+    width: 100%;
 }
 #profile .req_info_container p{
     margin: 0;

@@ -1,16 +1,12 @@
 <div class="req_container">
     <div class="req_info_container">
-        <p class="req_title_container"><span class="req_title">{{title}}</span></p>
+        <h2 class="req_title_container"><span class="req_title">{{title}}</span></h2>
         <hr>
         {{>@partial-block}}
         
         <hr>
-        <p class="req_author_container"><strong>Por: </strong><span class="req_author_name">Kevin Alexsander de Jesus</span> </p>
+        <p class="req_author_container hide"><strong>Por: </strong><span class="req_author_name">Kevin Alexsander de Jesus</span> </p>
 
-        <div class="req_button_container">
-            <button class="all_button approve_button">Aprovar</button>
-            <button class="all_button reprove_button">Reprovar</button>
-        </div>
     </div>
     {{#if this.dataValues.description}}
     <div class="req_description_container">
@@ -24,5 +20,9 @@
         <p>{{{this.dataValues.content}}}</p>
     </div>
     {{/if}}
+        <div class="req_button_container">
+            <button class="all_button reprove_button">Reprovar</button>
+            <button class="all_button approve_button">Aprovar</button>
+        </div>
 </div>
 <br><br>
