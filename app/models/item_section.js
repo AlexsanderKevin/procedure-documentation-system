@@ -23,6 +23,6 @@ const ItemSection = database.define('item_sections', {
 
 Department.hasMany(ItemSection, {constraint: true, foreingnKey: 'departmentId'})
 
-ItemSection.belongsTo(Department, {constraint: true, foreingnKey: 'departmentId'})
+ItemSection.belongsTo(Department, {constraint: true, foreingnKey: 'departmentId', onDelete: 'CASCADE'})
  
 module.exports = ItemSection;

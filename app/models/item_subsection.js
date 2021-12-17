@@ -27,10 +27,10 @@ const ItemSubsection = database.define('item_subsections', {
 
 ItemSection.hasMany(ItemSubsection, {constraint: true, foreingnKey: 'itemSectionId'})
 
-ItemSubsection.belongsTo(ItemSection, {constraint: true, foreingnKey: 'itemSectionId'})
+ItemSubsection.belongsTo(ItemSection, {constraint: true, foreingnKey: 'itemSectionId', onDelete: 'CASCADE'})
 
 ItemSubsection.hasMany(Item, {constraint: true, foreingnKey: 'itemSubsectionId'})
 
-Item.belongsTo(ItemSubsection, {constraint: true, foreingnKey: 'itemSubsectionId'})
+Item.belongsTo(ItemSubsection, {constraint: true, foreingnKey: 'itemSubsectionId', onDelete: 'CASCADE'})
  
 module.exports = ItemSubsection;

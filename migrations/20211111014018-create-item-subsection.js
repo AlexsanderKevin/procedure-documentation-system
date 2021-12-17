@@ -20,6 +20,7 @@ module.exports = {
       },
       itemSectionId: {
           type: Sequelize.INTEGER,
+          onDelete: 'CASCADE',
           references: {
             model: 'item_sections',
             key: 'id'

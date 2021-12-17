@@ -27,6 +27,6 @@ Comment.belongsTo(Item, {constraint: true, foreingnKey: 'itemId',onDelete: 'CASC
 
 User.hasMany(Comment, {constraint: true, foreingnKey: 'userId'})
 
-Comment.belongsTo(User, {constraint: true, foreingnKey: 'userId'})
+Comment.belongsTo(User, {constraint: true, foreingnKey: 'userId', onDelete: 'CASCADE'})
 
 module.exports = Comment
