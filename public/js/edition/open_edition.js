@@ -27,7 +27,7 @@ const add_forms = {
     add_issue: get('#add_issue_form'),
     add_obs: get('#add_obs_form'),
 }
-on_click(main_add_button, ()=>{add_options.classList.toggle('hide')})
+// on_click(main_add_button, ()=>{add_options.classList.toggle('hide')})
 on_change(add_options, ()=>{
     open(modal)
     switch(add_options.value){
@@ -53,14 +53,14 @@ on_change(add_options, ()=>{
             open(add_forms.add_obs)
             break
     }
-    add_options.classList.add('hide')
+    // add_options.classList.add('hide')
     add_options.value = ''
 })
 // this inits the edition mode
 on_click(start_edition_button, ()=>{
     bg_img.classList.toggle('hide')
     header.classList.toggle('hide')
-    add_options.classList.add('hide')
+    // add_options.classList.add('hide')
 })
 // this closes the modal when click in the cancel buttons
 cancel_buttons.forEach(button => {

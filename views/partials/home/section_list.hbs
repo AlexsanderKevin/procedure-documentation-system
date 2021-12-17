@@ -5,7 +5,7 @@
         <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
 
         {{>edition/button/edit class="edit_section"}}
-        {{>edition/button/delete id=this.dataValues.id target='section' class="delete_section hide"}}
+        {{>edition/button/delete id=this.dataValues.id target='section' department=this.dataValues.id class="delete_section"}}
     </div>
     <div class="section_content">
 

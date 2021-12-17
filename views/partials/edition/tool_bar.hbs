@@ -3,12 +3,14 @@
     <div id="edition_nav">
         <h1>Barra de Edição</h1>
         <div class="buttons">
-            {{>edition/button/add id="main_add_button" class="show"}}
           
-            <select name="open_add_form" id="add_options_container" class="hide">
-                <option class="invalid_option" value="">*Conteudo*</option>
+            <select name="open_add_form" id="add_options_container" style="display: flex;">
+                <option class="invalid_option" value="">
+                    {{>edition/button/add id="main_add_button" class="show"}}
+                </option>
                 {{>@partial-block}}         
             </select>
+            {{!-- {{>edition/button/add id="main_add_button" class="show"}} --}}
             {{>edition/button/main_edit id="main_edit_button"}}
         </div>   
     </div>
