@@ -334,7 +334,7 @@ app.post('/create_department', async(req, res)=>{
     res.redirect('profile')
 })
 // delete an issue requisition
-app.get('/reprove_issue:id', async (req, res)=>{
+app.get('/delete_issue:id', async (req, res)=>{
     const ISSUE_ID = req.params.id
     try{
         const DELETED_ISSUE = await ItemIssue.destroy({where: {id:ISSUE_ID}})
@@ -345,7 +345,7 @@ app.get('/reprove_issue:id', async (req, res)=>{
     }
 })
 // delete a solution requisition
-app.get('/reprove_solution:id', async (req, res)=>{
+app.get('/delete_solution:id', async (req, res)=>{
     const SOLUTION_ID = req.params.id
     try{
         const DELETED_SOLUTION = await ItemSolution.destroy({where: {id:SOLUTION_ID}})
@@ -356,7 +356,7 @@ app.get('/reprove_solution:id', async (req, res)=>{
     }
 })
 // delete a obs requisition
-app.get('/reprove_obs:id', async (req, res)=>{
+app.get('/delete_obs:id', async (req, res)=>{
     const OBS_ID = req.params.id
     try{
         const DELETED_OBS = await ItemObs.destroy({where: {id:OBS_ID}})
@@ -367,7 +367,7 @@ app.get('/reprove_obs:id', async (req, res)=>{
     }
 })
 // delete a procedure
-app.get('/reprove_procedure:id', async (req, res)=>{
+app.get('/delete_procedure:id', async (req, res)=>{
     const PROCEDURE_ID = req.params.id
     try{
         const DELETED_PROCEDURE = await Item.destroy({where: {id: PROCEDURE_ID}})
@@ -378,7 +378,7 @@ app.get('/reprove_procedure:id', async (req, res)=>{
     }
 })
 // delete a subsection
-app.get('/reprove_subsection:id', async (req, res)=>{
+app.get('/delete_subsection:id', async (req, res)=>{
     const SUBSECTION_ID = req.params.id
     try{
         const DELETED_SUBSECTION = await ItemSubsection.destroy({where: {id:SUBSECTION_ID}})
@@ -389,7 +389,7 @@ app.get('/reprove_subsection:id', async (req, res)=>{
     }
 })
 // delete a section
-app.get('/reprove_section:id', async (req, res)=>{
+app.get('/delete_section:id', async (req, res)=>{
     const SECTION_ID = req.params.id
     try{
         const DELETED_SECTION = await ItemSection.destroy({where: {id:SECTION_ID}})
