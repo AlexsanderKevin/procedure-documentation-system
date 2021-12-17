@@ -3,7 +3,7 @@
         {{#each this.item_sections}}
             {{#each this.item_subsections}}
                 {{#unless this.dataValues.approved}}
-                    {{#>profile/main_column/requisition/req_container title = this.dataValues.name}}
+                    {{#>profile/main_column/requisition/req_container title = this.dataValues.name target_table="subsection"}}
                         <p><strong>linha:</strong> {{../../../dataValues.name}}</p>
                         <p><strong>seção:</strong> {{../../dataValues.name}}</p>
                     {{/profile/main_column/requisition/req_container}}

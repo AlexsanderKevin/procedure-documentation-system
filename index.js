@@ -333,5 +333,54 @@ app.post('/create_department', async(req, res)=>{
     const CREATED_DEPARTMENT = await Department.create(NEW_DEPARTMENT)
     res.redirect('profile')
 })
-// delete an requisition
-app.delete('/reprove')
+// delete an issue requisition
+app.get('/reprove_issue:id', async (req, res)=>{
+    const ISSUE_ID = req.params.id
+    try{
+        const DELETED_ISSUE = await ItemIssue.destroy({where: {id:ISSUE_ID}})
+        res.redirect('profile')
+    }catch(err){
+        console.log(err)
+        res.render('error')
+    }
+})
+// delete a solution requisition
+app.get('/reprove_solution:id', async (req, res)=>{
+    const SOLUTION_ID = req.params.id
+    try{
+        const DELETED_SOLUTION = await ItemSolution.destroy({where: {id:SOLUTION_ID}})
+        res.redirect('profile')
+    }catch(err){
+        console.log(err)
+        res.render('error')
+    }
+})
+// delete a obs requisition
+app.get('/reprove_obs:id', async (req, res)=>{
+    const OBS_ID = req.params.id
+    try{
+        const DELETED_OBS = await ItemObs.destroy({where: {id:OBS_ID}})
+        res.redirect('profile')
+    }catch(err){
+        console.log(err)
+        res.render('error')
+    }
+})
+// delete a procedure
+app.get('/reprove_procedure:id', async (req, res)=>{
+    const PROCEDURE_ID = req.params.id
+    try{
+        const DELETED_PROCEDURE = await Item.destroy({
+            where: {id: PROCEDURE_ID},
+            include: [
+                {model: ItemIssue},
+                {model: ItemSolution},
+                {model: ItemObs}
+            ]
+        })
+        res.redirect('profile')
+    }catch(err){
+        console.log(err)
+        res.render('error')
+    }
+})

@@ -5,7 +5,7 @@
                 {{#each this.items}}
                 {{#each this.item_issues}}
                     {{#unless this.dataValues.approved}}
-                        {{#>profile/main_column/requisition/req_container title = this.dataValues.title}}
+                        {{#>profile/main_column/requisition/req_container title = this.dataValues.title target_table="issue"}}
                             <p><strong>Proced:</strong> {{../../dataValues.title}}</p>
                             <p><strong>linha:</strong> {{../../../../../dataValues.name}}</p>
                             <p><strong>seção:</strong> {{../../../../dataValues.name}}</p>
