@@ -2,6 +2,7 @@
  .item_section{
     padding-top: 20px;
     width: 90vw;
+    position: relative;
 }
 
 .section_title{

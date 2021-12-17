@@ -409,3 +409,4 @@ app.get('/destroy_section/:id/:department_id', async (req, res)=>{
         res.render('error')
     }
 })
+// destroy

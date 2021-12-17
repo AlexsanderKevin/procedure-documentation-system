@@ -5,8 +5,12 @@
             <button class="subsection_about_button section_color_{{../dataValues.departmentId}}">
                 ?
             </button>
-            <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">{{this.dataValues.name}}</h3>
+            <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">
+                {{this.dataValues.name}}
+                {{>edition/button/delete id=this.dataValues.id target='subsection' department=../dataValues.departmentId class="delete_subsection"}}
+            </h3>
             {{>main/burger class = 'subsection_burger'}}
+
         </div>
         
         <div class="subsection_description">

@@ -53,3 +53,15 @@
     color: var(--contrast_color);
     gap: 5px;
 }
+.delete_button{
+    height: 30px;
+    width: 30px;
+}
+.delete_button.subsection{
+    position: static;
+}
+.delete_button_container.subsection{
+    position: fixed;
+    top: -100px;
+    display: none;
+}
