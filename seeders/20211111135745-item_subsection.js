@@ -8,14 +8,14 @@ module.exports = {
         name: 'LDIAG',
         description: "Todos os tópicos desta seção são testes realizados pelo LDIAG, portanto não requerem nenhum procedimento específico. O procedimento para execução do teste LDIAG está contido na seção de itens Extras.",
         itemSectionId: 1,
-        approved: true
+        approved: false
       },
       {
         id: 2,
         name: 'Verificações',
         description:'Esta seção consiste apenas em averiguar informações estáticasem relação ao equipamento.',
         itemSectionId: 1,
-        approved: true
+        approved: false
       },
       {
         id: 3,
@@ -29,7 +29,7 @@ module.exports = {
         name: 'Áudio, Vídeo e sistema',
         description:'O sistema operacional também é responsável pelo pleno funcionamento dos componentes. Esta seção contém os pontos mais afetados pelo funcionamento (ou a falta deste) do sistema.',
         itemSectionId: 1,
-        approved: true
+        approved: false
       },
       {
         id: 5,
@@ -64,14 +64,14 @@ module.exports = {
         name: 'Outros',
         description:'Os procedimentos a seguir são singulares. Talvez isso aconteça por serem muito específicos ou por resolverem um problema do inicio ao fim. Sendo assim, o fato de não estarem contidos em  outras seções não  os tornam menos relevantes.',
         itemSectionId: 2,
-        approved: true
+        approved: false
       },
       {
         id: 10,
         name: 'subseção de análise 1',
         description:'descrição da subseção 1 de análise',
         itemSectionId: 3,
-        approved: true
+        approved: false
       },
       {
         id: 11,

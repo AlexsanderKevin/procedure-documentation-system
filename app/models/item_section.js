@@ -14,11 +14,6 @@ const ItemSection = database.define('item_sections', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    departmentId: {
-        type: Sequelize.INTEGER,
-        references: 'department',
-        referencesKey: 'id'
-    },
     approved:{
         type: Sequelize.BOOLEAN,
         allowNull: false,
@@ -26,6 +21,8 @@ const ItemSection = database.define('item_sections', {
     }
 })
 
-Department.hasMany(ItemSection)
+Department.hasMany(ItemSection, {constraint: true, foreingnKey: 'departmentId'})
+
+ItemSection.belongsTo(Department, {constraint: true, foreingnKey: 'departmentId'})
  
 module.exports = ItemSection;

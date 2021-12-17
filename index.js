@@ -370,17 +370,31 @@ app.get('/reprove_obs:id', async (req, res)=>{
 app.get('/reprove_procedure:id', async (req, res)=>{
     const PROCEDURE_ID = req.params.id
     try{
-        const DELETED_PROCEDURE = await Item.destroy({
-            where: {id: PROCEDURE_ID},
-            include: [
-                {model: ItemIssue},
-                {model: ItemSolution},
-                {model: ItemObs}
-            ]
-        })
+        const DELETED_PROCEDURE = await Item.destroy({where: {id: PROCEDURE_ID}})
         res.redirect('profile')
     }catch(err){
         console.log(err)
+        res.render('error')
+    }
+})
+// delete a subsection
+app.get('/reprove_subsection:id', async (req, res)=>{
+    const SUBSECTION_ID = req.params.id
+    try{
+        const DELETED_SUBSECTION = await ItemSubsection.destroy({where: {id:SUBSECTION_ID}})
+        res.redirect('profile')
+    }catch(err){
+        console.log(err)
+        res.render('error')
+    }
+})
+// delete a section
+app.get('/reprove_section:id', async (req, res)=>{
+    const SECTION_ID = req.params.id
+    try{
+        const DELETED_SECTION = await ItemSection.destroy({where: {id:SECTION_ID}})
+        res.redirect('profile')
+    }catch(err){
         res.render('error')
     }
 })
