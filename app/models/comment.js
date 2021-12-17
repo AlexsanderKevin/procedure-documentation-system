@@ -23,7 +23,7 @@ const Comment = database.define('comments', {
 
 Item.hasMany(Comment, {constraint: true, foreingnKey: 'itemId'})
 
-Comment.belongsTo(Item, {constraint: true, foreingnKey: 'itemId'})
+Comment.belongsTo(Item, {constraint: true, foreingnKey: 'itemId',onDelete: 'CASCADE'})
 
 User.hasMany(Comment, {constraint: true, foreingnKey: 'userId'})
 

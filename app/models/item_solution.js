@@ -27,6 +27,6 @@ const ItemSolution = database.define('item_solutions', {
 
 Item.hasMany(ItemSolution, {constraint: true, foreingnKey: 'itemId'})
 
-ItemSolution.belongsTo(Item, {constraint: true, foreingnKey: 'itemId'})
+ItemSolution.belongsTo(Item, {constraint: true, foreingnKey: 'itemId', onDelete: 'CASCADE'})
 
 module.exports = ItemSolution
