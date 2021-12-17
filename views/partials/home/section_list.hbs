@@ -1,11 +1,11 @@
-{{#item_sections}}
+{{#each this.item_sections}}
 {{#if this.dataValues.approved}}
 <section class="item_section" id='{{this.dataValues.name}}'>
     <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
         <h2 class="section_name section_color_{{this.dataValues.departmentId}}">{{this.dataValues.name}}</h2>
 
         {{>edition/button/edit class="edit_section"}}
-        {{>edition/button/delete id=this.dataValues.id target='section' department=this.dataValues.id class="delete_section"}}
+        {{>edition/button/delete id=this.dataValues.id target='section' department=../dataValues.id class="delete_section"}}
     </div>
     <div class="section_content">
 
@@ -14,5 +14,5 @@
     </div>
 </section>
 {{/if}}
-{{/item_sections}}
+{{/each}}
 {{>edition/button/add class="add_section_button"}}

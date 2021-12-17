@@ -124,25 +124,25 @@ app.get("/home/:id", async (req, res) => {
     
     try{
         const departments = await Department.findAll({
-            where: {id: departmentId}
-        })
-        const item_sections = await ItemSection.findAll({
-            where: {departmentId: departmentId},
+            where: {id: departmentId},
             include: [{
-                model: ItemSubsection,
+                model: ItemSection,
+                where: {departmentId: departmentId},
                 include: [{
-                    model: Item,
-                    include:[
-                        {model: ItemSolution},
-                        {model: ItemIssue},
-                        {model: ItemObs}
-                    ]
-                }]
-            }] 
+                    model: ItemSubsection,
+                    include: [{
+                        model: Item,
+                        include:[
+                            {model: ItemSolution},
+                            {model: ItemIssue},
+                            {model: ItemObs}
+                        ]
+                    }]
+                }] 
+            }]
         })
 
         res.render('home', {
-            item_sections: item_sections,
             departments: departments 
         })
     }catch(err){
