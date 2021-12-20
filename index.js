@@ -420,3 +420,14 @@ app.get('/destroy_subsection/:id/:department_id', async(req, res)=>{
         res.render('error')
     }
 })
+// destroy a procedure
+app.get('/destroy_procedure/:id/:department_id', async(req, res)=>{
+    const PROCEDURE_ID = req.params.id
+    const DEPARTMENT_ID =req.params.department_id
+    try{
+        const DELETED_PROCEDURE = await Item.destroy({where:{id:PROCEDURE_ID}})
+        res.redirect(`/home/${DEPARTMENT_ID}`)
+    }catch{
+        res.render('error')
+    }
+})

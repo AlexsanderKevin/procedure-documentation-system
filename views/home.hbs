@@ -9,10 +9,16 @@
 {{/edition/tool_bar}}
 
 <section id="content">
-    {{#>home/section_list}}
-        {{#>home/subsection_list}}
-            {{>home/item_list}}
+    {{#each this.item_sections}}
+    {{#>home/section_list department = ../dataValues.id}}
+        {{#each this.item_subsections}}
+        {{#>home/subsection_list department = ../../../dataValues.id}}
+            {{#each this.items}}
+            {{>home/item_list department = ../../../../../dataValues.id}}
+            {{/each}}
         {{/home/subsection_list}}
+        {{/each}}
     {{/home/section_list}}
+    {{/each}}
 </section>
 {{/departments}}

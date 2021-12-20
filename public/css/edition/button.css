@@ -65,3 +65,7 @@
     top: -100px;
     display: none;
 }
+.delete_procedure{
+    display: static;
+    align-self: center;
+}

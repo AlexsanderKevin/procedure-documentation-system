@@ -1,13 +1,12 @@
-{{#each this.item_subsections}}
 <div>
-    <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{../dataValues.departmentId}}">
+    <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{department}}">
         <div class=" subsection_title">
-            <button class="subsection_about_button section_color_{{../dataValues.departmentId}}">
+            <button class="subsection_about_button section_color_{{department}}">
                 ?
             </button>
-            <h3 class="subsection_name section_color_{{../dataValues.departmentId}}">
+            <h3 class="subsection_name section_color_{{department}}">
                 {{this.dataValues.name}}
-                {{>edition/button/delete id=this.dataValues.id target='subsection' department=../dataValues.departmentId class="delete_subsection"}}
+                {{>edition/button/delete id=this.dataValues.id target='subsection' department=department class="delete_subsection"}}
             </h3>
             {{>main/burger class = 'subsection_burger'}}
 
@@ -25,5 +24,3 @@
     </ul>
     </div>
 </div>
-{{/each}}
-{{>edition/button/add class="add_subsection_button"}}
