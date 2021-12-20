@@ -409,4 +409,14 @@ app.get('/destroy_section/:id/:department_id', async (req, res)=>{
         res.render('error')
     }
 })
-// destroy
+// destroy a subsection
+app.get('/destroy_subsection/:id/:department_id', async(req, res)=>{
+    const SUBSECTION_ID = req.params.id
+    const DEPARTMENT_ID = req.params.department_id
+    try{
+        const DELETED_SUBSECTION = await ItemSubsection.destroy({where:{id:SUBSECTION_ID}})
+        res.redirect(`/home/${DEPARTMENT_ID}`)
+    }catch{
+        res.render('error')
+    }
+})
