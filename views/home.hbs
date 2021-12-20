@@ -2,7 +2,7 @@
 {{>home/header title = this.dataValues.name}}
 {{>main/home_button}}
 {{>nav/home}}
-{{#>edition/tool_bar}}
+{{#>edition/tool_bar department_id = this.dataValues.id department_name = this.dataValues.name}}
     <option value="section">Seção</option>
     <option value="subsection">Subseção</option>
     <option value="procedure">Procedimento</option>

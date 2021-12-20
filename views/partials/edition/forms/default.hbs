@@ -2,13 +2,9 @@
     {{>forms/header text=title}}
     <form action="{{action}}" method="POST">
         {{>@partial-block}}
-        {{#if departments}}
-            <select class="metadata_select" style="display: none;" name="department_id" id="">
-                {{#each departments}}
-                <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
-                {{/each}}
-            </select>
-        {{/if}}
+        <select class="metadata_select" style="display: none;" name="department_id" id="">
+            <option value="{{department_id}}">{{this.dataValues.name}}</option>
+        </select>
         {{#>forms/buttons/container}}
             {{>forms/buttons/reset class="cancel_button" label="Cancelar"}}
             {{>forms/buttons/submit class="submit_button" label="Pronto"}}

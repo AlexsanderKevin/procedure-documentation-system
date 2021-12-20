@@ -2,9 +2,7 @@
     {{>forms/input_box name="section_title" type="text" label="*Título"}}
 
     {{#>forms/select name="section_department" label="Departamento"}}
-        {{#departments}}
-            <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
-        {{/departments}}
+        <option value={{department_id}}>Linha:{{department_name}}</option>
     {{/forms/select}}
 
 {{/edition/forms/default}}

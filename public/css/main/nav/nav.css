@@ -9,6 +9,7 @@ nav {
     top: -15px;
 
     padding: 0px;
+    z-index: 1;
 }
 .nav_links{
     position: absolute;
@@ -32,7 +33,7 @@ nav {
     transform: translateX(-110%);
     transition: transform 0.2s ease-in;
 
-    z-index: 1;
+    z-index: 2;
 }
 .nav_links a{
     letter-spacing: 3px;
