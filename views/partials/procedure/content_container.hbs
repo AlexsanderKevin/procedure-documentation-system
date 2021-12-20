@@ -7,16 +7,17 @@
         {{#each category}}
         <div>
         <div class="single_container">
-            <div class="content_header">
-                <h3 class="content_title">{{this.dataValues.title}}</h3>
-
-                {{>main/burger class = 'single_content_burger content_burger all_button'}}
+            <div>
+                <div class="content_header">
+                    <h3>{{this.dataValues.title}}</h3>
+                    {{>main/burger class='single_content_burger content_burger all_button'}}
+                </div>
+                <div class="content_text">
+                    <p>{{{this.dataValues.content}}}</p>
+                </div>
             </div>
-            
-            <div class="content_text">
-                <p>{{{this.dataValues.content}}}</p>
-            </div>
-        </div> 
+        {{>@partial-block}}
+        </div>
         </div>
         {{/each}}
     </div>

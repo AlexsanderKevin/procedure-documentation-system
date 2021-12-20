@@ -27,21 +27,23 @@
         </div>
         {{/if}}
         <!--# item solution-->
-            {{#if this.item_solutions}}
-                {{>procedure/content category = item_solutions title = 'Soluções' id = 'solutions'}}
-            {{/if}}
-            <!--# item obs-->
-            {{#if this.item_obs}}
-                {{>procedure/content category = item_obs title = 'Observações' id = 'obs'}}
-            {{/if}}
-            <!--# item issues-->
-            {{#if this.item_issues}}
-                {{>procedure/content category = item_issues title = 'Possíveis Problemas' id = 'issues'}}
-            {{/if}}
-            <!--# comments-->
-            {{#if this.comments}}
-                {{>procedure/content category = comments title = 'Comentários' id = 'comments'}}
-            {{/if}}   
+        {{#if this.item_solutions}}
+            {{#>procedure/content_container category=item_solutions title="Soluções" id="solutions"}}
+                {{>edition/button/delete target='solution' redirect=../dataValues.id}}
+            {{/procedure/content_container}}
+        {{/if}}
+        <!--# item obs-->
+        {{#if this.item_obs}}
+            {{#>procedure/content_container category=item_obs title='Observações' id='Obs'}}
+                {{>edition/button/delete target='obs' redirect=../dataValues.id}}
+            {{/procedure/content_container}}
+        {{/if}}
+        <!--# item issues-->
+        {{#if this.item_issues}}
+            {{#>procedure/content_container category=item_issues title='Possíveis Problemas' id='issues'}}
+                {{>edition/button/delete target='issue' redirect=../dataValues.id}}
+            {{/procedure/content_container}}
+        {{/if}}
     </div>
     <a href="/home/{{../../../dataValues.id}}">Home</a>
 </section>

@@ -80,6 +80,11 @@
     box-shadow: 2px 2px 7px black;
 
     animation: open_content 0.3s;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 .content_header{

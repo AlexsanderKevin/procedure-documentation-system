@@ -6,7 +6,7 @@
             </button>
             <h3 class="subsection_name section_color_{{department}}">
                 {{this.dataValues.name}}
-                {{>edition/button/delete id=this.dataValues.id target='subsection' department=department class="delete_subsection"}}
+                {{>edition/button/delete id=this.dataValues.id target='subsection' redirect=department class="delete_subsection"}}
             </h3>
             {{>main/burger class = 'subsection_burger'}}
 

@@ -5,7 +5,7 @@
             {{this.dataValues.title}}
         </h4>
     </a>
-    {{>edition/button/delete id=this.dataValues.id target="procedure" department=department class="delete_procedure"}}
+    {{>edition/button/delete id=this.dataValues.id target="procedure" redirect=department class="delete_procedure"}}
 </div>
 
 {{else}}
@@ -13,6 +13,6 @@
     <h4 class="emptyItemList item_name">
         {{this.dataValues.title}}
     </h4>
-    {{>edition/button/delete id=this.dataValues.id target="procedure" department=department class="delete_procedure"}}
+    {{>edition/button/delete id=this.dataValues.id target="procedure" redirect=department class="delete_procedure"}}
 </div>
 {{/if}}
