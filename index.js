@@ -431,3 +431,14 @@ app.get('/destroy_procedure/:id/:department_id', async(req, res)=>{
         res.render('error')
     }
 })
+// destroy a item solution
+app.get('/destroy_solution/:id/:redirect', async(req, res)=>{
+    const SOLUTION_ID = req.params.id
+    const PROCEDURE_ID = req.params.redirect
+    try{
+        const DELETED_SOLUTION = await ItemSolution.destroy({where:{id:SOLUTION_ID}})
+        res.redirect(`/procedure/${PROCEDURE_ID}`)
+    }catch{
+        res.render('error')
+    }
+})
