@@ -22,6 +22,7 @@ const jwt = require('jsonwebtoken')
 require("dotenv").config();
 //const hbs_helpers = require('./public/helpers')
 const Helpers = require('./public/helpers/index.js')
+const { redirect } = require("express/lib/response")
 
 const hbs = express_handlebars.create({
     defaultLayout: 'main',
@@ -398,47 +399,79 @@ app.get('/delete_section/:id', async (req, res)=>{
         res.render('error')
     }
 })
-// destroy a section
-app.get('/destroy_section/:id/:department_id', async (req, res)=>{
-    const SECTION_ID = req.params.id
-    const DEPARTMENT_ID = req.params.department_id
-    try{
-        const DELETED_SECTION = await ItemSection.destroy({where: {id:SECTION_ID}})
-        res.redirect(`/home/${DEPARTMENT_ID}`)
-    }catch(err){
-        res.render('error')
-    }
-})
-// destroy a subsection
-app.get('/destroy_subsection/:id/:department_id', async(req, res)=>{
-    const SUBSECTION_ID = req.params.id
-    const DEPARTMENT_ID = req.params.department_id
-    try{
-        const DELETED_SUBSECTION = await ItemSubsection.destroy({where:{id:SUBSECTION_ID}})
-        res.redirect(`/home/${DEPARTMENT_ID}`)
-    }catch{
-        res.render('error')
-    }
-})
+// // destroy a section
+// app.get('/destroy_section/:id/:department_id', async (req, res)=>{
+//     const SECTION_ID = req.params.id
+//     const DEPARTMENT_ID = req.params.department_id
+//     try{
+//         const DELETED_SECTION = await ItemSection.destroy({where: {id:SECTION_ID}})
+//         res.redirect(`/home/${DEPARTMENT_ID}`)
+//     }catch(err){
+//         res.render('error')
+//     }
+// })
+// // destroy a subsection
+// app.get('/destroy_subsection/:id/:department_id', async(req, res)=>{
+//     const SUBSECTION_ID = req.params.id
+//     const DEPARTMENT_ID = req.params.department_id
+//     try{
+//         const DELETED_SUBSECTION = await ItemSubsection.destroy({where:{id:SUBSECTION_ID}})
+//         res.redirect(`/home/${DEPARTMENT_ID}`)
+//     }catch{
+//         res.render('error')
+//     }
+// })
 // destroy a procedure
-app.get('/destroy_procedure/:id/:department_id', async(req, res)=>{
-    const PROCEDURE_ID = req.params.id
-    const DEPARTMENT_ID =req.params.department_id
-    try{
-        const DELETED_PROCEDURE = await Item.destroy({where:{id:PROCEDURE_ID}})
-        res.redirect(`/home/${DEPARTMENT_ID}`)
-    }catch{
-        res.render('error')
-    }
-})
+// app.get('/destroy_procedure/:id/:department_id', async(req, res)=>{
+//     const PROCEDURE_ID = req.params.id
+//     const DEPARTMENT_ID =req.params.department_id
+//     try{
+//         const DELETED_PROCEDURE = await Item.destroy({where:{id:PROCEDURE_ID}})
+//         res.redirect(`/home/${DEPARTMENT_ID}`)
+//     }catch{
+//         res.render('error')
+//     }
+// })
 // destroy a item solution
-app.get('/destroy_solution/:id/:redirect', async(req, res)=>{
-    const SOLUTION_ID = req.params.id
-    const PROCEDURE_ID = req.params.redirect
-    try{
-        const DELETED_SOLUTION = await ItemSolution.destroy({where:{id:SOLUTION_ID}})
-        res.redirect(`/procedure/${PROCEDURE_ID}`)
-    }catch{
-        res.render('error')
-    }
-})
+// app.get('/destroy_solution/:id/:redirect', async(req, res)=>{
+//     const SOLUTION_ID = req.params.id
+//     const PROCEDURE_ID = req.params.redirect
+//     try{
+//         const DELETED_SOLUTION = await ItemSolution.destroy({where:{id:SOLUTION_ID}})
+//         res.redirect(`/procedure/${PROCEDURE_ID}`)
+//     }catch{
+//         res.render('error')
+//     }
+// })
+//function to delete and redirect
+// const destroy_row = async(req, res, Model, redirect_route)=>{
+//     const ROW_ID = req.params.id
+//     const REDIRECT  = req.params.redirect
+//     try{
+
+//         res.redirect(redirect_route+REDIRECT)
+//     }catch{
+//         res.render('error')
+//     }
+// }
+// destroy an issue
+// app.get('/destroy_issue/:id/:redirect', async(req, res)=>{destroy_row(req,res,ItemIssue, '/procedure/')})
+// destroy an obs
+const destroy_row = (target, Model, redirect_route)=>{
+    app.get(`/destroy_${target}/:id/:redirect`, async(req, res)=>{
+        const ROW_ID = req.params.id
+        const REDIRECT = req.params.redirect
+        try{
+            const DELETED_ROW = await Model.destroy({where:{id: ROW_ID}})
+            res.redirect(redirect_route+REDIRECT)
+        }catch{
+            res.render('error')
+        }
+    })
+}
+destroy_row('section', ItemSection, '/home/')
+destroy_row('subsection', ItemSubsection, '/home/')
+destroy_row('procedure', Item, '/home/')
+destroy_row('solution', ItemSolution, '/procedure/')
+destroy_row('issue', ItemIssue, '/procedure/')
+destroy_row('obs', ItemObs, '/procedure/')
