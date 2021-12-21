@@ -457,8 +457,8 @@ app.post('/create_department', async(req, res)=>{
 // destroy an issue
 // app.get('/destroy_issue/:id/:redirect', async(req, res)=>{destroy_row(req,res,ItemIssue, '/procedure/')})
 // destroy an obs
-const destroy_row = (get_route, Model, redirect_route)=>{
-    app.get(`${get_route}/:id/:redirect`, async(req, res)=>{
+const destroy_row = (target, Model, redirect_route)=>{
+    app.get(`/destroy_${target}/:id/:redirect`, async(req, res)=>{
         const ROW_ID = req.params.id
         const REDIRECT = req.params.redirect
         try{
@@ -469,9 +469,9 @@ const destroy_row = (get_route, Model, redirect_route)=>{
         }
     })
 }
-destroy_row('/destroy_section', ItemSection, '/home/')
-destroy_row('/destroy_subsection', ItemSubsection, '/home/')
-destroy_row('/destroy_procedure', Item, '/home/')
-destroy_row('/destroy_solution', ItemSolution, '/procedure/')
-destroy_row('/destroy_issue', ItemIssue, '/procedure/')
-destroy_row('/destroy_obs', ItemObs, '/procedure/')
+destroy_row('section', ItemSection, '/home/')
+destroy_row('subsection', ItemSubsection, '/home/')
+destroy_row('procedure', Item, '/home/')
+destroy_row('solution', ItemSolution, '/procedure/')
+destroy_row('issue', ItemIssue, '/procedure/')
+destroy_row('obs', ItemObs, '/procedure/')
