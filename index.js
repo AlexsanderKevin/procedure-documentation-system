@@ -391,3 +391,19 @@ reprove_requsition('procedure', Item)
 reprove_requsition('solution', ItemSolution)
 reprove_requsition('obs', ItemObs)
 reprove_requsition('issue', ItemIssue)
+// function to approve content requisitions
+const approve_requisition = (target, Model)=>{
+    app.get(`/approve_${target}/:id`, async(req, res)=>{
+        const REQUISITON_ID = req.params.id
+        try{
+            const APPROVED_REQUISITION = await Model.update(
+                {approved: true},
+                {where: {id: REQUISITON_ID}}
+            )
+            res.redirect('/profile')
+        }catch{
+            res.render('error')
+        }
+    })
+}
+approve_requisition('section', ItemSection)
