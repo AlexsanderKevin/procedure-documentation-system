@@ -5,8 +5,18 @@
     </h1>
 
     {{#departments}}
-        <a href="/home/{{this.dataValues.id}}" class="all_button">{{this.dataValues.name}}</a>
+    <div class="department_link_container">
+        <a href="/home/{{this.dataValues.id}}" class="all_button department_link">{{this.dataValues.name}}</a>
+        {{#unless this.item_sections}}
+            {{>edition/button/delete id=this.dataValues.id target='department' class="department_trash"}}
+        {{/unless}}
+    </div>
     {{/departments}}
 {{>edition/forms/department class="hide"}}
 </div>
-{{>edition/button/add id="add_department_button" class="show"}}
+<div class="department_button_container">
+    {{>edition/button/add id="add_department_button" class="show"}}
+    {{>edition/button/main_delete id="main_delete_button" }}
+</div>
+
+<script type="module" src="/js/edition/delete.js"></script>

@@ -353,6 +353,16 @@ destroy_row('procedure', Item, '/home/')
 destroy_row('solution', ItemSolution, '/procedure/')
 destroy_row('issue', ItemIssue, '/procedure/')
 destroy_row('obs', ItemObs, '/procedure/')
+// deleting a department
+app.get('/destroy_department/:id', async(req, res)=>{
+    const DEPARTMENT_ID = req.params.id
+    try{
+        const DELETED_DEPARTMENT = await Department.destroy({where: {id: DEPARTMENT_ID}})
+        res.redirect('/profile')
+    }catch{
+        res.render('error')
+    }
+})
 // reproving an addition requisitions
 const reprove_requsition = (target, Model)=>{
     app.get(`/reprove_${target}/:id`, async(req, res)=>{

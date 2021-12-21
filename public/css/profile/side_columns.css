@@ -34,10 +34,8 @@
 
     position: relative;
 }
-#profile #departments_container a{
-    border: solid var(--gradient_color_5);
-    width: 90%;
-    border-width: 0 0 0.1px 0;
+#profile #departments_container .department_link{
+    width: 100%;
 
     position: relative;
 }
@@ -67,4 +65,17 @@
 }
 #profile #this_user_info h1{
     font-size: 17pt;
+}
+#profile .department_link_container{
+    width: 100%;
+    border: solid var(--contrast_color);
+    border-width: 0 0 1px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#profile .department_link_container .department_trash img{
+    width: 20px;
+    height: 20px;
 }

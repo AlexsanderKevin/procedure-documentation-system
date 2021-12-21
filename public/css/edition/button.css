@@ -80,3 +80,15 @@
 .active{
     opacity: 0.5;
 }
+.trash_icon{
+    height: 25px;
+    width: 25px;
+}
+.department_button_container{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
