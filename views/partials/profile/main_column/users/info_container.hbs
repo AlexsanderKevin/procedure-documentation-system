@@ -5,6 +5,9 @@
         <img class="user_pic" src="/img/icon/account.png" alt="">
         <h1>{{this.dataValues.name}}</h1>
         <span>{{../dataValues.name}}</span>
+        {{#unless this.dataValues.adm}}
+            {{>edition/button/delete target='user'}}
+        {{/unless}}
     </div>
     <div class="user_info">
         <div class="main_info">

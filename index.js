@@ -363,6 +363,16 @@ app.get('/destroy_department/:id', async(req, res)=>{
         res.render('error')
     }
 })
+// deleting an user
+app.get('/destroy_user/:id', async(req, res)=>{
+    const USER_ID = req.params.id
+    try{
+        const DELETED_USER = await User.destroy({where: {id:USER_ID}})
+        res.redirect('/profile')
+    }catch{
+        res.render('error')
+    }
+})
 // reproving an addition requisitions
 const reprove_requsition = (target, Model)=>{
     app.get(`/reprove_${target}/:id`, async(req, res)=>{
