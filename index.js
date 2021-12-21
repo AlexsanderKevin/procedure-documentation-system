@@ -385,13 +385,7 @@ const reprove_requsition = (target, Model)=>{
         }
     })
 }
-reprove_requsition('section', ItemSection)
-reprove_requsition('subsection', ItemSubsection)
-reprove_requsition('procedure', Item)
-reprove_requsition('solution', ItemSolution)
-reprove_requsition('obs', ItemObs)
-reprove_requsition('issue', ItemIssue)
-// function to approve content requisitions
+// function to reprove content requisition
 const approve_requisition = (target, Model)=>{
     app.get(`/approve_${target}/:id`, async(req, res)=>{
         const REQUISITON_ID = req.params.id
@@ -406,4 +400,16 @@ const approve_requisition = (target, Model)=>{
         }
     })
 }
-approve_requisition('section', ItemSection)
+const TARGETS_AND_MODELS = [
+    {target: 'section', Model: ItemSection},
+    {target: 'subsection', Model: ItemSubsection},
+    {target: 'procedure', Model: Item},
+    {target: 'solution', Model: ItemSolution},
+    {target: 'obs', Model: ItemObs},
+    {target: 'issue', Model: ItemIssue},
+]
+TARGETS_AND_MODELS.forEach(item => {
+    const {target, Model} = item
+    approve_requisition(target, Model)
+    reprove_requsition(target, Model)
+})
