@@ -69,3 +69,14 @@
     display: static;
     align-self: center;
 }
+#main_delete_button{
+    background: none;
+    display: flex;
+    flex-direction: row;
+    color: var(--contrast_color);
+    align-items: center;
+    border: none;
+}
+.active{
+    opacity: 0.5;
+}

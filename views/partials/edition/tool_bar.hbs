@@ -11,7 +11,8 @@
                 {{>@partial-block}}         
             </select>
             {{!-- {{>edition/button/add id="main_add_button" class="show"}} --}}
-            {{>edition/button/main_edit id="main_edit_button"}}
+            {{>edition/button/main_delete class="" id="main_delete_button"}}
+            {{>edition/button/main_edit class="" id="main_edit_button"}}
         </div>   
     </div>
     <div id="empty"></div>
@@ -54,3 +55,4 @@
 <!--edition-->
 <script type="module" src="/js/edition/open_edition.js"></script>
 <script type="module" src="/js/edition/edit.js"></script>
+<script type="module" src="/js/edition/delete.js"></script>

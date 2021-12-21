@@ -7,6 +7,7 @@ const EDITION_BUTTONS = [
 ]
 
 on_click(MAIN_BUTTON, ()=>{
+    MAIN_BUTTON.classList.toggle('active')
     EDITION_BUTTONS.forEach(item => {
         const {buttons} = item
         buttons.forEach(button => button.classList.toggle('hide'))
