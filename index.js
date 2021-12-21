@@ -334,129 +334,7 @@ app.post('/create_department', async(req, res)=>{
     const CREATED_DEPARTMENT = await Department.create(NEW_DEPARTMENT)
     res.redirect('profile')
 })
-// // reprove an issue requisition
-// app.get('/delete_issue/:id', async (req, res)=>{
-//     const ISSUE_ID = req.params.id
-//     try{
-//         const DELETED_ISSUE = await ItemIssue.destroy({where: {id:ISSUE_ID}})
-//         res.redirect('/profile')
-//     }catch(err){
-//         console.log(err)
-//         res.render('error')
-//     }
-// })
-// // reprove a solution requisition
-// app.get('/delete_solution/:id', async (req, res)=>{
-//     const SOLUTION_ID = req.params.id
-//     try{
-//         const DELETED_SOLUTION = await ItemSolution.destroy({where: {id:SOLUTION_ID}})
-//         res.redirect('/profile')
-//     }catch(err){
-//         console.log(err)
-//         res.render('error')
-//     }
-// })
-// // reprove a obs requisition
-// app.get('/delete_obs/:id', async (req, res)=>{
-//     const OBS_ID = req.params.id
-//     try{
-//         const DELETED_OBS = await ItemObs.destroy({where: {id:OBS_ID}})
-//         res.redirect('/profile')
-//     }catch(err){
-//         console.log(err)
-//         res.render('error')
-//     }
-// })
-// // reprove a procedure
-// app.get('/delete_procedure/:id', async (req, res)=>{
-//     const PROCEDURE_ID = req.params.id
-//     try{
-//         const DELETED_PROCEDURE = await Item.destroy({where: {id: PROCEDURE_ID}})
-//         res.redirect('/profile')
-//     }catch(err){
-//         console.log(err)
-//         res.render('error')
-//     }
-// })
-// // reprove a subsection requisition
-// app.get('/delete_subsection/:id', async (req, res)=>{
-//     const SUBSECTION_ID = req.params.id
-//     try{
-//         const DELETED_SUBSECTION = await ItemSubsection.destroy({where: {id:SUBSECTION_ID}})
-//         res.redirect('/profile')
-//     }catch(err){
-//         console.log(err)
-//         res.render('error')
-//     }
-// })
-// // reprove a section requisition
-// app.get('/delete_section/:id', async (req, res)=>{
-//     const SECTION_ID = req.params.id
-//     try{
-//         const DELETED_SECTION = await ItemSection.destroy({where: {id:SECTION_ID}})
-//         res.redirect('/profile')
-//     }catch(err){
-//         res.render('error')
-//     }
-// })
-// // destroy a section
-// app.get('/destroy_section/:id/:department_id', async (req, res)=>{
-//     const SECTION_ID = req.params.id
-//     const DEPARTMENT_ID = req.params.department_id
-//     try{
-//         const DELETED_SECTION = await ItemSection.destroy({where: {id:SECTION_ID}})
-//         res.redirect(`/home/${DEPARTMENT_ID}`)
-//     }catch(err){
-//         res.render('error')
-//     }
-// })
-// // destroy a subsection
-// app.get('/destroy_subsection/:id/:department_id', async(req, res)=>{
-//     const SUBSECTION_ID = req.params.id
-//     const DEPARTMENT_ID = req.params.department_id
-//     try{
-//         const DELETED_SUBSECTION = await ItemSubsection.destroy({where:{id:SUBSECTION_ID}})
-//         res.redirect(`/home/${DEPARTMENT_ID}`)
-//     }catch{
-//         res.render('error')
-//     }
-// })
-// destroy a procedure
-// app.get('/destroy_procedure/:id/:department_id', async(req, res)=>{
-//     const PROCEDURE_ID = req.params.id
-//     const DEPARTMENT_ID =req.params.department_id
-//     try{
-//         const DELETED_PROCEDURE = await Item.destroy({where:{id:PROCEDURE_ID}})
-//         res.redirect(`/home/${DEPARTMENT_ID}`)
-//     }catch{
-//         res.render('error')
-//     }
-// })
-// destroy a item solution
-// app.get('/destroy_solution/:id/:redirect', async(req, res)=>{
-//     const SOLUTION_ID = req.params.id
-//     const PROCEDURE_ID = req.params.redirect
-//     try{
-//         const DELETED_SOLUTION = await ItemSolution.destroy({where:{id:SOLUTION_ID}})
-//         res.redirect(`/procedure/${PROCEDURE_ID}`)
-//     }catch{
-//         res.render('error')
-//     }
-// })
-//function to delete and redirect
-// const destroy_row = async(req, res, Model, redirect_route)=>{
-//     const ROW_ID = req.params.id
-//     const REDIRECT  = req.params.redirect
-//     try{
-
-//         res.redirect(redirect_route+REDIRECT)
-//     }catch{
-//         res.render('error')
-//     }
-// }
-// destroy an issue
-// app.get('/destroy_issue/:id/:redirect', async(req, res)=>{destroy_row(req,res,ItemIssue, '/procedure/')})
-// destroy an obs
+// deleting main content with trash buttons
 const destroy_row = (target, Model, redirect_route)=>{
     app.get(`/destroy_${target}/:id/:redirect`, async(req, res)=>{
         const ROW_ID = req.params.id
@@ -475,3 +353,21 @@ destroy_row('procedure', Item, '/home/')
 destroy_row('solution', ItemSolution, '/procedure/')
 destroy_row('issue', ItemIssue, '/procedure/')
 destroy_row('obs', ItemObs, '/procedure/')
+// reproving an addition requisitions
+const reprove_requsition = (target, Model)=>{
+    app.get(`/reprove_${target}/:id`, async(req, res)=>{
+        const REQUISITON_ID = req.params.id
+        try{
+            const DELETED_REQUISITION = await Model.destroy({where: {id: REQUISITON_ID}})
+            res.redirect('/profile')
+        }catch{
+            res.render('error')
+        }
+    })
+}
+reprove_requsition('section', ItemSection)
+reprove_requsition('subsection', ItemSubsection)
+reprove_requsition('procedure', Item)
+reprove_requsition('solution', ItemSolution)
+reprove_requsition('obs', ItemObs)
+reprove_requsition('issue', ItemIssue)
