@@ -14,14 +14,14 @@ nav {
 .nav_links{
     position: absolute;
     left: 0vh;
-    top: 15px;
+    top: 0px;
 
     min-width: 200px;
     height: 100vh;
     overflow-y: scroll;
 
     padding: 0;
-    padding-top: 70px;
+    padding-top: 20px;
     padding-bottom: 10px;
     background-color: var(--gradient_color_2);
     box-shadow: 2px 2px 7px black;

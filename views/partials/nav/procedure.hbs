@@ -1,6 +1,11 @@
  <nav id = "menu" class="section_nav procedure_nav">
     <div class="nav_links">
         <div class="nav_div">
+            <a href="/profile" class="a_container">
+                <img src="/img/icon/account.png" alt="">
+            </a>
+        </div>
+        <div class="nav_div">
             <a class="all_button procedure_nav_anchor" href="#description">Descrição</a>
                 
             {{#if item_solutions}}
@@ -12,9 +17,6 @@
             {{#if item_issues}}
                 <a class="all_button procedure_nav_anchor" href="#issues">Problemas</a>
             {{/if}}
-            {{!-- {{#if comments}}
-                <a class="all_button procedure_nav_anchor" href="#comments">Comentários</a>
-            {{/if}} --}}
         </div>
     </div>
 </nav>
