@@ -4,7 +4,9 @@
     {{#>forms/select name="subsection_section" label="Seção"}}
         {{>forms/invalid_opt label="Seção"}}
         {{#each item_sections}}
+        {{#if this.dataValues.approved}}
             <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
+        {{/if}}
         {{/each}}
     {{/forms/select}}
     {{>forms/textarea_box name="subsection_description" label="*Descrição"}}

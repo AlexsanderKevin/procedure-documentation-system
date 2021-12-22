@@ -5,7 +5,9 @@
         {{>forms/invalid_opt label="Subseção"}}
         {{#item_sections}}
             {{#each this.item_subsections}}
+            {{#if this.dataValues.approved}}
                 <option value="{{this.dataValues.id}}">{{this.dataValues.name}}</option>
+            {{/if}}
             {{/each}}
         {{/item_sections}}
     {{/forms/select}}
