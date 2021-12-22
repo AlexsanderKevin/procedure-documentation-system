@@ -1,3 +1,4 @@
+{{#if this.dataValues.approved}}
 {{#if dataValues.description}}
 <div class="editable single_item_container">
     <a href="/procedure/{{this.dataValues.id}}" class="itemList section_color_{{department}}">
@@ -15,4 +16,5 @@
     </h4>
     {{>edition/button/delete id=this.dataValues.id target="procedure" redirect=department class="delete_procedure"}}
 </div>
+{{/if}}
 {{/if}}
