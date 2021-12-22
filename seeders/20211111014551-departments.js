@@ -15,6 +15,10 @@ module.exports = {
           name: 'Embalagem',
           id: 3
          },
+         {
+          name: 'Troca',
+          id: 4
+         },
     ], 
     {});
   },

@@ -11,9 +11,7 @@ const radios = [
     },{
        button: get('#radio_approve_list'),
        content: get('#profile #requisition_list_container')
-    },{
-       button: get('#radio_comment_list'),
-    }
+    },
 ]
 
 radios.forEach(radio => {

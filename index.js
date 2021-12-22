@@ -128,7 +128,6 @@ app.get("/home/:id", async (req, res) => {
             where: {id: departmentId},
             include: [{
                 model: ItemSection,
-                where: {departmentId: departmentId},
                 include: [{
                     model: ItemSubsection,
                     include: [{
@@ -173,15 +172,6 @@ app.get("/procedure/:id", async (req, res) => {
                     }]
                 }] 
             }]
-        })
-        const procedure = await Item.findAll({
-            where: {id: procedureId},
-            include: [
-                {model: ItemSolution},
-                {model: ItemIssue},
-                {model: ItemObs},
-                {model: Comment}
-            ]
         })
 
        res.render("procedure", {
