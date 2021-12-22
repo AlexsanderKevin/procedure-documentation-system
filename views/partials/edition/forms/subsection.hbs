@@ -1,6 +1,4 @@
 {{#>edition/forms/default action=action id=id title=title confirm="Adicionar"}}
-    {{>forms/input_box name="subsection_title" type="text" label="*Título"}}
-        
     {{#>forms/select name="subsection_section" label="Seção"}}
         {{>forms/invalid_opt label="Seção"}}
         {{#each item_sections}}
@@ -9,5 +7,8 @@
         {{/if}}
         {{/each}}
     {{/forms/select}}
+
+    {{>forms/input_box name="subsection_title" type="text" label="*Título"}}
+        
     {{>forms/textarea_box name="subsection_description" label="*Descrição"}}
 {{/edition/forms/default}}

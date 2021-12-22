@@ -1,7 +1,7 @@
 {{#>edition/forms/default action=action id=id title=title confirm="Adicionar"}}
-    {{>forms/input_box name="section_title" type="text" label="*Título"}}
-
     {{#>forms/select name="section_department" label="Departamento"}}
         <option value={{department_id}}>Linha:{{department_name}}</option>
     {{/forms/select}}
+
+    {{>forms/input_box name="section_title" type="text" label="*Título"}}
 {{/edition/forms/default}}

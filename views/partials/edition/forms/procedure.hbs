@@ -1,6 +1,4 @@
 {{#>edition/forms/default action=action id=id title=title confirm='Adicionar'}}
-    {{>forms/input_box name="procedure_title" type="text" label="*Título"}}
-
     {{#>forms/select name="procedure_subsection" label="Subseção"}}
         {{>forms/invalid_opt label="Subseção"}}
         {{#item_sections}}
@@ -12,5 +10,7 @@
         {{/item_sections}}
     {{/forms/select}}
     
+    {{>forms/input_box name="procedure_title" type="text" label="*Título"}}
+
     {{>forms/textarea_box name="procedure_description_input" label="*Descrição"}}
 {{/edition/forms/default}}

@@ -1,9 +1,9 @@
 {{#>edition/forms/default action=action id=id title=title confirm="Adicionar"}}
-    {{>forms/input_box name="obs_title" type="Text" label="*Título"}}
-
     {{#>forms/select name="obs_procedure" label="Procedimento"}}
         <option value="{{this.dataValues.id}}">{{this.dataValues.title}}</option>
     {{/forms/select}}
+
+    {{>forms/input_box name="obs_title" type="Text" label="*Título"}}
 
     {{>forms/textarea_box name="obs_description" label="*Descrição"}}
 {{/edition/forms/default}}
