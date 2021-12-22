@@ -5,6 +5,7 @@
     </div>
     <div class="item_content_text">
         {{#each category}}
+        {{#if this.dataValues.approved}}
         <div>
         <div class="single_container">
             <div>
@@ -19,6 +20,7 @@
         {{>@partial-block}}
         </div>
         </div>
+        {{/if}}
         {{/each}}
     </div>
 </div>
