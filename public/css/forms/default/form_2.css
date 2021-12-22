@@ -37,3 +37,13 @@
 .form_2 .button_container button{
     font-size: 15pt;
 }
+.form_2.update_form input{
+    border: none;
+    background: black;
+    padding: 5px 20px 5px 20px;
+}
+.form_2.update_form input.section_new_name{
+    font-size: 25pt;
+    letter-spacing: 5px;
+    font-weight: bold;
+}

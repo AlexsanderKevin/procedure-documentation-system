@@ -3,6 +3,14 @@
     <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
         <h2 class="section_name section_color_{{this.dataValues.departmentId}}">
             {{this.dataValues.name}}
+            <form class="form_2 update_form" action="">
+
+            <input type="text" class="section_new_name" name="section_new_name " value='{{this.dataValues.name}}' required>
+            </form>
+            <div class="button_container">
+                {{!-- <a href="">Pronto</a>
+                <a href="">Cancelar</a> --}}
+            </div>
         </h2>
 
         {{>edition/button/delete id=this.dataValues.id target='section' redirect=department class="delete_section"}}
