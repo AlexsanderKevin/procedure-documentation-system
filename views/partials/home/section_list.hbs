@@ -1,16 +1,13 @@
 {{#if this.dataValues.approved}}
 <section class="item_section" id='{{this.dataValues.name}}'>
     <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
-        <h2 class="section_name section_color_{{this.dataValues.departmentId}}">
-            {{this.dataValues.name}}
-            <form class="form_2 update_form" action="">
-
-            <input type="text" class="section_new_name" name="section_new_name " value='{{this.dataValues.name}}' required>
-            </form>
-            <div class="button_container">
-                {{!-- <a href="">Pronto</a>
-                <a href="">Cancelar</a> --}}
-            </div>
+        <h2 id="section_{{this.dataValues.id}}_title_cotainer" class="section_name section_color_{{this.dataValues.departmentId}}">
+            <span id="section_{{this.dataValues.id}}_title">{{this.dataValues.name}}</span>
+            {{>edition/forms/update/title
+                target='section'
+                id=this.dataValues.id
+                input_name='section_new_name'
+            }}
         </h2>
 
         {{>edition/button/delete id=this.dataValues.id target='section' redirect=department class="delete_section"}}

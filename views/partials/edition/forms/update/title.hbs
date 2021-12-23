@@ -1,0 +1,12 @@
+<form id="update_{{target}}_{{id}}_form" class="form_2 update_form title {{class}}" action="/update_{{target}}/{{this.dataValues.id}}/{{this.dataValues.departmentId}}" method="POST">
+
+    {{>forms/input_box name=input_name type="text" value=this.dataValues.name}}
+    <div class="button_container">
+        <button type="submit">
+            <img src="/img/icon/diskette.png" alt="save_change" class="icon_button all_button">
+        </button>
+        <button type="reset">
+            <img src="/img/icon/close.png" alt="discard_changes" class="icon_button all_button">
+        </button>
+    </div>
+</form>

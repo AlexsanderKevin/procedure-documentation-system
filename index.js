@@ -23,6 +23,7 @@ require("dotenv").config();
 //const hbs_helpers = require('./public/helpers')
 const Helpers = require('./public/helpers/index.js')
 const { redirect } = require("express/lib/response")
+const { STRING } = require("sequelize")
 
 const hbs = express_handlebars.create({
     defaultLayout: 'main',
@@ -402,4 +403,18 @@ TARGETS_AND_MODELS.forEach(item => {
     const {target, Model} = item
     approve_requisition(target, Model)
     reprove_requsition(target, Model)
+})
+//update values
+app.post('/update_section/:id/:redirect', async(req, res)=>{
+    const NEW_SECTION  = {name:req.body.section_new_name}
+    console.log(NEW_SECTION.name)
+    try{
+        const UPDATED_SECTION = await ItemSection.update(
+            {name: req.body.section_new_name},
+            {where: {id:req.params.id}}
+        )
+        res.redirect(`/home/${req.params.redirect}`)
+    }catch{
+        res.render('error')
+    }
 })
