@@ -27,6 +27,8 @@ const add_forms = {
     add_issue: get('#add_issue_form'),
     add_obs: get('#add_obs_form'),
 }
+const UPDATE_BUTTONS = get('.edit_mode')
+const DELETE_BUTTONS = get('.delete_button_container')
 // on_click(main_add_button, ()=>{add_options.classList.toggle('hide')})
 on_change(add_options, ()=>{
     open(modal)
@@ -60,6 +62,8 @@ on_change(add_options, ()=>{
 on_click(start_edition_button, ()=>{
     bg_img.classList.toggle('hide')
     header.classList.toggle('hide')
+    UPDATE_BUTTONS.forEach(button => button.classList.add('hide'))
+    DELETE_BUTTONS.forEach(button => button.classList.add('hide'))
     // add_options.classList.add('hide')
 })
 // this closes the modal when click in the cancel buttons
