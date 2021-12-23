@@ -1,6 +1,4 @@
 #profile #user_list_container{
-    border: solid var(--gradient_color_5);
-    border-width: 1px;
     color:var(--contrast_color);
 
 }
@@ -9,13 +7,17 @@
     background-color: var(--gradient_color_2);
     
     border: solid var(--gradient_color_5);
-    border-width: 0 0 1px 0;
+    border-width: 1px;
     
     padding: 0px 10px 0px 10px;
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: sticky;
+    top: 0px;
+    z-index: 2;
 }
 #profile .list_content{
     padding: 30px;
@@ -30,10 +32,11 @@
 }
 #profile .user_info_container{
     border: solid var(--gradient_color_5);
-    border-width: 0 0 0px 0;
+    border-width: 1px;
+    border-radius: 5px;
 
     width: 90%;
-    padding: 10px;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;

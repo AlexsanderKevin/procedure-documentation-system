@@ -1,6 +1,4 @@
 #profile #requisition_list_container{
-    border: solid var(--gradient_color_5);
-    border-width: 1px;
     color:var(--contrast_color);
 }
 #profile #user_list_container #list_header{
@@ -47,7 +45,8 @@
     flex-wrap: wrap;
 
     border: solid var(--gradient_color_5);
-    border-width: 0 0 2px 0;
+    border-width: 2px;
+    border-radius: 5px;
 }
 #profile .req_title_container{
 
@@ -82,10 +81,19 @@
     color: var(--min_contrast_color);
 
     border: solid var(--gradient_color_5);
-    border-width: 0 0 1px 0;
+    border-width: 0 1px 1px 1px;
+
+    position: sticky;
+    top: 52px;
+
+    z-index: 2;
+    background-color: var(--gradient_color_1);
 }
 #profile #req_menu input{
     display: none;
+}
+#profile #req_menu label{
+    cursor: pointer;
 }
 #profile #req_menu input:checked ~ label{
     background-color: var(--contrast_color);
