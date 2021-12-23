@@ -2,16 +2,17 @@
 <section class="item_section" id='{{this.dataValues.name}}'>
     <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
         <h2 id="section_{{this.dataValues.id}}_title_cotainer" class="section_name section_color_{{this.dataValues.departmentId}}">
-            <span id="section_{{this.dataValues.id}}_title">{{this.dataValues.name}}</span>
+            <span class="section_name_text" id="section_{{this.dataValues.id}}_title">{{this.dataValues.name}}</span>
             {{>edition/forms/update/title
                 target='section'
                 id=this.dataValues.id
-                input_name='section_new_name'
+                input_name='new_name'
+                form_class='update_section_name_form'
             }}
         </h2>
 
         {{>edition/button/delete id=this.dataValues.id target='section' redirect=department class="delete_section"}}
-        {{>edition/button/edit class="edit_section"}}
+        {{>edition/button/edit class="edit_section update_section_name"}}
     </div>
     <div class="section_content">
 

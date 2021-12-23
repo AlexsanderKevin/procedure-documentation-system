@@ -55,3 +55,6 @@
 .background_section_color_3{
     background-color: var(--sectionColor_3);
 }
+.section_name{
+    position: relative;
+}

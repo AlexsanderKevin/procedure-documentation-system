@@ -13,10 +13,3 @@ on_click(MAIN_BUTTON, ()=>{
         buttons.forEach(button => button.classList.toggle('hide'))
     })
 })
-EDITION_BUTTONS.forEach(item => {
-    const {buttons, form} = item
-    buttons.forEach(button => on_click(button, ()=>{
-        open(modal)
-        open(form)
-    }))
-})

@@ -404,17 +404,17 @@ TARGETS_AND_MODELS.forEach(item => {
     approve_requisition(target, Model)
     reprove_requsition(target, Model)
 })
-//update values
-app.post('/update_section/:id/:redirect', async(req, res)=>{
-    const NEW_SECTION  = {name:req.body.section_new_name}
-    console.log(NEW_SECTION.name)
-    try{
-        const UPDATED_SECTION = await ItemSection.update(
-            {name: req.body.section_new_name},
-            {where: {id:req.params.id}}
-        )
-        res.redirect(`/home/${req.params.redirect}`)
-    }catch{
-        res.render('error')
-    }
-})
+const update_name = (target_table, Model, redirect_page)=>{
+    app.post(`/update_${target_table}/:id/:redirect`, async(req, res)=>{
+        try{
+            const UPDATED_CONTENT = await Model.update(
+                {name: req.body.new_name},
+                {where: {id:req.params.id}}
+            )
+            res.redirect(`/${redirect_page}/${req.params.redirect}`)
+        }catch{
+            res.render('error')
+        }
+    })
+}
+update_name('section', ItemSection, 'home')
