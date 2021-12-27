@@ -404,18 +404,41 @@ TARGETS_AND_MODELS.forEach(item => {
     approve_requisition(target, Model)
     reprove_requsition(target, Model)
 })
-const update_name = (target_table, Model, redirect_page)=>{
-    app.post(`/update_${target_table}/:id/:redirect`, async(req, res)=>{
+const update_name = async(Model, new_name, target_id) => {
+    const UPDATED_NAME = await Model.update(
+        {name: new_name},
+        {where: {id: target_id}}
+    )
+}
+const update_title = async(Model, new_title, target_id) => {
+    const UPDATED_TITLE = await Model.update(
+        {title: new_title},
+        {where: {id: target_id}}
+    )
+}
+const update_table = (target_table,target_collumn, Model, redirect_page)=>{
+    app.post(`/update_${target_table}_${target_collumn}/:id/:redirect`, async(req, res)=>{
+
+        const NEW_CONTENT = req.body.new_content
+        const TARGET_ITEM = req.params.id
+
         try{
-            const UPDATED_CONTENT = await Model.update(
-                {name: req.body.new_name},
-                {where: {id:req.params.id}}
-            )
+            switch(target_collumn){
+                case 'name': 
+                    update_name(Model, NEW_CONTENT, TARGET_ITEM)
+                    break
+
+                case 'title':
+                    update_title(Model, NEW_CONTENT, TARGET_ITEM)
+                    break
+            }
             res.redirect(`/${redirect_page}/${req.params.redirect}`)
+
         }catch{
             res.render('error')
         }
     })
 }
-update_name('section', ItemSection, 'home')
-update_name('subsection', ItemSubsection, 'home')
+
+update_table('section', 'name', ItemSection, 'home')
+update_table('subsection', 'name', ItemSubsection, 'home')

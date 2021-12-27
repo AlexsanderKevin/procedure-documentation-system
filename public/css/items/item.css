@@ -11,7 +11,7 @@
 .itemList{
     background-color: var(--gradient_color_4);
 
-    padding: 13px;
+    padding: 15px;
 
     margin: 10px;
 
@@ -22,6 +22,8 @@
 
     display: flex;
     align-content: center;
+    align-items: center;
+    gap: 20px;
     justify-content: center;
 
     box-shadow: var(--standard_shadow);
@@ -48,6 +50,8 @@
 
     display: flex;
     align-content: center;
+    align-items: center;
+    gap: 20px;
     justify-content: center;
 }
 
