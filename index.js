@@ -442,3 +442,4 @@ const update_table = (target_table,target_collumn, Model, redirect_page)=>{
 
 update_table('section', 'name', ItemSection, 'home')
 update_table('subsection', 'name', ItemSubsection, 'home')
+update_table('procedure', 'title', Item, 'home')
