@@ -443,3 +443,6 @@ const update_table = (target_table,target_collumn, Model, redirect_page)=>{
 update_table('section', 'name', ItemSection, 'home')
 update_table('subsection', 'name', ItemSubsection, 'home')
 update_table('procedure', 'title', Item, 'home')
+update_table('solution', 'title', ItemSolution, 'procedure')
+update_table('obs', 'title', ItemObs, 'procedure')
+update_table('issue', 'title', ItemIssue, 'procedure')
