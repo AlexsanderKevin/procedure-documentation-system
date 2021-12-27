@@ -35,3 +35,9 @@ update_form_interaction(
     '.subsection_name_text',
     '.close_update_subsection_form'
 )
+update_form_interaction(
+    '.update_procedure_name',
+    '.update_procedure_name_form',
+    '.procedure_name_text',
+    '.close_update_procedure_form'
+)
