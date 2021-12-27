@@ -29,3 +29,9 @@ update_form_interaction(
     '.section_name_text',
     '.close_update_section_form'
 )
+update_form_interaction(
+    '.update_subsection_name',
+    '.update_subsection_name_form',
+    '.subsection_name_text',
+    '.close_update_subsection_form'
+)
