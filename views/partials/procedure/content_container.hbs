@@ -10,7 +10,16 @@
         <div class="single_container">
             <div>
                 <div class="content_header">
-                    <h3>{{this.dataValues.title}}</h3>
+                    <h3>
+                        {{this.dataValues.title}}
+                        <!-- edit subsection title form -->
+                        {{>edition/forms/update/title
+                            target=../target
+                            id=this.dataValues.id
+                            collumn='title'
+                            input_value=this.dataValues.title
+                            }}
+                    </h3>
                     {{>main/burger class='single_content_burger content_burger all_button'}}
                 </div>
                 <div class="content_text">

@@ -28,7 +28,14 @@
         {{/if}}
         <!--# item solution-->
         {{#if this.item_solutions}}
-            {{#>procedure/content_container category=item_solutions title="Soluções" id="solutions"}}
+            {{#>procedure/content_container 
+                category=item_solutions 
+                title="Soluções" 
+                id="solutions"
+                target="solution"
+                form_class='update_solution_title_form'
+                redirect=redirect
+            }}
                 {{>edition/button/delete target='solution' redirect=../dataValues.id}}
             {{/procedure/content_container}}
         {{/if}}
