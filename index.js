@@ -418,3 +418,4 @@ const update_name = (target_table, Model, redirect_page)=>{
     })
 }
 update_name('section', ItemSection, 'home')
+update_name('subsection', ItemSubsection, 'home')
