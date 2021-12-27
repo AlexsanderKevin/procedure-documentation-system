@@ -33,9 +33,11 @@
                 title="Soluções" 
                 id="solutions"
                 target="solution"
-                form_class='update_solution_title_form'
                 redirect=this.dataValues.id
-            }}
+                update_button_class='edit_section update_solution_title'
+                form_class='update_solution_title_form'
+                }}
+
                 {{>edition/button/delete target='solution' redirect=../dataValues.id}}
 
             {{/procedure/content_container}}
@@ -49,7 +51,9 @@
                 target="obs"
                 form_class='update_obs_title_form'
                 redirect=this.dataValues.id
-            }}
+                update_button_class='edit_section update_obs_title'
+                }}
+
                 {{>edition/button/delete target='obs' redirect=../dataValues.id}}
 
             {{/procedure/content_container}}
@@ -63,7 +67,9 @@
                 target="issue"
                 form_class='update_issue_title_form'
                 redirect=this.dataValues.id
-            }}
+                update_button_class='edit_section update_issue_title'
+                }}
+
                 {{>edition/button/delete target='issue' redirect=../dataValues.id}}
 
             {{/procedure/content_container}}

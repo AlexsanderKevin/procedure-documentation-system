@@ -3,7 +3,7 @@
 <div class="editable single_item_container">
     <h4 class="itemList section_color_{{department}} item_name">
         <a href="/procedure/{{this.dataValues.id}}" >
-            <span class="procedure_name_text">
+            <span class="procedure_title_text">
                 {{this.dataValues.title}}
             </span>
         </a>
@@ -11,13 +11,13 @@
         {{>edition/forms/update/title
             target='procedure'
             id=this.dataValues.id
-            form_class='update_procedure_name_form'
+            form_class='update_procedure_title_form'
             redirect=department
             collumn='title'
             input_value=this.dataValues.title
             }}
             <!-- pencil button -->
-        {{>edition/button/edit class="edit_section update_procedure_name"}}
+        {{>edition/button/edit class="edit_section update_procedure_title"}}
     </h4>
     {{>edition/button/delete id=this.dataValues.id target="procedure" redirect=department class="delete_procedure"}}
 </div>
@@ -25,20 +25,20 @@
 {{else}}
 <div class="single_item_container">                        
     <h4 class="emptyItemList item_name">
-        <span class="procedure_name_text">
+        <span class="procedure_title_text">
             {{this.dataValues.title}}
         </span>
         <!-- edit subsection title form -->
         {{>edition/forms/update/title
             target='procedure'
             id=this.dataValues.id
-            form_class='update_procedure_name_form'
+            form_class='update_procedure_title_form'
             redirect=department
             collumn='title'
             input_value=this.dataValues.title
             }}
             <!-- pencil button -->
-            {{>edition/button/edit class="edit_section update_procedure_name"}}
+            {{>edition/button/edit class="edit_section update_procedure_title"}}
         </h4>
     {{>edition/button/delete id=this.dataValues.id target="procedure" redirect=department class="delete_procedure"}}
 </div>

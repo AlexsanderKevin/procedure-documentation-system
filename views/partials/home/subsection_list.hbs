@@ -6,20 +6,20 @@
                 ?
             </button>
             <h3 class="subsection_name section_color_{{department}}">
-                <span class="subsection_name_text">
+                <span class="subsection_title_text">
                     {{this.dataValues.name}}
                 </span>
                 <!-- edit subsection title form -->
                 {{>edition/forms/update/title
                     target='subsection'
                     id=this.dataValues.id
-                    form_class='update_subsection_name_form'
+                    form_class='update_subsection_title_form'
                     redirect=department
                     collumn='name'
                     input_value=this.dataValues.name
                 }}
                 <!-- pencil button -->
-                {{>edition/button/edit class="edit_section update_subsection_name"}}
+                {{>edition/button/edit class="edit_section update_subsection_title"}}
                 <!-- trash button -->
                 {{>edition/button/delete id=this.dataValues.id target='subsection' redirect=department class="delete_subsection"}}
             </h3>

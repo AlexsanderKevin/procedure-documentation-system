@@ -11,7 +11,9 @@
             <div>
                 <div class="content_header">
                     <h3>
-                        {{this.dataValues.title}}
+                        <span class="{{../target}}_title_text">
+                            {{this.dataValues.title}}
+                        </span>
                         <!-- edit subsection title form -->
                         {{>edition/forms/update/title
                             target=../target
@@ -19,7 +21,10 @@
                             collumn='title'
                             input_value=this.dataValues.title
                             redirect=../redirect
+                            form_class=../form_class
                             }}
+
+                        {{>edition/button/edit class=../update_button_class}}
                     </h3>
                     {{>main/burger class='single_content_burger content_burger all_button'}}
                 </div>

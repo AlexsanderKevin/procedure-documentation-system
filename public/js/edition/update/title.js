@@ -22,22 +22,19 @@ const update_form_interaction = (buttons, forms, names, delete_buttons) => {
         })
     }
 }
-
-update_form_interaction(
-    '.update_section_name',
-    '.update_section_name_form',
-    '.section_name_text',
-    '.close_update_section_form'
-)
-update_form_interaction(
-    '.update_subsection_name',
-    '.update_subsection_name_form',
-    '.subsection_name_text',
-    '.close_update_subsection_form'
-)
-update_form_interaction(
-    '.update_procedure_name',
-    '.update_procedure_name_form',
-    '.procedure_name_text',
-    '.close_update_procedure_form'
-)
+const updatable_targets = [
+    'section', 
+    'subsection', 
+    'procedure', 
+    'solution', 
+    'obs', 
+    'issue'
+]
+updatable_targets.forEach(target => {
+    update_form_interaction(
+        `.update_${target}_title`,
+        `.update_${target}_title_form`,
+        `.${target}_title_text`,
+        `.close_update_${target}_title`
+    )
+})

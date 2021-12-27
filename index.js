@@ -368,9 +368,11 @@ app.get('/destroy_user/:id', async(req, res)=>{
 const reprove_requsition = (target, Model)=>{
     app.get(`/reprove_${target}/:id`, async(req, res)=>{
         const REQUISITON_ID = req.params.id
+
         try{
             const DELETED_REQUISITION = await Model.destroy({where: {id: REQUISITON_ID}})
             res.redirect('/profile')
+
         }catch{
             res.render('error')
         }
