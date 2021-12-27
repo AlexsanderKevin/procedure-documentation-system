@@ -29,6 +29,7 @@ const add_forms = {
 }
 const UPDATE_BUTTONS = get('.edit_mode')
 const DELETE_BUTTONS = get('.delete_button_container')
+const MAIN_UPDATE_BUTTON = get('#main_edit_button')
 // on_click(main_add_button, ()=>{add_options.classList.toggle('hide')})
 on_change(add_options, ()=>{
     open(modal)
@@ -64,7 +65,7 @@ on_click(start_edition_button, ()=>{
     header.classList.toggle('hide')
     UPDATE_BUTTONS.forEach(button => button.classList.add('hide'))
     DELETE_BUTTONS.forEach(button => button.classList.add('hide'))
-    // add_options.classList.add('hide')
+    MAIN_UPDATE_BUTTON.classList.remove('active')
 })
 // this closes the modal when click in the cancel buttons
 cancel_buttons.forEach(button => {
