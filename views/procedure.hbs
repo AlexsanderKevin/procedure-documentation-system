@@ -46,8 +46,10 @@
                 id="solutions"
                 target="solution"
                 redirect=this.dataValues.id
+
                 update_button_class='edit_section update_solution_title'
                 form_class='update_solution_title_form'
+
                 update_content_button_class='edit_section update_solution_description'
                 content_form_class='update_solution_description_form'
                 }}
@@ -63,9 +65,13 @@
                 title='Observações' 
                 id='Obs'
                 target="obs"
-                form_class='update_obs_title_form'
                 redirect=this.dataValues.id
+
                 update_button_class='edit_section update_obs_title'
+                form_class='update_obs_title_form'
+
+                update_content_button_class='edit_section update_obs_description'
+                content_form_class='update_obs_description_form'
                 }}
 
                 {{>edition/button/delete target='obs' redirect=../dataValues.id}}
@@ -79,9 +85,13 @@
                 title='Possíveis Problemas' 
                 id='issues'
                 target="issue"
-                form_class='update_issue_title_form'
                 redirect=this.dataValues.id
+
                 update_button_class='edit_section update_issue_title'
+                form_class='update_issue_title_form'
+
+                update_content_button_class='edit_section update_issue_description'
+                content_form_class='update_issue_description_form'
                 }}
 
                 {{>edition/button/delete target='issue' redirect=../dataValues.id}}

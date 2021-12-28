@@ -43,6 +43,6 @@ updatable_targets.forEach(target => {
         `.update_${target}_description`,
         `.update_${target}_description_form`,
         `.${target}_description_text`,
-        `.close_update_${target}_form`
+        `.close_update_description_${target}_form`
     )
 })
