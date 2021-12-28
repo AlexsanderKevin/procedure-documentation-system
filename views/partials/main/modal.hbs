@@ -1,9 +1,11 @@
-<div id="modal" class="modalContainer ">
-    <div id="conceptModalFrame" class="modalFrame">
+<div id="modal" class="modalContainer {{modal_container_class}}">
+    <div id="conceptModalFrame" class="modalFrame {{modal_frame_class}}">
         <div class="modalHeader">
             <h3 class="modal_title">modal</h3>
-            <button class="modalCloseButton all_button">X</button>
+            <button class="modalCloseButton all_button {{close_button_class}}">X</button>
         </div>
-        <div class="modalContent itemContent" style="border: none;"></div>
+        <div class="modalContent itemContent" style="border: none;">
+            {{>@partial-block}}
+        </div>
     </div>
 </div>

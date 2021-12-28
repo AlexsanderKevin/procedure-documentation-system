@@ -26,8 +26,11 @@
             {{>main/burger class = 'subsection_burger'}}
 
         </div>
-        
-        <div class="subsection_description">
+        {{#>main/modal 
+        modal_frame_class="description_modal_frame" 
+        modal_container_class="description_modal_container"
+        close_button_class="close_description_modal"
+        }} 
             <span class="subsection_description_text">
                 {{{this.dataValues.description}}}
             </span>
@@ -37,11 +40,12 @@
                 form_class='update_subsection_description_form'
                 redirect=department
                 collumn='description'
-                input_value=this.dataValues.name
+                input_value=this.dataValues.description
+                input_style='height: 200px; min-width: 100%; width: 900px'
             }}
 
             {{>edition/button/edit class="edit_section update_subsection_description"}}
-        </div>
+        {{/main/modal}} 
 
     <!--#region items-->
     <ul class="mainUl">
@@ -52,3 +56,5 @@
     </div>
 </div>
 {{/if}}
+
+<script type="module" src="/js/main/subsection_modal.js"></script>

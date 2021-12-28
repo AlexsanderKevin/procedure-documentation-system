@@ -17,13 +17,13 @@ function dynamic_modal(target_component, title_component, content_component){
         target[i].addEventListener('click', ()=>{
             modal.classList.toggle('show')
             modal_title.innerText = title[i].innerText
-            modal_content.innerHTML = content[i].innerHTML
+            // modal_content.innerHTML = content[i].innerHTML
         })
     }
 }
 
 // subsection description modal
-dynamic_modal('.subsection_about_button', '.subsection_name', '.subsection_description')
+// dynamic_modal('.subsection_about_button', '.subsection_name', '.subsection_description')
 
 function static_modal(target_component, title, content){
     const target = document.querySelectorAll(target_component)
