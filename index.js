@@ -424,6 +424,12 @@ const update_description = async(Model, new_description, target_id) => {
         {where: {id: target_id}}
     )
 }
+const update_content = async(Model, new_content, target_id) => {
+    const UPDATED_CONTENT = await Model.update(
+        {content: new_content},
+        {where: {id: target_id}}
+    )
+}
 const update_table = (target_table,target_collumn, Model, redirect_page)=>{
     app.post(`/update_${target_table}_${target_collumn}/:id/:redirect`, async(req, res)=>{
 
@@ -439,9 +445,14 @@ const update_table = (target_table,target_collumn, Model, redirect_page)=>{
                 case 'title':
                     update_title(Model, NEW_CONTENT, TARGET_ITEM)
                     break
+
                 case 'description':
                     update_description(Model, NEW_CONTENT, TARGET_ITEM)
                     break 
+
+                case 'content':
+                    update_content(Model, NEW_CONTENT, TARGET_ITEM)
+                    break
             }
             res.redirect(`/${redirect_page}/${req.params.redirect}`)
 
@@ -458,3 +469,6 @@ update_table('solution', 'title', ItemSolution, 'procedure')
 update_table('obs', 'title', ItemObs, 'procedure')
 update_table('issue', 'title', ItemIssue, 'procedure')
 update_table('procedure', 'description', Item, 'procedure')
+update_table('solution', 'content', ItemSolution, 'procedure')
+update_table('obs', 'content', ItemObs, 'procedure')
+update_table('issue', 'content', ItemIssue, 'procedure')

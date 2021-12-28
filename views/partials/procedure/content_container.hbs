@@ -29,7 +29,19 @@
                     {{>main/burger class='single_content_burger content_burger all_button'}}
                 </div>
                 <div class="content_text">
-                    <p>{{{this.dataValues.content}}}</p>
+                    <p class="solution_description_text">{{{this.dataValues.content}}}</p>
+
+                    {{>edition/forms/update/description
+                        target=../target
+                        id=this.dataValues.id
+                        form_class=../content_form_class
+                        redirect=../redirect
+                        collumn='content'
+                        input_value=this.dataValues.content
+                        input_style='height: 200px; min-width: 100%; width: 900px'
+                    }}
+
+                    {{>edition/button/edit class=../update_content_button_class}}
                 </div>
             </div>
         {{>@partial-block}}
