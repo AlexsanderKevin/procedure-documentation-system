@@ -6,7 +6,7 @@
         <h1>{{this.dataValues.name}}</h1>
         <span>{{../dataValues.name}}</span>
         {{#unless this.dataValues.adm}}
-            {{>edition/button/delete target='user'}}
+            {{>edition/button/delete target='user' class='user_trash'}}
         {{/unless}}
     </div>
     <div class="user_info">
