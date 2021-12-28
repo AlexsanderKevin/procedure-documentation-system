@@ -28,9 +28,13 @@ a:hover{
     --contrast_color: #ddd;
     --min_contrast_color: #aaa;
 
-    --sectionColor_1: #6495ED;
-    --sectionColor_2: #5fc751;
-    --sectionColor_3: #ecc14b;
+    --sectionColor_1: #8d64ed;
+    --sectionColor_2: #6495ED;
+    --sectionColor_3: #64e8ed;
+    --sectionColor_4: #5fc751;
+    --sectionColor_5: #bded64;
+    --sectionColor_6: #ecc14b;
+    --sectionColor_7: #ec7e4b;
 
     --errorColor: rgb(255, 121, 121);
 
