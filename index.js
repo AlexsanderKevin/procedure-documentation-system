@@ -438,21 +438,10 @@ const update_table = (target_table,target_collumn, Model, redirect_page)=>{
 
         try{
             switch(target_collumn){
-                case 'name': 
-                    update_name(Model, NEW_CONTENT, TARGET_ITEM)
-                    break
-
-                case 'title':
-                    update_title(Model, NEW_CONTENT, TARGET_ITEM)
-                    break
-
-                case 'description':
-                    update_description(Model, NEW_CONTENT, TARGET_ITEM)
-                    break 
-
-                case 'content':
-                    update_content(Model, NEW_CONTENT, TARGET_ITEM)
-                    break
+                case 'name': update_name(Model, NEW_CONTENT, TARGET_ITEM); break
+                case 'title': update_title(Model, NEW_CONTENT, TARGET_ITEM); break
+                case 'description': update_description(Model, NEW_CONTENT, TARGET_ITEM); break 
+                case 'content': update_content(Model, NEW_CONTENT, TARGET_ITEM); break
             }
             res.redirect(`/${redirect_page}/${req.params.redirect}`)
 
@@ -472,3 +461,4 @@ update_table('procedure', 'description', Item, 'procedure')
 update_table('solution', 'content', ItemSolution, 'procedure')
 update_table('obs', 'content', ItemObs, 'procedure')
 update_table('issue', 'content', ItemIssue, 'procedure')
+update_table('subsection', 'description', ItemSubsection, 'home')
