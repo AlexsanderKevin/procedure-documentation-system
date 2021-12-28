@@ -22,7 +22,19 @@
             </div>
 
             <div class="item_content_text">
-                <p>{{{this.dataValues.description}}}</p>
+                <p class="procedure_description_text">{{{this.dataValues.description}}}</p>
+
+                {{>edition/forms/update/description
+                    target='procedure'
+                    id=this.dataValues.id
+                    form_class='update_procedure_description_form'
+                    redirect=this.dataValues.id
+                    collumn='description'
+                    input_value=this.dataValues.description
+                    input_style='height: 300px; min-width: 100%; width: 900px'
+                }}
+
+                {{>edition/button/edit class="edit_section update_procedure_description"}}
             </div>           
         </div>
         {{/if}}

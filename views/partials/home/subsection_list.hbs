@@ -28,7 +28,19 @@
         </div>
         
         <div class="subsection_description">
-            {{{this.dataValues.description}}}
+            <span class="subsection_description_text">
+                {{{this.dataValues.description}}}
+            </span>
+            {{>edition/forms/update/description
+                target='subsection'
+                id=this.dataValues.id
+                form_class='update_subsection_description_form'
+                redirect=department
+                collumn='description'
+                input_value=this.dataValues.name
+            }}
+
+            {{>edition/button/edit class="edit_section update_subsection_description"}}
         </div>
 
     <!--#region items-->

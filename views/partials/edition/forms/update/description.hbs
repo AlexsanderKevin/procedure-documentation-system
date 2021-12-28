@@ -1,0 +1,14 @@
+<form id="update_{{target}}_{{id}}_form" class="form_2 update_form title {{form_class}}" action="/update_{{target}}_{{collumn}}/{{this.dataValues.id}}/{{redirect}}" method="POST" style="padding: 0 10px 0 10px;">
+
+    {{>forms/textarea_box name='new_content' value=input_value input_style=input_style}}
+    <div class="button_container_2">
+        <button type="submit">
+            <img src="/img/icon/diskette.png" alt="save_change" class="icon_button all_button">
+            
+        </button>
+        <button class="close_update_{{target}}_form" type="reset">
+            <img src="/img/icon/close.png" alt="discard_changes" class="icon_button all_button">
+
+        </button>
+    </div>
+</form>

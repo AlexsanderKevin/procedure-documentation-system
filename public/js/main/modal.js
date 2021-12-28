@@ -17,7 +17,7 @@ function dynamic_modal(target_component, title_component, content_component){
         target[i].addEventListener('click', ()=>{
             modal.classList.toggle('show')
             modal_title.innerText = title[i].innerText
-            modal_content.innerText = content[i].innerText
+            modal_content.innerHTML = content[i].innerHTML
         })
     }
 }
