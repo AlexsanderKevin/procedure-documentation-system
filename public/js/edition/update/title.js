@@ -14,7 +14,7 @@ const update_form_interaction = (buttons, forms, names, delete_buttons) => {
             NAMES[i].classList.add('hide')
             BUTTONS[i].classList.add('hide')
             
-            on_click(DELETE_BUTTONS[i], ()=>{
+            DELETE_BUTTONS[i].addEventListener('click', ()=>{
                 FORMS[i].classList.add('hide')
                 BUTTONS[i].classList.remove('hide')
                 NAMES[i].classList.remove('hide')
@@ -35,6 +35,6 @@ updatable_targets.forEach(target => {
         `.update_${target}_title`,
         `.update_${target}_title_form`,
         `.${target}_title_text`,
-        `.close_update_${target}_title`
+        `.close_update_${target}_form`
     )
 })
