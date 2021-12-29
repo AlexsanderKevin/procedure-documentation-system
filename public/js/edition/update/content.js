@@ -1,4 +1,5 @@
 import { get, on_click } from "/lib/main.js"
+import {this_user} from '/js/profile/this_user.js'
 
 const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     const BUTTONS = get(buttons)
@@ -7,19 +8,22 @@ const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     const DELETE_BUTTONS = get(delete_buttons)
     FORMS.forEach(form => form.classList.add('hide'))
 
-    for(let i = 0; i<BUTTONS.length; i++){
+    if(this_user.adm){
 
-        BUTTONS[i].addEventListener('click', ()=>{
-            FORMS[i].classList.remove('hide')
-            CONTENTS[i].classList.add('hide')
-            BUTTONS[i].classList.add('hide')
-            
-            DELETE_BUTTONS[i].addEventListener('click', ()=>{
-                FORMS[i].classList.add('hide')
-                BUTTONS[i].classList.remove('hide')
-                CONTENTS[i].classList.remove('hide')
+        for(let i = 0; i<BUTTONS.length; i++){
+    
+            BUTTONS[i].addEventListener('click', ()=>{
+                FORMS[i].classList.remove('hide')
+                CONTENTS[i].classList.add('hide')
+                BUTTONS[i].classList.add('hide')
+                
+                DELETE_BUTTONS[i].addEventListener('click', ()=>{
+                    FORMS[i].classList.add('hide')
+                    BUTTONS[i].classList.remove('hide')
+                    CONTENTS[i].classList.remove('hide')
+                })
             })
-        })
+        }
     }
 }
 const updatable_targets = [
