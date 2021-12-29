@@ -1,11 +1,14 @@
 {{#each departments}}
 {{#each this.users}}
 <div class="user_info_container">
-    <div>
+    <div class="user_info_subcontainer">
         <div class="user_info_header">
             <img class="user_pic" src="/img/icon/account.png" alt="">
             <h1>{{this.dataValues.name}}</h1>
             <span>{{../dataValues.name}}</span>
+
+            {{>edition/button/edit class="edit_section update_user_button"}}
+
             {{#unless this.dataValues.adm}}
                 {{>edition/button/delete target='user' class='user_trash'}}
             {{/unless}}

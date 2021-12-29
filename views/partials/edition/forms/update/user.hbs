@@ -1,4 +1,4 @@
-<form class="form_2" action="/update_user/{{this.dataValues.id}}" method="POST" id="update_user_{{this.dataValues.id}}">
+<form class="form_2 update_user_form" action="/update_user/{{this.dataValues.id}}" method="POST" id="update_user_{{this.dataValues.id}}">
     {{>forms/input_box name="new_name" value=this.dataValues.name label="Nome"}}
     <hr>
     <div style="width: 100%; justify-content: space-between; gap: 20px;">
@@ -18,23 +18,43 @@
         </div>
 
         <div id="permission_container" class="checkboxes_container">
-            {{>forms/checkbox_box 
-            input_class="permission_checkbox" 
-            name="new_adm_permission" 
-            label="ADM"
-            id=this.dataValues.id
-            }}
-            {{>forms/checkbox_box 
-            input_class="permission_checkbox" 
-            name="new_editor_permission" 
-            label="Editor"
-            id=this.dataValues.id
-            }}
+            {{#if this.dataValues.adm}}
+                {{>forms/checkbox_box 
+                input_class="permission_checkbox" 
+                name="new_adm_permission" 
+                label="ADM"
+                id=this.dataValues.id
+                checked="checked"
+                }}
+            {{else}}
+                {{>forms/checkbox_box 
+                input_class="permission_checkbox" 
+                name="new_adm_permission" 
+                label="ADM"
+                id=this.dataValues.id
+                }}
+            {{/if}}
+
+            {{#if this.dataValues.editor}}
+                {{>forms/checkbox_box 
+                input_class="permission_checkbox" 
+                name="new_editor_permission" 
+                label="Editor"
+                id=this.dataValues.id
+                checked="checked"
+                }}
+            {{else}}
+                {{>forms/checkbox_box 
+                input_class="permission_checkbox" 
+                name="new_editor_permission" 
+                label="Editor"
+                id=this.dataValues.id
+                }}
+            {{/if}}
         </div>
     </div>
-    <hr>
     <div class="button_container">
-        <button type="reset">Cancelar</button>
-        <button type="submit">Pronto</button>
+        <button type="reset" class=" all_button close_update_user_form">Cancelar</button>
+        <button type="submit" class="all_button">Pronto</button>
     </div>
 </form>
