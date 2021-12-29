@@ -462,3 +462,57 @@ update_table('solution', 'content', ItemSolution, 'procedure')
 update_table('obs', 'content', ItemObs, 'procedure')
 update_table('issue', 'content', ItemIssue, 'procedure')
 update_table('subsection', 'description', ItemSubsection, 'home')
+
+const update_adm_permission = async(new_permission, target_id)=>{
+        if(new_permission){
+            const UPDATED_PERMISSION = await User.update(
+                {adm: new_permission},
+                {where: {id: target_id}}
+            )
+        }else{
+            const UPDATED_PERMISSION = await User.update(
+                {adm: false},
+                {where: {id: target_id}}
+            )
+        }
+}
+const update_editor_permission = async(new_permission, target_id)=>{
+        if(new_permission){
+            const UPDATED_PERMISSION = await User.update(
+                {editor: new_permission},
+                {where: {id: target_id}}
+            )
+        }else{
+            const UPDATED_PERMISSION = await User.update(
+                {editor: false},
+                {where: {id: target_id}}
+            )
+        }
+}
+
+app.post('/update_user/:id', async(req, res)=>{
+
+    const USER_ID = req.params.id
+    const NEW_NAME = req.body.new_name
+    const NEW_USERNAME = req.body.new_username
+    const NEW_DEPARTMENT_ID = req.body.new_department_id
+    const NEW_ADM_PERMISSION = req.body.new_adm_permission
+    const NEW_EDITOR_PERMISSION = req.body.new_editor_permission
+
+    try{
+        const UPDATED_USER = await User.update(
+            {
+                name: NEW_NAME,
+                username: NEW_USERNAME,
+                departmentId: NEW_DEPARTMENT_ID,
+            },
+            {where: {id: USER_ID}}
+        )
+        update_adm_permission(NEW_ADM_PERMISSION, USER_ID)
+        update_editor_permission(NEW_EDITOR_PERMISSION, USER_ID)
+
+        res.redirect('/profile')
+    }catch{
+        res.render('error')
+    }
+})

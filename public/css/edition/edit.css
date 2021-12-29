@@ -64,3 +64,7 @@ form div.input_box input{
 #add_user_form #permission_container input{
     display: none;
 }
+.checkbox_container input:checked ~ label{
+    background-color: var(--contrast_color);
+    color: var(--gradient_color_1);
+}

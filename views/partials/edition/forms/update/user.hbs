@@ -1,0 +1,35 @@
+<form class="form_2" action="/update_user/{{this.dataValues.id}}" method="POST">
+    {{>forms/input_box name="new_name" value=this.dataValues.name label="Nome"}}
+    <hr>
+    <div style="width: 100%; justify-content: space-between; gap: 20px;">
+        {{>forms/input_box 
+        type="text" 
+        name="new_username" 
+        value=this.dataValues.username 
+        label="Usuário"
+        }}
+        <div style="width: 120px;">
+            {{>forms/input_box 
+            type="number" 
+            name="new_department_id" 
+            label="Dep" 
+            value=this.dataValues.departmentId
+            }}
+        </div>
+
+        <div id="permission_container" class="checkboxes_container">
+            {{>forms/checkbox_box 
+            input_class="permission_checkbox" 
+            name="new_adm_permission" 
+            label="ADM"
+            }}
+
+            {{>forms/checkbox_box input_class="permission_checkbox" name="new_editor_permission" label="Editor"}}
+        </div>
+    </div>
+    <hr>
+    <div class="button_container">
+        <button type="reset">Cancelar</button>
+        <button type="submit">Pronto</button>
+    </div>
+</form>
