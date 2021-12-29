@@ -50,7 +50,6 @@ updatable_targets.forEach(target => {
         `.close_update_description_${target}_form`
     )
 })
-
 update_form_interaction(
     '.update_user_button',
     '.update_user_form',
