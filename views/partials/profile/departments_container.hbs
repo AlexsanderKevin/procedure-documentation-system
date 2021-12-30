@@ -6,7 +6,7 @@
 
     {{#departments}}
     <div class="department_link_container">
-        <a href="/home/{{this.dataValues.id}}" class="all_button department_link">{{this.dataValues.name}}</a>
+        <a href="/home/{{this.dataValues.id}}" class="all_button department_link">{{>id_span}}{{this.dataValues.name}} </a>
         {{#unless this.item_sections}}
             {{>edition/button/delete id=this.dataValues.id target='department' class="department_trash"}}
         {{/unless}}

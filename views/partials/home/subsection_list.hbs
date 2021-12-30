@@ -5,8 +5,11 @@
             <button class="subsection_about_button section_color_{{department}}">
                 ?
             </button>
+
             <h3 class="subsection_name section_color_{{department}}">
+                
                 <span class="subsection_title_text">
+                    {{>id_span}}
                     {{this.dataValues.name}}
                 </span>
                 <!-- edit subsection title form -->
@@ -23,6 +26,7 @@
                 <!-- trash button -->
                 {{>edition/button/delete id=this.dataValues.id target='subsection' redirect=department class="delete_subsection"}}
             </h3>
+
             {{>main/burger class = 'subsection_burger'}}
 
         </div>

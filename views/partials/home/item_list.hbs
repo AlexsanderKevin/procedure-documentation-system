@@ -4,6 +4,7 @@
     <h4 class="itemList section_color_{{department}} item_name">
         <a href="/procedure/{{this.dataValues.id}}" >
             <span class="procedure_title_text">
+                {{>id_span}}
                 {{this.dataValues.title}}
             </span>
         </a>
@@ -26,6 +27,7 @@
 <div class="single_item_container">                        
     <h4 class="emptyItemList item_name">
         <span class="procedure_title_text emptyItemList_title">
+            <span class="id">{{this.dataValues.id}}</span>
             {{this.dataValues.title}}
         </span>
         <!-- edit subsection title form -->

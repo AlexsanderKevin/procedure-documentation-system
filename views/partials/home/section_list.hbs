@@ -1,8 +1,13 @@
 {{#if this.dataValues.approved}}
 <section class="item_section" id='{{this.dataValues.name}}'>
     <div class='editable section_title section_color_{{this.dataValues.departmentId}}'>
+
         <h2 id="section_{{this.dataValues.id}}_title_cotainer" class="section_name section_color_{{this.dataValues.departmentId}}">
-            <span class="section_title_text" id="section_{{this.dataValues.id}}_title">{{this.dataValues.name}}</span>
+
+            <span class="section_title_text" id="section_{{this.dataValues.id}}_title">
+                {{>id_span}}
+                {{this.dataValues.name}}
+            </span>
             <!-- edit section title form-->
             {{>edition/forms/update/title
                 target='section'
