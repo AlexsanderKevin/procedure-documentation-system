@@ -6,7 +6,7 @@ const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     const FORMS = get(forms)
     const CONTENTS = get(contents)
     const DELETE_BUTTONS = get(delete_buttons)
-    FORMS.forEach(form => form.classList.add('hide'))
+    // FORMS.forEach(form => form.classList.add('hide'))
 
     if(this_user.adm){
 
@@ -14,8 +14,8 @@ const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     
             BUTTONS[i].addEventListener('click', ()=>{
                 FORMS[i].classList.remove('hide')
-                BUTTONS[i].classList.add('hide')
                 CONTENTS[i].classList.add('hide')
+                BUTTONS[i].classList.add('hide')
                 
                 DELETE_BUTTONS[i].addEventListener('click', ()=>{
                     FORMS[i].classList.add('hide')
