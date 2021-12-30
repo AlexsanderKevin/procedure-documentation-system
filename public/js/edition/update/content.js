@@ -14,8 +14,8 @@ const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     
             BUTTONS[i].addEventListener('click', ()=>{
                 FORMS[i].classList.remove('hide')
-                CONTENTS[i].classList.add('hide')
                 BUTTONS[i].classList.add('hide')
+                CONTENTS[i].classList.add('hide')
                 
                 DELETE_BUTTONS[i].addEventListener('click', ()=>{
                     FORMS[i].classList.add('hide')
