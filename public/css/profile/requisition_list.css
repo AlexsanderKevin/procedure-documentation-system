@@ -1,5 +1,6 @@
 #profile #requisition_list_container{
     color:var(--contrast_color);
+    animation: var(--slide_and_fade);
 }
 #profile #user_list_container #list_header{
     width: 100%;
