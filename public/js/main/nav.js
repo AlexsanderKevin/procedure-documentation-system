@@ -1,30 +1,24 @@
-//arrays
-const section_links = document.querySelectorAll('.section_links')
-const subsection_links = document.querySelectorAll('.subsection_links')
+const SECTION_LINKS = document.querySelectorAll('.section_links_container')
+SECTION_LINKS.forEach(link => {
 
-// show subsection links when click on section links
-for(let i = 0; i < section_links.length; i ++){
-    section_links[i].addEventListener('click', () => {
-        subsection_links[i].classList.toggle('show')
-        subsection_links[i].classList.toggle('while_hidden')
-    })
-}
+    const SUBSECTION_LINKS_CONTAINER = link.querySelector('.subsection_links_container')
 
-function nav_to_content(nav_component, content_component, anchor_component, show_nav_class, show_content_class){
-    const nav = document.querySelector(nav_component)
-    const content = document.querySelectorAll(content_component)
-    const anchor = document.querySelectorAll(anchor_component)
-
-    for(let i = 0; i < content.length; i++){
-        anchor[i].addEventListener('click', ()=>{
-            //hide nav
-            nav.classList.toggle(show_nav_class)
-            //open content
-            content[i].classList.add(show_content_class)
-        })
+    const show_links = () => {
+        SUBSECTION_LINKS_CONTAINER.classList.toggle('show')
+        SUBSECTION_LINKS_CONTAINER.classList.toggle('while_hidden')
     }
-}
+    link.addEventListener('click', show_links)
+})
+const nav_to_content = (nav_component, content_component, anchor_component, show_nav_class, show_content_class) => {
+    const NAV = document.querySelector(nav_component)
+    const CONTENTS = document.querySelectorAll(content_component)
+    const ANCHORS = NAV.querySelectorAll(anchor_component)
 
+    ANCHORS.forEach((anchor, index) => anchor.addEventListener('click', ()=>{
+        NAV.classList.remove(show_nav_class)
+        CONTENTS[index].classList.add(show_content_class)
+    }))
+}
 // home nav
 nav_to_content('.nav_links', '.item_subsection_content', '.subsection_anchor', 'show', 'show_items')
 //procedure nav

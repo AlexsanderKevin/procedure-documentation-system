@@ -8,10 +8,10 @@
         <div class="nav_div">
             {{#item_sections}}
             {{#if this.dataValues.approved}}
-                <li>
+                <li class="section_links_container">
                     <h1 class="section_links all_button">{{this.dataValues.name}}</h1>
 
-                    <div class="subsection_links while_hidden">
+                    <div class="subsection_links subsection_links_container while_hidden">
                         {{#each this.dataValues.item_subsections}}
                         {{#if this.dataValues.approved}}
                             <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
