@@ -21,7 +21,7 @@
 
     box-shadow: 3px 3px 8px black;
 
-    animation: open_modal 0.5s;
+    animation: var(--slide_and_fade);
 }
 .block_modal_frame{
     width: 60vw;

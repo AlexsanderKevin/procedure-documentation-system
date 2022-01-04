@@ -40,6 +40,8 @@ a:hover{
 
     --standard_shadow: 0 0 5px black;
     --standard_shadow_strong: 0 0 10px black;
+
+    --slide_and_fade: slide_and_fade .5s forwards
 }
 
 ::-webkit-scrollbar{
@@ -138,4 +140,14 @@ ul{
 span.id{
     opacity: 0.4;
     margin-right: 10px;
+}
+
+@keyframes slide_and_fade {
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
