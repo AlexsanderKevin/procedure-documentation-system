@@ -29,7 +29,11 @@ function ds_burger(button_component, content_component, show_class){
         const PARENT = button.parentElement.parentElement
         const CONTENT = PARENT.querySelector(content_component)
 
-        button.addEventListener('click', ()=>{CONTENT.classList.toggle(show_class)})
+        const show_content = ()=>{
+            CONTENT? CONTENT.classList.toggle(show_class):false
+        }
+
+        button.addEventListener('click', show_content)
     })
 }
 // item subsection burger
