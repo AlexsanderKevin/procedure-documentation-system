@@ -66,15 +66,27 @@
 #profile #this_user_info h1{
     font-size: 17pt;
 }
+#profile #departments_container{
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
 #profile .department_link_container{
     width: 100%;
     border: solid var(--contrast_color);
-    border-width: 0 0 1px 0;
+    border-width: 0 5px 0px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 5px 20px 5px 20px;
+    background: var(--gradient_color_3);
 }
+#profile .department_link_container:hover{
+    border-width: 0 40px 0 40px;
+    transition: .3s;
+}
+
 #profile .department_link_container .department_trash img{
     width: 20px;
     height: 20px;
