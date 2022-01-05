@@ -1,28 +1,17 @@
-<nav id = "menu" class="section_nav">
-    <div class="nav_links">
-        <div class="nav_div">
-            <a href="/profile" class="a_container profile_link">
-                <img src="/img/icon/account.png" alt="">
-            </a>
-        </div>
-        <div class="nav_div">
-            {{#item_sections}}
-            {{#if this.dataValues.approved}}
-                <div class="section_links_container">
-                    <span class="section_links all_button">{{this.dataValues.name}}</span>
+{{#>nav/default}}
+    {{#item_sections}}
+    {{#if this.dataValues.approved}}
+        <div class="section_links_container">
+            <span class="section_links all_button">{{this.dataValues.name}}</span>
 
-                    <div class="subsection_links subsection_links_container while_hidden">
-                        {{#each this.dataValues.item_subsections}}
-                        {{#if this.dataValues.approved}}
-                            <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
-                        {{/if}}
-                        {{/each}}
-                    </div>
-                </div>
-            {{/if}}
-            {{/item_sections}}
+            <div class="subsection_links subsection_links_container while_hidden">
+                {{#each this.dataValues.item_subsections}}
+                {{#if this.dataValues.approved}}
+                    <a class = "all_button subsection_anchor" href = '#{{this.dataValues.name}}'>{{this.dataValues.name}}</a>
+                {{/if}}
+                {{/each}}
+            </div>
         </div>
-    </div>
-</nav>
-
-{{>main/burger id = 'nav_burger' class = 'burger'}}
+    {{/if}}
+    {{/item_sections}}
+{{/nav/default}}

@@ -1,24 +1,15 @@
- <nav id = "menu" class="section_nav procedure_nav">
-    <div class="nav_links">
-        <div class="nav_div">
-            <a href="/profile" class="a_container">
-                <img src="/img/icon/account.png" alt="">
-            </a>
-        </div>
-        <div class="nav_div">
-            <a class="all_button procedure_nav_anchor" href="#description">Descrição</a>
-                
-            {{#if item_solutions}}
-                <a class="all_button procedure_nav_anchor" href="#solutions">Soluções</a>
-            {{/if}}
-            {{#if item_obs}}
-                <a class="all_button procedure_nav_anchor" href="#obs">Observações</a>
-            {{/if}}
-            {{#if item_issues}}
-                <a class="all_button procedure_nav_anchor" href="#issues">Problemas</a>
-            {{/if}}
-        </div>
-    </div>
-</nav>
+{{#>nav/default}}
+    {{>nav/procedure_content_link label='Dercrição' target='description'}}
+        
+    {{#if item_solutions}}
+        {{>nav/procedure_content_link label='Soluções' target='solutions'}}
+    {{/if}}
 
-{{>main/burger id = 'nav_burger' class = 'burger'}}
+    {{#if item_obs}}
+        {{>nav/procedure_content_link label='Observações' target='obs'}}
+    {{/if}}
+
+    {{#if item_issues}}
+        {{>nav/procedure_content_link label='Problemas' target='issues'}}
+    {{/if}}
+{{/nav/default}}
