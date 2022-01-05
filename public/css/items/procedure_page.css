@@ -15,7 +15,7 @@
     padding-bottom: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,34 +24,39 @@
 
 .item_content_container{
     width: 100%;
-    padding: 15px;
-    padding-right: 50px;
-    padding-left: 50px;
     margin: 25px;
-
+    
     animation: var(--slide_and_fade);
+    
 }
 
 .item_content_text{
-    padding: 10px;
-
+    
     display: none;
     flex-wrap: wrap;
+    gap: 20px;
     
-    justify-content: center;
-
-    border: solid var(--contrast_color);
-    border-width: 2px 0 0 0;
+    justify-content: flex-start;
+    
+    padding: 50px;
 }
 
 .item_content_header{
+    border: solid var(--contrast_color);
+    border-width: 0px 0px 0px 8px;
+
     position: relative;
+    /* background: var(--gradient_color_2); */
+
+    padding: 15px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .page_content_burger{
     position: absolute;
-    top: 5px;
-    right: -30px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
 }
 
@@ -69,7 +74,6 @@
 
 .single_container{
     background-color: var(--gradient_color_2);
-    margin: 10px;
     padding: 20px;
 
     justify-content: center;
@@ -85,6 +89,14 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 10px;
+    
+    width: 100%;
+
+    border: solid var(--contrast_color);
+    border-width: 0px 0px 0px 6px ;
+}
+.single_container .inner_div{
+    width: 100%;
 }
 
 .content_header{
@@ -93,14 +105,13 @@
 }
 
 .content_text{
-    border: solid var(--contrast_color);
-    border-width: 1px 0 0 0;
-
     margin-top: 15px;
     padding-top: 15px;
 
     display: none;
     flex-direction: column;
+
+    width: 100%;
 }
 
 .show_text{
