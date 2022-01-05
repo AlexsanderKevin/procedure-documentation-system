@@ -83,7 +83,7 @@
     background: var(--gradient_color_3);
 }
 #profile .department_link_container:hover{
-    border-width: 0 40px 0 40px;
+    border-width: 0 20px 0 20px;
     transition: .3s;
 }
 
