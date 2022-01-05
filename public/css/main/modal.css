@@ -17,39 +17,39 @@
     width: 60vw;
     min-width: 400px;
     background-color: var(--gradient_color_2);
-    padding: 20px;
-
+    
     box-shadow: 3px 3px 8px black;
 
     animation: var(--slide_and_fade);
+    border: solid var(--contrast_color);
+    border-width: 0 0 0 8px;
 }
 .block_modal_frame{
     width: 60vw;
     min-width: 400px;
     background: none;
     padding: 20px;
-
+    
     animation: open_modal 0.5s;
 }
 
 .modalHeader{
-    border: solid var(--contrast_color);
-    border-width: 0 0 3px 0 ;
-
     display: flex;
     position: relative;
     justify-content: center;
+    background: var(--gradient_color_3);
+    padding: 10px;
 }
 
 .modalCloseButton{
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 10px;
+    right: 10px;
     border-radius: 4px;
     padding: 5px;
     width: 40px;
     height: 40px;
-    background-color: var(--gradient_color_2);
+    background: none;
 
     border-width: 0;
 
