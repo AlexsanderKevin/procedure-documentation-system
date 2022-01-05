@@ -10,8 +10,7 @@ if(MODAL){
         MODAL.classList.remove('show')
     })
     const static_modal = (target_component, title, content) => {
-        const target = document.querySelectorAll(target_component)
-    
+
         const TARGETS = document.querySelectorAll(target_component)
         TARGETS.forEach(target => target.addEventListener('click', ()=>{
             MODAL.classList.toggle('show')
