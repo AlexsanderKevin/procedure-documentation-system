@@ -116,6 +116,11 @@ nav {
 }
 .subsection_anchor{
     font-weight: normal;
+    font-family: monospace;
+}
+.subsection_anchor::before{
+    content: '-';
+    left: ;
 }
 .profile_link{
     align-self: flex-end;

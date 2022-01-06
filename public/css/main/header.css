@@ -17,6 +17,8 @@
 
 .headerTitle{
     color: var(--gradient_color_5);
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
 }
 
 .home_button{

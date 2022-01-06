@@ -72,11 +72,6 @@ hr{
     color: var(--contrast_color);
 }
 
-.itemTitle{
-    font-size: 30pt;
-    margin: auto;
-}
-
 .itemHeader{
     padding-left: 30px;
     padding-right: 30px;
@@ -105,5 +100,11 @@ hr{
     background-color: var(--gradient_color_1);
     margin: 10px;
 }
+.procedure_title_text{
+    font-size: 20pt;
+    font-family: monospace;
+    margin: auto;
 
-
+    font-weight: normal;
+    text-align: center;
+}
