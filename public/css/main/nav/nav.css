@@ -117,10 +117,12 @@ nav {
 .subsection_anchor{
     font-weight: normal;
     font-family: monospace;
+    letter-spacing: none;
 }
 .subsection_anchor::before{
     content: '-';
-    left: ;
+    left: -10px;
+    display: inline-block;
 }
 .profile_link{
     align-self: flex-end;
