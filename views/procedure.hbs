@@ -2,7 +2,7 @@
 {{#each this.item_sections}}
 {{#each this.item_subsections}}
 {{#each this.items}}
-<section id="content">
+<section id="procedure_page_container">
     {{>main/header title = this.dataValues.title}}
     {{>main/home_button}}
     {{>nav/procedure}}
@@ -16,13 +16,15 @@
         {{#if this.dataValues.description}}
         <div class="item_content_container">
             <div class="item_content_header">
-                <h2 id="description">Descrição</h2>
+                <h2 id="description" class=" content_title_text ">
+                    Descrição
+                </h2>
 
                 {{>main/burger class='page_content_burger content_burger'}}
             </div>
 
             <div class="item_content_text showed_content">
-                <p class="procedure_description_text">{{{this.dataValues.description}}}</p>
+                <p class=" procedure_description_text single_content_text">{{{this.dataValues.description}}}</p>
 
                 {{>edition/forms/update/description
                     target='procedure'
@@ -99,7 +101,7 @@
             {{/procedure/content_container}}
         {{/if}}
     </div>
-    <a href="/home/{{../../../dataValues.id}}">Home</a>
+    <a href="/home/{{../../../dataValues.id}}" id="home_link">Home</a>
 </section>
 {{/each}}
 {{/each}}
