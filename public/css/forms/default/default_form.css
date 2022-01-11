@@ -21,10 +21,13 @@ form{
 
 .form_header h1{
     letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 form div{
     display: flex;
     justify-content: space-around;
 }
-
+form label {
+    font-family: monospace;
+}

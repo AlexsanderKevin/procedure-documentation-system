@@ -8,6 +8,8 @@ form textarea{
     outline: none;
     color: var(--contrast_color);
     width: 500px;
+
+    font-family: monospace;
 }
 
 .textarea label{
@@ -15,4 +17,6 @@ form textarea{
     position: absolute;
     top: -25px;
     left: 0;
+
+    font-family: monospace;
 }
