@@ -137,9 +137,6 @@
 .single_content_text{
     font-family: monospace;
 }
-#procedure_page_container{
-    margin-top: 100px;
-}
 #home_link{
     position: fixed;
     left: 20px;
@@ -155,4 +152,7 @@
 #home_link:hover{
     border-color: var(--contrast_color);
     transition: .3s;
+}
+#procedure_page_inner_container{
+    margin-top: 100px;
 }
