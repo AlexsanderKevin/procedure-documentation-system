@@ -151,3 +151,6 @@ span.id{
         transform: translateX(0);
     }
 }
+p {
+    font-size: 15pt;
+}
