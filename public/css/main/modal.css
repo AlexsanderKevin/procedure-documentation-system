@@ -69,6 +69,9 @@
 
 .modal_title{
     letter-spacing: 1px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30pt;
 }
 
 .error{
@@ -78,6 +81,9 @@
 .modalContent{
     color: var(--contrast_color);
     border-width: 0 0 0 0 ;
+
+    font-family: monospace;
+    font-size: 15pt;
 }
 
 @keyframes open_modal {
