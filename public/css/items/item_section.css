@@ -10,20 +10,16 @@
     padding: 10px;
     margin-top: 100px;
     margin-bottom: 50px;
-    /* border: solid ;
-    border-width: 0 0 3px 0; */
-
-    letter-spacing: 10px;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background: none;
 
 }
 .section_title_text{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 40pt;
+    font-size: 70pt;
 }
 
 .section_content{
