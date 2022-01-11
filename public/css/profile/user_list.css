@@ -107,3 +107,10 @@
     flex-direction: row;
     justify-content: space-between;
 }
+#profile .user_info_header .user_name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25pt;
+}
+#profile .user_info p {
+    font-family: monospace;
+}

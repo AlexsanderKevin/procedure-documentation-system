@@ -5,7 +5,7 @@
 #profile .side_column{
     height: 100%;
     width: 20%;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 #profile .side_column_container {
     padding: 10px;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,29 +25,33 @@
     border: solid var(--gradient_color_5);
     color: var(--contrast_color);
     width: 100%;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    
     box-shadow: var(--standard_shadow_strong);
-
+    
     position: relative;
 }
 #profile #departments_container .department_link{
     width: 100%;
-
     position: relative;
+
+    font-family: monospace;
+    font-weight: normal;
 }
 #profile #departments_container_header{
     font-size: 25pt;
     width: 100%;
     border: solid;
     border-width: 0 0 2px 0;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    font-family: 'Times New Roman', Times, serif;
 }
 #profile #left_column{
     position: sticky;
@@ -62,9 +66,15 @@
 #profile #this_user_info p{
     padding: 0;
     margin: 0;
+
+    font-family: monospace;
+}
+#profile #this_user_info p strong{
+    font-weight: normal;
 }
 #profile #this_user_info h1{
     font-size: 17pt;
+    font-family: 'Times New Roman', Times, serif;
 }
 #profile #departments_container{
     border: none;
@@ -81,6 +91,7 @@
     align-items: center;
     padding: 5px 20px 5px 20px;
     background: var(--gradient_color_3);
+
 }
 #profile .department_link_container:hover{
     border-width: 0 20px 0 20px;
