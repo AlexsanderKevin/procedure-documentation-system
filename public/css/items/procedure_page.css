@@ -39,7 +39,6 @@
     justify-content: flex-start;
     
     padding: 50px;
-    margin-bottom: 100px;
 }
 
 .item_content_header{
@@ -156,4 +155,5 @@
 }
 #procedure_page_inner_container{
     margin-top: 100px;
+    padding-bottom: 100px;
 }
