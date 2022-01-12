@@ -3,6 +3,10 @@
     padding-top: 20px;
     width: 90vw;
     position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 600px 600px 1fr;
 }
 
 .section_title{
@@ -16,6 +20,7 @@
     align-items: center;
     background: none;
 
+    grid-column: 2 / 4;
 }
 .section_title_text{
     font-family: 'Times New Roman', Times, serif;
@@ -26,9 +31,14 @@
 }
 
 .section_content{
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     justify-content: center;
+
+    grid-column: 2 / 4;
+
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 /* sections colors */
@@ -93,4 +103,15 @@
 }
 .section_name{
     position: relative;
+}
+@media (max-width: 1200px){
+    .item_section{
+        grid-template-columns: auto;
+    }
+    .section_title{
+        grid-template-columns: auto;
+    }
+    .section_content{
+        grid-template-columns: auto;
+    }
 }
