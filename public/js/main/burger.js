@@ -39,5 +39,4 @@ function ds_burger(button_component, content_component, show_class){
 // item subsection burger
 ds_burger('.subsection_burger', '.item_subsection_content', 'show_items')
 // procedure page
-ds_burger('.page_content_burger', '.item_content_text', 'show_text') // procedure sections
-ds_burger('.single_content_burger', '.content_text', 'show_text') // single content
+ds_burger('.page_content_burger', '.item_content_text', 'active') // procedure sections

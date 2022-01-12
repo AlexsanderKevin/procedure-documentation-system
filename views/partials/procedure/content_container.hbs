@@ -3,11 +3,11 @@
         <h2 id="{{id}}" class=" content_title_text ">{{title}}</h2>
         {{>main/burger class = 'page_content_burger content_burger all_button'}}
     </div>
-    <div class="item_content_text">
+    <div class="item_content_text ">
         {{#each category}}
         {{#if this.dataValues.approved}}
-        <div class="inner_div">
-        <div class="single_container showed_content ">
+        <div class="inner_div ">
+        <div class="single_container showed_content">
             <div class="inner_div">
                 <div class="content_header">
                     <h3>
@@ -27,7 +27,6 @@
 
                         {{>edition/button/edit class=../update_button_class}}
                     </h3>
-                    {{>main/burger class='single_content_burger content_burger all_button'}}
                 </div>
                 <div class="content_text">
                     <p class="{{../target}}_description_text single_content_text">
