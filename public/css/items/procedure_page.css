@@ -128,9 +128,13 @@
 .content_title_text{
     font-family: 'Times New Roman', Times, serif;
     font-size: 30pt;
+    color: var(--contrast_color);
 
+}
+.active .content_title_text {
     border: solid var(--min_contrast_color);
     border-width: 0px 0px 8px 0px;
+    color: var(--contrast_color);
 }
 .single_content_text{
     font-family: monospace;
@@ -140,6 +144,9 @@
     color: var(--min_contrast_color);
 
     cursor: pointer;
+}
+.inner_div.active .single_container h3{
+    color: var(--contrast_color);
 }
 .single_container h3::after{
     content: '▼';

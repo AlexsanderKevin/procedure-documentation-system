@@ -22,4 +22,4 @@ const nav_to_content = (nav_component, content_component, anchor_component, show
 // home nav
 nav_to_content('.nav_links', '.item_subsection_content', '.subsection_anchor', 'show', 'show_items')
 //procedure nav
-nav_to_content('.nav_links', '.item_content_text', '.procedure_nav_anchor', 'show', 'show_text')
+nav_to_content('.nav_links', '.item_content_text', '.procedure_nav_anchor', 'show', 'active')

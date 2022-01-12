@@ -40,3 +40,4 @@ function ds_burger(button_component, content_component, show_class){
 ds_burger('.subsection_burger', '.item_subsection_content', 'show_items')
 // procedure page
 ds_burger('.page_content_burger', '.item_content_text', 'active') // procedure sections
+ds_burger('.page_content_burger', '.item_content_container', 'active')
