@@ -2,6 +2,8 @@
 <div>
     <div id="{{this.dataValues.name}}" class="item_subsection section_color_{{department}}">
         <div class=" subsection_title">
+            <div class="inner_div">
+
             <button class="subsection_about_button section_color_{{department}}">
                 ?
             </button>
@@ -26,6 +28,7 @@
                 <!-- trash button -->
                 {{>edition/button/delete id=this.dataValues.id target='subsection' redirect=department class="delete_subsection"}}
             </h3>
+            </div>
 
             {{>main/burger class = 'subsection_burger'}}
 

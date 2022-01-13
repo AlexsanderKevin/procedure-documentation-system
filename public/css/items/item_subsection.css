@@ -37,6 +37,11 @@
     display: flex; 
     justify-content: space-between;
 }
+.subsection_title .inner_div{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
 
 .subsection_title a{
     font-size: 15pt;

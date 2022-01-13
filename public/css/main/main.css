@@ -139,7 +139,7 @@ ul{
 }
 span.id{
     opacity: 0.4;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 @keyframes slide_and_fade {
