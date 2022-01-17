@@ -4,8 +4,10 @@
     <div class="user_info_subcontainer">
         <div class="user_info_header">
             <img class="user_pic" src="/img/icon/account.png" alt="">
-            <h1 class="user_name">{{>id_span}}{{this.dataValues.name}}</h1>
-            <span>{{../dataValues.name}}</span>
+            <h1 class="user_name" >
+                {{>id_span}} <span data-info="name">{{this.dataValues.name}}</span> 
+            </h1>
+            <span data-info="department">{{../dataValues.name}}</span>
 
             {{>edition/button/edit class="edit_section update_user_button"}}
 
@@ -16,14 +18,14 @@
         <div class="user_info">
             <div class="main_info">
                 <p><strong>Usuário:</strong>  {{this.dataValues.username}}</p>
-                <p><strong>Cargo:</strong>  {{this.dataValues.cargo}}</p>
+                <p><strong>Cargo:</strong>  <span data-info="cargo">{{this.dataValues.cargo}}</span></p>
             </div>
             <div class="permission_tags_container">
                 {{#if this.dataValues.adm}}
-                    <span class="user_permission_tag">ADM</span>
+                    <span class="user_permission_tag" data-info="adm">ADM</span>
                 {{/if}}
                 {{#if this.dataValues.editor}}
-                    <span class="user_permission_tag">Editor</span>
+                    <span class="user_permission_tag" data-info="editor">Editor</span>
                 {{/if}}
             </div>
         </div>

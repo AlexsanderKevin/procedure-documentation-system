@@ -15,4 +15,4 @@ const {name: this_name,username:this_username, cargo: this_cargo, department: th
 this_name.innerText = user_name
 this_username.innerText = user_username
 this_cargo.innerText = user_cargo
-this_department.innerText = user_department
+// this_department.innerText = user_department

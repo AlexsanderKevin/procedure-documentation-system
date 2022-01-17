@@ -10,6 +10,50 @@
             <img id="user_quantity_icon" src="/img/icon/group.png" alt="">
         </div>
     </header>
+        <div class="filter_container">
+            <span class="filter_container_title">Filtro</span>
+
+            <select name="filter_by" id="filter_by">
+                <option value="">*Filtrar por:</option>
+                <option value="department">Departamento:</option>
+                <option value="cargo">Cargo:</option>
+                <option value="permission">Permissão:</option>
+                <option value="name">Nome:</option>
+            </select>
+
+            <select name="department_filter" id="department_filter" data-filter="select">
+                <option value="">*Selecionar depart:</option>
+                {{#each departments}}
+                    <option value="{{this.dataValues.name}}">{{this.dataValues.name}}</option>
+                {{/each}}
+            </select>
+
+            <select name="cargo_filter" id="cargo_filter" data-filter="select">
+                <option value="">*Selecionar cargo:</option>
+                <option value="Assistente Técnico 1">Assitente Técnico 1</option>
+                <option value="Assistente Técnico 2">Assitente Técnico 2</option>
+                <option value="Auxiliar de Produção">Auxiliar de Produção</option>
+                <option value="Encarregado">Encarregado</option>
+                <option value="Lider">Lider</option>
+                <option value="Técnico">Técnico</option>
+            </select>
+
+            <select name="permission_filter" id="permission_filter" data-filter="select">
+                <option value="">*Selecionar Permissão:</option>
+                <option value="adm">Administrador</option>
+                <option value="editor">Editor</option>
+                <option value="common">Comum</option>
+            </select>
+
+            {{#>forms/datalist name="filter_by_name" class="show" label="*Digite o nome"}}
+                {{#each departments}}
+                {{#each this.users}}
+                    <option value="{{this.dataValues.name}}">
+                {{/each}}
+                {{/each}}
+            {{/forms/datalist}}
+        </div>
+
     <div id="user_list_content" class="list_content">
         {{>edition/forms/user  class=""}}
         {{>@partial-block}}
