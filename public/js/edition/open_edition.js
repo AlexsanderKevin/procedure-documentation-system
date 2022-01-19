@@ -1,5 +1,5 @@
 import {get, on_click, close, open, on_change} from '../../lib/main.js'
-import {this_user} from '/js/profile/this_user.js'
+import {this_user} from '/js/modules/this_user.js'
 
 const bg_img = get('#edit_bg_img')
 const start_edition_button = get('#edition_mode_button')
