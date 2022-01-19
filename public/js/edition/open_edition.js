@@ -27,26 +27,19 @@ if(this_user.editor){
     on_change(add_options, ()=>{
         open(modal)
         switch(add_options.value){
-            case 'department': 
-                open(add_forms.add_department)
+            case 'department': open(add_forms.add_department)
                 break
-            case 'procedure': 
-                open(add_forms.add_procedure)
+            case 'procedure': open(add_forms.add_procedure)
                 break
-            case 'section': 
-                open(add_forms.add_section)
+            case 'section': open(add_forms.add_section)
                 break
-            case 'subsection': 
-                open(add_forms.add_subsection)
+            case 'subsection': open(add_forms.add_subsection)
                 break
-            case 'solution': 
-                open(add_forms.add_solution)
+            case 'solution': open(add_forms.add_solution)
                 break
-            case 'issue': 
-                open(add_forms.add_issue)
+            case 'issue': open(add_forms.add_issue)
                 break
-            case 'obs': 
-                open(add_forms.add_obs)
+            case 'obs': open(add_forms.add_obs)
                 break
         }
         // add_options.classList.add('hide')

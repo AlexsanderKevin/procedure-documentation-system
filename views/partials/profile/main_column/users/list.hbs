@@ -19,7 +19,6 @@
                 <option value="department">Departamento</option>
                 <option value="name">Nome</option>
                 <option value="permission">Permissão</option>
-                <option value="">Todos</option>
             </select>
 
             <select name="department_filter" id="department_filter" data-filter="department">
@@ -49,13 +48,14 @@
                 <option value="">Todos</option>
             </select>
 
-            {{#>forms/datalist name="filter_by_name" class="show" label="*Digite o nome"}}
+            {{!-- <input class="text_input" type="text" id="filter_name" list="name_filter" name="name_filter" placeholder="Digite o Nome" data-filter="name">
+            <datalist id="name_filter" name="name_filter">
                 {{#each departments}}
                 {{#each this.users}}
                     <option value="{{this.dataValues.name}}">
                 {{/each}}
                 {{/each}}
-            {{/forms/datalist}}
+            </datalist> --}}
         </div>
 
     <div id="user_list_content" class="list_content">

@@ -1,5 +1,4 @@
 const USER_COMPONENTS = document.querySelectorAll('.user_info_container')
-const SELECTS = document.querySelectorAll('[data-filter="select"]')
 
 const hide = target => target.classList.add('hide')
 const show = target => target.classList.remove('hide')
@@ -23,14 +22,21 @@ const filter_by = (select, selector) =>{
     })
 }
 
-const DEPARTMENT_SELECT = document.querySelector('#department_filter')
-DEPARTMENT_SELECT.addEventListener('change', ()=>{
-    filter_by(DEPARTMENT_SELECT, '[data-info="department"]')
-})
-const CARGO_SELECT = document.querySelector('#cargo_filter')
-CARGO_SELECT.addEventListener('change', ()=>{
-    filter_by(CARGO_SELECT, '[data-info="cargo"]')
-})
+function department_filter(){
+    const DEPARTMENT_SELECT = document.querySelector('#department_filter')
+    DEPARTMENT_SELECT.addEventListener('change', ()=>{
+        filter_by(DEPARTMENT_SELECT, '[data-info="department"]')
+    })
+}
+department_filter()
+
+function cargo_filter(){
+    const CARGO_SELECT = document.querySelector('#cargo_filter')
+    CARGO_SELECT.addEventListener('change', ()=>{
+        filter_by(CARGO_SELECT, '[data-info="cargo"]')
+    })
+}
+cargo_filter()
 
 const find_permissions = element => {
     const permissions = {
@@ -59,7 +65,16 @@ const filter_by_permission = target_permission => {
         }
     })
 }
-const PERMISSION_SELECT = document.querySelector('[data-filter="permission"]')
-PERMISSION_SELECT.addEventListener('change', ()=>{
-    filter_by_permission(PERMISSION_SELECT.value)
-})
+
+function permission_filter(){
+    const PERMISSION_SELECT = document.querySelector('[data-filter="permission"]')
+    PERMISSION_SELECT.addEventListener('change', ()=>{
+        filter_by_permission(PERMISSION_SELECT.value)
+    })
+}
+
+export default function init_filters(){
+    department_filter()
+    cargo_filter()
+    permission_filter()
+}

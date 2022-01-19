@@ -1,5 +1,5 @@
 import {get, on_click} from '/lib/main.js'
-import {this_user} from '/js/profile/this_user.js'
+import {this_user} from '/js/modules/this_user.js'
 
 const DEPARTMENT_MAIN_BUTTON = get('#main_delete_button.department')
 const DELETE_DEPARTMENT_BUTTONS = get('.department_trash')

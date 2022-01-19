@@ -1,5 +1,5 @@
 import {get, on_click, open} from '/lib/main.js'
-import {this_user} from '/js/profile/this_user.js'
+import {this_user} from '/js/modules/this_user.js'
 
 const MAIN_BUTTON = get('#main_edit_button')
 const EDITION_BUTTONS = [
