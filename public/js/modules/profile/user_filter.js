@@ -55,12 +55,15 @@ const filter_by_permission = target_permission => {
             case 'adm': 
                 permission.adm ? show(component) : false
                 break
+                
             case 'editor': 
                 permission.editor ? show(component) : false
                 break
+
             case 'common': 
                 !permission.adm && !permission.editor ? show(component) : false
                 break
+
             default: show(component); break
         }
     })

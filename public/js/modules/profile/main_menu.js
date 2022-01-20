@@ -3,7 +3,7 @@ import { this_user } from "../this_user.js"
 
 export default function init_menu(){
     const MENU = get('#main_menu')
-    if(!this_user.adm){MENU.classList.add('hide')}
+    if(this_user.adm != 'true'){MENU.remove()}
     
     if(MENU){
         const radios = [

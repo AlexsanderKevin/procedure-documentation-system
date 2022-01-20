@@ -1,4 +1,4 @@
-{{>edition/button/edition_mode}}
+{{>edition/button/edition_mode class=""}}
 <header id="edition_header" class="hide">
     <div id="edition_nav">
         <h1>Barra de Edição</h1>
@@ -10,7 +10,6 @@
                 </option>
                 {{>@partial-block}}         
             </select>
-            {{!-- {{>edition/button/add id="main_add_button" class="show"}} --}}
             {{>edition/button/main_delete class="" id="main_delete_button"}}
             {{>edition/button/main_edit class="" id="main_edit_button"}}
         </div>   
@@ -54,6 +53,5 @@
 
 <!--edition-->
 <script type="module" src="/js/edition/open_edition.js"></script>
-<script type="module" src="/js/edition/edit.js"></script>
 <script type="module" src="/js/edition/delete.js"></script>
 <script type="module" src="/js/edition/update/content.js"></script>
