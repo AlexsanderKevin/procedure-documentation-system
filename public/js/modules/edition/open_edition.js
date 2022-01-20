@@ -1,4 +1,4 @@
-import {get, on_click, close, open, on_change} from '../../lib/main.js'
+import {get, on_click, close, open, on_change} from '../../../lib/main.js'
 import {this_user} from '/js/modules/this_user.js'
 
 const bg_img = get('#edit_bg_img')

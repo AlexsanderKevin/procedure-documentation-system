@@ -7,26 +7,28 @@ const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     const CONTENTS = get(contents)
     const DELETE_BUTTONS = get(delete_buttons)
 
-    if(this_user.adm){
-
-        for(let i = 0; i<BUTTONS.length; i++){
-    
-            BUTTONS[i].addEventListener('click', ()=>{
-                FORMS[i].classList.remove('hide')
-                CONTENTS[i].classList.add('hide')
-                BUTTONS[i].classList.add('hide')
-                
-                DELETE_BUTTONS[i].addEventListener('click', ()=>{
-                    FORMS[i].classList.add('hide')
-                    BUTTONS[i].classList.remove('hide')
-                    CONTENTS[i].classList.remove('hide')
-                })
-            })
-        }
+    function show_forms(index){
+        FORMS[index].classList.remove('hide')
+        CONTENTS[index].classList.add('hide')
+        BUTTONS[index].classList.add('hide')
     }
-}
+    function hide_forms(index){
+        FORMS[index].classList.add('hide')
+        BUTTONS[index].classList.remove('hide')
+        CONTENTS[index].classList.remove('hide')
+    }
 
-export function initUpdates(){
+    BUTTONS.forEach((BUTTON, index) => {
+        BUTTON.addEventListener('click', ()=>{
+            show_forms(index)
+
+            DELETE_BUTTONS[index].addEventListener('click', ()=>{
+                hide_forms(index)
+            })
+        })
+    })
+}
+function execute_updates(){
     const updatable_targets = [
         'section', 
         'subsection', 
@@ -59,4 +61,7 @@ export function initUpdates(){
     )
 }
 
-initUpdates()
+export default function initUpdates(){
+    if(this_user.adm === 'true')
+        execute_updates()
+}

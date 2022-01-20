@@ -8,11 +8,11 @@ const MENU = get('#main_menu')
 function activate_buttons(){
     const radios = [
         {
-            button: MENU.querySelector('#radio_user_list'),
-            content: MENU.querySelector('#user_list_container')
+            button: document.querySelector('#radio_user_list'),
+            content: document.querySelector('#user_list_container')
         },{
-            button: MENU.querySelector('#radio_approve_list'),
-            content: MENU.querySelector('#profile #requisition_list_container')
+            button: document.querySelector('#radio_approve_list'),
+            content: document.querySelector('#profile #requisition_list_container')
         },
     ]
     

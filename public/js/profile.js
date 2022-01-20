@@ -11,3 +11,13 @@ add_user()
 main_menu()
 requisition_menu()
 this_user()
+
+import delete_user from './modules/edition/delete_user.js'
+import delete_department from './modules/edition/delete_department.js'
+import update_mode from './modules/edition/update_mode.js'
+import update_forms from './modules/edition/update_forms.js'
+
+delete_user()
+delete_department()
+update_mode()
+update_forms()
