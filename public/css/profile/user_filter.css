@@ -16,7 +16,7 @@
 
     width: 50%;
 
-    animation: fade_in .3s forwards;
+    animation: filter_fade_in .3s forwards;
     cursor: pointer;
 }
 
@@ -24,7 +24,7 @@
     border-width: 1px;
 }
 
-@keyframes fade_in{
+@keyframes filter_fade_in{
     from{
         opacity: 0;
         transform: translate3d(0, -20px, 0)
