@@ -88,7 +88,6 @@ function close_add_modal(){
         cancel_buttons.forEach(button => {
             on_click(button, ()=>{
                 close(modal)
-                // this close the form with the modal
                 close(add_forms.add_procedure)
                 close(add_forms.add_section)
                 close(add_forms.add_subsection)

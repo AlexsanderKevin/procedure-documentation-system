@@ -1,0 +1,31 @@
+/* main */
+@import './main/main.css';
+@import './main/header.css';
+@import './main/footer.css';
+@import './main/modal.css';
+@import './main/department_selection.css';
+@import './main/nav/nav.css';
+@import './main/nav/burger.css';
+/* items */
+@import './items/procedure_page.css';
+@import './items/item_section.css';
+@import './items/item_subsection.css';
+@import './items/item.css';
+/* froms */
+@import './forms/login_page.css';
+@import './forms/default/default_form.css';
+@import './forms/default/datalist.css';
+@import './forms/default/button.css';
+@import './forms/default/textarea.css';
+@import './forms/default/input.css';
+@import './forms/default/select.css';
+@import './forms/default/form_2.css';
+/* edition */
+@import './edition/edit.css';
+@import './edition/button.css';
+@import './edition/nav.css';
+/* profile */
+@import './profile/main.css';
+@import './profile/side_columns.css';
+@import './profile/user_list.css';
+@import './profile/requisition_list.css';
