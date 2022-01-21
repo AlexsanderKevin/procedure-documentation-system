@@ -86,6 +86,7 @@ function show_filter(select_value, filter_array){
 
 function reset_filters(filters){
     filters.forEach(filter => filter.value = '')
+    USER_COMPONENTS.forEach(user => show(user))
 }
 
 function filter_filters(){
