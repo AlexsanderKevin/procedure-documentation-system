@@ -76,7 +76,30 @@ function permission_filter(){
     })
 }
 
+function show_filter(select_value, filter_array){
+
+    filter_array.forEach(filter => {
+        const FILTER_TYPE = filter.dataset.filter
+        FILTER_TYPE === select_value ? show(filter) : hide(filter)
+    })
+}
+
+function reset_filters(filters){
+    filters.forEach(filter => filter.value = '')
+}
+
+function filter_filters(){
+    const SELECT_FILTER = document.querySelector('[data-select="filters"]')
+    const FILTERS = document.querySelectorAll('[data-filter]')
+
+    SELECT_FILTER.addEventListener('change', ()=>{
+        reset_filters(FILTERS)
+        show_filter(SELECT_FILTER.value ,FILTERS)
+    })
+}
+
 export default function init_filters(){
+    filter_filters()
     department_filter()
     cargo_filter()
     permission_filter()

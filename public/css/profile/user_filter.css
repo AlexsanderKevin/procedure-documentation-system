@@ -1,0 +1,36 @@
+#profile .filter_container{
+    display: flex;
+    font-size: 20pt;
+    color: var(--min_contrast_color);
+
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 10px;
+}
+
+#profile .filter_container select{
+    border: solid var(--min_contrast_color);
+    border-width: 0px 0px 1px 0px;
+
+    width: 50%;
+
+    animation: fade_in .3s forwards;
+    cursor: pointer;
+}
+
+#profile .filter_container select:hover{
+    border-width: 1px;
+}
+
+@keyframes fade_in{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}

@@ -13,24 +13,24 @@
         <div class="filter_container">
             <span class="filter_container_title">Filtro</span>
 
-            <select name="filter_by" id="filter_by">
+            <select name="filter_by" id="filter_by" data-select="filters" >
                 <option class="invalid_option" value="">*Filtrar por:</option>
                 <option value="cargo">Cargo</option>
                 <option value="department">Departamento</option>
-                <option value="name">Nome</option>
+                {{!-- <option value="name">Nome</option> --}}
                 <option value="permission">Permissão</option>
             </select>
 
-            <select name="department_filter" id="department_filter" data-filter="department">
-                <option class="invalid_option" value="">*Selecionar depart:</option>
+            <select name="department_filter" id="department_filter" data-filter="department" class="hide">
+                <option class="invalid_option" value="">*Selecionar:</option>
                 {{#each departments}}
                     <option value="{{this.dataValues.name}}">{{this.dataValues.name}}</option>
                 {{/each}}
                 <option value="">Todos</option>
             </select>
 
-            <select name="cargo_filter" id="cargo_filter" data-filter="cargo">
-                <option class="invalid_option" value="">*Selecionar cargo:</option>
+            <select name="cargo_filter" id="cargo_filter" data-filter="cargo" class="hide">
+                <option class="invalid_option" value="">*Selecionar:</option>
                 <option value="Assistente Técnico 1">Assitente Técnico 1</option>
                 <option value="Assistente Técnico 2">Assitente Técnico 2</option>
                 <option value="Auxiliar de Produção">Auxiliar de Produção</option>
@@ -40,8 +40,8 @@
                 <option value="">Todos</option>
             </select>
 
-            <select name="permission_filter" id="permission_filter" data-filter="permission">
-                <option class="invalid_option" value="">*Selecionar Permissão:</option>
+            <select name="permission_filter" id="permission_filter" data-filter="permission" class="hide">
+                <option class="invalid_option" value="">*Selecionar:</option>
                 <option value="adm">Administrador</option>
                 <option value="editor">Editor</option>
                 <option value="common">Comum</option>

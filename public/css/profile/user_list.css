@@ -42,7 +42,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    animation: var(--slide_and_fade);
 }
+
 #profile .user_info{
     width: 100%;
 }
@@ -55,6 +58,7 @@
 
     display: flex;
     justify-content: flex-start;
+
 }
 #profile .user_info_container p{
     padding: 0;
