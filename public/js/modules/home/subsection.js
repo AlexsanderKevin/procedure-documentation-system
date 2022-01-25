@@ -9,7 +9,7 @@ export default function deactivate_empty_subsection(){
             const ITEMS = ITEM_CONTAINER.querySelectorAll('.single_item_container')
         
             !ITEMS.length?BURGER.style.opacity='0.2':false
-            !ITEMS.length?ITEM_CONTAINER.remove():false
+            // !ITEMS.length?ITEM_CONTAINER.remove():false
         })
     }
 }

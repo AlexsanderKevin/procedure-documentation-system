@@ -19,15 +19,15 @@ function show_subsection_links(){
 const nav_to_content = (nav_component, content_component, anchor_component, show_nav_class, show_content_class) => {
     const NAV = document.querySelector(nav_component)
     const CONTENTS = document.querySelectorAll(content_component)
-    // ISSUE: em caso de subsections vazias, os links da nav ficam confusos em relação a qual abrir quando clickado, afinal estão relacionados com o indice do conteudo do container de subseção e nao com o próprio container
-    // SOLUÇÃO: relacionar os links de subseção da nav com os containers de subseção ao invés de seus conteúdos
     
     if(NAV && CONTENTS.length){
 
         const ANCHORS = NAV.querySelectorAll(anchor_component)
         ANCHORS.forEach((anchor, index) => anchor.addEventListener('click', ()=>{
             NAV.classList.remove(show_nav_class)
-            CONTENTS[index].classList.add(show_content_class)
+
+            if(CONTENTS[index].children.length)
+                CONTENTS[index].classList.add(show_content_class)
         }))
     }
 }
