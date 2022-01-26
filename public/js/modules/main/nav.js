@@ -1,4 +1,5 @@
 function show_subsection_links(){
+
     const SECTION_LINKS = document.querySelectorAll('.section_links_container')
     if(SECTION_LINKS){
         SECTION_LINKS.forEach(link => {
@@ -17,6 +18,7 @@ function show_subsection_links(){
 }
 
 const nav_to_content = (nav_component, content_component, anchor_component, show_nav_class, show_content_class) => {
+
     const NAV = document.querySelector(nav_component)
     const CONTENTS = document.querySelectorAll(content_component)
     

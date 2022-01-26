@@ -1,9 +1,11 @@
 <section class="login form_section">
-    {{>forms/header text='Login'}}
-    <form class="login_form" action="/auth" method="POST">        
+      {{>forms/header text='Login'}}
+    <form class="login_form" action="/auth" method="POST" name="login_form">        
         {{>forms/input_box type="text" name="username" class=' username' label='*Nome de Usuário'}}
         {{>forms/input_box type="password" name="password" label='*Senha'}}
-        {{>forms/button_container submit="Entrar"}}
+      <div class="button_container">
+          <button class=" login_button" type="submit" >Entrar</button>
+      </div>
     </form>
 </section>
 
@@ -21,3 +23,5 @@
     localStorage.setItem("editor", "{{user_editor}}")
   </script>
 {{/if}}
+
+<script type="module" src="/js/login.js"></script>
