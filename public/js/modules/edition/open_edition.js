@@ -101,7 +101,7 @@ function close_add_modal(){
 }
 
 export default function start_edition(){
-    if(this_user.editor === 'true'){
+    if(this_user.editor ){
         init_edition_mode()
         close_add_modal()
         open_respective_modal()

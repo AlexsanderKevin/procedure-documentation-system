@@ -1,7 +1,7 @@
 import { get, on_click } from "../../../lib/main.js"
 import { this_user } from "../this_user.js"
 
-const USER_HAS_PERMISSION = this_user.adm === 'true'
+const USER_HAS_PERMISSION = this_user.adm
 
 const MENU = get('#main_menu')
 
