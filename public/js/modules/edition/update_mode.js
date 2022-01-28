@@ -1,10 +1,9 @@
 import {get, on_click, open} from '/lib/main.js'
-import this_user from '/js/modules/this_user.js'
+import BOOLEAN_PERMISSION from '../../../lib/parse_boolean.js'
 
 const MAIN_BUTTON = get('#main_edit_button')
 const EDITION_BUTTONS = document.querySelectorAll('.edit_section')
-const IS_USER_ADM = this_user.adm
-const IS_USER_EDITOR = this_user.editor
+const IS_USER_ADM = BOOLEAN_PERMISSION('adm')
 
 function validate_permissions(){
     if(!IS_USER_ADM){

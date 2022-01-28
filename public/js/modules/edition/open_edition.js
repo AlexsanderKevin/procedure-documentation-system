@@ -1,5 +1,8 @@
 import {get, on_click, close, open, on_change} from '../../../lib/main.js'
-import {this_user} from '/js/modules/this_user.js'
+import BOOLEAN_PERMISSION from '../../../lib/parse_boolean.js'
+
+const IS_USER_ADM = BOOLEAN_PERMISSION('adm')
+const IS_USER_EDITOR = BOOLEAN_PERMISSION('editor')
 
 const bg_img = get('#edit_bg_img')
 const start_edition_button = get('#edition_mode_button')
@@ -101,7 +104,7 @@ function close_add_modal(){
 }
 
 export default function start_edition(){
-    if(this_user.editor ){
+    if(IS_USER_EDITOR){
         init_edition_mode()
         close_add_modal()
         open_respective_modal()

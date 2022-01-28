@@ -20,9 +20,9 @@ function parse_boolean(target){
 
 function turn_into_boolean(target){
 
-    if(target === 'true')
+    if(target === 'true' || target === 'on' || target === 1)
         return true
-    else if (target == 'false')
+    else if (target === 'false' || target === '' || target === 0 || target === 'off')
         return false
     else
         return 'not a boolean'

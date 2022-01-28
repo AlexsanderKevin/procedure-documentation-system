@@ -1,5 +1,7 @@
 import { get} from "/lib/main.js"
-import this_user from '/js/modules/this_user.js'
+import BOOLEAN_PERMISSION from "../../../lib/parse_boolean.js"
+
+const IS_USER_ADM = BOOLEAN_PERMISSION('adm')
 
 const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     const BUTTONS = get(buttons)
@@ -62,6 +64,6 @@ function execute_updates(){
 }
 
 export default function initUpdates(){
-    if(this_user.adm === 'true')
+    if(IS_USER_ADM)
         execute_updates()
 }
