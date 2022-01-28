@@ -1,7 +1,18 @@
 import { get, on_click } from "../../../lib/main.js"
-import { this_user } from "../this_user.js"
+import BOOLEAN_PERMISSION from "../../../lib/parse_boolean.js"
 
-const USER_HAS_PERMISSION = this_user.adm
+
+const USER_HAS_PERMISSION = BOOLEAN_PERMISSION('adm') 
+
+console.log('adm: ', BOOLEAN_PERMISSION('adm'))
+console.log("editor: ", BOOLEAN_PERMISSION('editor'))
+
+// const BOOLEAN_PERMISSION = turn_into_boolean(USER_HAS_PERMISSION)
+
+// console.log(parse_boolean(USER_HAS_PERMISSION))
+// console.log(parse_boolean(BOOLEAN_PERMISSION))
+// const boolean = true
+// console.log(Object.prototype.toString.call(boolean) === '[object Boolean]')
 
 const MENU = get('#main_menu')
 
@@ -15,25 +26,22 @@ function activate_buttons(){
             content: document.querySelector('#profile #requisition_list_container')
         },
     ]
-    
-    function on_click_buttons(){
+    radios.forEach(radio => handleCheck(radio))
 
-        radios.forEach(radio => {
-            on_click(radio.button, ()=>{
-                const bg_img = get('#bg_img')
-                bg_img.classList.add('hide')
-                radios.forEach(radio => {const {button, content} = radio
+    function handleCheck(radio_obj){
+        const {button, content} = radio_obj
 
-                    if(button.checked){
-                        content.classList.remove('hide')
-                    }else{
-                        content.classList.add('hide')
-                    }
-                })
-            })
-        })
+        if(button.checked)
+            content.classList.remove('hide')
+        else
+            content.classList.add('hide')
     }
-    on_click_buttons()
+    
+    radios.forEach(radio => {
+        on_click(radio.button, ()=>{
+            radios.forEach(radio => handleCheck(radio))
+        })
+    })
 }
 
 export default function init_menu(){

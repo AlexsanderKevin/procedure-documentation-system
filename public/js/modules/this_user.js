@@ -1,4 +1,4 @@
-export const this_user = {
+export default this_user = {
     name: localStorage.getItem('name'),
     username: localStorage.getItem('username'),
     cargo: localStorage.getItem('cargo'),
