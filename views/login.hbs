@@ -1,11 +1,12 @@
 <section class="login form_section">
-      {{>forms/header text='Login'}}
     <form class="login_form" action="/auth" method="POST" name="login_form">        
-        {{>forms/input_box type="text" name="username" class=' username' label='*Nome de Usuário'}}
-        {{>forms/input_box type="password" name="password" label='*Senha'}}
-      <div class="button_container">
-          <button class=" login_button" type="submit" >Entrar</button>
-      </div>
+
+      <h1>Login</h1>
+
+      {{>forms/input_box type="text" name="username" class=' username' label='*Nome de Usuário'}}
+      {{>forms/input_box type="password" name="password" label='*Senha'}}
+
+      <button class=" login_button" type="submit" >Entrar</button>
     </form>
 </section>
 

@@ -9,5 +9,22 @@
 .login_button:hover{
     background: none;
     color: #ddd;
-    transition: .2s;
+    transition: .15s;
+    border: solid var(--min_contrast_color);
+    border-width: 1px;
+}
+
+.login_form{
+    padding:  20;
+    background: var(--gradient_color_2);
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.247);
+}
+
+.login_form h1{
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: 30pt;
 }
