@@ -1,4 +1,4 @@
-import {this_user} from '../../modules/this_user.js'
+import this_user from '../../modules/this_user.js'
 
 export default function hide_ids_from_users(){
     const ID_SPANS = document.querySelectorAll('span.id')

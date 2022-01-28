@@ -1,5 +1,5 @@
 import { get } from "../../../lib/main.js"
-import { this_user } from "../this_user.js"
+import this_user from "../this_user.js"
 
 const {
     name: user_name,

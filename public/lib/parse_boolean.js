@@ -1,6 +1,6 @@
 import this_user from "../js/modules/this_user.js"
 
-export default BOOLEAN_PERMISSION = (permission)=>{
+const BOOLEAN_PERMISSION = (permission)=>{
     
     const PERMISSION = this_user[permission]
     
@@ -27,3 +27,5 @@ function turn_into_boolean(target){
     else
         return 'not a boolean'
 }
+
+export default BOOLEAN_PERMISSION

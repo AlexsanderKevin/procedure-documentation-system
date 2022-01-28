@@ -1,5 +1,5 @@
 import { get} from "/lib/main.js"
-import {this_user} from '/js/modules/this_user.js'
+import this_user from '/js/modules/this_user.js'
 
 const update_form_interaction = (buttons, forms, contents, delete_buttons) => {
     const BUTTONS = get(buttons)

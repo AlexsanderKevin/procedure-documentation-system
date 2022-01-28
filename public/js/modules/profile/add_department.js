@@ -1,5 +1,5 @@
 import {get, on_click} from '/lib/main.js'
-import { this_user } from '../this_user.js'
+import this_user from '../this_user.js'
 
 const hide = target => target.classList.add('hide')
 
