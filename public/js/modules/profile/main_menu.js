@@ -7,13 +7,6 @@ const USER_HAS_PERMISSION = BOOLEAN_PERMISSION('adm')
 console.log('adm: ', BOOLEAN_PERMISSION('adm'))
 console.log("editor: ", BOOLEAN_PERMISSION('editor'))
 
-// const BOOLEAN_PERMISSION = turn_into_boolean(USER_HAS_PERMISSION)
-
-// console.log(parse_boolean(USER_HAS_PERMISSION))
-// console.log(parse_boolean(BOOLEAN_PERMISSION))
-// const boolean = true
-// console.log(Object.prototype.toString.call(boolean) === '[object Boolean]')
-
 const MENU = get('#main_menu')
 
 function activate_buttons(){
