@@ -14,3 +14,10 @@ form .button_container{
     
     margin-bottom: 20px;
 }
+
+button[type="submit"]{
+    background: var(--contrast_color);
+    color: var(--gradient_color_2);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
