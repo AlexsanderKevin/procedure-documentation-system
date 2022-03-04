@@ -27,9 +27,9 @@ export default function init_menu(){
             const {button, content} = radio_obj
             
             if(button.checked)
-            content.classList.remove('hide')
+                content.classList.remove('hide')
             else
-            content.classList.add('hide')
+                content.classList.add('hide')
         }
         
         radios.forEach(radio => {

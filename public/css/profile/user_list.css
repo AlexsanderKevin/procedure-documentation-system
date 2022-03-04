@@ -19,6 +19,8 @@
     position: sticky;
     top: 0px;
     z-index: 2;
+
+    border-radius: 5px;
 }
 #profile .list_content{
     padding: 30px;
