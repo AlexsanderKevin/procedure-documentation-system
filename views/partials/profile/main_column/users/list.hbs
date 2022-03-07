@@ -17,7 +17,6 @@
                 <option class="invalid_option" value="">*Filtrar por:</option>
                 <option value="cargo">Cargo</option>
                 <option value="department">Departamento</option>
-                {{!-- <option value="name">Nome</option> --}}
                 <option value="permission">Permissão</option>
             </select>
 
@@ -31,12 +30,12 @@
 
             <select name="cargo_filter" id="cargo_filter" data-filter="cargo" class="hide">
                 <option class="invalid_option" value="">*Selecionar:</option>
-                <option value="Assistente Técnico 1">Assitente Técnico 1</option>
-                <option value="Assistente Técnico 2">Assitente Técnico 2</option>
+                <option value="Assistente Operacional">Assitente Operacional</option>
                 <option value="Auxiliar de Produção">Auxiliar de Produção</option>
                 <option value="Encarregado">Encarregado</option>
                 <option value="Lider">Lider</option>
                 <option value="Técnico">Técnico</option>
+                <option value="Técnico II">Técnico II</option>
                 <option value="">Todos</option>
             </select>
 
@@ -47,15 +46,6 @@
                 <option value="common">Comum</option>
                 <option value="">Todos</option>
             </select>
-
-            {{!-- <input class="text_input" type="text" id="filter_name" list="name_filter" name="name_filter" placeholder="Digite o Nome" data-filter="name">
-            <datalist id="name_filter" name="name_filter">
-                {{#each departments}}
-                {{#each this.users}}
-                    <option value="{{this.dataValues.name}}">
-                {{/each}}
-                {{/each}}
-            </datalist> --}}
         </div>
 
     <div id="user_list_content" class="list_content">
