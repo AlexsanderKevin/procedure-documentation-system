@@ -1,12 +1,12 @@
-import BOOLEAN_PERMISSION from '../../../lib/parse_boolean.js'
+import BOOLEAN_PERMISSION from '../../../lib/parse_boolean.js';
 
-export default class DeleteDepartment {
+export default class DeleteMode {
     constructor(mainSelector, buttonsSelector) {
         this.mainButton = document.querySelector(mainSelector);
         this.buttons = document.querySelectorAll(buttonsSelector);
         this.admPermission = BOOLEAN_PERMISSION('adm');
         this.activeClass = 'active';
-        this.hideClass = 'hide'
+        this.hideClass = 'hide';
     }
 
     activateDeleteMode() {
@@ -15,7 +15,7 @@ export default class DeleteDepartment {
     }
 
     addEventToButtons() {
-        this.mainButton.addEventListener('click', () => this.activateDeleteMode())
+        this.mainButton.addEventListener('click', () => this.activateDeleteMode());
     }
 
     init() {
