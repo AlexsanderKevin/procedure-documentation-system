@@ -14,12 +14,14 @@ requisition_menu()
 this_user()
 show_gradually('[data-card="user"]')
 
+import DeleteDepartment from './modules/edition/delete_department.js'
 import delete_user from './modules/edition/delete_user.js'
-import delete_department from './modules/edition/delete_department.js'
 import update_mode from './modules/edition/update_mode.js'
 import update_forms from './modules/edition/update_forms.js'
 
+const deleteDepartment = new DeleteDepartment('#main_delete_button.department', '.department_trash');
+deleteDepartment.init()
+
 delete_user()
-delete_department()
 update_mode()
 update_forms()

@@ -1,22 +1,28 @@
-import {get, on_click} from '/lib/main.js'
 import BOOLEAN_PERMISSION from '../../../lib/parse_boolean.js'
 
-const IS_USER_ADM = BOOLEAN_PERMISSION('adm')
+export default class DeleteDepartment {
+    constructor(mainSelector, buttonsSelector) {
+        this.mainButton = document.querySelector(mainSelector);
+        this.buttons = document.querySelectorAll(buttonsSelector);
+        this.admPermission = BOOLEAN_PERMISSION('adm');
+        this.activeClass = 'active';
+        this.hideClass = 'hide'
+    }
 
-const DEPARTMENT_MAIN_BUTTON = get('#main_delete_button.department')
-const DELETE_DEPARTMENT_BUTTONS = get('.department_trash')
+    activateDeleteMode() {
+        this.mainButton.classList.toggle(this.activeClass);
+        this.buttons.forEach((button) => button.classList.toggle(this.hideClass));
+    }
 
-function activate_mode(){
-    DEPARTMENT_MAIN_BUTTON.classList.toggle('active')
-    DELETE_DEPARTMENT_BUTTONS.forEach(button => button.classList.toggle('hide'))
-}
+    addEventToButtons() {
+        this.mainButton.addEventListener('click', () => this.activateDeleteMode())
+    }
 
-export default function init_delete_department_mode(){
-
-    if(IS_USER_ADM){
-        on_click(DEPARTMENT_MAIN_BUTTON, activate_mode)
-    
-    }else{
-        DEPARTMENT_MAIN_BUTTON.classList.add('hide')
+    init() {
+        if (this.admPermission) {
+            this.addEventToButtons();
+        } else {
+            this.mainButton.classList.add(this.hideClass);
+        }
     }
 }
