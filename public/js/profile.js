@@ -6,9 +6,8 @@ import requisition_menu from './modules/profile/req_menu.js';
 import this_user from './modules/profile/this_user_info.js';
 import show_gradually from './modules/main/show_gradually.js';
 
-import DeleteMode from './modules/edition/delete-mode.js';
-import update_mode from './modules/edition/update_mode.js';
-import update_forms from './modules/edition/update_forms.js';
+import EditionOperation from './modules/edition/edition-operation.js';
+import handleUpdateForms from './modules/edition/handle-update-forms.js';
 
 user_filters();
 add_department();
@@ -18,11 +17,13 @@ requisition_menu();
 this_user();
 show_gradually('[data-card="user"]');
 
-const deleteDepartment = new DeleteMode('#main_delete_button.department', '.department_trash');
+const deleteDepartment = new EditionOperation('#main_delete_button.department', '.department_trash');
 deleteDepartment.init();
 
-const deleteUser = new DeleteMode('#main_delete_button.user', '.user_trash');
+const deleteUser = new EditionOperation('#main_delete_button.user', '.user_trash');
 deleteUser.init();
 
-update_mode();
-update_forms();
+const updateMode = new EditionOperation('#main_edit_button', '.edit_section');
+updateMode.init();
+
+handleUpdateForms();

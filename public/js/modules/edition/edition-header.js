@@ -30,8 +30,8 @@ export default class EditionHeader {
     init() {
         if (this.permission) {
             this.addEventToStartButton();
-       } else {
+        } else {
            this.startEditionButton.remove();
-       }
+        }
     }
 }
