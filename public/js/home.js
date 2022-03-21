@@ -1,5 +1,6 @@
 import empty_subsection from './modules/home/subsection.js';
 import Modal from './modules/home/modal.js';
+import Burgers from './modules/main/burgers.js';
 
 empty_subsection();
 
@@ -10,3 +11,10 @@ const aboutModal = new Modal(
     '.close_description_modal',
 );
 aboutModal.init();
+
+const sectionBurgers = new Burgers(
+    '.subsection_burger',
+    '.item_subsection_content',
+    'show_items',
+);
+sectionBurgers.init();
