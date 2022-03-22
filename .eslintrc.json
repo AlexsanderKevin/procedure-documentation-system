@@ -13,6 +13,7 @@
     "rules": {
         "linebreak-style": 0,
         "indent": 0,
-        "import/extensions": 0
+        "import/extensions": 0,
+        "no-plusplus": 0
     }
 }
